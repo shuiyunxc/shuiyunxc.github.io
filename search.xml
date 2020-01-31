@@ -4,6 +4,39 @@
   
     
     <entry>
+      <title>lenovo-R720-15IKBN-OC-055-20200131</title>
+      <link href="/2020/02/01/lenovo-R720-15IKBN-OC-055-20200131/index/"/>
+      <url>/2020/02/01/lenovo-R720-15IKBN-OC-055-20200131/index/</url>
+      
+        <content type="html"><![CDATA[<div class="note class_name info"><p><font color= "#FF0000" size= "8px" align="center">联想拯救者 R720-15IKBN-OC-055-EFI</font> </p></div><h2 id="配置情况"><a href="#配置情况" class="headerlink" title="配置情况"></a>配置情况</h2><ul><li>CPU：i7-7700HQ</li><li>内存：16G</li><li>独立显卡：NVIDIA Geforce GTX 1050（黑苹果无视）</li><li>集成显卡：Intel HD Graphics 630</li><li>无线网卡：DW1820A</li><li>有线网卡：瑞昱 RTL8168/8111/8112<a id="more"></a></li></ul><h2 id="安装版本"><a href="#安装版本" class="headerlink" title="安装版本"></a>安装版本</h2><p>Catalina10.15.3(19D76)</p><h2 id="OpenCore版本"><a href="#OpenCore版本" class="headerlink" title="OpenCore版本"></a>OpenCore版本</h2><p>OpenCore-0.5.5-RELEASE</p><h2 id="工作状况"><a href="#工作状况" class="headerlink" title="工作状况"></a>工作状况</h2><h3 id="正常工作："><a href="#正常工作：" class="headerlink" title="正常工作："></a>正常工作：</h3><ul><li>集显：正常（可以一键HiDPi）。</li><li>声卡：使用<code>AppleALC+Lilu</code>原生驱动，注入Layout ID: 28（<code>1C000000</code> ），完美支持Tpye-C耳机、3.5耳机、外放。</li><li>功能键：声音、亮度可以调节，小键盘正常使用。（亮度需要在<code>系统偏好设置</code>–&gt;<code>键盘</code>–&gt;<code>快捷键</code>–&gt;<code>显示器</code>中调节）</li><li>触控板：完美多指触控。</li><li>USB：USB3.0/2.0可以正常识别使用。</li><li>HDMI：外接HDMI正常，在使用<code>MacBookPro11,2</code>机型有HDMI声音，其他机型（如MacBookPro13,1、MacBookPro14,3等）无HDMI声音。</li><li>变频：正常。</li><li>无线：搜索正常，连接5G/2.4G正常。</li><li>蓝牙：连接蓝牙耳机/音箱正常，无延迟、爆音、杂音，连接蓝牙鼠标正常，无漂移。</li><li>休眠：可以合盖、开盖正常。</li><li>有线网卡：正常</li></ul><h3 id="异常情况："><a href="#异常情况：" class="headerlink" title="异常情况："></a>异常情况：</h3><ul><li>睡眠：不正常。待以后解决。</li><li>独立显卡：可以显示，无法使用。</li></ul><h3 id="其他："><a href="#其他：" class="headerlink" title="其他："></a>其他：</h3><p>更新时间：2020-01-31</p><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><a href="https://github.com/shuiyunxc/lenovo-R720-15IKBN-OC-055-20200131" target="_blank" rel="noopener"><i class="fa fa-download" aria-hidden="true"></i></a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> OpenCore </category>
+          
+          <category> EFI </category>
+          
+          <category> lenovo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> OpenCore </tag>
+            
+            <tag> EFI </tag>
+            
+            <tag> lenovo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ASRock-Z370m-Pro4-i3-8350K-Rx5500XT-OC-055</title>
       <link href="/2020/01/28/ASRock-Z370m-Pro4-i3-8350K-Rx5500XT-OC-055/"/>
       <url>/2020/01/28/ASRock-Z370m-Pro4-i3-8350K-Rx5500XT-OC-055/</url>
