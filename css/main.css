@@ -1994,7 +1994,7 @@ alipay:hover p {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #3bffee;
+  background: #904aff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3292,4 +3292,9 @@ alipay:hover p {
   .pagination {
     margin: 8px 0 0;
   }
+}
+code {
+  color: #ff7600;
+  background: #dbdfe1;
+  margin: 2px;
 }
