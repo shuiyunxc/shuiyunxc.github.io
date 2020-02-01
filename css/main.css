@@ -301,13 +301,13 @@ hr {
   margin: 40px 0;
   height: 3px;
   border: none;
-  background-color: #ddd;
+  background-color: #fff;
   background-image: repeating-linear-gradient(-45deg, #fff, #fff 4px, transparent 4px, transparent 8px);
 }
 blockquote {
   padding: 0 15px;
   color: #666;
-  border-left: 4px solid #ddd;
+  border-left: 4px solid #fff;
 }
 blockquote cite::before {
   content: "-";
@@ -403,7 +403,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
-  border: 1px solid #ddd;
+  border: 1px solid #fff;
   font-size: 14px;
   table-layout: fixed;
   word-wrap: break-all;
@@ -424,8 +424,8 @@ td {
 }
 th,
 td {
-  border-bottom: 3px solid #ddd;
-  border-right: 1px solid #eee;
+  border-bottom: 3px solid #fff;
+  border-right: 1px solid #fff;
 }
 th {
   padding-bottom: 10px;
@@ -499,7 +499,7 @@ code {
   padding: 2px 4px;
   word-wrap: break-word;
   color: #555;
-  background: #eee;
+  background: #fff;
   border-radius: 3px;
   font-size: 16px;
 }
@@ -745,7 +745,7 @@ pre .javascript .function {
   position: relative;
   padding: 15px;
   margin-bottom: 20px;
-  border: 1px solid #eee;
+  border: 1px solid #fff;
   border-left-width: 5px;
   border-radius: 3px;
 }
@@ -907,16 +907,16 @@ pre .javascript .function {
 }
 .post-body .tabs ul.nav-tabs li.tab.active {
   border-top: 3px solid #fc6423;
-  border-left: 1px solid #ddd;
-  border-right: 1px solid #ddd;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
   background-color: #fff;
 }
 @media (max-width: 413px) {
   .post-body .tabs ul.nav-tabs li.tab.active {
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #fff;
     border-left: 3px solid #fc6423;
-    border-right: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
   }
 }
 .post-body .tabs ul.nav-tabs li.tab.active a {
@@ -927,7 +927,7 @@ pre .javascript .function {
   background-color: #fff;
 }
 .post-body .tabs .tab-content .tab-pane {
-  border: 1px solid #ddd;
+  border: 1px solid #fff;
   padding: 20px 20px 0 20px;
 }
 .post-body .tabs .tab-content .tab-pane:not(.active) {
@@ -976,7 +976,7 @@ pre .javascript .function {
 .pagination {
   margin: 120px 0 40px;
   text-align: center;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #fff;
 }
 .page-number-basic,
 .pagination .prev,
@@ -1002,7 +1002,7 @@ pre .javascript .function {
 .pagination .next,
 .pagination .page-number {
   border-bottom: 0;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #fff;
   transition-property: border-color;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
@@ -1037,7 +1037,7 @@ pre .javascript .function {
   .pagination .page-number {
     margin-bottom: 10px;
     border-top: 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #fff;
     padding: 0 10px;
   }
   .pagination .prev:hover,
@@ -1136,7 +1136,7 @@ pre .javascript .function {
 .site-subtitle {
   margin-top: 10px;
   font-size: 13px;
-  color: #ddd;
+  color: #fff;
 }
 .use-motion .brand {
   opacity: 0;
@@ -1171,7 +1171,7 @@ pre .javascript .function {
     margin: 0 -10px;
     padding: 0 10px;
     clear: both;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #fff;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1330,7 +1330,7 @@ pre .javascript .function {
   box-sizing: border-box;
   margin: auto;
   padding: 3px;
-  border: 1px solid #ddd;
+  border: 1px solid #fff;
 }
 .posts-expand .post-body .fancybox img {
   margin: 0 auto 25px;
@@ -1561,7 +1561,7 @@ pre .javascript .function {
   display: table;
   margin-top: 15px;
   width: 100%;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #fff;
 }
 .post-nav-divider {
   display: table-cell;
@@ -1846,7 +1846,7 @@ alipay:hover p {
   border-bottom-color: #555;
 }
 .sidebar a:hover {
-  color: #eee;
+  color: #fff;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .sidebar {
@@ -1912,7 +1912,7 @@ alipay:hover p {
   padding: 2px;
   max-width: 120px;
   height: auto;
-  border: 1px solid #eee;
+  border: 1px solid #fff;
 }
 .site-author-name {
   margin: 0;
@@ -1935,7 +1935,7 @@ alipay:hover p {
 .site-state-item {
   display: inline-block;
   padding: 0 15px;
-  border-left: 1px solid #eee;
+  border-left: 1px solid #fff;
 }
 .site-state-item:first-child {
   border-left: none;
@@ -1994,7 +1994,7 @@ alipay:hover p {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #50f954;
+  background: #fff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3101,7 +3101,7 @@ alipay:hover p {
 }
 .links-of-author-item a:hover {
   border-radius: 4px;
-  background: #eee;
+  background: #fff;
 }
 .links-of-author-item .fa {
   margin-right: 2px;
