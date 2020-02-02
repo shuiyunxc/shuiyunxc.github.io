@@ -57,9 +57,9 @@
       
         <tags>
             
-            <tag> ASRock </tag>
-            
             <tag> OpenCore </tag>
+            
+            <tag> ASRock </tag>
             
             <tag> EFI </tag>
             
@@ -81,9 +81,9 @@
           
           <category> Clover </category>
           
-          <category> 技嘉 </category>
-          
           <category> EFI </category>
+          
+          <category> 技嘉 </category>
           
       </categories>
       

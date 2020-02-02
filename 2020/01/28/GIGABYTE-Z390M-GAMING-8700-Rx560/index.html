@@ -366,7 +366,7 @@
         
 
         <div class="post-meta">
-          
+        
           <span class="post-time">
             
               <span class="post-meta-item-icon">
@@ -379,7 +379,7 @@
                 2020-01-28
               </time>
             
-            
+
             
               <span class="post-meta-divider">|</span>
             
@@ -421,8 +421,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Clover/%E6%8A%80%E5%98%89/" itemprop="url" rel="index">
-                    <span itemprop="name">技嘉</span>
+                  <a href="/categories/EFI/" itemprop="url" rel="index">
+                    <span itemprop="name">EFI</span>
                   </a>
                 </span>
 
@@ -432,8 +432,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/EFI/" itemprop="url" rel="index">
-                    <span itemprop="name">EFI</span>
+                  <a href="/categories/Clover/%E6%8A%80%E5%98%89/" itemprop="url" rel="index">
+                    <span itemprop="name">技嘉</span>
                   </a>
                 </span>
 
@@ -462,7 +462,7 @@
              <span id="/2020/01/28/GIGABYTE-Z390M-GAMING-8700-Rx560/" class="leancloud_visitors" data-flag-title="GIGABYTE-Z390M-GAMING-8700-Rx560">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
-                 <i class="fa fa-bell-o"></i>
+                 <i class="fa fa-eye"></i>
                </span>
                
                  <span class="post-meta-item-text">阅读次数&#58;</span>
@@ -470,6 +470,7 @@
                  <span class="leancloud-visitors-count"></span>
              </span>
           
+
           
           
           
@@ -549,15 +550,15 @@
 
     
 <div>
-   
-   <div>
+  
+    <div>
     
         <div style="text-align:center;color: #FF0000;font-size:18px;">-------------本文结束<i class="fa fa-flag-checkered" color:#000000;></i>感谢您的阅读-------------</div>
     
 </div>
 
 
-   
+  
 </div>
     
       <div>
@@ -591,7 +592,6 @@
     
 
     
-
 <div>
     
         
@@ -631,7 +631,6 @@
 
     
 </div>
-
     <footer class="post-footer">
       
         <div class="post-tags">
@@ -675,7 +674,6 @@
       
     </footer>
   </div>
-  
   
   
   
@@ -748,7 +746,7 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/%7C%7C%20archive">
+                <a href="/archives">
               
                   <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
@@ -885,7 +883,7 @@
 
         
 <div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
     <span class="site-uv">
@@ -1053,9 +1051,12 @@
   <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
   
   <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
     new Valine({
-        lang: 'zh-cn',
-        admin_email: 'shuiyunxc@sina.com', //博主邮箱
         el: '#comments' ,
         verify: false,
         notify: false,
