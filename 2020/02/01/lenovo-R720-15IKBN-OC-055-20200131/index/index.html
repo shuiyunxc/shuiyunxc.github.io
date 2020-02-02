@@ -1020,12 +1020,9 @@
   <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
   
   <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item=>{
-      return GUEST.indexOf(item)>-1;
-    });
     new Valine({
+        lang: 'zh-cn',
+        admin_email: 'shuiyunxc@sina.com', //博主邮箱
         el: '#comments' ,
         verify: false,
         notify: false,
