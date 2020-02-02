@@ -46,9 +46,9 @@
       <category term="lenovo" scheme="https://shuiyunxc.github.io/categories/OpenCore/lenovo/"/>
     
     
-      <category term="OpenCore" scheme="https://shuiyunxc.github.io/tags/OpenCore/"/>
-    
       <category term="EFI" scheme="https://shuiyunxc.github.io/tags/EFI/"/>
+    
+      <category term="OpenCore" scheme="https://shuiyunxc.github.io/tags/OpenCore/"/>
     
       <category term="lenovo" scheme="https://shuiyunxc.github.io/tags/lenovo/"/>
     
@@ -80,11 +80,11 @@
       <category term="EFI" scheme="https://shuiyunxc.github.io/categories/EFI/"/>
     
     
-      <category term="OpenCore" scheme="https://shuiyunxc.github.io/tags/OpenCore/"/>
+      <category term="EFI" scheme="https://shuiyunxc.github.io/tags/EFI/"/>
     
       <category term="ASRock" scheme="https://shuiyunxc.github.io/tags/ASRock/"/>
     
-      <category term="EFI" scheme="https://shuiyunxc.github.io/tags/EFI/"/>
+      <category term="OpenCore" scheme="https://shuiyunxc.github.io/tags/OpenCore/"/>
     
   </entry>
   
@@ -109,16 +109,16 @@
     
       <category term="Clover" scheme="https://shuiyunxc.github.io/categories/Clover/"/>
     
-      <category term="EFI" scheme="https://shuiyunxc.github.io/categories/EFI/"/>
-    
       <category term="技嘉" scheme="https://shuiyunxc.github.io/categories/Clover/%E6%8A%80%E5%98%89/"/>
     
+      <category term="EFI" scheme="https://shuiyunxc.github.io/categories/EFI/"/>
     
-      <category term="EFI" scheme="https://shuiyunxc.github.io/tags/EFI/"/>
     
       <category term="Clover" scheme="https://shuiyunxc.github.io/tags/Clover/"/>
     
       <category term="技嘉" scheme="https://shuiyunxc.github.io/tags/%E6%8A%80%E5%98%89/"/>
+    
+      <category term="EFI" scheme="https://shuiyunxc.github.io/tags/EFI/"/>
     
   </entry>
   
@@ -201,9 +201,9 @@
       <category term="Clover" scheme="https://shuiyunxc.github.io/categories/Clover/"/>
     
     
-      <category term="OpenCore" scheme="https://shuiyunxc.github.io/tags/OpenCore/"/>
-    
       <category term="Clover" scheme="https://shuiyunxc.github.io/tags/Clover/"/>
+    
+      <category term="OpenCore" scheme="https://shuiyunxc.github.io/tags/OpenCore/"/>
     
       <category term="其他" scheme="https://shuiyunxc.github.io/tags/%E5%85%B6%E4%BB%96/"/>
     

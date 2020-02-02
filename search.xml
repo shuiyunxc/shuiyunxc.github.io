@@ -24,9 +24,9 @@
       
         <tags>
             
-            <tag> OpenCore </tag>
-            
             <tag> EFI </tag>
+            
+            <tag> OpenCore </tag>
             
             <tag> lenovo </tag>
             
@@ -57,11 +57,11 @@
       
         <tags>
             
-            <tag> OpenCore </tag>
+            <tag> EFI </tag>
             
             <tag> ASRock </tag>
             
-            <tag> EFI </tag>
+            <tag> OpenCore </tag>
             
         </tags>
       
@@ -81,20 +81,20 @@
           
           <category> Clover </category>
           
-          <category> EFI </category>
-          
           <category> 技嘉 </category>
+          
+          <category> EFI </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> EFI </tag>
-            
             <tag> Clover </tag>
             
             <tag> 技嘉 </tag>
+            
+            <tag> EFI </tag>
             
         </tags>
       
@@ -177,9 +177,9 @@
       
         <tags>
             
-            <tag> OpenCore </tag>
-            
             <tag> Clover </tag>
+            
+            <tag> OpenCore </tag>
             
             <tag> 其他 </tag>
             
