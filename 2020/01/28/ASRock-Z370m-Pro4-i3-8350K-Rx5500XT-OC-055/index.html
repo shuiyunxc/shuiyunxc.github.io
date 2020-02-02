@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="EFI,ASRock,OpenCore," />
+  <meta name="keywords" content="ASRock,OpenCore,EFI," />
 
 
 
@@ -103,9 +103,9 @@
 <meta property="article:published_time" content="2020-01-28T05:25:25.000Z">
 <meta property="article:modified_time" content="2020-01-31T07:29:20.682Z">
 <meta property="article:author" content="独行秀才">
-<meta property="article:tag" content="EFI">
 <meta property="article:tag" content="ASRock">
 <meta property="article:tag" content="OpenCore">
+<meta property="article:tag" content="EFI">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://shuiyunxc.github.io/2020/01/28/ASRock-Z370m-Pro4-i3-8350K-Rx5500XT-OC-055/D902351D.png">
 
@@ -123,7 +123,7 @@
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
-      author: '独行秀才'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -249,7 +249,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+          <a href="/archives" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -380,19 +380,7 @@
             
 
             
-              <span class="post-meta-divider">|</span>
-            
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2020-01-31T15:29:20+08:00">
-                2020-01-31
-              </time>
             
           </span>
 
@@ -470,6 +458,9 @@
              </span>
           
 
+          <!--
+          
+          -->
           
           
           
@@ -647,11 +638,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/EFI/" rel="tag"><i class="fa fa-tag"></i> EFI</a>
-          
             <a href="/tags/ASRock/" rel="tag"><i class="fa fa-tag"></i> ASRock</a>
           
             <a href="/tags/OpenCore/" rel="tag"><i class="fa fa-tag"></i> OpenCore</a>
+          
+            <a href="/tags/EFI/" rel="tag"><i class="fa fa-tag"></i> EFI</a>
           
         </div>
       
@@ -1060,25 +1051,31 @@
 
 
   <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
+  <script src="/js/src/Valine.min.js"></script>
+
+  <!-- https://deserts.io/diy-a-comment-system/ -->
   <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item=>{
-      return GUEST.indexOf(item)>-1;
-    });
     new Valine({
+        lang: 'zh-cn',
+        admin_email: 'shuiyunxc@sina.com', //博主邮箱
         el: '#comments' ,
-        verify: false,
-        notify: false,
         appId: 'XsF3ooTFstaC4AdIkBGId7Xi-9Nh9j0Va',
         appKey: 'FMWOp5KGWSz1o0WwGecKgk2Y',
+        emoticon_url: 'https://cloud.panjunwen.com/alu',
+        emoticon_list: ["吐.png","喷血.png","狂汗.png","不说话.png","汗.png","坐等.png","献花.png","不高兴.png","中刀.png","害羞.png","皱眉.png","小眼睛.png","中指.png","尴尬.png","瞅你.png","想一想.png","中枪.png","得意.png","肿包.png","扇耳光.png","亲亲.png","惊喜.png","脸红.png","无所谓.png","便便.png","愤怒.png","蜡烛.png","献黄瓜.png","内伤.png","投降.png","观察.png","看不见.png","击掌.png","抠鼻.png","邪恶.png","看热闹.png","口水.png","抽烟.png","锁眉.png","装大款.png","吐舌.png","无奈.png","长草.png","赞一个.png","呲牙.png","无语.png","阴暗.png","不出所料.png","咽气.png","期待.png","高兴.png","吐血倒地.png","哭泣.png","欢呼.png","黑线.png","喜极而泣.png","喷水.png","深思.png","鼓掌.png","暗地观察.png"],
         placeholder: '欢迎大家畅所欲言',
-        avatar:'mm',
-        guest_info:guest,
-        pageSize:'10' || 10,
-    });
+  });
+
+  <!--点击邮件中的链接跳转至相应评论-->
+  if(window.location.hash){
+      var checkExist = setInterval(function() {
+         if ($(window.location.hash).length) {
+            $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+            clearInterval(checkExist);
+         }
+      }, 100);
+   }
+
   </script>
 
 
@@ -1407,6 +1404,73 @@
 
 
   
+  
+  <script>
+    
+    function addCount(Counter) {
+      var $visitors = $('.leancloud_visitors');
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+            
+              .done(function() {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.time + 1);
+              })
+            
+              .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+              })
+          } else {
+            
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1 }))
+                .done(function() {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function() {
+                  console.log('Failed to create');
+                });
+            
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'XsF3ooTFstaC4AdIkBGId7Xi-9Nh9j0Va')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: 'https://' + api_server + '/1.1' + url,
+              headers: {
+                'X-LC-Id': 'XsF3ooTFstaC4AdIkBGId7Xi-9Nh9j0Va',
+                'X-LC-Key': 'FMWOp5KGWSz1o0WwGecKgk2Y',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+          
+            const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
+            if (localhost.test(document.URL)) return;
+            addCount(Counter);
+          
+        });
+    });
+  </script>
+
+
 
   
 
@@ -1416,8 +1480,6 @@
   
 
   
-  
-
 
   
 
