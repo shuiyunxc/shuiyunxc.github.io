@@ -104,7 +104,7 @@
 <meta property="og:image" content="https://shuiyunxc.github.io/uploads/50F56396.png">
 <meta property="og:image" content="https://shuiyunxc.github.io/uploads/634356D6.png">
 <meta property="article:published_time" content="2020-01-27T16:00:39.000Z">
-<meta property="article:modified_time" content="2020-02-04T02:07:49.584Z">
+<meta property="article:modified_time" content="2020-02-05T07:12:42.647Z">
 <meta property="article:author" content="独行秀才">
 <meta property="article:tag" content="EFI">
 <meta property="article:tag" content="Clover">
@@ -393,8 +393,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-02-04T10:07:49+08:00">
-                2020-02-04
+              <time title="更新于" itemprop="dateModified" datetime="2020-02-05T15:12:42+08:00">
+                2020-02-05
               </time>
             
           </span>
@@ -478,6 +478,37 @@
           -->
           
           
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
           
 
           
@@ -622,7 +653,7 @@
   <p><span>本文标题:</span>GIGABYTE-Z390M-GAMING-8700-Rx560</a></p>
   <p><span>文章作者:</span>独行秀才</a></p>
   <p><span>发布时间:</span>2020年01月28日 - 00:00:39</p>
-  <p><span>最后更新:</span>2020年02月04日 - 10:07:49</p>
+  <p><span>最后更新:</span>2020年02月05日 - 15:12:42</p>
   <p><span>原始链接:</span><a href="/2020/01/28/GIGABYTE-Z390M-GAMING-8700-Rx560/" title="GIGABYTE-Z390M-GAMING-8700-Rx560">https://shuiyunxc.github.io/2020/01/28/GIGABYTE-Z390M-GAMING-8700-Rx560/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://shuiyunxc.github.io/2020/01/28/GIGABYTE-Z390M-GAMING-8700-Rx560/"  aria-label="复制成功！"></i></span>
   </p>
@@ -892,6 +923,15 @@
   </span>
   <span class="author" itemprop="copyrightHolder">独行秀才</span>
 
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">本站总字数&#58;</span>
+    
+    <span title="本站总字数"></span>
   
 </div>
 
@@ -1420,38 +1460,32 @@
   
   <script>
     
-    function showTime(Counter) {
-      var entries = [];
+    function addCount(Counter) {
       var $visitors = $('.leancloud_visitors');
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
 
-      $visitors.each(function() {
-        entries.push( $(this).attr('id').trim() );
-      });
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { '$in': entries } }) })
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
         .done(function({ results }) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.url;
-            var time = item.time;
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for (var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if (countSpan.text() == '') {
-              countSpan.text(0);
-            }
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+            
+              .done(function() {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.time + 1);
+              })
+            
+              .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+              })
+          } else {
+            
+              var $element = $(document.getElementById(url));
+              $element.find('.leancloud-visitors-count').text('Counter not initialized! More info at console err msg.');
+              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
+            
           }
         })
         .fail(function ({ responseJSON }) {
@@ -1476,9 +1510,9 @@
             });
           };
           
-            if ($('.post-title-link').length >= 1) {
-              showTime(Counter);
-            }
+            const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
+            if (localhost.test(document.URL)) return;
+            addCount(Counter);
           
         });
     });
