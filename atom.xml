@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://shuiyunxc.github.io/"/>
-  <updated>2020-02-07T03:51:13.609Z</updated>
+  <updated>2020-02-07T04:44:54.297Z</updated>
   <id>https://shuiyunxc.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>OpenCore-EFI-配置模版</title>
+    <title>OpenCore-EFI-配置模版(持续更新)</title>
     <link href="https://shuiyunxc.github.io/2020/02/07/OpenCore-EFI-%E9%85%8D%E7%BD%AE%E6%A8%A1%E7%89%88/index/"/>
     <id>https://shuiyunxc.github.io/2020/02/07/OpenCore-EFI-%E9%85%8D%E7%BD%AE%E6%A8%A1%E7%89%88/index/</id>
     <published>2020-02-06T17:06:31.000Z</published>
-    <updated>2020-02-07T03:51:13.609Z</updated>
+    <updated>2020-02-07T04:44:54.297Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>随着OpenCore日臻完善，将在以后会更多的用于黑苹果的安装。同时，在各位大佬的大力支持与推广，各种入门，进阶教程的推出，OpenCore已经从神界降临到人间。逐渐为普通黑苹果爱好者掌握和使用。OpenCore推出的初衷是简单易用，很多人对于里面的众多的参数的选择还是云里雾里，甚至一头懵逼。鉴于这个情况，独行秀才根据自己安装、使用OpenCore的一些配置，制作几类OpenCore-EFI模版，供广大黑苹果爱好者借鉴、使用。欢迎大家指正，共同完善，谢谢大家！<a id="more"></a></p><h2 id="分类（先简单分类，待以后完善）"><a href="#分类（先简单分类，待以后完善）" class="headerlink" title="分类（先简单分类，待以后完善）"></a>分类<code>（先简单分类，待以后完善）</code></h2><ul><li>台式机</li><li>笔记本</li></ul><h3 id="台式机"><a href="#台式机" class="headerlink" title="台式机"></a>台式机</h3><ul><li>老旧主板台式机（如H61、Z87、Z97等，3～5代U）<code>（待添加）</code></li><li>主流主板台式机（如B360、Z370、Z390等，6代以后的U）下载地址：<a href="https://gitee.com/shuiyunxc/OpenCore-EFI-Template" target="_blank" rel="noopener"><i class="fa fa-download" aria-hidden="true"></i></a></li></ul><h3 id="笔记本"><a href="#笔记本" class="headerlink" title="笔记本"></a>笔记本</h3><ul><li>老旧CPU笔记本（一般是指3代、4代、5代U）<code>（待添加）</code></li><li>主流CPU笔记本（一般是6代以后的U）<code>（待添加）</code></li></ul><h2 id="OpenCore-EFI模版（基于0-5-6）"><a href="#OpenCore-EFI模版（基于0-5-6）" class="headerlink" title="OpenCore-EFI模版（基于0.5.6）"></a>OpenCore-EFI模版（基于0.5.6）</h2><h3 id="模版内容"><a href="#模版内容" class="headerlink" title="模版内容"></a>模版内容</h3><h4 id="OpenCore-EFI基本结构："><a href="#OpenCore-EFI基本结构：" class="headerlink" title="OpenCore-EFI基本结构："></a>OpenCore-EFI基本结构：</h4><img src="/2020/02/07/OpenCore-EFI-配置模版/index/B2DF0C5.png" alt="B2DF0C5" style="zoom:50%;" /><h4 id="OpenCore-EFI文件夹内容"><a href="#OpenCore-EFI文件夹内容" class="headerlink" title="OpenCore-EFI文件夹内容"></a>OpenCore-EFI文件夹内容</h4><p>BOOT包含BOOTx64.efi-OpenCore引导核心</p><p>OC包含：</p><ul><li>ACPI包含适合自己的DSDT与SSDT</li><li>Drivers包含ApfsDriverLoader.efi、FwRuntimeServices.efi、VBoxHfs.efi等</li><li>Kexts包含适合自己的驱动</li><li>Tools包含modGRUBShell.efi、VerifyMsrE2.efi、CleanNvram.efi、Shell.efi等</li><li>config.plist-OpenCore配置文件</li><li>OpenCore.efi-OpenCore引导核心</li></ul><h3 id="反馈与完善"><a href="#反馈与完善" class="headerlink" title="反馈与完善"></a>反馈与完善</h3><p>大家在使用模版的过程中，如果遇到问题，请截图，并与我联系，大家一起共同来解决问题，，来完善、充实OpenCore-EFI-配置模版。</p><h3 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h3><p>2020-02-06：第一版</p><h3 id="附：从码云下载文件"><a href="#附：从码云下载文件" class="headerlink" title="附：从码云下载文件"></a>附：从码云下载文件</h3><p>下载到新建文件夹或已有文件夹，点击上面链接，进到码云，点击`发行版本，如下图：</p> <img src="/uploads/7C043E836B.jpg" alt="7C043E836B" style="zoom:50%;" /><p>选取你需要的版本下载</p><img src="/uploads/55F9523A.jpg" alt="55F9523A" style="zoom:50%;" /> ]]></content>
     
