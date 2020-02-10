@@ -4,6 +4,39 @@
   
     
     <entry>
+      <title>在OpenCore引导菜单添加Windows引导项</title>
+      <link href="/2020/02/10/Add-Windows-boot-item-in-OpenCore-boot-menu/index/"/>
+      <url>/2020/02/10/Add-Windows-boot-item-in-OpenCore-boot-menu/index/</url>
+      
+        <content type="html"><![CDATA[<h2 id=""><a href="#" class="headerlink" title=""></a><div class="note class\_name info"><p><font color= "#FF0000"  align="center">在OpenCore引导菜单添加Windows引导项</font> </p></div></h2><h3 id="OpenCore配置文件修改"><a href="#OpenCore配置文件修改" class="headerlink" title="OpenCore配置文件修改"></a>OpenCore配置文件修改</h3><p>在<code>Misc</code>-<code>HideSelf</code>去掉勾选</p><p>在<code>Misc</code>-<code>Entries</code>添加<code>\EFI\Microsoft\Boot\bootmgfw.efi</code>，如下图：<a id="more"></a></p><img src="/2020/02/10/Add-Windows-boot-item-in-OpenCore-boot-menu/index/0319D15DE1.jpg" alt="0319D15DE1" style="zoom:50%;" /><h3 id="添加Windows启动文件"><a href="#添加Windows启动文件" class="headerlink" title="添加Windows启动文件"></a>添加Windows启动文件</h3><p>在Windows的引导ESP里面提取引导文件夹包含<code>Microsoft\Boot\bootmgfw.efi</code>放入OpenCore的<code>EFI</code>文件夹里面。</p><p>完成后引导菜单如下图：</p><img src="/2020/02/10/Add-Windows-boot-item-in-OpenCore-boot-menu/index/8E876F436.jpg" alt="8E876F436" style="zoom:50%;" /><p>可以正常引导Windows！！</p><p>希望对大家有帮助！！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> OpenCore </category>
+          
+          <category> Windows </category>
+          
+          <category> 引导项 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> OpenCore </tag>
+            
+            <tag> Windows </tag>
+            
+            <tag> 引导项 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>OpenCore-EFI-配置模版(持续更新)</title>
       <link href="/2020/02/07/OpenCore-EFI-configuration-template/index/"/>
       <url>/2020/02/07/OpenCore-EFI-configuration-template/index/</url>
@@ -127,9 +160,9 @@
       
         <tags>
             
-            <tag> OpenCore </tag>
-            
             <tag> ASRock </tag>
+            
+            <tag> OpenCore </tag>
             
             <tag> EFI </tag>
             

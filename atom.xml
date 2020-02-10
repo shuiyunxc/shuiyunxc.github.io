@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://shuiyunxc.github.io/"/>
-  <updated>2020-02-07T04:44:54.297Z</updated>
+  <updated>2020-02-10T13:19:16.001Z</updated>
   <id>https://shuiyunxc.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在OpenCore引导菜单添加Windows引导项</title>
+    <link href="https://shuiyunxc.github.io/2020/02/10/Add-Windows-boot-item-in-OpenCore-boot-menu/index/"/>
+    <id>https://shuiyunxc.github.io/2020/02/10/Add-Windows-boot-item-in-OpenCore-boot-menu/index/</id>
+    <published>2020-02-10T11:59:28.000Z</published>
+    <updated>2020-02-10T13:19:16.001Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id=""><a href="#" class="headerlink" title=""></a><div class="note class\_name info"><p><font color= "#FF0000"  align="center">在OpenCore引导菜单添加Windows引导项</font> </p></div></h2><h3 id="OpenCore配置文件修改"><a href="#OpenCore配置文件修改" class="headerlink" title="OpenCore配置文件修改"></a>OpenCore配置文件修改</h3><p>在<code>Misc</code>-<code>HideSelf</code>去掉勾选</p><p>在<code>Misc</code>-<code>Entries</code>添加<code>\EFI\Microsoft\Boot\bootmgfw.efi</code>，如下图：<a id="more"></a></p><img src="/2020/02/10/Add-Windows-boot-item-in-OpenCore-boot-menu/index/0319D15DE1.jpg" alt="0319D15DE1" style="zoom:50%;" /><h3 id="添加Windows启动文件"><a href="#添加Windows启动文件" class="headerlink" title="添加Windows启动文件"></a>添加Windows启动文件</h3><p>在Windows的引导ESP里面提取引导文件夹包含<code>Microsoft\Boot\bootmgfw.efi</code>放入OpenCore的<code>EFI</code>文件夹里面。</p><p>完成后引导菜单如下图：</p><img src="/2020/02/10/Add-Windows-boot-item-in-OpenCore-boot-menu/index/8E876F436.jpg" alt="8E876F436" style="zoom:50%;" /><p>可以正常引导Windows！！</p><p>希望对大家有帮助！！</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;&lt;div class=&quot;note class\_name info&quot;&gt;&lt;p&gt;&lt;font color= &quot;#FF0000&quot;  align=&quot;center&quot;&gt;在OpenCore引导菜单添加Windows引导项&lt;/font&gt; &lt;/p&gt;&lt;/div&gt;&lt;/h2&gt;&lt;h3 id=&quot;OpenCore配置文件修改&quot;&gt;&lt;a href=&quot;#OpenCore配置文件修改&quot; class=&quot;headerlink&quot; title=&quot;OpenCore配置文件修改&quot;&gt;&lt;/a&gt;OpenCore配置文件修改&lt;/h3&gt;&lt;p&gt;在&lt;code&gt;Misc&lt;/code&gt;-&lt;code&gt;HideSelf&lt;/code&gt;去掉勾选&lt;/p&gt;
+&lt;p&gt;在&lt;code&gt;Misc&lt;/code&gt;-&lt;code&gt;Entries&lt;/code&gt;添加&lt;code&gt;\EFI\Microsoft\Boot\bootmgfw.efi&lt;/code&gt;，如下图：
+    
+    </summary>
+    
+    
+      <category term="OpenCore" scheme="https://shuiyunxc.github.io/categories/OpenCore/"/>
+    
+      <category term="Windows" scheme="https://shuiyunxc.github.io/categories/OpenCore/Windows/"/>
+    
+      <category term="引导项" scheme="https://shuiyunxc.github.io/categories/OpenCore/Windows/%E5%BC%95%E5%AF%BC%E9%A1%B9/"/>
+    
+    
+      <category term="OpenCore" scheme="https://shuiyunxc.github.io/tags/OpenCore/"/>
+    
+      <category term="Windows" scheme="https://shuiyunxc.github.io/tags/Windows/"/>
+    
+      <category term="引导项" scheme="https://shuiyunxc.github.io/tags/%E5%BC%95%E5%AF%BC%E9%A1%B9/"/>
+    
+  </entry>
   
   <entry>
     <title>OpenCore-EFI-配置模版(持续更新)</title>
@@ -156,9 +188,9 @@
       <category term="EFI" scheme="https://shuiyunxc.github.io/categories/EFI/"/>
     
     
-      <category term="OpenCore" scheme="https://shuiyunxc.github.io/tags/OpenCore/"/>
-    
       <category term="ASRock" scheme="https://shuiyunxc.github.io/tags/ASRock/"/>
+    
+      <category term="OpenCore" scheme="https://shuiyunxc.github.io/tags/OpenCore/"/>
     
       <category term="EFI" scheme="https://shuiyunxc.github.io/tags/EFI/"/>
     
