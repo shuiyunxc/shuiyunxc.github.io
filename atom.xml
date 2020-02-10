@@ -18,8 +18,8 @@
   
   <entry>
     <title>OpenCore-EFI-配置模版(持续更新)</title>
-    <link href="https://shuiyunxc.github.io/2020/02/07/OpenCore-EFI-%E9%85%8D%E7%BD%AE%E6%A8%A1%E7%89%88/index/"/>
-    <id>https://shuiyunxc.github.io/2020/02/07/OpenCore-EFI-%E9%85%8D%E7%BD%AE%E6%A8%A1%E7%89%88/index/</id>
+    <link href="https://shuiyunxc.github.io/2020/02/07/OpenCore-EFI-configuration-template/index/"/>
+    <id>https://shuiyunxc.github.io/2020/02/07/OpenCore-EFI-configuration-template/index/</id>
     <published>2020-02-06T17:06:31.000Z</published>
     <updated>2020-02-07T04:44:54.297Z</updated>
     
@@ -156,9 +156,9 @@
       <category term="EFI" scheme="https://shuiyunxc.github.io/categories/EFI/"/>
     
     
-      <category term="ASRock" scheme="https://shuiyunxc.github.io/tags/ASRock/"/>
-    
       <category term="OpenCore" scheme="https://shuiyunxc.github.io/tags/OpenCore/"/>
+    
+      <category term="ASRock" scheme="https://shuiyunxc.github.io/tags/ASRock/"/>
     
       <category term="EFI" scheme="https://shuiyunxc.github.io/tags/EFI/"/>
     
@@ -199,17 +199,17 @@
   </entry>
   
   <entry>
-    <title>OC初级配置视频第二版</title>
-    <link href="https://shuiyunxc.github.io/2020/01/27/OC%E5%88%9D%E7%BA%A7%E9%85%8D%E7%BD%AE%E8%A7%86%E9%A2%91%E7%AC%AC%E4%BA%8C%E7%89%88/"/>
-    <id>https://shuiyunxc.github.io/2020/01/27/OC%E5%88%9D%E7%BA%A7%E9%85%8D%E7%BD%AE%E8%A7%86%E9%A2%91%E7%AC%AC%E4%BA%8C%E7%89%88/</id>
+    <title>OpenCore配置视频第二版</title>
+    <link href="https://shuiyunxc.github.io/2020/01/27/OpenCore-configuration-video-version-2/"/>
+    <id>https://shuiyunxc.github.io/2020/01/27/OpenCore-configuration-video-version-2/</id>
     <published>2020-01-27T06:23:16.000Z</published>
-    <updated>2020-02-05T15:48:22.185Z</updated>
+    <updated>2020-02-10T13:54:07.371Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="OC初级配置视频第二版之一-二-三-四"><a href="#OC初级配置视频第二版之一-二-三-四" class="headerlink" title="OC初级配置视频第二版之一/二/三/四"></a>OC初级配置视频第二版之一/二/三/四</h1><p>​    应很多网友的建议，将OC初级配置视频第一版整段24分钟的视频，分为若干个5分钟左右的短视频，这样，看起来不累，同时增补了第一版缺失的部分，以及055新增的内容。将OC初级配置视频第一版精简、截断、优化为四个部分，以下是<strong>OC初级配置视频第二版</strong>第一、二、三、四部分：</p><h2 id="OC初级配置视频第二版之一："><a href="#OC初级配置视频第二版之一：" class="headerlink" title="OC初级配置视频第二版之一："></a>OC初级配置视频第二版之一：</h2><p>视频地址：<a href="https://www.bilibili.com/video/av85050197/" target="_blank" rel="noopener">https://www.bilibili.com/video/av85050197/</a> <a id="more"></a></p><iframe height=498 width=510src="https://player.bilibili.com/player.html?aid=85050197"frameborder=0 allowfullscreen></iframe> <h2 id="OC初级配置视频第二版之二："><a href="#OC初级配置视频第二版之二：" class="headerlink" title="OC初级配置视频第二版之二："></a>OC初级配置视频第二版之二：</h2><p>视频地址：<a href="https://www.bilibili.com/video/av85050197/" target="_blank" rel="noopener">https://www.bilibili.com/video/av85050197/?p=2</a></p><h2 id="OC初级配置视频第二版之三："><a href="#OC初级配置视频第二版之三：" class="headerlink" title="OC初级配置视频第二版之三："></a>OC初级配置视频第二版之三：</h2><p>视频地址：<a href="https://www.bilibili.com/video/av85050197/" target="_blank" rel="noopener">https://www.bilibili.com/video/av85050197/?p=3</a></p><h2 id="OC初级配置视频第二版之四："><a href="#OC初级配置视频第二版之四：" class="headerlink" title="OC初级配置视频第二版之四："></a>OC初级配置视频第二版之四：</h2><p>视频地址：<a href="https://www.bilibili.com/video/av85050197/" target="_blank" rel="noopener">https://www.bilibili.com/video/av85050197/?p=4</a></p><h2 id="从Clover配置转换为OpenCore配置短视频："><a href="#从Clover配置转换为OpenCore配置短视频：" class="headerlink" title="从Clover配置转换为OpenCore配置短视频："></a>从Clover配置转换为OpenCore配置短视频：</h2><p>视频地址：<a href="https://www.bilibili.com/video/av85050197/" target="_blank" rel="noopener">https://www.bilibili.com/video/av84961867/</a></p><h2 id="Clover环境下导出的设备PCI转换为OpenCore可用的设备PCI"><a href="#Clover环境下导出的设备PCI转换为OpenCore可用的设备PCI" class="headerlink" title="Clover环境下导出的设备PCI转换为OpenCore可用的设备PCI"></a>Clover环境下导出的设备PCI转换为OpenCore可用的设备PCI</h2><p>视频地址：<a href="https://www.bilibili.com/video/av85050197/" target="_blank" rel="noopener">https://www.bilibili.com/video/av84962156/</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="OpenCore配置视频第二版之一-二-三-四"><a href="#OpenCore配置视频第二版之一-二-三-四" class="headerlink" title="OpenCore配置视频第二版之一/二/三/四"></a>OpenCore配置视频第二版之一/二/三/四</h1><p>​    应很多网友的建议，将OC初级配置视频第一版整段24分钟的视频，分为若干个5分钟左右的短视频，这样，看起来不累，同时增补了第一版缺失的部分，以及055新增的内容。将OC初级配置视频第一版精简、截断、优化为四个部分，以下是<strong>OC初级配置视频第二版</strong>第一、二、三、四部分：</p><h2 id="OC初级配置视频第二版之一："><a href="#OC初级配置视频第二版之一：" class="headerlink" title="OC初级配置视频第二版之一："></a>OC初级配置视频第二版之一：</h2><p>视频地址：<a href="https://www.bilibili.com/video/av85050197/" target="_blank" rel="noopener">https://www.bilibili.com/video/av85050197/</a> <a id="more"></a></p><iframe height=498 width=510src="https://player.bilibili.com/player.html?aid=85050197"frameborder=0 allowfullscreen></iframe> <h2 id="OC初级配置视频第二版之二："><a href="#OC初级配置视频第二版之二：" class="headerlink" title="OC初级配置视频第二版之二："></a>OC初级配置视频第二版之二：</h2><p>视频地址：<a href="https://www.bilibili.com/video/av85050197/" target="_blank" rel="noopener">https://www.bilibili.com/video/av85050197/?p=2</a></p><h2 id="OC初级配置视频第二版之三："><a href="#OC初级配置视频第二版之三：" class="headerlink" title="OC初级配置视频第二版之三："></a>OC初级配置视频第二版之三：</h2><p>视频地址：<a href="https://www.bilibili.com/video/av85050197/" target="_blank" rel="noopener">https://www.bilibili.com/video/av85050197/?p=3</a></p><h2 id="OC初级配置视频第二版之四："><a href="#OC初级配置视频第二版之四：" class="headerlink" title="OC初级配置视频第二版之四："></a>OC初级配置视频第二版之四：</h2><p>视频地址：<a href="https://www.bilibili.com/video/av85050197/" target="_blank" rel="noopener">https://www.bilibili.com/video/av85050197/?p=4</a></p><h2 id="从Clover配置转换为OpenCore配置短视频："><a href="#从Clover配置转换为OpenCore配置短视频：" class="headerlink" title="从Clover配置转换为OpenCore配置短视频："></a>从Clover配置转换为OpenCore配置短视频：</h2><p>视频地址：<a href="https://www.bilibili.com/video/av85050197/" target="_blank" rel="noopener">https://www.bilibili.com/video/av84961867/</a></p><h2 id="Clover环境下导出的设备PCI转换为OpenCore可用的设备PCI"><a href="#Clover环境下导出的设备PCI转换为OpenCore可用的设备PCI" class="headerlink" title="Clover环境下导出的设备PCI转换为OpenCore可用的设备PCI"></a>Clover环境下导出的设备PCI转换为OpenCore可用的设备PCI</h2><p>视频地址：<a href="https://www.bilibili.com/video/av85050197/" target="_blank" rel="noopener">https://www.bilibili.com/video/av84962156/</a></p>]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;OC初级配置视频第二版之一-二-三-四&quot;&gt;&lt;a href=&quot;#OC初级配置视频第二版之一-二-三-四&quot; class=&quot;headerlink&quot; title=&quot;OC初级配置视频第二版之一/二/三/四&quot;&gt;&lt;/a&gt;OC初级配置视频第二版之一/二/三/四&lt;/h1&gt;&lt;p&gt;​    应很多网友的建议，将OC初级配置视频第一版整段24分钟的视频，分为若干个5分钟左右的短视频，这样，看起来不累，同时增补了第一版缺失的部分，以及055新增的内容。将OC初级配置视频第一版精简、截断、优化为四个部分，以下是&lt;strong&gt;OC初级配置视频第二版&lt;/strong&gt;第一、二、三、四部分：&lt;/p&gt;
+      &lt;h1 id=&quot;OpenCore配置视频第二版之一-二-三-四&quot;&gt;&lt;a href=&quot;#OpenCore配置视频第二版之一-二-三-四&quot; class=&quot;headerlink&quot; title=&quot;OpenCore配置视频第二版之一/二/三/四&quot;&gt;&lt;/a&gt;OpenCore配置视频第二版之一/二/三/四&lt;/h1&gt;&lt;p&gt;​    应很多网友的建议，将OC初级配置视频第一版整段24分钟的视频，分为若干个5分钟左右的短视频，这样，看起来不累，同时增补了第一版缺失的部分，以及055新增的内容。将OC初级配置视频第一版精简、截断、优化为四个部分，以下是&lt;strong&gt;OC初级配置视频第二版&lt;/strong&gt;第一、二、三、四部分：&lt;/p&gt;
 &lt;h2 id=&quot;OC初级配置视频第二版之一：&quot;&gt;&lt;a href=&quot;#OC初级配置视频第二版之一：&quot; class=&quot;headerlink&quot; title=&quot;OC初级配置视频第二版之一：&quot;&gt;&lt;/a&gt;OC初级配置视频第二版之一：&lt;/h2&gt;&lt;p&gt;视频地址：&lt;a href=&quot;https://www.bilibili.com/video/av85050197/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.bilibili.com/video/av85050197/&lt;/a&gt;
     
     </summary>
@@ -226,8 +226,8 @@
   
   <entry>
     <title>OpenCore初级配置视频文字说明</title>
-    <link href="https://shuiyunxc.github.io/2020/01/22/OpenCore%E5%88%9D%E7%BA%A7%E9%85%8D%E7%BD%AE%E8%A7%86%E9%A2%91%E6%96%87%E5%AD%97%E8%AF%B4%E6%98%8E/"/>
-    <id>https://shuiyunxc.github.io/2020/01/22/OpenCore%E5%88%9D%E7%BA%A7%E9%85%8D%E7%BD%AE%E8%A7%86%E9%A2%91%E6%96%87%E5%AD%97%E8%AF%B4%E6%98%8E/</id>
+    <link href="https://shuiyunxc.github.io/2020/01/22/OpenCore-configuration-video-text-description/"/>
+    <id>https://shuiyunxc.github.io/2020/01/22/OpenCore-configuration-video-text-description/</id>
     <published>2020-01-22T15:12:36.000Z</published>
     <updated>2020-02-05T13:26:14.768Z</updated>
     
