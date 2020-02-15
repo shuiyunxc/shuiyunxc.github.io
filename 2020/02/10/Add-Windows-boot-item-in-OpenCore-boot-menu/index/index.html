@@ -88,16 +88,16 @@
 
 
 
-<meta name="description" content="在OpenCore引导菜单添加Windows引导项 OpenCore配置文件修改在Misc-HideSelf去掉勾选 在Misc-Entries添加\EFI\Microsoft\Boot\bootmgfw.efi，如下图：">
+<meta name="description" content="在OpenCore引导菜单添加Windows引导项 OpenCore配置文件修改在Misc-HideSelf去掉勾选 在Misc-BlessOverride添加\EFI\Microsoft\Boot\bootmgfw.efi，如下图：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在OpenCore引导菜单添加Windows引导项">
 <meta property="og:url" content="https://shuiyunxc.github.io/2020/02/10/Add-Windows-boot-item-in-OpenCore-boot-menu/index/index.html">
 <meta property="og:site_name" content="独行秀才的老窝">
-<meta property="og:description" content="在OpenCore引导菜单添加Windows引导项 OpenCore配置文件修改在Misc-HideSelf去掉勾选 在Misc-Entries添加\EFI\Microsoft\Boot\bootmgfw.efi，如下图：">
+<meta property="og:description" content="在OpenCore引导菜单添加Windows引导项 OpenCore配置文件修改在Misc-HideSelf去掉勾选 在Misc-BlessOverride添加\EFI\Microsoft\Boot\bootmgfw.efi，如下图：">
 <meta property="og:image" content="https://shuiyunxc.github.io/2020/02/10/Add-Windows-boot-item-in-OpenCore-boot-menu/index/0319D15DE1.jpg">
 <meta property="og:image" content="https://shuiyunxc.github.io/2020/02/10/Add-Windows-boot-item-in-OpenCore-boot-menu/index/8E876F436.jpg">
 <meta property="article:published_time" content="2020-02-10T11:59:28.000Z">
-<meta property="article:modified_time" content="2020-02-10T13:19:16.001Z">
+<meta property="article:modified_time" content="2020-02-10T16:21:08.000Z">
 <meta property="article:author" content="独行秀才">
 <meta property="article:tag" content="OpenCore">
 <meta property="article:tag" content="Windows">
@@ -386,8 +386,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-02-10T21:19:16+08:00">
-                2020-02-10
+              <time title="更新于" itemprop="dateModified" datetime="2020-02-11T00:21:08+08:00">
+                2020-02-11
               </time>
             
           </span>
@@ -520,7 +520,7 @@
 
       
         <h2 id=""><a href="#" class="headerlink" title=""></a><div class="note class\_name info"><p><font color= "#FF0000"  align="center">在OpenCore引导菜单添加Windows引导项</font> </p></div></h2><h3 id="OpenCore配置文件修改"><a href="#OpenCore配置文件修改" class="headerlink" title="OpenCore配置文件修改"></a>OpenCore配置文件修改</h3><p>在<code>Misc</code>-<code>HideSelf</code>去掉勾选</p>
-<p>在<code>Misc</code>-<code>Entries</code>添加<code>\EFI\Microsoft\Boot\bootmgfw.efi</code>，如下图：<a id="more"></a></p>
+<p>在<code>Misc</code>-<code>BlessOverride</code>添加<code>\EFI\Microsoft\Boot\bootmgfw.efi</code>，如下图：<a id="more"></a></p>
 <img src="/2020/02/10/Add-Windows-boot-item-in-OpenCore-boot-menu/index/0319D15DE1.jpg" alt="0319D15DE1" style="zoom:50%;" />
 
 <h3 id="添加Windows启动文件"><a href="#添加Windows启动文件" class="headerlink" title="添加Windows启动文件"></a>添加Windows启动文件</h3><p>在Windows的引导ESP里面提取引导文件夹包含<code>Microsoft\Boot\bootmgfw.efi</code>放入OpenCore的<code>EFI</code>文件夹里面。</p>
@@ -594,7 +594,7 @@
   <p><span>本文标题:</span>在OpenCore引导菜单添加Windows引导项</a></p>
   <p><span>文章作者:</span>独行秀才</a></p>
   <p><span>发布时间:</span>2020年02月10日 - 19:59:28</p>
-  <p><span>最后更新:</span>2020年02月10日 - 21:19:16</p>
+  <p><span>最后更新:</span>2020年02月11日 - 00:21:08</p>
   <p><span>原始链接:</span><a href="/2020/02/10/Add-Windows-boot-item-in-OpenCore-boot-menu/index/" title="在OpenCore引导菜单添加Windows引导项">https://shuiyunxc.github.io/2020/02/10/Add-Windows-boot-item-in-OpenCore-boot-menu/index/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://shuiyunxc.github.io/2020/02/10/Add-Windows-boot-item-in-OpenCore-boot-menu/index/"  aria-label="复制成功！"></i></span>
   </p>
@@ -649,6 +649,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/02/13/Unlock/index/" rel="prev" title="OpenCore引导Mac下解除CFG LOCK锁定">
+                OpenCore引导Mac下解除CFG LOCK锁定 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -732,7 +736,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -743,7 +747,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -754,7 +758,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -868,7 +872,7 @@
     
       <span class="post-meta-item-text">本站总字数&#58;</span>
     
-    <span title="本站总字数">2.5k</span>
+    <span title="本站总字数">3.3k</span>
   
 </div>
 
