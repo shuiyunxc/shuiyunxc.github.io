@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>OpenCore-0.5.6-02-03版与02-16版差异</title>
+      <link href="/2020/02/17/difference/index/"/>
+      <url>/2020/02/17/difference/index/</url>
+      
+        <content type="html"><![CDATA[<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><h3 id="由于我身在武汉，切身体会到疫情的严重性。衷心的感谢奋战在抗疫第一线的医生、护士、自愿者和所有为此付出的人士。为武汉加油！为湖北加油！为中国加油！为中国人民加油！引用老人家的一句词：待到山花烂漫时，她在丛中笑。祝福所有人！！"><a href="#由于我身在武汉，切身体会到疫情的严重性。衷心的感谢奋战在抗疫第一线的医生、护士、自愿者和所有为此付出的人士。为武汉加油！为湖北加油！为中国加油！为中国人民加油！引用老人家的一句词：待到山花烂漫时，她在丛中笑。祝福所有人！！" class="headerlink" title="由于我身在武汉，切身体会到疫情的严重性。衷心的感谢奋战在抗疫第一线的医生、护士、自愿者和所有为此付出的人士。为武汉加油！为湖北加油！为中国加油！为中国人民加油！引用老人家的一句词：待到山花烂漫时，她在丛中笑。祝福所有人！！"></a><font color= "#FF0000" >由于我身在武汉，切身体会到疫情的严重性。衷心的感谢奋战在抗疫第一线的医生、护士、自愿者和所有为此付出的人士。为武汉加油！为湖北加油！为中国加油！为中国人民加油！引用老人家的一句词：待到山花烂漫时，她在丛中笑。祝福所有人！！</font></h3><h2 id=""><a href="#" class="headerlink" title=""></a><div class="note class\_name info"><p>OpenCore-0.5.6-02-03版与02-16版差异</p></div></h2><h3 id="Booter增加项："><a href="#Booter增加项：" class="headerlink" title="Booter增加项："></a>Booter增加项：</h3><h4 id="1-Booter-Quirks-ProtectSecureBoot保护安全启动"><a href="#1-Booter-Quirks-ProtectSecureBoot保护安全启动" class="headerlink" title="1.Booter-Quirks-ProtectSecureBoot保护安全启动"></a>1.Booter-Quirks-ProtectSecureBoot保护安全启动</h4><p>保护UEFI安全引导变量写入参数时不被干扰而引起冲突</p><p>默认不勾选-<code>false</code><a id="more"></a></p><h3 id="Misc删除项："><a href="#Misc删除项：" class="headerlink" title="Misc删除项："></a>Misc删除项：</h3><h4 id="1-Misc-boot-BuiltinTextRenderer-移到UEFI-Output并改名为TextRenderer▼"><a href="#1-Misc-boot-BuiltinTextRenderer-移到UEFI-Output并改名为TextRenderer▼" class="headerlink" title="1.Misc-boot-BuiltinTextRenderer-移到UEFI-Output并改名为TextRenderer▼　"></a><font color= "#FF0000" >1.Misc-boot-BuiltinTextRenderer-移到UEFI-Output并改名为TextRenderer▼</font>　</h4><h4 id="2-Misc-boot-ConsoleBehaviourOs"><a href="#2-Misc-boot-ConsoleBehaviourOs" class="headerlink" title="2.Misc-boot-ConsoleBehaviourOs"></a><del>2.Misc-boot-ConsoleBehaviourOs</del></h4><h4 id="3-Misc-boot-ConsoleBehaviourUi"><a href="#3-Misc-boot-ConsoleBehaviourUi" class="headerlink" title="3.Misc-boot-ConsoleBehaviourUi"></a><del>3.Misc-boot-ConsoleBehaviourUi</del></h4><h4 id="4-Misc-boot-ConsoleMode-移到UEFI-Output▼"><a href="#4-Misc-boot-ConsoleMode-移到UEFI-Output▼" class="headerlink" title="4.Misc-boot-ConsoleMode-移到UEFI-Output▼"></a><font color= "#FF0000" >4.Misc-boot-ConsoleMode-移到UEFI-Output▼</font></h4><h4 id="5-Misc-boot-Resolution-移到UEFI-Output▼"><a href="#5-Misc-boot-Resolution-移到UEFI-Output▼" class="headerlink" title="5.Misc-boot-Resolution-移到UEFI-Output▼"></a><font color= "#FF0000" >5.Misc-boot-Resolution-移到UEFI-Output▼</font></h4><h4 id="6-Misc-boot-UsePicker"><a href="#6-Misc-boot-UsePicker" class="headerlink" title="6.Misc-boot-UsePicker"></a><del>6.Misc-boot-UsePicker</del></h4><h4 id="7-Misc-Security-RequireSignature"><a href="#7-Misc-Security-RequireSignature" class="headerlink" title="7.Misc-Security-RequireSignature"></a><del>7.Misc-Security-RequireSignature</del></h4><h4 id="8-Misc-Security-RequireVault"><a href="#8-Misc-Security-RequireVault" class="headerlink" title="8.Misc-Security-RequireVault"></a><del>8.Misc-Security-RequireVault</del></h4><h3 id="Misc增加项："><a href="#Misc增加项：" class="headerlink" title="Misc增加项："></a>Misc增加项：</h3><h4 id="1-Misc-boot-PickerMode启动界面选择（为将来引入UI做准备）"><a href="#1-Misc-boot-PickerMode启动界面选择（为将来引入UI做准备）" class="headerlink" title="1.Misc-boot-PickerMode启动界面选择（为将来引入UI做准备）"></a>1.Misc-boot-PickerMode启动界面选择（为将来引入UI做准备）</h4><ol><li><font color= "#FF0000" >Builtin模式：使用简单的纯文本用户界面</font>，目前选择<code>Builtin</code></li><li>External模式：如果外部模式引导可用则启用，否则使用纯文本用户界面。</li><li>Apple模式：如果苹果引导可用则启用，否则使用纯文本用户界面。</li></ol><p>在External模式下，完全禁用OpenCore对所有引导管理，除非有强制策略。</p><p>在Apple模式下，可以绕过强制策略。</p><p>要实现External模式，用户自定义界面，使用OcSupportPkg、 OcBootManagementLib库，外部图形接     </p><p>口参考在ExternalUi测试驱动程序中提供。</p><p>OpenCore-Builtin模式引导包含在引导过程中支持几个快捷键，类似于苹果的BDS，目前有以下几个：</p><p>Default-默认选项：使用OpenCore内置引导</p><p> ShowPicker项：勾选此项，则此项变为默认项，强制picker显示，可以在引导时使用Option。</p><p>ResetNvram项：在勾选AllowNvramReset的情况下，可以使用CMD+OPT+P+R组合键来实现清除（Reset） NVRAM，当然还可以用另一种方式来清除NVRAM。</p><p>BootApple项：执行此选项会找到的苹果操作系统的第一个引导，除非苹果已经创建了默认选择的操作系统。按住X键可选择此选项。</p><p>BootAppleRecovery项：此选项执行引导到Apple操作系统恢复模式。要么是与默认选择的操作系统相关的操作系统，要么是在默认选择的操作系统不是由苹果公司创建或没有恢复的情况下首先找到的操作系统。按住CMD+R组合键可选择此选项。</p><h4 id="2-Misc-boot-PickerAttributes使用纯文本用户界面时背景与前景颜色选择"><a href="#2-Misc-boot-PickerAttributes使用纯文本用户界面时背景与前景颜色选择" class="headerlink" title="2.Misc-boot-PickerAttributes使用纯文本用户界面时背景与前景颜色选择"></a>2.Misc-boot-PickerAttributes使用纯文本用户界面时背景与前景颜色选择</h4><p>根据UEFI规范，用参数的选择，来调节背景与前景的颜色，默认值为<code>0</code></p><h4 id="3-Misc-boot-HideAuxiliary隐藏引导是磁盘一些辅助选项"><a href="#3-Misc-boot-HideAuxiliary隐藏引导是磁盘一些辅助选项" class="headerlink" title="3.Misc-boot-HideAuxiliary隐藏引导是磁盘一些辅助选项"></a>3.Misc-boot-HideAuxiliary隐藏引导是磁盘一些辅助选项</h4><p><code>勾选（true）</code>时，隐藏如：recovery、Clean NVRAM等，按ESC，0，空格后，显示而不隐藏。</p><h4 id="4-Misc-Entries-0-Auxiliary"><a href="#4-Misc-Entries-0-Auxiliary" class="headerlink" title="4.Misc-Entries-0-Auxiliary"></a>4.Misc-Entries-0-Auxiliary</h4><p>当Misc-boot-HideAuxiliary<code>勾选（true）</code>时，该项目显示在磁盘选择界面里。</p><h4 id="5-Misc-Security-Vault加密磁盘"><a href="#5-Misc-Security-Vault加密磁盘" class="headerlink" title="5.Misc-Security-Vault加密磁盘"></a>5.Misc-Security-Vault加密磁盘</h4><p><font color= "#FF0000" >填写Optional时，为不选择磁盘加密，一般情况下都填写<code>Optional</code></font></p><p>填写Basic时，启用基本的系统文件加密验证</p><p>填写Secure时，启用完整全面的系统文件加密验证</p><h4 id="6-Misc-Tools-0-N-Auxiliary"><a href="#6-Misc-Tools-0-N-Auxiliary" class="headerlink" title="6.Misc-Tools-0-N-Auxiliary"></a>6.Misc-Tools-0-N-Auxiliary</h4><p>当Misc-boot-HideAuxiliary<code>勾选（true）</code>时，该项目显示在磁盘选择界面里。</p><h3 id="NVRAM增加项"><a href="#NVRAM增加项" class="headerlink" title="NVRAM增加项"></a>NVRAM增加项</h3><h4 id="1-NVRAM-Add-4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14-DefaultBackgroundColor"><a href="#1-NVRAM-Add-4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14-DefaultBackgroundColor" class="headerlink" title="1.NVRAM-Add-4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14-DefaultBackgroundColor"></a>1.NVRAM-Add-4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14-DefaultBackgroundColor</h4><p>增加此项，数字为<code>00000000</code> </p><h4 id="2-NVRAM-Block-4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14-DefaultBackgroundColor"><a href="#2-NVRAM-Block-4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14-DefaultBackgroundColor" class="headerlink" title="2.NVRAM-Block-4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14-DefaultBackgroundColor"></a>2.NVRAM-Block-4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14-DefaultBackgroundColor</h4><p>增加此项</p><h3 id="UEFI删除项"><a href="#UEFI删除项" class="headerlink" title="UEFI删除项"></a>UEFI删除项</h3><h4 id="1-UEFI-Protocols-ConsoleControl"><a href="#1-UEFI-Protocols-ConsoleControl" class="headerlink" title="1.UEFI-Protocols-ConsoleControl"></a><del>1.UEFI-Protocols-ConsoleControl</del></h4><h4 id="2-UEFI-Quirks-AvoidHighAlloc"><a href="#2-UEFI-Quirks-AvoidHighAlloc" class="headerlink" title="2.UEFI-Quirks-AvoidHighAlloc"></a><del>2.UEFI-Quirks-AvoidHighAlloc</del></h4><h4 id="3-UEFI-Quirks-ClearScreenOnModeSwitch-移到UEFI-Output★"><a href="#3-UEFI-Quirks-ClearScreenOnModeSwitch-移到UEFI-Output★" class="headerlink" title="3.UEFI-Quirks-ClearScreenOnModeSwitch-移到UEFI-Output★"></a><font color= "#FF0000" >3.UEFI-Quirks-ClearScreenOnModeSwitch-移到UEFI-Output★</font></h4><h4 id="4-UEFI-Quirks-IgnoreTextInGraphics-移到UEFI-Output★"><a href="#4-UEFI-Quirks-IgnoreTextInGraphics-移到UEFI-Output★" class="headerlink" title="4.UEFI-Quirks-IgnoreTextInGraphics-移到UEFI-Output★"></a><font color= "#FF0000" >4.UEFI-Quirks-IgnoreTextInGraphics-移到UEFI-Output★</font></h4><h4 id="5-UEFI-Quirks-ProvideConsoleGop-移到UEFI-Output★"><a href="#5-UEFI-Quirks-ProvideConsoleGop-移到UEFI-Output★" class="headerlink" title="5.UEFI-Quirks-ProvideConsoleGop-移到UEFI-Output★"></a><font color= "#FF0000" >5.UEFI-Quirks-ProvideConsoleGop-移到UEFI-Output★</font></h4><h4 id="6-UEFI-Quirks-ReconnectOnResChange-移到UEFI-Output★"><a href="#6-UEFI-Quirks-ReconnectOnResChange-移到UEFI-Output★" class="headerlink" title="6.UEFI-Quirks-ReconnectOnResChange-移到UEFI-Output★"></a><font color= "#FF0000" >6.UEFI-Quirks-ReconnectOnResChange-移到UEFI-Output★</font></h4><h4 id="7-UEFI-Quirks-ReplaceTabWithSpace-移到UEFI-Output★"><a href="#7-UEFI-Quirks-ReplaceTabWithSpace-移到UEFI-Output★" class="headerlink" title="7.UEFI-Quirks-ReplaceTabWithSpace-移到UEFI-Output★"></a><font color= "#FF0000" >7.UEFI-Quirks-ReplaceTabWithSpace-移到UEFI-Output★</font></h4><h4 id="8-UEFI-Quirks-SanitiseClearScreen-移到UEFI-Output★"><a href="#8-UEFI-Quirks-SanitiseClearScreen-移到UEFI-Output★" class="headerlink" title="8.UEFI-Quirks-SanitiseClearScreen-移到UEFI-Output★"></a><font color= "#FF0000" >8.UEFI-Quirks-SanitiseClearScreen-移到UEFI-Output★</font></h4><h3 id="UEFI增加项"><a href="#UEFI增加项" class="headerlink" title="UEFI增加项"></a>UEFI增加项</h3><h4 id="1-UEFI-Output新增此大项，"><a href="#1-UEFI-Output新增此大项，" class="headerlink" title="1.UEFI-Output新增此大项，"></a>1.UEFI-Output新增此大项，</h4><p>包含10个小项，将Misc-boot中的3项、UEFI-Quirks中的6项移到此项下，并新增一项</p><ul><li><font color= "#FF0000" >ClearScreenOnModeSwitch，由UEFI-Quirks项下转移★</font>一般不勾选(<code>false</code>)</li><li><font color= "#FF0000" >ConsoleMode，由Misc-boot项下转移▼</font>一般选<code>Max</code></li><li>DirectGopRendering，新增项，一般不勾选(<code>false</code>)，除非勾选后，对显示效果有利（对某些显卡有效）</li><li><font color= "#FF0000" >IgnoreTextInGraphics，由UEFI-Quirks项下转移★</font>一般是<code>勾选（true）</code></li><li><font color= "#FF0000" >ProvideConsoleGop，由UEFI-Quirks项下转移★</font>一般是<code>勾选（true）</code></li><li><font color= "#FF0000" >ReconnectOnResChange，由UEFI-Quirks项下转移★</font>一般不勾选(<code>false</code>)如果遇到开机直到登陆界面之前一直黑屏，那么勾选试试</li><li><font color= "#FF0000" >ReplaceTabWithSpace，由UEFI-Quirks项下转移★</font>一般是<code>勾选（true）</code></li><li><font color= "#FF0000" >Resolution，由Misc-boot项下转移▼</font>开机分辨率，自行选择，如2560x1440；3840x2160等等。</li><li><font color= "#FF0000" >SanitiseClearScreen，由UEFI-Quirks项下转移★</font>自行选择(<code>false或true</code>)</li><li><font color= "#FF0000" >TextRenderer，由Misc-boot-BuiltinTextRenderer转移并改名。▼</font>一般选SystemGraphics或SystemText</li></ul><p>​            有4个选项：</p><ol><li><p>BuiltinGraphics — 切换到图形模式并使用内置渲染器和自定义控制台控件。选择此项需要勾选ProvideConsoleGop，并将Resolution设置为Max</p></li><li><p>SystemGraphics — 切换到图形模式并使用带有自定义控制台控件的系统渲染器。</p></li><li><p>SystemText — 切换到文本模式并使用带有自定义控制台控件。</p></li><li><p>SystemGeneric — 使用系统控制台中的控件。</p><p>一般情况下首选设置是<code>SystemGraphics</code>或<code>SystemText</code>。启用<code>providecosolegop（true）</code>、将<code>Resolution</code>设置为<code>Max</code>、启用<code>ReplaceTabWithSpace（true）</code>，几乎所有配置和机型都好用。特别说明下，机型设置为<code>MacPro5,1</code>只能选择<code>BuiltinGraphics</code></p></li></ol><h3 id="根据以上情况，在OOC未更新的情况下，暂时用文本界面软件如Xcode、PlistEdit-Pro等编辑config，"><a href="#根据以上情况，在OOC未更新的情况下，暂时用文本界面软件如Xcode、PlistEdit-Pro等编辑config，" class="headerlink" title="根据以上情况，在OOC未更新的情况下，暂时用文本界面软件如Xcode、PlistEdit Pro等编辑config，"></a>根据以上情况，在OOC未更新的情况下，暂时用文本界面软件如Xcode、PlistEdit Pro等编辑config，</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> OpenCore </category>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> OpenCore </tag>
+            
+            <tag> 教程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>OpenCore引导Mac下解除CFG LOCK锁定</title>
       <link href="/2020/02/13/Unlock/index/"/>
       <url>/2020/02/13/Unlock/index/</url>
@@ -30,11 +59,11 @@
             
             <tag> 台式机 </tag>
             
+            <tag> 笔记本 </tag>
+            
             <tag> OpenCore,EFI </tag>
             
             <tag> CFG Lock </tag>
-            
-            <tag> 笔记本 </tag>
             
         </tags>
       
@@ -165,9 +194,9 @@
           
           <category> Lenovo </category>
           
-          <category> 笔记本 </category>
-          
           <category> 联想 </category>
+          
+          <category> 笔记本 </category>
           
           <category> 集显 </category>
           
@@ -180,9 +209,9 @@
             
             <tag> EFI </tag>
             
-            <tag> 笔记本 </tag>
-            
             <tag> Lenovo </tag>
+            
+            <tag> 笔记本 </tag>
             
             <tag> 集显 </tag>
             

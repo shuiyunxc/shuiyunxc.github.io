@@ -823,6 +823,236 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://shuiyunxc.github.io/2020/02/17/difference/index/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="独行秀才">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="独行秀才的老窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/02/17/difference/index/" itemprop="url">OpenCore-0.5.6-02-03版与02-16版差异</a></h2>
+        
+
+        <div class="post-meta">
+        
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-17T00:50:33+08:00">
+                2020-02-17
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2020-02-17T01:29:39+08:00">
+                2020-02-17
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OpenCore/" itemprop="url" rel="index">
+                    <span itemprop="name">OpenCore</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OpenCore/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index">
+                    <span itemprop="name">教程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-commenting-o"></i>
+                </span>
+                <a href="/2020/02/17/difference/index/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/02/17/difference/index/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2020/02/17/difference/index/" class="leancloud_visitors" data-flag-title="OpenCore-0.5.6-02-03版与02-16版差异">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-folder-open"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          <!--
+          
+          -->
+          
+          
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.3k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  5
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><h3 id="由于我身在武汉，切身体会到疫情的严重性。衷心的感谢奋战在抗疫第一线的医生、护士、自愿者和所有为此付出的人士。为武汉加油！为湖北加油！为中国加油！为中国人民加油！引用老人家的一句词：待到山花烂漫时，她在丛中笑。祝福所有人！！"><a href="#由于我身在武汉，切身体会到疫情的严重性。衷心的感谢奋战在抗疫第一线的医生、护士、自愿者和所有为此付出的人士。为武汉加油！为湖北加油！为中国加油！为中国人民加油！引用老人家的一句词：待到山花烂漫时，她在丛中笑。祝福所有人！！" class="headerlink" title="由于我身在武汉，切身体会到疫情的严重性。衷心的感谢奋战在抗疫第一线的医生、护士、自愿者和所有为此付出的人士。为武汉加油！为湖北加油！为中国加油！为中国人民加油！引用老人家的一句词：待到山花烂漫时，她在丛中笑。祝福所有人！！"></a><font color= "#FF0000" >由于我身在武汉，切身体会到疫情的严重性。衷心的感谢奋战在抗疫第一线的医生、护士、自愿者和所有为此付出的人士。为武汉加油！为湖北加油！为中国加油！为中国人民加油！引用老人家的一句词：待到山花烂漫时，她在丛中笑。祝福所有人！！</font></h3><h2 id=""><a href="#" class="headerlink" title=""></a><div class="note class\_name info"><p>OpenCore-0.5.6-02-03版与02-16版差异</p></div></h2><h3 id="Booter增加项："><a href="#Booter增加项：" class="headerlink" title="Booter增加项："></a>Booter增加项：</h3><h4 id="1-Booter-Quirks-ProtectSecureBoot保护安全启动"><a href="#1-Booter-Quirks-ProtectSecureBoot保护安全启动" class="headerlink" title="1.Booter-Quirks-ProtectSecureBoot保护安全启动"></a>1.Booter-Quirks-ProtectSecureBoot保护安全启动</h4><p>保护UEFI安全引导变量写入参数时不被干扰而引起冲突</p>
+<p>默认不勾选-<code>false</code>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/02/17/difference/index/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+<div>
+  
+</div>
+    
+
+    
+<div>
+    
+</div>
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://shuiyunxc.github.io/2020/02/13/Unlock/index/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1314,235 +1544,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://shuiyunxc.github.io/2020/02/07/OpenCore-EFI-configuration-template/index/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="独行秀才">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="独行秀才的老窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/02/07/OpenCore-EFI-configuration-template/index/" itemprop="url">OpenCore-EFI-配置模版(持续更新)</a></h2>
-        
-
-        <div class="post-meta">
-        
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-07T01:06:31+08:00">
-                2020-02-07
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2020-02-12T19:04:31+08:00">
-                2020-02-12
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OpenCore/" itemprop="url" rel="index">
-                    <span itemprop="name">OpenCore</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OpenCore/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index">
-                    <span itemprop="name">教程</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-commenting-o"></i>
-                </span>
-                <a href="/2020/02/07/OpenCore-EFI-configuration-template/index/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/02/07/OpenCore-EFI-configuration-template/index/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2020/02/07/OpenCore-EFI-configuration-template/index/" class="leancloud_visitors" data-flag-title="OpenCore-EFI-配置模版(持续更新)">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-folder-open"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          <!--
-          
-          -->
-          
-          
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  510
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h4 id=""><a href="#" class="headerlink" title=""></a><div class="note class\_name info"><p><font color= "#FF0000"  align="center">2020-02-12更新，添加NUC8模版</font> </p></div></h4><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>随着OpenCore日臻完善，将在以后会更多的用于黑苹果的安装。同时，在各位大佬的大力支持与推广，各种入门，进阶教程的推出，OpenCore已经从神界降临到人间。逐渐为普通黑苹果爱好者掌握和使用。OpenCore推出的初衷是简单易用，很多人对于里面的众多的参数的选择还是云里雾里，甚至一头懵逼。鉴于这个情况，独行秀才根据自己安装、使用OpenCore的一些配置，制作几类OpenCore-EFI模版，供广大黑苹果爱好者借鉴、使用。欢迎大家指正，共同完善，谢谢大家！
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/02/07/OpenCore-EFI-configuration-template/index/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-<div>
-  
-</div>
-    
-
-    
-<div>
-    
-</div>
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1596,7 +1597,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1716,7 +1717,7 @@
     
       <span class="post-meta-item-text">本站总字数&#58;</span>
     
-    <span title="本站总字数">3.3k</span>
+    <span title="本站总字数">4.7k</span>
   
 </div>
 

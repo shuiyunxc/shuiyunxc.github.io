@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="EFI,台式机,Clover,技嘉,Z390,Rx560," />
+  <meta name="keywords" content="OpenCore,教程," />
 
 
 
@@ -88,32 +88,18 @@
 
 
 
-<meta name="description" content="技嘉 GIGABYTE-Z390M-GAMING-8700-Rx560-EFI 配置主板：技嘉 Z390M GAMING CPU：i 7 8700 显卡：Rx560 无线网卡：BCM94360">
+<meta name="description" content="写在前面由于我身在武汉，切身体会到疫情的严重性。衷心的感谢奋战在抗疫第一线的医生、护士、自愿者和所有为此付出的人士。为武汉加油！为湖北加油！为中国加油！为中国人民加油！引用老人家的一句词：待到山花烂漫时，她在丛中笑。祝福所有人！！OpenCore-0.5.6-02-03版与02-16版差异Booter增加项：1.Booter-Quirks-ProtectSecureBoot保护安全启动保护UEFI">
 <meta property="og:type" content="article">
-<meta property="og:title" content="GIGABYTE-Z390M-GAMING-8700-Rx560">
-<meta property="og:url" content="https://shuiyunxc.github.io/2020/01/28/GIGABYTE-Z390M-GAMING-8700-Rx560/index.html">
+<meta property="og:title" content="OpenCore-0.5.6-02-03版与02-16版差异">
+<meta property="og:url" content="https://shuiyunxc.github.io/2020/02/17/difference/index/index.html">
 <meta property="og:site_name" content="独行秀才的老窝">
-<meta property="og:description" content="技嘉 GIGABYTE-Z390M-GAMING-8700-Rx560-EFI 配置主板：技嘉 Z390M GAMING CPU：i 7 8700 显卡：Rx560 无线网卡：BCM94360">
-<meta property="og:image" content="https://shuiyunxc.github.io/uploads/GIGABYTE-Z390M-GAMING-i7-8700-Rx560/7A6B794F.png">
-<meta property="og:image" content="https://shuiyunxc.github.io/uploads/GIGABYTE-Z390M-GAMING-i7-8700-Rx560/2A51AFDE.png">
-<meta property="og:image" content="https://shuiyunxc.github.io/uploads/GIGABYTE-Z390M-GAMING-i7-8700-Rx560/C410B582.png">
-<meta property="og:image" content="https://shuiyunxc.github.io/uploads/GIGABYTE-Z390M-GAMING-i7-8700-Rx560/6299D378.png">
-<meta property="og:image" content="https://shuiyunxc.github.io/uploads/GIGABYTE-Z390M-GAMING-i7-8700-Rx560/42720F95.png">
-<meta property="og:image" content="https://shuiyunxc.github.io/uploads/GIGABYTE-Z390M-GAMING-i7-8700-Rx560/WangWang20200127223509.jpg">
-<meta property="og:image" content="https://shuiyunxc.github.io/uploads/GIGABYTE-Z390M-GAMING-i7-8700-Rx560/WangWang202.jpg">
-<meta property="og:image" content="https://shuiyunxc.github.io/uploads/7C043E836B.jpg">
-<meta property="og:image" content="https://shuiyunxc.github.io/uploads/55F9523A.jpg">
-<meta property="article:published_time" content="2020-01-27T16:00:39.000Z">
-<meta property="article:modified_time" content="2020-02-07T16:16:33.000Z">
+<meta property="og:description" content="写在前面由于我身在武汉，切身体会到疫情的严重性。衷心的感谢奋战在抗疫第一线的医生、护士、自愿者和所有为此付出的人士。为武汉加油！为湖北加油！为中国加油！为中国人民加油！引用老人家的一句词：待到山花烂漫时，她在丛中笑。祝福所有人！！OpenCore-0.5.6-02-03版与02-16版差异Booter增加项：1.Booter-Quirks-ProtectSecureBoot保护安全启动保护UEFI">
+<meta property="article:published_time" content="2020-02-16T16:50:33.000Z">
+<meta property="article:modified_time" content="2020-02-16T17:29:39.000Z">
 <meta property="article:author" content="独行秀才">
-<meta property="article:tag" content="EFI">
-<meta property="article:tag" content="台式机">
-<meta property="article:tag" content="Clover">
-<meta property="article:tag" content="技嘉">
-<meta property="article:tag" content="Z390">
-<meta property="article:tag" content="Rx560">
+<meta property="article:tag" content="OpenCore">
+<meta property="article:tag" content="教程">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://shuiyunxc.github.io/uploads/GIGABYTE-Z390M-GAMING-i7-8700-Rx560/7A6B794F.png">
 
 
 
@@ -143,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="https://shuiyunxc.github.io/2020/01/28/GIGABYTE-Z390M-GAMING-8700-Rx560/"/>
+  <link rel="canonical" href="https://shuiyunxc.github.io/2020/02/17/difference/index/"/>
 
 
 
 
 
-  <title>GIGABYTE-Z390M-GAMING-8700-Rx560 | 独行秀才的老窝</title>
+  <title>OpenCore-0.5.6-02-03版与02-16版差异 | 独行秀才的老窝</title>
   
 
 
@@ -350,7 +336,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://shuiyunxc.github.io/2020/01/28/GIGABYTE-Z390M-GAMING-8700-Rx560/">
+    <link itemprop="mainEntityOfPage" href="https://shuiyunxc.github.io/2020/02/17/difference/index/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="独行秀才">
@@ -367,7 +353,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">GIGABYTE-Z390M-GAMING-8700-Rx560</h2>
+          <h2 class="post-title" itemprop="name headline">OpenCore-0.5.6-02-03版与02-16版差异</h2>
         
 
         <div class="post-meta">
@@ -380,8 +366,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-28T00:00:39+08:00">
-                2020-01-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-17T00:50:33+08:00">
+                2020-02-17
               </time>
             
 
@@ -396,8 +382,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-02-08T00:16:33+08:00">
-                2020-02-08
+              <time title="更新于" itemprop="dateModified" datetime="2020-02-17T01:29:39+08:00">
+                2020-02-17
               </time>
             
           </span>
@@ -415,8 +401,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Clover/" itemprop="url" rel="index">
-                    <span itemprop="name">Clover</span>
+                  <a href="/categories/OpenCore/" itemprop="url" rel="index">
+                    <span itemprop="name">OpenCore</span>
                   </a>
                 </span>
 
@@ -426,52 +412,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Clover/%E6%8A%80%E5%98%89/" itemprop="url" rel="index">
-                    <span itemprop="name">技嘉</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Clover/EFI/" itemprop="url" rel="index">
-                    <span itemprop="name">EFI</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%8F%B0%E5%BC%8F%E6%9C%BA/" itemprop="url" rel="index">
-                    <span itemprop="name">台式机</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Z390/" itemprop="url" rel="index">
-                    <span itemprop="name">Z390</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Rx560/" itemprop="url" rel="index">
-                    <span itemprop="name">Rx560</span>
+                  <a href="/categories/OpenCore/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index">
+                    <span itemprop="name">教程</span>
                   </a>
                 </span>
 
@@ -488,8 +430,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-commenting-o"></i>
                 </span>
-                <a href="/2020/01/28/GIGABYTE-Z390M-GAMING-8700-Rx560/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/01/28/GIGABYTE-Z390M-GAMING-8700-Rx560/" itemprop="commentCount"></span>
+                <a href="/2020/02/17/difference/index/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/02/17/difference/index/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -497,7 +439,7 @@
 
           
           
-             <span id="/2020/01/28/GIGABYTE-Z390M-GAMING-8700-Rx560/" class="leancloud_visitors" data-flag-title="GIGABYTE-Z390M-GAMING-8700-Rx560">
+             <span id="/2020/02/17/difference/index/" class="leancloud_visitors" data-flag-title="OpenCore-0.5.6-02-03版与02-16版差异">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-folder-open"></i>
@@ -525,7 +467,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  146
+                  1.3k
                 </span>
               
 
@@ -541,7 +483,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  5
                 </span>
               
             </div>
@@ -562,68 +504,58 @@
       
 
       
-        <h2 id=""><a href="#" class="headerlink" title=""></a><div class="note class\_name info"><p><font color= "#FF0000"  align="center">技嘉 GIGABYTE-Z390M-GAMING-8700-Rx560-EFI</font> </p></div></h2><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>主板：技嘉 Z390M GAMING</p>
-<p>CPU：i 7 8700</p>
-<p>显卡：Rx560</p>
-<p>无线网卡：BCM94360</p>
-<a id="more"></a>
-
-<h2 id="BIOS设置"><a href="#BIOS设置" class="headerlink" title="BIOS设置"></a>BIOS设置</h2><p>BIOS版本：F8</p>
-<p>Advanced CPU Settings → VT-d → Disabled</p>
-<p>Extreme Memory Profile (X.M.P.) → Profile 1</p>
-<p>Internal Graphics → Enabled</p>
-<p>Above 4G Decoding → Enabled</p>
-<p>XHCI Handoff → Enabled</p>
-<p>Windows 8/10 Features → Other OS</p>
-<p>CSM Support → Disabled</p>
-<h2 id="完成截图"><a href="#完成截图" class="headerlink" title="完成截图"></a>完成截图</h2><table>
-<thead>
-<tr>
-<th align="center">项目</th>
-<th align="center">图片</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">关于本机</td>
-<td align="center"><img src="/uploads/GIGABYTE-Z390M-GAMING-i7-8700-Rx560/7A6B794F.png" alt="7A6B794F" style="zoom:50%;" /></td>
-</tr>
-<tr>
-<td align="center">显卡</td>
-<td align="center"><img src="/uploads/GIGABYTE-Z390M-GAMING-i7-8700-Rx560/2A51AFDE.png" alt="2A51AFDE" style="zoom:40%;" /></td>
-</tr>
-<tr>
-<td align="center">蓝牙</td>
-<td align="center"><img src="/uploads/GIGABYTE-Z390M-GAMING-i7-8700-Rx560/C410B582.png" alt="C410B582" style="zoom:40%;" /></td>
-</tr>
-<tr>
-<td align="center">USB</td>
-<td align="center"><img src="/uploads/GIGABYTE-Z390M-GAMING-i7-8700-Rx560/6299D378.png" alt="6299D378" style="zoom:40%;" /></td>
-</tr>
-<tr>
-<td align="center">无线</td>
-<td align="center"><img src="/uploads/GIGABYTE-Z390M-GAMING-i7-8700-Rx560/42720F95.png" alt="42720F95" style="zoom:40%;" /></td>
-</tr>
-<tr>
-<td align="center">无线网卡</td>
-<td align="center"><img src="/uploads/GIGABYTE-Z390M-GAMING-i7-8700-Rx560/WangWang20200127223509.jpg" alt="WangWang20200127223509" style="zoom:50%;" /></td>
-</tr>
-<tr>
-<td align="center">随航</td>
-<td align="center"><img src="/uploads/GIGABYTE-Z390M-GAMING-i7-8700-Rx560/WangWang202.jpg" alt="WangWang202" style="zoom:20%;" /></td>
-</tr>
-</tbody></table>
-<h2 id="EFI"><a href="#EFI" class="headerlink" title="EFI"></a>EFI</h2><p>EFI下载：<a href="https://gitee.com/shuiyunxc/GIGABYTE-Z390M-GAMING-i7-8700-Rx560" target="_blank" rel="noopener"><i class="fa fa-download" aria-hidden="true"></i></a></p>
-<h3 id="附：从码云下载文件"><a href="#附：从码云下载文件" class="headerlink" title="附：从码云下载文件"></a>附：从码云下载文件</h3><p>下载到新建文件夹或已有文件夹，点击上面链接，进到码云，点击`发行版本，如下图：</p>
- <img src="/uploads/7C043E836B.jpg" alt="7C043E836B" style="zoom:50%;" />
-
-<p>选取你需要的版本下载</p>
-<img src="/uploads/55F9523A.jpg" alt="55F9523A" style="zoom:50%;" /> 
-
-
-
-
-
-
+        <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><h3 id="由于我身在武汉，切身体会到疫情的严重性。衷心的感谢奋战在抗疫第一线的医生、护士、自愿者和所有为此付出的人士。为武汉加油！为湖北加油！为中国加油！为中国人民加油！引用老人家的一句词：待到山花烂漫时，她在丛中笑。祝福所有人！！"><a href="#由于我身在武汉，切身体会到疫情的严重性。衷心的感谢奋战在抗疫第一线的医生、护士、自愿者和所有为此付出的人士。为武汉加油！为湖北加油！为中国加油！为中国人民加油！引用老人家的一句词：待到山花烂漫时，她在丛中笑。祝福所有人！！" class="headerlink" title="由于我身在武汉，切身体会到疫情的严重性。衷心的感谢奋战在抗疫第一线的医生、护士、自愿者和所有为此付出的人士。为武汉加油！为湖北加油！为中国加油！为中国人民加油！引用老人家的一句词：待到山花烂漫时，她在丛中笑。祝福所有人！！"></a><font color= "#FF0000" >由于我身在武汉，切身体会到疫情的严重性。衷心的感谢奋战在抗疫第一线的医生、护士、自愿者和所有为此付出的人士。为武汉加油！为湖北加油！为中国加油！为中国人民加油！引用老人家的一句词：待到山花烂漫时，她在丛中笑。祝福所有人！！</font></h3><h2 id=""><a href="#" class="headerlink" title=""></a><div class="note class\_name info"><p>OpenCore-0.5.6-02-03版与02-16版差异</p></div></h2><h3 id="Booter增加项："><a href="#Booter增加项：" class="headerlink" title="Booter增加项："></a>Booter增加项：</h3><h4 id="1-Booter-Quirks-ProtectSecureBoot保护安全启动"><a href="#1-Booter-Quirks-ProtectSecureBoot保护安全启动" class="headerlink" title="1.Booter-Quirks-ProtectSecureBoot保护安全启动"></a>1.Booter-Quirks-ProtectSecureBoot保护安全启动</h4><p>保护UEFI安全引导变量写入参数时不被干扰而引起冲突</p>
+<p>默认不勾选-<code>false</code><a id="more"></a></p>
+<h3 id="Misc删除项："><a href="#Misc删除项：" class="headerlink" title="Misc删除项："></a>Misc删除项：</h3><h4 id="1-Misc-boot-BuiltinTextRenderer-移到UEFI-Output并改名为TextRenderer▼"><a href="#1-Misc-boot-BuiltinTextRenderer-移到UEFI-Output并改名为TextRenderer▼" class="headerlink" title="1.Misc-boot-BuiltinTextRenderer-移到UEFI-Output并改名为TextRenderer▼　"></a><font color= "#FF0000" >1.Misc-boot-BuiltinTextRenderer-移到UEFI-Output并改名为TextRenderer▼</font>　</h4><h4 id="2-Misc-boot-ConsoleBehaviourOs"><a href="#2-Misc-boot-ConsoleBehaviourOs" class="headerlink" title="2.Misc-boot-ConsoleBehaviourOs"></a><del>2.Misc-boot-ConsoleBehaviourOs</del></h4><h4 id="3-Misc-boot-ConsoleBehaviourUi"><a href="#3-Misc-boot-ConsoleBehaviourUi" class="headerlink" title="3.Misc-boot-ConsoleBehaviourUi"></a><del>3.Misc-boot-ConsoleBehaviourUi</del></h4><h4 id="4-Misc-boot-ConsoleMode-移到UEFI-Output▼"><a href="#4-Misc-boot-ConsoleMode-移到UEFI-Output▼" class="headerlink" title="4.Misc-boot-ConsoleMode-移到UEFI-Output▼"></a><font color= "#FF0000" >4.Misc-boot-ConsoleMode-移到UEFI-Output▼</font></h4><h4 id="5-Misc-boot-Resolution-移到UEFI-Output▼"><a href="#5-Misc-boot-Resolution-移到UEFI-Output▼" class="headerlink" title="5.Misc-boot-Resolution-移到UEFI-Output▼"></a><font color= "#FF0000" >5.Misc-boot-Resolution-移到UEFI-Output▼</font></h4><h4 id="6-Misc-boot-UsePicker"><a href="#6-Misc-boot-UsePicker" class="headerlink" title="6.Misc-boot-UsePicker"></a><del>6.Misc-boot-UsePicker</del></h4><h4 id="7-Misc-Security-RequireSignature"><a href="#7-Misc-Security-RequireSignature" class="headerlink" title="7.Misc-Security-RequireSignature"></a><del>7.Misc-Security-RequireSignature</del></h4><h4 id="8-Misc-Security-RequireVault"><a href="#8-Misc-Security-RequireVault" class="headerlink" title="8.Misc-Security-RequireVault"></a><del>8.Misc-Security-RequireVault</del></h4><h3 id="Misc增加项："><a href="#Misc增加项：" class="headerlink" title="Misc增加项："></a>Misc增加项：</h3><h4 id="1-Misc-boot-PickerMode启动界面选择（为将来引入UI做准备）"><a href="#1-Misc-boot-PickerMode启动界面选择（为将来引入UI做准备）" class="headerlink" title="1.Misc-boot-PickerMode启动界面选择（为将来引入UI做准备）"></a>1.Misc-boot-PickerMode启动界面选择（为将来引入UI做准备）</h4><ol>
+<li><font color= "#FF0000" >Builtin模式：使用简单的纯文本用户界面</font>，目前选择<code>Builtin</code></li>
+<li>External模式：如果外部模式引导可用则启用，否则使用纯文本用户界面。</li>
+<li>Apple模式：如果苹果引导可用则启用，否则使用纯文本用户界面。</li>
+</ol>
+<p>在External模式下，完全禁用OpenCore对所有引导管理，除非有强制策略。</p>
+<p>在Apple模式下，可以绕过强制策略。</p>
+<p>要实现External模式，用户自定义界面，使用OcSupportPkg、 OcBootManagementLib库，外部图形接     </p>
+<p>口参考在ExternalUi测试驱动程序中提供。</p>
+<p>OpenCore-Builtin模式引导包含在引导过程中支持几个快捷键，类似于苹果的BDS，目前有以下几个：</p>
+<p>Default-默认选项：使用OpenCore内置引导</p>
+<p> ShowPicker项：勾选此项，则此项变为默认项，强制picker显示，可以在引导时使用Option。</p>
+<p>ResetNvram项：在勾选AllowNvramReset的情况下，可以使用CMD+OPT+P+R组合键来实现清除（Reset） NVRAM，当然还可以用另一种方式来清除NVRAM。</p>
+<p>BootApple项：执行此选项会找到的苹果操作系统的第一个引导，除非苹果已经创建了默认选择的操作系统。按住X键可选择此选项。</p>
+<p>BootAppleRecovery项：此选项执行引导到Apple操作系统恢复模式。要么是与默认选择的操作系统相关的操作系统，要么是在默认选择的操作系统不是由苹果公司创建或没有恢复的情况下首先找到的操作系统。按住CMD+R组合键可选择此选项。</p>
+<h4 id="2-Misc-boot-PickerAttributes使用纯文本用户界面时背景与前景颜色选择"><a href="#2-Misc-boot-PickerAttributes使用纯文本用户界面时背景与前景颜色选择" class="headerlink" title="2.Misc-boot-PickerAttributes使用纯文本用户界面时背景与前景颜色选择"></a>2.Misc-boot-PickerAttributes使用纯文本用户界面时背景与前景颜色选择</h4><p>根据UEFI规范，用参数的选择，来调节背景与前景的颜色，默认值为<code>0</code></p>
+<h4 id="3-Misc-boot-HideAuxiliary隐藏引导是磁盘一些辅助选项"><a href="#3-Misc-boot-HideAuxiliary隐藏引导是磁盘一些辅助选项" class="headerlink" title="3.Misc-boot-HideAuxiliary隐藏引导是磁盘一些辅助选项"></a>3.Misc-boot-HideAuxiliary隐藏引导是磁盘一些辅助选项</h4><p><code>勾选（true）</code>时，隐藏如：recovery、Clean NVRAM等，按ESC，0，空格后，显示而不隐藏。</p>
+<h4 id="4-Misc-Entries-0-Auxiliary"><a href="#4-Misc-Entries-0-Auxiliary" class="headerlink" title="4.Misc-Entries-0-Auxiliary"></a>4.Misc-Entries-0-Auxiliary</h4><p>当Misc-boot-HideAuxiliary<code>勾选（true）</code>时，该项目显示在磁盘选择界面里。</p>
+<h4 id="5-Misc-Security-Vault加密磁盘"><a href="#5-Misc-Security-Vault加密磁盘" class="headerlink" title="5.Misc-Security-Vault加密磁盘"></a>5.Misc-Security-Vault加密磁盘</h4><p><font color= "#FF0000" >填写Optional时，为不选择磁盘加密，一般情况下都填写<code>Optional</code></font></p>
+<p>填写Basic时，启用基本的系统文件加密验证</p>
+<p>填写Secure时，启用完整全面的系统文件加密验证</p>
+<h4 id="6-Misc-Tools-0-N-Auxiliary"><a href="#6-Misc-Tools-0-N-Auxiliary" class="headerlink" title="6.Misc-Tools-0-N-Auxiliary"></a>6.Misc-Tools-0-N-Auxiliary</h4><p>当Misc-boot-HideAuxiliary<code>勾选（true）</code>时，该项目显示在磁盘选择界面里。</p>
+<h3 id="NVRAM增加项"><a href="#NVRAM增加项" class="headerlink" title="NVRAM增加项"></a>NVRAM增加项</h3><h4 id="1-NVRAM-Add-4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14-DefaultBackgroundColor"><a href="#1-NVRAM-Add-4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14-DefaultBackgroundColor" class="headerlink" title="1.NVRAM-Add-4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14-DefaultBackgroundColor"></a>1.NVRAM-Add-4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14-DefaultBackgroundColor</h4><p>增加此项，数字为<code>00000000</code> </p>
+<h4 id="2-NVRAM-Block-4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14-DefaultBackgroundColor"><a href="#2-NVRAM-Block-4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14-DefaultBackgroundColor" class="headerlink" title="2.NVRAM-Block-4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14-DefaultBackgroundColor"></a>2.NVRAM-Block-4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14-DefaultBackgroundColor</h4><p>增加此项</p>
+<h3 id="UEFI删除项"><a href="#UEFI删除项" class="headerlink" title="UEFI删除项"></a>UEFI删除项</h3><h4 id="1-UEFI-Protocols-ConsoleControl"><a href="#1-UEFI-Protocols-ConsoleControl" class="headerlink" title="1.UEFI-Protocols-ConsoleControl"></a><del>1.UEFI-Protocols-ConsoleControl</del></h4><h4 id="2-UEFI-Quirks-AvoidHighAlloc"><a href="#2-UEFI-Quirks-AvoidHighAlloc" class="headerlink" title="2.UEFI-Quirks-AvoidHighAlloc"></a><del>2.UEFI-Quirks-AvoidHighAlloc</del></h4><h4 id="3-UEFI-Quirks-ClearScreenOnModeSwitch-移到UEFI-Output★"><a href="#3-UEFI-Quirks-ClearScreenOnModeSwitch-移到UEFI-Output★" class="headerlink" title="3.UEFI-Quirks-ClearScreenOnModeSwitch-移到UEFI-Output★"></a><font color= "#FF0000" >3.UEFI-Quirks-ClearScreenOnModeSwitch-移到UEFI-Output★</font></h4><h4 id="4-UEFI-Quirks-IgnoreTextInGraphics-移到UEFI-Output★"><a href="#4-UEFI-Quirks-IgnoreTextInGraphics-移到UEFI-Output★" class="headerlink" title="4.UEFI-Quirks-IgnoreTextInGraphics-移到UEFI-Output★"></a><font color= "#FF0000" >4.UEFI-Quirks-IgnoreTextInGraphics-移到UEFI-Output★</font></h4><h4 id="5-UEFI-Quirks-ProvideConsoleGop-移到UEFI-Output★"><a href="#5-UEFI-Quirks-ProvideConsoleGop-移到UEFI-Output★" class="headerlink" title="5.UEFI-Quirks-ProvideConsoleGop-移到UEFI-Output★"></a><font color= "#FF0000" >5.UEFI-Quirks-ProvideConsoleGop-移到UEFI-Output★</font></h4><h4 id="6-UEFI-Quirks-ReconnectOnResChange-移到UEFI-Output★"><a href="#6-UEFI-Quirks-ReconnectOnResChange-移到UEFI-Output★" class="headerlink" title="6.UEFI-Quirks-ReconnectOnResChange-移到UEFI-Output★"></a><font color= "#FF0000" >6.UEFI-Quirks-ReconnectOnResChange-移到UEFI-Output★</font></h4><h4 id="7-UEFI-Quirks-ReplaceTabWithSpace-移到UEFI-Output★"><a href="#7-UEFI-Quirks-ReplaceTabWithSpace-移到UEFI-Output★" class="headerlink" title="7.UEFI-Quirks-ReplaceTabWithSpace-移到UEFI-Output★"></a><font color= "#FF0000" >7.UEFI-Quirks-ReplaceTabWithSpace-移到UEFI-Output★</font></h4><h4 id="8-UEFI-Quirks-SanitiseClearScreen-移到UEFI-Output★"><a href="#8-UEFI-Quirks-SanitiseClearScreen-移到UEFI-Output★" class="headerlink" title="8.UEFI-Quirks-SanitiseClearScreen-移到UEFI-Output★"></a><font color= "#FF0000" >8.UEFI-Quirks-SanitiseClearScreen-移到UEFI-Output★</font></h4><h3 id="UEFI增加项"><a href="#UEFI增加项" class="headerlink" title="UEFI增加项"></a>UEFI增加项</h3><h4 id="1-UEFI-Output新增此大项，"><a href="#1-UEFI-Output新增此大项，" class="headerlink" title="1.UEFI-Output新增此大项，"></a>1.UEFI-Output新增此大项，</h4><p>包含10个小项，将Misc-boot中的3项、UEFI-Quirks中的6项移到此项下，并新增一项</p>
+<ul>
+<li><font color= "#FF0000" >ClearScreenOnModeSwitch，由UEFI-Quirks项下转移★</font>一般不勾选(<code>false</code>)</li>
+<li><font color= "#FF0000" >ConsoleMode，由Misc-boot项下转移▼</font>一般选<code>Max</code></li>
+<li>DirectGopRendering，新增项，一般不勾选(<code>false</code>)，除非勾选后，对显示效果有利（对某些显卡有效）</li>
+<li><font color= "#FF0000" >IgnoreTextInGraphics，由UEFI-Quirks项下转移★</font>一般是<code>勾选（true）</code></li>
+<li><font color= "#FF0000" >ProvideConsoleGop，由UEFI-Quirks项下转移★</font>一般是<code>勾选（true）</code></li>
+<li><font color= "#FF0000" >ReconnectOnResChange，由UEFI-Quirks项下转移★</font>一般不勾选(<code>false</code>)如果遇到开机直到登陆界面之前一直黑屏，那么勾选试试</li>
+<li><font color= "#FF0000" >ReplaceTabWithSpace，由UEFI-Quirks项下转移★</font>一般是<code>勾选（true）</code></li>
+<li><font color= "#FF0000" >Resolution，由Misc-boot项下转移▼</font>开机分辨率，自行选择，如2560x1440；3840x2160等等。</li>
+<li><font color= "#FF0000" >SanitiseClearScreen，由UEFI-Quirks项下转移★</font>自行选择(<code>false或true</code>)</li>
+<li><font color= "#FF0000" >TextRenderer，由Misc-boot-BuiltinTextRenderer转移并改名。▼</font>一般选SystemGraphics或SystemText</li>
+</ul>
+<p>​            有4个选项：</p>
+<ol>
+<li><p>BuiltinGraphics — 切换到图形模式并使用内置渲染器和自定义控制台控件。选择此项需要勾选ProvideConsoleGop，并将Resolution设置为Max</p>
+</li>
+<li><p>SystemGraphics — 切换到图形模式并使用带有自定义控制台控件的系统渲染器。</p>
+</li>
+<li><p>SystemText — 切换到文本模式并使用带有自定义控制台控件。</p>
+</li>
+<li><p>SystemGeneric — 使用系统控制台中的控件。</p>
+<p>一般情况下首选设置是<code>SystemGraphics</code>或<code>SystemText</code>。启用<code>providecosolegop（true）</code>、将<code>Resolution</code>设置为<code>Max</code>、启用<code>ReplaceTabWithSpace（true）</code>，几乎所有配置和机型都好用。特别说明下，机型设置为<code>MacPro5,1</code>只能选择<code>BuiltinGraphics</code></p>
+</li>
+</ol>
+<h3 id="根据以上情况，在OOC未更新的情况下，暂时用文本界面软件如Xcode、PlistEdit-Pro等编辑config，"><a href="#根据以上情况，在OOC未更新的情况下，暂时用文本界面软件如Xcode、PlistEdit-Pro等编辑config，" class="headerlink" title="根据以上情况，在OOC未更新的情况下，暂时用文本界面软件如Xcode、PlistEdit Pro等编辑config，"></a>根据以上情况，在OOC未更新的情况下，暂时用文本界面软件如Xcode、PlistEdit Pro等编辑config，</h3>
       
     </div>
     
@@ -685,12 +617,12 @@
   <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
 
-  <p><span>本文标题:</span>GIGABYTE-Z390M-GAMING-8700-Rx560</a></p>
+  <p><span>本文标题:</span>OpenCore-0.5.6-02-03版与02-16版差异</a></p>
   <p><span>文章作者:</span>独行秀才</a></p>
-  <p><span>发布时间:</span>2020年01月28日 - 00:00:39</p>
-  <p><span>最后更新:</span>2020年02月08日 - 00:16:33</p>
-  <p><span>原始链接:</span><a href="/2020/01/28/GIGABYTE-Z390M-GAMING-8700-Rx560/" title="GIGABYTE-Z390M-GAMING-8700-Rx560">https://shuiyunxc.github.io/2020/01/28/GIGABYTE-Z390M-GAMING-8700-Rx560/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://shuiyunxc.github.io/2020/01/28/GIGABYTE-Z390M-GAMING-8700-Rx560/"  aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2020年02月17日 - 00:50:33</p>
+  <p><span>最后更新:</span>2020年02月17日 - 01:29:39</p>
+  <p><span>原始链接:</span><a href="/2020/02/17/difference/index/" title="OpenCore-0.5.6-02-03版与02-16版差异">https://shuiyunxc.github.io/2020/02/17/difference/index/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://shuiyunxc.github.io/2020/02/17/difference/index/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
 </div>
@@ -717,17 +649,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/EFI/" rel="tag"><i class="fa fa-tag"></i> EFI</a>
+            <a href="/tags/OpenCore/" rel="tag"><i class="fa fa-tag"></i> OpenCore</a>
           
-            <a href="/tags/%E5%8F%B0%E5%BC%8F%E6%9C%BA/" rel="tag"><i class="fa fa-tag"></i> 台式机</a>
-          
-            <a href="/tags/Clover/" rel="tag"><i class="fa fa-tag"></i> Clover</a>
-          
-            <a href="/tags/%E6%8A%80%E5%98%89/" rel="tag"><i class="fa fa-tag"></i> 技嘉</a>
-          
-            <a href="/tags/Z390/" rel="tag"><i class="fa fa-tag"></i> Z390</a>
-          
-            <a href="/tags/Rx560/" rel="tag"><i class="fa fa-tag"></i> Rx560</a>
+            <a href="/tags/%E6%95%99%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> 教程</a>
           
         </div>
       
@@ -740,8 +664,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/01/27/OpenCore-configuration-video-version-2/" rel="next" title="OpenCore配置视频第二版">
-                <i class="fa fa-chevron-left"></i> OpenCore配置视频第二版
+              <a href="/2020/02/13/Unlock/index/" rel="next" title="OpenCore引导Mac下解除CFG LOCK锁定">
+                <i class="fa fa-chevron-left"></i> OpenCore引导Mac下解除CFG LOCK锁定
               </a>
             
           </div>
@@ -749,10 +673,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/01/28/ASRock-Z370m-Pro4-i3-8350K-Rx5500XT-OC-055/" rel="prev" title="ASRock-Z370m-Pro4-i3-8350K-Rx5500XT-OC-055">
-                ASRock-Z370m-Pro4-i3-8350K-Rx5500XT-OC-055 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -938,7 +858,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">技嘉 GIGABYTE-Z390M-GAMING-8700-Rx560-EFI </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BIOS设置"><span class="nav-number">3.</span> <span class="nav-text">BIOS设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完成截图"><span class="nav-number">4.</span> <span class="nav-text">完成截图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EFI"><span class="nav-number">5.</span> <span class="nav-text">EFI</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#附：从码云下载文件"><span class="nav-number">5.1.</span> <span class="nav-text">附：从码云下载文件</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#由于我身在武汉，切身体会到疫情的严重性。衷心的感谢奋战在抗疫第一线的医生、护士、自愿者和所有为此付出的人士。为武汉加油！为湖北加油！为中国加油！为中国人民加油！引用老人家的一句词：待到山花烂漫时，她在丛中笑。祝福所有人！！"><span class="nav-number">1.1.</span> <span class="nav-text">由于我身在武汉，切身体会到疫情的严重性。衷心的感谢奋战在抗疫第一线的医生、护士、自愿者和所有为此付出的人士。为武汉加油！为湖北加油！为中国加油！为中国人民加油！引用老人家的一句词：待到山花烂漫时，她在丛中笑。祝福所有人！！</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.</span> <span class="nav-text">OpenCore-0.5.6-02-03版与02-16版差异</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Booter增加项："><span class="nav-number">2.1.</span> <span class="nav-text">Booter增加项：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Booter-Quirks-ProtectSecureBoot保护安全启动"><span class="nav-number">2.1.1.</span> <span class="nav-text">1.Booter-Quirks-ProtectSecureBoot保护安全启动</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Misc删除项："><span class="nav-number">2.2.</span> <span class="nav-text">Misc删除项：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Misc-boot-BuiltinTextRenderer-移到UEFI-Output并改名为TextRenderer▼"><span class="nav-number">2.2.1.</span> <span class="nav-text">1.Misc-boot-BuiltinTextRenderer-移到UEFI-Output并改名为TextRenderer▼　</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Misc-boot-ConsoleBehaviourOs"><span class="nav-number">2.2.2.</span> <span class="nav-text">2.Misc-boot-ConsoleBehaviourOs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-Misc-boot-ConsoleBehaviourUi"><span class="nav-number">2.2.3.</span> <span class="nav-text">3.Misc-boot-ConsoleBehaviourUi</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-Misc-boot-ConsoleMode-移到UEFI-Output▼"><span class="nav-number">2.2.4.</span> <span class="nav-text">4.Misc-boot-ConsoleMode-移到UEFI-Output▼</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-Misc-boot-Resolution-移到UEFI-Output▼"><span class="nav-number">2.2.5.</span> <span class="nav-text">5.Misc-boot-Resolution-移到UEFI-Output▼</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-Misc-boot-UsePicker"><span class="nav-number">2.2.6.</span> <span class="nav-text">6.Misc-boot-UsePicker</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-Misc-Security-RequireSignature"><span class="nav-number">2.2.7.</span> <span class="nav-text">7.Misc-Security-RequireSignature</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-Misc-Security-RequireVault"><span class="nav-number">2.2.8.</span> <span class="nav-text">8.Misc-Security-RequireVault</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Misc增加项："><span class="nav-number">2.3.</span> <span class="nav-text">Misc增加项：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Misc-boot-PickerMode启动界面选择（为将来引入UI做准备）"><span class="nav-number">2.3.1.</span> <span class="nav-text">1.Misc-boot-PickerMode启动界面选择（为将来引入UI做准备）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Misc-boot-PickerAttributes使用纯文本用户界面时背景与前景颜色选择"><span class="nav-number">2.3.2.</span> <span class="nav-text">2.Misc-boot-PickerAttributes使用纯文本用户界面时背景与前景颜色选择</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-Misc-boot-HideAuxiliary隐藏引导是磁盘一些辅助选项"><span class="nav-number">2.3.3.</span> <span class="nav-text">3.Misc-boot-HideAuxiliary隐藏引导是磁盘一些辅助选项</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-Misc-Entries-0-Auxiliary"><span class="nav-number">2.3.4.</span> <span class="nav-text">4.Misc-Entries-0-Auxiliary</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-Misc-Security-Vault加密磁盘"><span class="nav-number">2.3.5.</span> <span class="nav-text">5.Misc-Security-Vault加密磁盘</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-Misc-Tools-0-N-Auxiliary"><span class="nav-number">2.3.6.</span> <span class="nav-text">6.Misc-Tools-0-N-Auxiliary</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NVRAM增加项"><span class="nav-number">2.4.</span> <span class="nav-text">NVRAM增加项</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-NVRAM-Add-4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14-DefaultBackgroundColor"><span class="nav-number">2.4.1.</span> <span class="nav-text">1.NVRAM-Add-4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14-DefaultBackgroundColor</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-NVRAM-Block-4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14-DefaultBackgroundColor"><span class="nav-number">2.4.2.</span> <span class="nav-text">2.NVRAM-Block-4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14-DefaultBackgroundColor</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UEFI删除项"><span class="nav-number">2.5.</span> <span class="nav-text">UEFI删除项</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-UEFI-Protocols-ConsoleControl"><span class="nav-number">2.5.1.</span> <span class="nav-text">1.UEFI-Protocols-ConsoleControl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-UEFI-Quirks-AvoidHighAlloc"><span class="nav-number">2.5.2.</span> <span class="nav-text">2.UEFI-Quirks-AvoidHighAlloc</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-UEFI-Quirks-ClearScreenOnModeSwitch-移到UEFI-Output★"><span class="nav-number">2.5.3.</span> <span class="nav-text">3.UEFI-Quirks-ClearScreenOnModeSwitch-移到UEFI-Output★</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-UEFI-Quirks-IgnoreTextInGraphics-移到UEFI-Output★"><span class="nav-number">2.5.4.</span> <span class="nav-text">4.UEFI-Quirks-IgnoreTextInGraphics-移到UEFI-Output★</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-UEFI-Quirks-ProvideConsoleGop-移到UEFI-Output★"><span class="nav-number">2.5.5.</span> <span class="nav-text">5.UEFI-Quirks-ProvideConsoleGop-移到UEFI-Output★</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-UEFI-Quirks-ReconnectOnResChange-移到UEFI-Output★"><span class="nav-number">2.5.6.</span> <span class="nav-text">6.UEFI-Quirks-ReconnectOnResChange-移到UEFI-Output★</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-UEFI-Quirks-ReplaceTabWithSpace-移到UEFI-Output★"><span class="nav-number">2.5.7.</span> <span class="nav-text">7.UEFI-Quirks-ReplaceTabWithSpace-移到UEFI-Output★</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-UEFI-Quirks-SanitiseClearScreen-移到UEFI-Output★"><span class="nav-number">2.5.8.</span> <span class="nav-text">8.UEFI-Quirks-SanitiseClearScreen-移到UEFI-Output★</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UEFI增加项"><span class="nav-number">2.6.</span> <span class="nav-text">UEFI增加项</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-UEFI-Output新增此大项，"><span class="nav-number">2.6.1.</span> <span class="nav-text">1.UEFI-Output新增此大项，</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#根据以上情况，在OOC未更新的情况下，暂时用文本界面软件如Xcode、PlistEdit-Pro等编辑config，"><span class="nav-number">2.7.</span> <span class="nav-text">根据以上情况，在OOC未更新的情况下，暂时用文本界面软件如Xcode、PlistEdit Pro等编辑config，</span></a></li></ol></li></ol></div>
             
 
           </div>
