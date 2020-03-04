@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://shuiyunxc.github.io/"/>
-  <updated>2020-02-26T07:10:18.000Z</updated>
+  <updated>2020-03-03T16:55:47.000Z</updated>
   <id>https://shuiyunxc.github.io/</id>
   
   <author>
@@ -15,6 +15,46 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何快速从GitHub下载文件</title>
+    <link href="https://shuiyunxc.github.io/2020/03/03/download/index/"/>
+    <id>https://shuiyunxc.github.io/2020/03/03/download/index/</id>
+    <published>2020-03-03T15:47:04.000Z</published>
+    <updated>2020-03-03T16:55:47.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id=""><a href="#" class="headerlink" title=""></a><div class="note class\_name info"><p><font color= "#FF0000"  align="center">如何快速从GitHub下载文件</font></p></div></h2><p>众所周知，从GitHub下载文件，是一件很痛苦的事情，即便是用GitHub的客户端下载，也是龟速，还经常丢包导致下载失败，这里介绍是利用<a href="https://gitee.com" target="_blank" rel="noopener">码云（https://gitee.com）</a>从github克隆项目，然后在码云下载，速度飞快！！当然还有其他梯子办法。</p><h3 id="首先你要有码云账户："><a href="#首先你要有码云账户：" class="headerlink" title="首先你要有码云账户："></a>首先你要有码云账户：</h3><p>没有的话自己注册个，注册简单快速，反正以后会经常用到。<a id="more"></a></p><h3 id="码云注册完成后具体步骤："><a href="#码云注册完成后具体步骤：" class="headerlink" title="码云注册完成后具体步骤："></a>码云注册完成后具体步骤：</h3><h4 id="打开码云新建仓库"><a href="#打开码云新建仓库" class="headerlink" title="打开码云新建仓库"></a>打开码云新建仓库</h4><img src="/2020/03/03/download/index/8B20B944.png" alt="8B20B944" style="zoom:50%;" /><h4 id="名字随便或与github项目同名"><a href="#名字随便或与github项目同名" class="headerlink" title="名字随便或与github项目同名"></a>名字随便或与github项目同名</h4><img src="/2020/03/03/download/index/C3520931.png" alt="C3520931" style="zoom:50%;" /><h4 id="选择导入已有仓库，将GitHub仓库的链接复制"><a href="#选择导入已有仓库，将GitHub仓库的链接复制" class="headerlink" title="选择导入已有仓库，将GitHub仓库的链接复制"></a>选择导入已有仓库，将GitHub仓库的链接复制</h4><img src="/2020/03/03/download/index/544EB136.png" alt="544EB136" style="zoom:50%;" /><h4 id="将上面复制的链接中输入导入窗口（如：https-github-com-xxxxx-xxxxx-git）"><a href="#将上面复制的链接中输入导入窗口（如：https-github-com-xxxxx-xxxxx-git）" class="headerlink" title="将上面复制的链接中输入导入窗口（如：https://github.com/xxxxx/xxxxx.git）"></a>将上面复制的链接中输入导入窗口（如：<a href="https://github.com/xxxxx/xxxxx.git）" target="_blank" rel="noopener">https://github.com/xxxxx/xxxxx.git）</a></h4><img src="/2020/03/03/download/index/F643E835.png" alt="F643E835" style="zoom:50%;" /><h4 id="然后点击创建"><a href="#然后点击创建" class="headerlink" title="然后点击创建"></a>然后点击创建</h4><img src="/2020/03/03/download/index/28B51476.png" alt="28B51476" style="zoom:50%;" /><h4 id="等待码云克隆项目，大概1-3分钟（由克隆项目大小决定），完成克隆。"><a href="#等待码云克隆项目，大概1-3分钟（由克隆项目大小决定），完成克隆。" class="headerlink" title="等待码云克隆项目，大概1-3分钟（由克隆项目大小决定），完成克隆。"></a>等待码云克隆项目，大概1-3分钟（由克隆项目大小决定），完成克隆。</h4><h4 id="然后再下载码云上项目，速度飞快！！"><a href="#然后再下载码云上项目，速度飞快！！" class="headerlink" title="然后再下载码云上项目，速度飞快！！"></a>然后再下载码云上项目，速度飞快！！</h4><img src="/2020/03/03/download/index/4F5C9106.png" alt="4F5C9106" style="zoom:50%;" /><h4 id="最后下载完成后不需要这个项目了可以在码云上去删了，也可以保留，以后有更新同步一下，就可以得到更新后的项目。"><a href="#最后下载完成后不需要这个项目了可以在码云上去删了，也可以保留，以后有更新同步一下，就可以得到更新后的项目。" class="headerlink" title="最后下载完成后不需要这个项目了可以在码云上去删了，也可以保留，以后有更新同步一下，就可以得到更新后的项目。"></a>最后下载完成后不需要这个项目了可以在码云上去删了，也可以保留，以后有更新同步一下，就可以得到更新后的项目。</h4><img src="https://img.shields.io/badge/更新日期-2020年03月04日-red?style=flat-square" align='center'>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;&lt;div class=&quot;note class\_name info&quot;&gt;&lt;p&gt;&lt;font color= &quot;#FF0000&quot;  align=&quot;center&quot;&gt;如何快速从GitHub下载文件&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;&lt;/h2&gt;&lt;p&gt;众所周知，从GitHub下载文件，是一件很痛苦的事情，即便是用GitHub的客户端下载，也是龟速，还经常丢包导致下载失败，这里介绍是利用&lt;a href=&quot;https://gitee.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;码云（https://gitee.com）&lt;/a&gt;从github克隆项目，然后在码云下载，速度飞快！！当然还有其他梯子办法。&lt;/p&gt;
+&lt;h3 id=&quot;首先你要有码云账户：&quot;&gt;&lt;a href=&quot;#首先你要有码云账户：&quot; class=&quot;headerlink&quot; title=&quot;首先你要有码云账户：&quot;&gt;&lt;/a&gt;首先你要有码云账户：&lt;/h3&gt;&lt;p&gt;没有的话自己注册个，注册简单快速，反正以后会经常用到。
+    
+    </summary>
+    
+    
+      <category term="GitHub" scheme="https://shuiyunxc.github.io/categories/GitHub/"/>
+    
+      <category term="教程" scheme="https://shuiyunxc.github.io/categories/GitHub/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="下载" scheme="https://shuiyunxc.github.io/categories/GitHub/%E6%95%99%E7%A8%8B/%E4%B8%8B%E8%BD%BD/"/>
+    
+      <category term="Gitee" scheme="https://shuiyunxc.github.io/categories/GitHub/%E6%95%99%E7%A8%8B/%E4%B8%8B%E8%BD%BD/Gitee/"/>
+    
+      <category term="码云" scheme="https://shuiyunxc.github.io/categories/GitHub/%E6%95%99%E7%A8%8B/%E4%B8%8B%E8%BD%BD/Gitee/%E7%A0%81%E4%BA%91/"/>
+    
+    
+      <category term="教程" scheme="https://shuiyunxc.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="GitHub" scheme="https://shuiyunxc.github.io/tags/GitHub/"/>
+    
+      <category term="下载" scheme="https://shuiyunxc.github.io/tags/%E4%B8%8B%E8%BD%BD/"/>
+    
+      <category term="Gitee" scheme="https://shuiyunxc.github.io/tags/Gitee/"/>
+    
+      <category term="码云" scheme="https://shuiyunxc.github.io/tags/%E7%A0%81%E4%BA%91/"/>
+    
+  </entry>
   
   <entry>
     <title>快速编译OpenCore</title>
@@ -242,15 +282,15 @@
       <category term="Rx 5500XT" scheme="https://shuiyunxc.github.io/categories/Rx-5500XT/"/>
     
     
-      <category term="技嘉" scheme="https://shuiyunxc.github.io/tags/%E6%8A%80%E5%98%89/"/>
-    
-      <category term="台式机" scheme="https://shuiyunxc.github.io/tags/%E5%8F%B0%E5%BC%8F%E6%9C%BA/"/>
-    
-      <category term="Z390" scheme="https://shuiyunxc.github.io/tags/Z390/"/>
+      <category term="OpenCore" scheme="https://shuiyunxc.github.io/tags/OpenCore/"/>
     
       <category term="EFI" scheme="https://shuiyunxc.github.io/tags/EFI/"/>
     
-      <category term="OpenCore" scheme="https://shuiyunxc.github.io/tags/OpenCore/"/>
+      <category term="台式机" scheme="https://shuiyunxc.github.io/tags/%E5%8F%B0%E5%BC%8F%E6%9C%BA/"/>
+    
+      <category term="技嘉" scheme="https://shuiyunxc.github.io/tags/%E6%8A%80%E5%98%89/"/>
+    
+      <category term="Z390" scheme="https://shuiyunxc.github.io/tags/Z390/"/>
     
       <category term="Rx 5500XT" scheme="https://shuiyunxc.github.io/tags/Rx-5500XT/"/>
     
@@ -291,9 +331,9 @@
       <category term="集显" scheme="https://shuiyunxc.github.io/categories/%E9%9B%86%E6%98%BE/"/>
     
     
-      <category term="EFI" scheme="https://shuiyunxc.github.io/tags/EFI/"/>
-    
       <category term="OpenCore" scheme="https://shuiyunxc.github.io/tags/OpenCore/"/>
+    
+      <category term="EFI" scheme="https://shuiyunxc.github.io/tags/EFI/"/>
     
       <category term="笔记本" scheme="https://shuiyunxc.github.io/tags/%E7%AC%94%E8%AE%B0%E6%9C%AC/"/>
     
@@ -330,22 +370,22 @@
     
       <category term="EFI" scheme="https://shuiyunxc.github.io/categories/OpenCore/EFI/"/>
     
-      <category term="台式机" scheme="https://shuiyunxc.github.io/categories/%E5%8F%B0%E5%BC%8F%E6%9C%BA/"/>
-    
       <category term="Rx5500XT" scheme="https://shuiyunxc.github.io/categories/Rx5500XT/"/>
+    
+      <category term="台式机" scheme="https://shuiyunxc.github.io/categories/%E5%8F%B0%E5%BC%8F%E6%9C%BA/"/>
     
       <category term="华擎" scheme="https://shuiyunxc.github.io/categories/%E5%8D%8E%E6%93%8E/"/>
     
-    
-      <category term="台式机" scheme="https://shuiyunxc.github.io/tags/%E5%8F%B0%E5%BC%8F%E6%9C%BA/"/>
-    
-      <category term="EFI" scheme="https://shuiyunxc.github.io/tags/EFI/"/>
     
       <category term="ASRock" scheme="https://shuiyunxc.github.io/tags/ASRock/"/>
     
       <category term="华擎" scheme="https://shuiyunxc.github.io/tags/%E5%8D%8E%E6%93%8E/"/>
     
       <category term="OpenCore" scheme="https://shuiyunxc.github.io/tags/OpenCore/"/>
+    
+      <category term="EFI" scheme="https://shuiyunxc.github.io/tags/EFI/"/>
+    
+      <category term="台式机" scheme="https://shuiyunxc.github.io/tags/%E5%8F%B0%E5%BC%8F%E6%9C%BA/"/>
     
       <category term="Rx5500XT" scheme="https://shuiyunxc.github.io/tags/Rx5500XT/"/>
     
@@ -385,17 +425,17 @@
       <category term="Rx560" scheme="https://shuiyunxc.github.io/categories/Rx560/"/>
     
     
+      <category term="EFI" scheme="https://shuiyunxc.github.io/tags/EFI/"/>
+    
+      <category term="台式机" scheme="https://shuiyunxc.github.io/tags/%E5%8F%B0%E5%BC%8F%E6%9C%BA/"/>
+    
       <category term="Clover" scheme="https://shuiyunxc.github.io/tags/Clover/"/>
     
       <category term="技嘉" scheme="https://shuiyunxc.github.io/tags/%E6%8A%80%E5%98%89/"/>
     
-      <category term="台式机" scheme="https://shuiyunxc.github.io/tags/%E5%8F%B0%E5%BC%8F%E6%9C%BA/"/>
-    
       <category term="Z390" scheme="https://shuiyunxc.github.io/tags/Z390/"/>
     
       <category term="Rx560" scheme="https://shuiyunxc.github.io/tags/Rx560/"/>
-    
-      <category term="EFI" scheme="https://shuiyunxc.github.io/tags/EFI/"/>
     
   </entry>
   
@@ -480,9 +520,9 @@
       <category term="Clover" scheme="https://shuiyunxc.github.io/categories/Clover/"/>
     
     
-      <category term="Clover" scheme="https://shuiyunxc.github.io/tags/Clover/"/>
-    
       <category term="OpenCore" scheme="https://shuiyunxc.github.io/tags/OpenCore/"/>
+    
+      <category term="Clover" scheme="https://shuiyunxc.github.io/tags/Clover/"/>
     
       <category term="其他" scheme="https://shuiyunxc.github.io/tags/%E5%85%B6%E4%BB%96/"/>
     

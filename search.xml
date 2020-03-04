@@ -4,6 +4,47 @@
   
     
     <entry>
+      <title>如何快速从GitHub下载文件</title>
+      <link href="/2020/03/03/download/index/"/>
+      <url>/2020/03/03/download/index/</url>
+      
+        <content type="html"><![CDATA[<h2 id=""><a href="#" class="headerlink" title=""></a><div class="note class\_name info"><p><font color= "#FF0000"  align="center">如何快速从GitHub下载文件</font></p></div></h2><p>众所周知，从GitHub下载文件，是一件很痛苦的事情，即便是用GitHub的客户端下载，也是龟速，还经常丢包导致下载失败，这里介绍是利用<a href="https://gitee.com" target="_blank" rel="noopener">码云（https://gitee.com）</a>从github克隆项目，然后在码云下载，速度飞快！！当然还有其他梯子办法。</p><h3 id="首先你要有码云账户："><a href="#首先你要有码云账户：" class="headerlink" title="首先你要有码云账户："></a>首先你要有码云账户：</h3><p>没有的话自己注册个，注册简单快速，反正以后会经常用到。<a id="more"></a></p><h3 id="码云注册完成后具体步骤："><a href="#码云注册完成后具体步骤：" class="headerlink" title="码云注册完成后具体步骤："></a>码云注册完成后具体步骤：</h3><h4 id="打开码云新建仓库"><a href="#打开码云新建仓库" class="headerlink" title="打开码云新建仓库"></a>打开码云新建仓库</h4><img src="/2020/03/03/download/index/8B20B944.png" alt="8B20B944" style="zoom:50%;" /><h4 id="名字随便或与github项目同名"><a href="#名字随便或与github项目同名" class="headerlink" title="名字随便或与github项目同名"></a>名字随便或与github项目同名</h4><img src="/2020/03/03/download/index/C3520931.png" alt="C3520931" style="zoom:50%;" /><h4 id="选择导入已有仓库，将GitHub仓库的链接复制"><a href="#选择导入已有仓库，将GitHub仓库的链接复制" class="headerlink" title="选择导入已有仓库，将GitHub仓库的链接复制"></a>选择导入已有仓库，将GitHub仓库的链接复制</h4><img src="/2020/03/03/download/index/544EB136.png" alt="544EB136" style="zoom:50%;" /><h4 id="将上面复制的链接中输入导入窗口（如：https-github-com-xxxxx-xxxxx-git）"><a href="#将上面复制的链接中输入导入窗口（如：https-github-com-xxxxx-xxxxx-git）" class="headerlink" title="将上面复制的链接中输入导入窗口（如：https://github.com/xxxxx/xxxxx.git）"></a>将上面复制的链接中输入导入窗口（如：<a href="https://github.com/xxxxx/xxxxx.git）" target="_blank" rel="noopener">https://github.com/xxxxx/xxxxx.git）</a></h4><img src="/2020/03/03/download/index/F643E835.png" alt="F643E835" style="zoom:50%;" /><h4 id="然后点击创建"><a href="#然后点击创建" class="headerlink" title="然后点击创建"></a>然后点击创建</h4><img src="/2020/03/03/download/index/28B51476.png" alt="28B51476" style="zoom:50%;" /><h4 id="等待码云克隆项目，大概1-3分钟（由克隆项目大小决定），完成克隆。"><a href="#等待码云克隆项目，大概1-3分钟（由克隆项目大小决定），完成克隆。" class="headerlink" title="等待码云克隆项目，大概1-3分钟（由克隆项目大小决定），完成克隆。"></a>等待码云克隆项目，大概1-3分钟（由克隆项目大小决定），完成克隆。</h4><h4 id="然后再下载码云上项目，速度飞快！！"><a href="#然后再下载码云上项目，速度飞快！！" class="headerlink" title="然后再下载码云上项目，速度飞快！！"></a>然后再下载码云上项目，速度飞快！！</h4><img src="/2020/03/03/download/index/4F5C9106.png" alt="4F5C9106" style="zoom:50%;" /><h4 id="最后下载完成后不需要这个项目了可以在码云上去删了，也可以保留，以后有更新同步一下，就可以得到更新后的项目。"><a href="#最后下载完成后不需要这个项目了可以在码云上去删了，也可以保留，以后有更新同步一下，就可以得到更新后的项目。" class="headerlink" title="最后下载完成后不需要这个项目了可以在码云上去删了，也可以保留，以后有更新同步一下，就可以得到更新后的项目。"></a>最后下载完成后不需要这个项目了可以在码云上去删了，也可以保留，以后有更新同步一下，就可以得到更新后的项目。</h4><img src="https://img.shields.io/badge/更新日期-2020年03月04日-red?style=flat-square" align='center'>]]></content>
+      
+      
+      <categories>
+          
+          <category> GitHub </category>
+          
+          <category> 教程 </category>
+          
+          <category> 下载 </category>
+          
+          <category> Gitee </category>
+          
+          <category> 码云 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 教程 </tag>
+            
+            <tag> GitHub </tag>
+            
+            <tag> 下载 </tag>
+            
+            <tag> Gitee </tag>
+            
+            <tag> 码云 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>快速编译OpenCore</title>
       <link href="/2020/02/26/compile/index/"/>
       <url>/2020/02/26/compile/index/</url>
@@ -218,15 +259,15 @@
       
         <tags>
             
-            <tag> 技嘉 </tag>
-            
-            <tag> 台式机 </tag>
-            
-            <tag> Z390 </tag>
+            <tag> OpenCore </tag>
             
             <tag> EFI </tag>
             
-            <tag> OpenCore </tag>
+            <tag> 台式机 </tag>
+            
+            <tag> 技嘉 </tag>
+            
+            <tag> Z390 </tag>
             
             <tag> Rx 5500XT </tag>
             
@@ -263,9 +304,9 @@
       
         <tags>
             
-            <tag> EFI </tag>
-            
             <tag> OpenCore </tag>
+            
+            <tag> EFI </tag>
             
             <tag> 笔记本 </tag>
             
@@ -297,9 +338,9 @@
           
           <category> EFI </category>
           
-          <category> 台式机 </category>
-          
           <category> Rx5500XT </category>
+          
+          <category> 台式机 </category>
           
           <category> 华擎 </category>
           
@@ -308,15 +349,15 @@
       
         <tags>
             
-            <tag> 台式机 </tag>
-            
-            <tag> EFI </tag>
-            
             <tag> ASRock </tag>
             
             <tag> 华擎 </tag>
             
             <tag> OpenCore </tag>
+            
+            <tag> EFI </tag>
+            
+            <tag> 台式机 </tag>
             
             <tag> Rx5500XT </tag>
             
@@ -355,17 +396,17 @@
       
         <tags>
             
+            <tag> EFI </tag>
+            
+            <tag> 台式机 </tag>
+            
             <tag> Clover </tag>
             
             <tag> 技嘉 </tag>
             
-            <tag> 台式机 </tag>
-            
             <tag> Z390 </tag>
             
             <tag> Rx560 </tag>
-            
-            <tag> EFI </tag>
             
         </tags>
       
@@ -448,9 +489,9 @@
       
         <tags>
             
-            <tag> Clover </tag>
-            
             <tag> OpenCore </tag>
+            
+            <tag> Clover </tag>
             
             <tag> 其他 </tag>
             
