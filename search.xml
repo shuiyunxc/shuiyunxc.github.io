@@ -4,6 +4,47 @@
   
     
     <entry>
+      <title>OpenCore引导下config.plist的三码设置</title>
+      <link href="/2020/03/16/Three/index/"/>
+      <url>/2020/03/16/Three/index/</url>
+      
+        <content type="html"><![CDATA[<h2 id=""><a href="#" class="headerlink" title=""></a><div class="note class\_name info"><p>OpenCore引导下config.plist的三码设置</p></div></h2><h4 id="黑苹果OpenCore（OC）引导越来越多的受到广泛关注和使用，很多朋友还是一头雾水，这里就三码的设置，以OpenCore-Configurator工具为例，结合图片给大家演示下三码的设置。"><a href="#黑苹果OpenCore（OC）引导越来越多的受到广泛关注和使用，很多朋友还是一头雾水，这里就三码的设置，以OpenCore-Configurator工具为例，结合图片给大家演示下三码的设置。" class="headerlink" title="黑苹果OpenCore（OC）引导越来越多的受到广泛关注和使用，很多朋友还是一头雾水，这里就三码的设置，以OpenCore Configurator工具为例，结合图片给大家演示下三码的设置。"></a>黑苹果OpenCore（OC）引导越来越多的受到广泛关注和使用，很多朋友还是一头雾水，这里就三码的设置，以OpenCore Configurator工具为例，结合图片给大家演示下三码的设置。</h4><p>打开OpenCore Configurator。</p><p>点到<code>Platforminfo-机型平台设置</code>-<code>机型</code>-去掉<code>在config.plist里面添加此部分内容</code>的勾选。</p><img src="/2020/03/16/Three/index/1EA35236.png" alt="1EA35236" style="zoom:50%;" /><p>点到<code>DataHub-Generic-PlatformNVRAM</code>-去掉<code>DataHub</code>和<code>PlatformNVRAM</code>2项下的<code>在config.plist里面添加此部分内容</code>的勾选。同时勾选<code>Generic</code>项下的<code>在config.plist里面添加此部分内容</code>。</p><p>点在检查序列号有效性右边的机型选择符号，选择合适你的机型。</p><img src="/2020/03/16/Three/index/73C5355A.png" alt="73C5355A" style="zoom:50%;" /><p>并在<code>Generic</code>项下对照下图填写三码相关的相应内容，</p><img src="/2020/03/16/Three/index/0EDDDD.png" alt="0EDDDD" style="zoom:50%;" /><h4 id="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，特别是不能在远景论坛转载，否则将追究法律责任！还可能被远景封号，谢谢合作！"><a href="#重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，特别是不能在远景论坛转载，否则将追究法律责任！还可能被远景封号，谢谢合作！" class="headerlink" title="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，特别是不能在远景论坛转载，否则将追究法律责任！还可能被远景封号，谢谢合作！"></a>重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，特别是不能在远景论坛转载，否则将追究法律责任！还可能被远景封号，谢谢合作！</h4><img src="https://img.shields.io/badge/更新日期-2020年03月17日-blue?style=flat-square" align='center'><p>关键字：黑苹果；OpenCore；OC；引导；config.plist；三码</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> OpenCore </category>
+          
+          <category> 教程 </category>
+          
+          <category> config </category>
+          
+          <category> 三码 </category>
+          
+          <category> 设置 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> OpenCore </tag>
+            
+            <tag> 教程 </tag>
+            
+            <tag> config </tag>
+            
+            <tag> 三码 </tag>
+            
+            <tag> 设置 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>独行秀才的申明</title>
       <link href="/2020/03/12/statement/index/"/>
       <url>/2020/03/12/statement/index/</url>

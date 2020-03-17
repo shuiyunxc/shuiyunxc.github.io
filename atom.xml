@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://shuiyunxc.github.io/"/>
-  <updated>2020-03-11T21:43:42.000Z</updated>
+  <updated>2020-03-17T08:17:24.000Z</updated>
   <id>https://shuiyunxc.github.io/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>OpenCore引导下config.plist的三码设置</title>
+    <link href="https://shuiyunxc.github.io/2020/03/16/Three/index/"/>
+    <id>https://shuiyunxc.github.io/2020/03/16/Three/index/</id>
+    <published>2020-03-16T14:36:37.000Z</published>
+    <updated>2020-03-17T08:17:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id=""><a href="#" class="headerlink" title=""></a><div class="note class\_name info"><p>OpenCore引导下config.plist的三码设置</p></div></h2><h4 id="黑苹果OpenCore（OC）引导越来越多的受到广泛关注和使用，很多朋友还是一头雾水，这里就三码的设置，以OpenCore-Configurator工具为例，结合图片给大家演示下三码的设置。"><a href="#黑苹果OpenCore（OC）引导越来越多的受到广泛关注和使用，很多朋友还是一头雾水，这里就三码的设置，以OpenCore-Configurator工具为例，结合图片给大家演示下三码的设置。" class="headerlink" title="黑苹果OpenCore（OC）引导越来越多的受到广泛关注和使用，很多朋友还是一头雾水，这里就三码的设置，以OpenCore Configurator工具为例，结合图片给大家演示下三码的设置。"></a>黑苹果OpenCore（OC）引导越来越多的受到广泛关注和使用，很多朋友还是一头雾水，这里就三码的设置，以OpenCore Configurator工具为例，结合图片给大家演示下三码的设置。</h4><p>打开OpenCore Configurator。</p><p>点到<code>Platforminfo-机型平台设置</code>-<code>机型</code>-去掉<code>在config.plist里面添加此部分内容</code>的勾选。</p><img src="/2020/03/16/Three/index/1EA35236.png" alt="1EA35236" style="zoom:50%;" /><p>点到<code>DataHub-Generic-PlatformNVRAM</code>-去掉<code>DataHub</code>和<code>PlatformNVRAM</code>2项下的<code>在config.plist里面添加此部分内容</code>的勾选。同时勾选<code>Generic</code>项下的<code>在config.plist里面添加此部分内容</code>。</p><p>点在检查序列号有效性右边的机型选择符号，选择合适你的机型。</p><img src="/2020/03/16/Three/index/73C5355A.png" alt="73C5355A" style="zoom:50%;" /><p>并在<code>Generic</code>项下对照下图填写三码相关的相应内容，</p><img src="/2020/03/16/Three/index/0EDDDD.png" alt="0EDDDD" style="zoom:50%;" /><h4 id="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，特别是不能在远景论坛转载，否则将追究法律责任！还可能被远景封号，谢谢合作！"><a href="#重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，特别是不能在远景论坛转载，否则将追究法律责任！还可能被远景封号，谢谢合作！" class="headerlink" title="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，特别是不能在远景论坛转载，否则将追究法律责任！还可能被远景封号，谢谢合作！"></a>重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，特别是不能在远景论坛转载，否则将追究法律责任！还可能被远景封号，谢谢合作！</h4><img src="https://img.shields.io/badge/更新日期-2020年03月17日-blue?style=flat-square" align='center'><p>关键字：黑苹果；OpenCore；OC；引导；config.plist；三码</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;&lt;div class=&quot;note class\_name info&quot;&gt;&lt;p&gt;OpenCore引导下config.plist的三码设置&lt;/p&gt;&lt;/div&gt;&lt;/h2&gt;&lt;h4 i
+      
+    
+    </summary>
+    
+    
+      <category term="OpenCore" scheme="https://shuiyunxc.github.io/categories/OpenCore/"/>
+    
+      <category term="教程" scheme="https://shuiyunxc.github.io/categories/OpenCore/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="config" scheme="https://shuiyunxc.github.io/categories/OpenCore/%E6%95%99%E7%A8%8B/config/"/>
+    
+      <category term="三码" scheme="https://shuiyunxc.github.io/categories/OpenCore/%E6%95%99%E7%A8%8B/config/%E4%B8%89%E7%A0%81/"/>
+    
+      <category term="设置" scheme="https://shuiyunxc.github.io/categories/OpenCore/%E6%95%99%E7%A8%8B/config/%E4%B8%89%E7%A0%81/%E8%AE%BE%E7%BD%AE/"/>
+    
+    
+      <category term="OpenCore" scheme="https://shuiyunxc.github.io/tags/OpenCore/"/>
+    
+      <category term="教程" scheme="https://shuiyunxc.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="config" scheme="https://shuiyunxc.github.io/tags/config/"/>
+    
+      <category term="三码" scheme="https://shuiyunxc.github.io/tags/%E4%B8%89%E7%A0%81/"/>
+    
+      <category term="设置" scheme="https://shuiyunxc.github.io/tags/%E8%AE%BE%E7%BD%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>独行秀才的申明</title>
