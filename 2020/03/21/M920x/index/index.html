@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="OpenCore,台式机,Lenovo,M920x,集显," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="独行秀才的老窝" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="OpenCore引导安装联想-M920x黑苹果之历程关键字：OpenCore；OC；联想；M920x；黑苹果前言去年11月左右的时候，为了维护方便，需要一台便于携带；性能主流；容易安装黑苹果的小型机器（因为有便携式显示器，所以未考虑各种笔记本）。经过比较，最终选择了这款巴掌大小的机器—-联想-M920x准系统。再搭载性能强劲的9代intel酷睿i5 9600k；1个sata硬盘接口；背板有2个M.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OpenCore引导安装联想-M920x黑苹果之历程">
+<meta property="og:url" content="https://shuiyunxc.github.io/2020/03/21/M920x/index/index.html">
+<meta property="og:site_name" content="独行秀才的老窝">
+<meta property="og:description" content="OpenCore引导安装联想-M920x黑苹果之历程关键字：OpenCore；OC；联想；M920x；黑苹果前言去年11月左右的时候，为了维护方便，需要一台便于携带；性能主流；容易安装黑苹果的小型机器（因为有便携式显示器，所以未考虑各种笔记本）。经过比较，最终选择了这款巴掌大小的机器—-联想-M920x准系统。再搭载性能强劲的9代intel酷睿i5 9600k；1个sata硬盘接口；背板有2个M.">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/9FA54B26.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/A78A28DD.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/3659045E.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/WechatIMG1285.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/WechatIMG1293.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/WechatIMG1294.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/WechatIMG1295.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/WechatIMG1300.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/WechatIMG1301.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/USB.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/WechatIMG959.jpeg">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/WechatIMG962.jpeg">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/WechatIMG960.jpeg">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/WechatIMG961.jpeg">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/5D50211D.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/FCCE29B3.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/70092567.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/WechatIMG1095.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/WechatIMG1103.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/WechatIMG1107.png">
+<meta property="og:image" content="https://img.shields.io/badge/%E6%9B%B4%E6%96%B0%E6%97%A5%E6%9C%9F%EF%BC%9A-2020%E5%B9%B403%E6%9C%8821%E6%97%A5-red?style=flat-square">
+<meta property="article:published_time" content="2020-03-21T13:03:14.000Z">
+<meta property="article:modified_time" content="2020-03-21T17:50:50.000Z">
+<meta property="article:author" content="独行秀才">
+<meta property="article:tag" content="OpenCore">
+<meta property="article:tag" content="台式机">
+<meta property="article:tag" content="Lenovo">
+<meta property="article:tag" content="M920x">
+<meta property="article:tag" content="集显">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/9FA54B26.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"right","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://shuiyunxc.github.io/2020/03/21/M920x/index/"/>
+
+
+
+
+
+  <title>OpenCore引导安装联想-M920x黑苹果之历程 | 独行秀才的老窝</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?1baf224118b2f00d5c30cf05995b4c5f";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">独行秀才的老窝</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专注于黑苹果安装维护</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-corso">
+          <a href="/tags/%E6%95%99%E7%A8%8B/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br />
+            
+            教程
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-hackintosh">
+          <a href="/Hackintosh/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-apple"></i> <br />
+            
+            黑苹果安装维护
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://shuiyunxc.github.io/2020/03/21/M920x/index/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="独行秀才">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="独行秀才的老窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">OpenCore引导安装联想-M920x黑苹果之历程</h2>
+        
+
+        <div class="post-meta">
+        
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-21T21:03:14+08:00">
+                2020-03-21
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2020-03-22T01:50:50+08:00">
+                2020-03-22
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OpenCore/" itemprop="url" rel="index">
+                    <span itemprop="name">OpenCore</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8F%B0%E5%BC%8F%E6%9C%BA/" itemprop="url" rel="index">
+                    <span itemprop="name">台式机</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OpenCore/Lenovo/" itemprop="url" rel="index">
+                    <span itemprop="name">Lenovo</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%81%94%E6%83%B3/" itemprop="url" rel="index">
+                    <span itemprop="name">联想</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%9B%86%E6%98%BE/" itemprop="url" rel="index">
+                    <span itemprop="name">集显</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/M920x/" itemprop="url" rel="index">
+                    <span itemprop="name">M920x</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-commenting-o"></i>
+                </span>
+                <a href="/2020/03/21/M920x/index/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/03/21/M920x/index/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2020/03/21/M920x/index/" class="leancloud_visitors" data-flag-title="OpenCore引导安装联想-M920x黑苹果之历程">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-folder-open"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          <!--
+          
+          -->
+          
+          
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  959
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="OpenCore引导安装联想-M920x黑苹果之历程"><a href="#OpenCore引导安装联想-M920x黑苹果之历程" class="headerlink" title="OpenCore引导安装联想-M920x黑苹果之历程"></a>OpenCore引导安装联想-M920x黑苹果之历程</h1><h3 id=""><a href="#" class="headerlink" title=""></a><div class="note class_name info"><p>关键字：OpenCore；OC；联想；M920x；黑苹果</p></div></h3><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>去年11月左右的时候，为了维护方便，需要一台便于携带；性能主流；容易安装黑苹果的小型机器（因为有便携式显示器，所以未考虑各种笔记本）。经过比较，最终选择了这款巴掌大小的机器—-联想-M920x准系统。再搭载性能强劲的9代intel酷睿i5 9600k；1个sata硬盘接口；背板有2个M.2接口；自带无线/蓝牙（很显然这个是要换为黑苹果免驱卡）；一个小巧的135W电源适配器。几乎完美契合上面的需求。</p>
+<h3 id="联想-M920x简介"><a href="#联想-M920x简介" class="headerlink" title="联想-M920x简介"></a>联想-M920x简介</h3><p>前面面板：开关键、话筒、耳机、typec（雷电3）、1个usb3.0（可用于充电）</p>
+<p>后面背板：千兆网口、2个usb3.1GEN2、2个usb3.1GEN1、HDMI、2个dp、电源输入口</p>
+<img src="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/9FA54B26.png" alt="9FA54B26" style="zoom:50%;" />
+
+<img src="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/A78A28DD.png" alt="A78A28DD" style="zoom:50%;" />
+
+<h3 id="联想-M920x声卡"><a href="#联想-M920x声卡" class="headerlink" title="联想-M920x声卡"></a>联想-M920x声卡</h3><p>这款机器2个输入输出比较独特，输入口是内置音响 +外置独立麦克风，输出口是耳机麦克二合一，显然需要做<code>AppleALC.Kext</code>仿冒</p>
+<img src="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/3659045E.png" alt="3659045E" style="zoom:38%;" />
+
+<p>M920x_ALC233（5）声卡节点关联：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">RedirectedHpSpeaker  0x14   0x2---0xC---0x14</span><br><span class="line">                                        0x21   0x2---0xC---0x21</span><br><span class="line">MicIn (Dynamic device) 0x19   0x8---0x23---0x19</span><br><span class="line">MicIn (Dynamic device) 0x1A   0x9---0x22---0x1A</span><br><span class="line"></span><br><span class="line">0x14     Misc:0x1  Color:Unknown  Connection Type:Other Analog Default Device: Speaker Directional Location:N&#x2F;A Location:Internal Port Connectivity:Fixed Function Device</span><br><span class="line">0x21     Misc:0x0  Color:Black  Connection Type:1&#x2F;8&quot; stereo&#x2F;mono Default Device: HP Out Directional Location:Front Location:External Port Connectivity:Jack</span><br><span class="line">0x19     Misc:0x0  Color:Black  Connection Type:1&#x2F;8&quot; stereo&#x2F;mono Default Device: Mic In Directional Location:Front  Location:External Port Connectivity:Jack</span><br><span class="line">0x1A     Misc:0x0  Color:Black  Connection Type:1&#x2F;8&quot; stereo&#x2F;mono Default Device: Mic In Directional Location:Front  Location:External Port Connectivity:Jack</span><br></pre></td></tr></table></figure>
+
+<img src="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/WechatIMG1285.png" alt="WechatIMG1285" style="zoom:50%;" />
+
+<p>下面是相关截图：</p>
+<p>外置/内置Mic节点</p>
+<img src="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/WechatIMG1293.png" alt="WechatIMG1293" style="zoom:50%;" />
+
+
+
+<img src="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/WechatIMG1294.png" alt="WechatIMG1294" style="zoom:50%;" />
+
+<p>外置/内置输出节点</p>
+<img src="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/WechatIMG1295.png" alt="WechatIMG1295" style="zoom:50%;" />
+
+<p>设置ID与config数据</p>
+<img src="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/WechatIMG1300.png" alt="WechatIMG1300" style="zoom:50%;" />
+
+<img src="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/WechatIMG1301.png" alt="WechatIMG1301" style="zoom:50%;" />
+
+<p>最后生成仿冒的<code>AppleALC.kext</code>，ID为11，在OC中<code>Layout-id：0B000000</code> </p>
+<h3 id="联想-M920xUSB定制"><a href="#联想-M920xUSB定制" class="headerlink" title="联想-M920xUSB定制"></a>联想-M920xUSB定制</h3><p>10个外置USB端口，2个内置USB端口（其中一个是用于蓝牙），雷电口不在15端口限制之列，不需要单独定制。</p>
+<img src="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/USB.png" alt="USB" style="zoom:50%;" />
+
+<h3 id="联想-M920xBIOS设置"><a href="#联想-M920xBIOS设置" class="headerlink" title="联想-M920xBIOS设置"></a>联想-M920xBIOS设置</h3><h4 id="CPU设置"><a href="#CPU设置" class="headerlink" title="CPU设置"></a>CPU设置</h4><img src="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/WechatIMG959.jpeg" alt="WechatIMG959" style="zoom:50%;" />
+
+<h4 id="集显设置"><a href="#集显设置" class="headerlink" title="集显设置"></a>集显设置</h4><img src="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/WechatIMG962.jpeg" alt="WechatIMG962" style="zoom:50%;" />
+
+<h4 id="启动菜单设置"><a href="#启动菜单设置" class="headerlink" title="启动菜单设置"></a>启动菜单设置</h4><img src="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/WechatIMG960.jpeg" alt="WechatIMG960" style="zoom:50%;" />
+
+<h4 id="安全菜单设置"><a href="#安全菜单设置" class="headerlink" title="安全菜单设置"></a>安全菜单设置</h4><img src="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/WechatIMG961.jpeg" alt="WechatIMG961" style="zoom:50%;" />
+
+<h3 id="联想-M920x-OC配置与安装历程"><a href="#联想-M920x-OC配置与安装历程" class="headerlink" title="联想-M920x-OC配置与安装历程"></a>联想-M920x-OC配置与安装历程</h3><p>按照<a href="https://shuiyunxc.gitee.io/2020/03/10/instru/index/" target="_blank" rel="noopener">OpenCore黑苹果引导配置说明第三版</a>编辑完成config，添加相关efi与驱动。开始安装测试。</p>
+<h4 id="遇到问题一："><a href="#遇到问题一：" class="headerlink" title="遇到问题一："></a>遇到问题一：</h4><p>卡apfs_module_start：12xx或13xx</p>
+<img src="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/5D50211D.png" alt="5D50211D" style="zoom:50%;" />
+
+<p>这个是RTC问题，添加<code>SSDT-AWAC.aml</code>解决。</p>
+<h4 id="遇到问题二："><a href="#遇到问题二：" class="headerlink" title="遇到问题二："></a>遇到问题二：</h4><p>卡apfs_module_start：1683。错误图遗失</p>
+<p>是EC改名问题，添加<code>SSDT-EC-USBX.aml</code>解决</p>
+<h4 id="遇到问题三："><a href="#遇到问题三：" class="headerlink" title="遇到问题三："></a>遇到问题三：</h4><p>见<a href="https://shuiyunxc.gitee.io/2020/03/06/Faults/index/" target="_blank" rel="noopener">OpenCore配置错误、故障与解决办法</a>问题九。</p>
+<h4 id="遇到问题四～十："><a href="#遇到问题四～十：" class="headerlink" title="遇到问题四～十："></a>遇到问题四～十：</h4><p>就不一一罗列了。</p>
+<h3 id="联想-M920x-OC配置的完善"><a href="#联想-M920x-OC配置的完善" class="headerlink" title="联想-M920x-OC配置的完善"></a>联想-M920x-OC配置的完善</h3><h4 id="声卡"><a href="#声卡" class="headerlink" title="声卡"></a>声卡</h4><p>Blog开始就声卡仿冒做了说明并生成<code>AppleALC.kext</code>，直接添加使用，完美。并完善相关参数比如<code>device_type：Audio device</code>，有时候，参数不全，可能影响声卡声音大小</p>
+<img src="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/FCCE29B3.png" alt="FCCE29B3" style="zoom:50%;" />
+
+<h4 id="集显"><a href="#集显" class="headerlink" title="集显"></a>集显</h4><p>安装的时候，只用了一个参数<code>AAPL,ig-platform-id:07009B3E</code> 后期完善，补齐相关参数</p>
+<img src="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/70092567.png" alt="70092567" style="zoom:50%;" />
+
+<h3 id="联想-M920x-OC引导完善后成果展示"><a href="#联想-M920x-OC引导完善后成果展示" class="headerlink" title="联想-M920x-OC引导完善后成果展示"></a>联想-M920x-OC引导完善后成果展示</h3><h4 id="关于本机"><a href="#关于本机" class="headerlink" title="关于本机"></a>关于本机</h4><img src="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/WechatIMG1095.png" alt="WechatIMG1095" style="zoom:60%;" />
+
+<h4 id="集显-1"><a href="#集显-1" class="headerlink" title="集显"></a>集显</h4><img src="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/WechatIMG1103.png" alt="WechatIMG1103" style="zoom:50%;" />
+
+<h4 id="USB"><a href="#USB" class="headerlink" title="USB"></a>USB</h4><img src="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/WechatIMG1107.png" alt="WechatIMG1107" style="zoom:50%;" />
+
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>开机声音设置（设置完成后已经是深夜了，一开机，突然的dueng，吓我一跳，哈哈！！）</p>
+<p>开机图形界面设置</p>
+<p>详见<a href="https://shuiyunxc.gitee.io/2020/03/19/SoundGra/index/" target="_blank" rel="noopener">OpenCore黑苹果引导开机声音与图形界面设置</a></p>
+<h3 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h3><p>随着OpenCore引导的日臻完善，与大佬们的快速升级与迭代，OpenCore必将逐步走向主流，早一日了解并掌握OpenCore是必要滴！希望这篇Blog，能给大家有所启迪！！</p>
+<h3 id="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，特别是不能在远景论坛转载，否则将追究法律责任！可能被远景封号，谢谢合作！！"><a href="#重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，特别是不能在远景论坛转载，否则将追究法律责任！可能被远景封号，谢谢合作！！" class="headerlink" title="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，特别是不能在远景论坛转载，否则将追究法律责任！可能被远景封号，谢谢合作！！"></a>重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，特别是不能在远景论坛转载，否则将追究法律责任！可能被远景封号，谢谢合作！！</h3><img src="https://img.shields.io/badge/更新日期：-2020年03月21日-red?style=flat-square" align='center'>
+
+<h4 id="黑苹果OpenCore开放群，群号-9422866，注明“独行秀才Blog引入”"><a href="#黑苹果OpenCore开放群，群号-9422866，注明“独行秀才Blog引入”" class="headerlink" title=" 黑苹果OpenCore开放群，群号:9422866，注明“独行秀才Blog引入”"></a><font color= "#FF0000"  align="center"> 黑苹果OpenCore开放群，群号:9422866，注明“独行秀才Blog引入”</font></h4>
+      
+    </div>
+    
+    
+    
+
+    
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #FF0000;font-size:18px;"><i class="fa fa-arrow-right" aria-hidden="true"></i><i class="fa fa-arrow-right" aria-hidden="true"></i><i class="fa fa-arrow-right" aria-hidden="true"></i><i class="fa fa-arrow-right" aria-hidden="true"></i>本文结束<i class="fa fa-flag-checkered" color:#000000;></i>感谢您的阅读<i class="fa fa-arrow-left" aria-hidden="true"></i><i class="fa fa-arrow-left" aria-hidden="true"></i><i class="fa fa-arrow-left" aria-hidden="true"></i><i class="fa fa-arrow-left" aria-hidden="true"></i></div>
+    
+</div>
+
+
+  
+</div>
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/weixin.png" alt="独行秀才 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/aipay.png" alt="独行秀才 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+<div>
+    
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+
+  <p><span>本文标题:</span>OpenCore引导安装联想-M920x黑苹果之历程</a></p>
+  <p><span>文章作者:</span>独行秀才</a></p>
+  <p><span>发布时间:</span>2020年03月21日 - 21:03:14</p>
+  <p><span>最后更新:</span>2020年03月22日 - 01:50:50</p>
+  <p><span>原始链接:</span><a href="/2020/03/21/M920x/index/" title="OpenCore引导安装联想-M920x黑苹果之历程">https://shuiyunxc.github.io/2020/03/21/M920x/index/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://shuiyunxc.github.io/2020/03/21/M920x/index/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
+</div>
+<script>
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({
+          title: "",
+          text: '复制成功',
+          html: false,
+          timer: 500,
+          showConfirmButton: false
+        });
+      });
+    }));
+</script>
+
+
+
+    
+</div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/OpenCore/" rel="tag"><i class="fa fa-tag"></i> OpenCore</a>
+          
+            <a href="/tags/%E5%8F%B0%E5%BC%8F%E6%9C%BA/" rel="tag"><i class="fa fa-tag"></i> 台式机</a>
+          
+            <a href="/tags/Lenovo/" rel="tag"><i class="fa fa-tag"></i> Lenovo</a>
+          
+            <a href="/tags/M920x/" rel="tag"><i class="fa fa-tag"></i> M920x</a>
+          
+            <a href="/tags/%E9%9B%86%E6%98%BE/" rel="tag"><i class="fa fa-tag"></i> 集显</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/03/19/SoundGra/index/" rel="next" title="OpenCore黑苹果引导开机声音与图形界面设置">
+                <i class="fa fa-chevron-left"></i> OpenCore黑苹果引导开机声音与图形界面设置
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="独行秀才" />
+            
+              <p class="site-author-name" itemprop="name">独行秀才</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">39</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">37</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/shuiyunxc" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:shuiyunxc@sina.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="/weixin" target="_blank" title="微信">
+                      
+                        <i class="fa fa-fw fa-weixin"></i>微信</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="/qq" target="_blank" title="QQ">
+                      
+                        <i class="fa fa-fw fa-qq"></i>QQ</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="/Hackintosh" target="_blank" title="黑苹果服务">
+                      
+                        <i class="fa fa-fw fa-apple"></i>黑苹果服务</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.bilibili.com/video/av85050197" target="_blank" title="B站视频">
+                      
+                        <i class="fa fa-fw fa-camera"></i>B站视频</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#OpenCore引导安装联想-M920x黑苹果之历程"><span class="nav-number">1.</span> <span class="nav-text">OpenCore引导安装联想-M920x黑苹果之历程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">1.0.1.</span> <span class="nav-text">关键字：OpenCore；OC；联想；M920x；黑苹果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.0.2.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#联想-M920x简介"><span class="nav-number">1.0.3.</span> <span class="nav-text">联想-M920x简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#联想-M920x声卡"><span class="nav-number">1.0.4.</span> <span class="nav-text">联想-M920x声卡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#联想-M920xUSB定制"><span class="nav-number">1.0.5.</span> <span class="nav-text">联想-M920xUSB定制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#联想-M920xBIOS设置"><span class="nav-number">1.0.6.</span> <span class="nav-text">联想-M920xBIOS设置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#CPU设置"><span class="nav-number">1.0.6.1.</span> <span class="nav-text">CPU设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#集显设置"><span class="nav-number">1.0.6.2.</span> <span class="nav-text">集显设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#启动菜单设置"><span class="nav-number">1.0.6.3.</span> <span class="nav-text">启动菜单设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安全菜单设置"><span class="nav-number">1.0.6.4.</span> <span class="nav-text">安全菜单设置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#联想-M920x-OC配置与安装历程"><span class="nav-number">1.0.7.</span> <span class="nav-text">联想-M920x-OC配置与安装历程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#遇到问题一："><span class="nav-number">1.0.7.1.</span> <span class="nav-text">遇到问题一：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遇到问题二："><span class="nav-number">1.0.7.2.</span> <span class="nav-text">遇到问题二：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遇到问题三："><span class="nav-number">1.0.7.3.</span> <span class="nav-text">遇到问题三：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遇到问题四～十："><span class="nav-number">1.0.7.4.</span> <span class="nav-text">遇到问题四～十：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#联想-M920x-OC配置的完善"><span class="nav-number">1.0.8.</span> <span class="nav-text">联想-M920x-OC配置的完善</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#声卡"><span class="nav-number">1.0.8.1.</span> <span class="nav-text">声卡</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#集显"><span class="nav-number">1.0.8.2.</span> <span class="nav-text">集显</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#联想-M920x-OC引导完善后成果展示"><span class="nav-number">1.0.9.</span> <span class="nav-text">联想-M920x-OC引导完善后成果展示</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关于本机"><span class="nav-number">1.0.9.1.</span> <span class="nav-text">关于本机</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#集显-1"><span class="nav-number">1.0.9.2.</span> <span class="nav-text">集显</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#USB"><span class="nav-number">1.0.9.3.</span> <span class="nav-text">USB</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他"><span class="nav-number">1.0.10.</span> <span class="nav-text">其他</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结束语"><span class="nav-number">1.0.11.</span> <span class="nav-text">结束语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，特别是不能在远景论坛转载，否则将追究法律责任！可能被远景封号，谢谢合作！！"><span class="nav-number">1.0.12.</span> <span class="nav-text">重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，特别是不能在远景论坛转载，否则将追究法律责任！可能被远景封号，谢谢合作！！</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#黑苹果OpenCore开放群，群号-9422866，注明“独行秀才Blog引入”"><span class="nav-number">1.0.12.1.</span> <span class="nav-text"> 黑苹果OpenCore开放群，群号:9422866，注明“独行秀才Blog引入”</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2019 &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">独行秀才</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">本站总字数&#58;</span>
+    
+    <span title="本站总字数">25.7k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i> 访问人数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i> 访问总量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'XsF3ooTFstaC4AdIkBGId7Xi-9Nh9j0Va',
+        appKey: 'FMWOp5KGWSz1o0WwGecKgk2Y',
+        placeholder: '欢迎大家畅所欲言',
+        avatar:'mp',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+  
+  <script>
+    
+    function addCount(Counter) {
+      var $visitors = $('.leancloud_visitors');
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+            
+              .done(function() {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.time + 1);
+              })
+            
+              .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+              })
+          } else {
+            
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1 }))
+                .done(function() {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function() {
+                  console.log('Failed to create');
+                });
+            
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'XsF3ooTFstaC4AdIkBGId7Xi-9Nh9j0Va')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: 'https://' + api_server + '/1.1' + url,
+              headers: {
+                'X-LC-Id': 'XsF3ooTFstaC4AdIkBGId7Xi-9Nh9j0Va',
+                'X-LC-Key': 'FMWOp5KGWSz1o0WwGecKgk2Y',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+          
+            const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
+            if (localhost.test(document.URL)) return;
+            addCount(Counter);
+          
+        });
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
