@@ -88,21 +88,21 @@
 
 
 
-<meta name="description" content="写在前面由于目前OpenCore处于快速升级、迭代阶段，几乎每一天都有更新，喜欢追新的朋友，自己下载编译，可以体验最新的OpenCore，当然也是有风险的，迭代阶段或多或少存在BUG，在这里我友情提醒。文章最后有最新制作的：“编译OpenCore视频”。">
+<meta name="description" content="黑苹果；OC；OpenCore；编译 写在前面由于目前OpenCore处于快速升级、迭代阶段，几乎每一天都有更新，喜欢追新的朋友，自己下载编译，可以体验最新的OpenCore，当然也是有风险的，迭代阶段或多或少存在BUG，在这里我友情提醒。文章最后有最新制作的：“编译OpenCore视频”。 准备工作番茄：由于编译过程中，需要从自动raw.github.com下载nasm、nasm-mac64.z">
 <meta property="og:type" content="article">
-<meta property="og:title" content="快速编译OpenCore">
+<meta property="og:title" content="快速编译OpenCore（03月14日更新）">
 <meta property="og:url" content="https://shuiyunxc.github.io/2020/02/26/compile/index/index.html">
 <meta property="og:site_name" content="独行秀才的老窝">
-<meta property="og:description" content="写在前面由于目前OpenCore处于快速升级、迭代阶段，几乎每一天都有更新，喜欢追新的朋友，自己下载编译，可以体验最新的OpenCore，当然也是有风险的，迭代阶段或多或少存在BUG，在这里我友情提醒。文章最后有最新制作的：“编译OpenCore视频”。">
-<meta property="og:image" content="https://img.shields.io/badge/%E6%9B%B4%E6%96%B0%E6%97%A5%E6%9C%9F-2020%E5%B9%B402%E6%9C%8829%E6%97%A5-scarlet?style=flat-square">
+<meta property="og:description" content="黑苹果；OC；OpenCore；编译 写在前面由于目前OpenCore处于快速升级、迭代阶段，几乎每一天都有更新，喜欢追新的朋友，自己下载编译，可以体验最新的OpenCore，当然也是有风险的，迭代阶段或多或少存在BUG，在这里我友情提醒。文章最后有最新制作的：“编译OpenCore视频”。 准备工作番茄：由于编译过程中，需要从自动raw.github.com下载nasm、nasm-mac64.z">
+<meta property="og:image" content="https://img.shields.io/badge/%E6%9B%B4%E6%96%B0%E6%97%A5%E6%9C%9F-2020%E5%B9%B403%E6%9C%8814%E6%97%A5-scarlet?style=flat-square">
 <meta property="article:published_time" content="2020-02-26T04:06:21.000Z">
-<meta property="article:modified_time" content="2020-03-11T07:09:24.000Z">
+<meta property="article:modified_time" content="2020-03-22T08:58:28.000Z">
 <meta property="article:author" content="独行秀才">
 <meta property="article:tag" content="OpenCore">
 <meta property="article:tag" content="教程">
 <meta property="article:tag" content="编译">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img.shields.io/badge/%E6%9B%B4%E6%96%B0%E6%97%A5%E6%9C%9F-2020%E5%B9%B402%E6%9C%8829%E6%97%A5-scarlet?style=flat-square">
+<meta name="twitter:image" content="https://img.shields.io/badge/%E6%9B%B4%E6%96%B0%E6%97%A5%E6%9C%9F-2020%E5%B9%B403%E6%9C%8814%E6%97%A5-scarlet?style=flat-square">
 
 
 
@@ -138,7 +138,7 @@
 
 
 
-  <title>快速编译OpenCore | 独行秀才的老窝</title>
+  <title>快速编译OpenCore（03月14日更新） | 独行秀才的老窝</title>
   
 
 
@@ -356,7 +356,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">快速编译OpenCore</h2>
+          <h2 class="post-title" itemprop="name headline">快速编译OpenCore（03月14日更新）</h2>
         
 
         <div class="post-meta">
@@ -385,8 +385,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-03-11T15:09:24+08:00">
-                2020-03-11
+              <time title="更新于" itemprop="dateModified" datetime="2020-03-22T16:58:28+08:00">
+                2020-03-22
               </time>
             
           </span>
@@ -442,7 +442,7 @@
 
           
           
-             <span id="/2020/02/26/compile/index/" class="leancloud_visitors" data-flag-title="快速编译OpenCore">
+             <span id="/2020/02/26/compile/index/" class="leancloud_visitors" data-flag-title="快速编译OpenCore（03月14日更新）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-folder-open"></i>
@@ -470,7 +470,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  567
+                  788
                 </span>
               
 
@@ -486,7 +486,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  3
                 </span>
               
             </div>
@@ -507,8 +507,8 @@
       
 
       
-        <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>由于目前OpenCore处于快速升级、迭代阶段，几乎每一天都有更新，喜欢追新的朋友，自己下载编译，可以体验最新的OpenCore，当然也是有风险的，迭代阶段或多或少存在BUG，在这里我友情提醒。<font color= "#FF0000">文章最后有最新制作的：“编译OpenCore视频”。</font><a id="more"></a></p>
-<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="番茄："><a href="#番茄：" class="headerlink" title="番茄："></a>番茄：</h3><p>由于编译过程中，需要从自动raw.github.com下载nasm、nasm-mac64.zip、mtoc-mac64.zip等编译打包工具，而由于被强，需要番茄，可以用hosts解决，<a href="https://shuiyunxc.gitee.io/2020/02/26/compile/index/hosts.zip" target="_blank" rel="noopener">点这里下载hosts</a>，解压使用，至于hosts怎么用请自行搜索。</p>
+        <h4 id=""><a href="#" class="headerlink" title=""></a><div class="note class_name info"><p>黑苹果；OC；OpenCore；编译 </p></div></h4><h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>由于目前OpenCore处于快速升级、迭代阶段，几乎每一天都有更新，喜欢追新的朋友，自己下载编译，可以体验最新的OpenCore，当然也是有风险的，迭代阶段或多或少存在BUG，在这里我友情提醒。<font color= "#FF0000">文章最后有最新制作的：“编译OpenCore视频”。</font></p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="番茄："><a href="#番茄：" class="headerlink" title="番茄："></a>番茄：</h3><p>由于编译过程中，需要从自动raw.github.com下载nasm、nasm-mac64.zip、mtoc-mac64.zip等编译打包工具，而由于被强，需要番茄，可以用hosts解决，<a href="https://shuiyunxc.gitee.io/2020/02/26/compile/index/hosts.zip" target="_blank" rel="noopener">点这里下载hosts</a>，解压使用，至于hosts怎么用请<a href="https://www.bilibili.com/video/av92388174/" target="_blank" rel="noopener">看下面视频</a>。</p>
 <h3 id="安装xcode"><a href="#安装xcode" class="headerlink" title="安装xcode"></a>安装xcode</h3><p>打开终端，输入</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo xcode-select --install</span><br></pre></td></tr></table></figure>
 
@@ -516,22 +516,30 @@
 <h3 id="下载OpenCore源码包："><a href="#下载OpenCore源码包：" class="headerlink" title="下载OpenCore源码包："></a>下载OpenCore源码包：</h3><p>我已经将OpenCore源码包以及要用到的所有工具源码包，全部同步到国内的Gitee我的仓库中，下载速度是github无法比拟的，打开终端，输入</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;Users&#x2F;XXXX(你的用户名)&#x2F;Desktop&#x2F;   #回车</span><br><span class="line">git clone https:&#x2F;&#x2F;gitee.com&#x2F;shuiyunxc&#x2F;OpenCorePkg.git   #回车</span><br></pre></td></tr></table></figure>
 
+<p>本人的仓库每天2～4小时同步一次，保持与Github同步！</p>
 <h3 id="编译OpenCore"><a href="#编译OpenCore" class="headerlink" title="编译OpenCore"></a>编译OpenCore</h3><p>继续在终端输入</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd OpenCorePkg   #回车</span><br><span class="line">.&#x2F;macbuild.tool  #回车</span><br></pre></td></tr></table></figure>
 
 <p>开始编译，中间由于需要安装工具，无脑输入“y”，继续，直到编译完成。</p>
-<h3 id="获取OpenCore-0-5-x-RELEASE-zip"><a href="#获取OpenCore-0-5-x-RELEASE-zip" class="headerlink" title="获取OpenCore-0.5.x-RELEASE.zip"></a>获取OpenCore-0.5.x-RELEASE.zip</h3><p>打开OpenCorePkg/Binaries，里面有DEBUG、RELEASE分身，点击进入，里面就可以看到OpenCore-0.5.x-DEBUG.zip/OpenCore-0.5.x-RELEASE.zip，一般用RELEASE版就好。将OpenCore-0.5.x-RELEASE.zip拷贝到其他位置，解压，里面有：</p>
+<p>如果是第一次编译，下载UDK速度会慢些，耐心下载完成。如非第一次编译，可以将上次编译的<code>OpenCorePkg</code>文件夹中的UDK文件夹整体复制到新clone的<code>OpenCorePkg</code>文件夹中。并删除<code>Build</code>、<code>EfiPkg</code>、<code>MacInfoPkg</code>三个文件夹。这样就不用下载UDK，同时修改macbuild.tool里面做如下修改：EfiPkg与MacInfoPkg也保持同步。这样，整个编译速度快速迅捷！！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">将DEPURLS&#x3D;(&#39;https:&#x2F;&#x2F;github.com&#x2F;acidanthera&#x2F;EfiPkg&#39; &#39;https:&#x2F;&#x2F;github.com&#x2F;acidanthera&#x2F;MacInfoPkg&#39;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">修改为：DEPURLS&#x3D;(&#39;https:&#x2F;&#x2F;gitee.com&#x2F;shuiyunxc&#x2F;EfiPkg&#39; &#39;https:&#x2F;&#x2F;gitee.com&#x2F;shuiyunxc&#x2F;MacInfoPkg&#39;)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="获取OpenCore-0-5-x-RELEASE-zip"><a href="#获取OpenCore-0-5-x-RELEASE-zip" class="headerlink" title="获取OpenCore-0.5.x-RELEASE.zip"></a>获取OpenCore-0.5.x-RELEASE.zip</h3><p>打开OpenCorePkg/Binaries，里面有DEBUG、RELEASE分身，点击进入，里面就可以看到OpenCore-0.5.x-DEBUG.zip/OpenCore-0.5.x-RELEASE.zip，一般用RELEASE版就好。需要调试的，用DEBUG版。将OpenCore-0.5.x-RELEASE.zip拷贝到其他位置，解压，里面有：</p>
 <ul>
 <li>Docs文件夹：里面包含更新日志（Changelog.md）、说明文件（Configuration.pdf）、变化说明（Differences.pdf）、2个config.plist模版(Sample.plist、SampleFull.plist)、以及SSDT模版文件夹（AcpiSamples）。</li>
-<li>EFI文件夹：为将来要用的EFI。如何使用请参阅<a href="https://shuiyunxc.gitee.io/2020/02/21/instructions/index/" target="_blank" rel="noopener">OpenCore配置文字说明第二版（基于2月19日编译版）</a></li>
+<li>EFI文件夹：为将来要用的EFI。如何使用请参阅(<a href="https://shuiyunxc.gitee.io/2020/03/10/instru/index/" target="_blank" rel="noopener">OpenCore配置文字说明第三版（基于03月12日编译版）</a>)</li>
 <li>Utilities文件夹：包含用于传统BIOS（MBR）启动的文件（BootInstall），包含RsaTool的CreateVault文件夹，用于创建nvram的文件夹（LogoutHook）。</li>
 </ul>
 <p>最新制作的视频：<a href="https://www.bilibili.com/video/av92388174/" target="_blank" rel="noopener">https://www.bilibili.com/video/av92388174/</a></p>
 <iframe height=740 width=820 src="//player.bilibili.com/player.html?aid=92388174&cid=157747263&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
-<h3 id="重要声明：独行秀才拥有此篇文字、图片与视频所有版权，严禁用于任何商业用途，特别是不允许在远景论坛转载，否则将追究法律责任！谢谢合作"><a href="#重要声明：独行秀才拥有此篇文字、图片与视频所有版权，严禁用于任何商业用途，特别是不允许在远景论坛转载，否则将追究法律责任！谢谢合作" class="headerlink" title="重要声明：独行秀才拥有此篇文字、图片与视频所有版权，严禁用于任何商业用途，特别是不允许在远景论坛转载，否则将追究法律责任！谢谢合作"></a>重要声明：独行秀才拥有此篇文字、图片与视频所有版权，严禁用于任何商业用途，特别是不允许在远景论坛转载，否则将追究法律责任！谢谢合作</h3><img src="https://img.shields.io/badge/更新日期-2020年02月29日-scarlet?style=flat-square" align='center'>
+<h4 id="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"><a href="#重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！" class="headerlink" title="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"></a>重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！</h4><img src="https://img.shields.io/badge/更新日期-2020年03月14日-scarlet?style=flat-square" align='center'>
 
-
+<h4 id="黑苹果OpenCore开放群，群号-9422866，注明“独行秀才Blog引入”"><a href="#黑苹果OpenCore开放群，群号-9422866，注明“独行秀才Blog引入”" class="headerlink" title="黑苹果OpenCore开放群，群号:9422866，注明“独行秀才Blog引入”"></a><font color= "#FF0000"  align="center">黑苹果OpenCore开放群，群号:9422866，注明“独行秀才Blog引入”</font></h4>
       
     </div>
     
@@ -593,11 +601,11 @@
   <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
 
-  <p><span>本文标题:</span>快速编译OpenCore</a></p>
+  <p><span>本文标题:</span>快速编译OpenCore（03月14日更新）</a></p>
   <p><span>文章作者:</span>独行秀才</a></p>
   <p><span>发布时间:</span>2020年02月26日 - 12:06:21</p>
-  <p><span>最后更新:</span>2020年03月11日 - 15:09:24</p>
-  <p><span>原始链接:</span><a href="/2020/02/26/compile/index/" title="快速编译OpenCore">https://shuiyunxc.github.io/2020/02/26/compile/index/</a>
+  <p><span>最后更新:</span>2020年03月22日 - 16:58:28</p>
+  <p><span>原始链接:</span><a href="/2020/02/26/compile/index/" title="快速编译OpenCore（03月14日更新）">https://shuiyunxc.github.io/2020/02/26/compile/index/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://shuiyunxc.github.io/2020/02/26/compile/index/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
@@ -738,7 +746,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -749,7 +757,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">39</span>
+                  <span class="site-state-item-count">46</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -760,7 +768,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">37</span>
+                  <span class="site-state-item-count">42</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -840,7 +848,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工作"><span class="nav-number">2.</span> <span class="nav-text">准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#番茄："><span class="nav-number">2.1.</span> <span class="nav-text">番茄：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装xcode"><span class="nav-number">2.2.</span> <span class="nav-text">安装xcode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载OpenCore源码包："><span class="nav-number">2.3.</span> <span class="nav-text">下载OpenCore源码包：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编译OpenCore"><span class="nav-number">2.4.</span> <span class="nav-text">编译OpenCore</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取OpenCore-0-5-x-RELEASE-zip"><span class="nav-number">2.5.</span> <span class="nav-text">获取OpenCore-0.5.x-RELEASE.zip</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重要声明：独行秀才拥有此篇文字、图片与视频所有版权，严禁用于任何商业用途，特别是不允许在远景论坛转载，否则将追究法律责任！谢谢合作"><span class="nav-number">2.6.</span> <span class="nav-text">重要声明：独行秀才拥有此篇文字、图片与视频所有版权，严禁用于任何商业用途，特别是不允许在远景论坛转载，否则将追究法律责任！谢谢合作</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">黑苹果；OC；OpenCore；编译 </span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#写在前面"><span class="nav-number"></span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工作"><span class="nav-number"></span> <span class="nav-text">准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#番茄："><span class="nav-number"></span> <span class="nav-text">番茄：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装xcode"><span class="nav-number"></span> <span class="nav-text">安装xcode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载OpenCore源码包："><span class="nav-number"></span> <span class="nav-text">下载OpenCore源码包：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编译OpenCore"><span class="nav-number"></span> <span class="nav-text">编译OpenCore</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取OpenCore-0-5-x-RELEASE-zip"><span class="nav-number"></span> <span class="nav-text">获取OpenCore-0.5.x-RELEASE.zip</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"><span class="nav-number">1.</span> <span class="nav-text">重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#黑苹果OpenCore开放群，群号-9422866，注明“独行秀才Blog引入”"><span class="nav-number">2.</span> <span class="nav-text">黑苹果OpenCore开放群，群号:9422866，注明“独行秀才Blog引入”</span></a></li></ol></div>
             
 
           </div>
@@ -874,7 +882,7 @@
     
       <span class="post-meta-item-text">本站总字数&#58;</span>
     
-    <span title="本站总字数">25.7k</span>
+    <span title="本站总字数">27.9k</span>
   
 </div>
 

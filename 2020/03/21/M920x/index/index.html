@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="OpenCore,台式机,Lenovo,M920x,集显," />
+  <meta name="keywords" content="OpenCore,台式机,集显,Lenovo,M920x," />
 
 
 
@@ -116,13 +116,13 @@
 <meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/WechatIMG1107.png">
 <meta property="og:image" content="https://img.shields.io/badge/%E6%9B%B4%E6%96%B0%E6%97%A5%E6%9C%9F%EF%BC%9A-2020%E5%B9%B403%E6%9C%8821%E6%97%A5-red?style=flat-square">
 <meta property="article:published_time" content="2020-03-21T13:03:14.000Z">
-<meta property="article:modified_time" content="2020-03-21T17:50:50.000Z">
+<meta property="article:modified_time" content="2020-03-23T06:56:29.000Z">
 <meta property="article:author" content="独行秀才">
 <meta property="article:tag" content="OpenCore">
 <meta property="article:tag" content="台式机">
+<meta property="article:tag" content="集显">
 <meta property="article:tag" content="Lenovo">
 <meta property="article:tag" content="M920x">
-<meta property="article:tag" content="集显">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/9FA54B26.png">
 
@@ -407,8 +407,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-03-22T01:50:50+08:00">
-                2020-03-22
+              <time title="更新于" itemprop="dateModified" datetime="2020-03-23T14:56:29+08:00">
+                2020-03-23
               </time>
             
           </span>
@@ -536,7 +536,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  959
+                  982
                 </span>
               
 
@@ -623,7 +623,9 @@
 <p>这个是RTC问题，添加<code>SSDT-AWAC.aml</code>解决。</p>
 <h4 id="遇到问题二："><a href="#遇到问题二：" class="headerlink" title="遇到问题二："></a>遇到问题二：</h4><p>卡apfs_module_start：1683。错误图遗失</p>
 <p>是EC改名问题，添加<code>SSDT-EC-USBX.aml</code>解决</p>
-<h4 id="遇到问题三："><a href="#遇到问题三：" class="headerlink" title="遇到问题三："></a>遇到问题三：</h4><p>见<a href="https://shuiyunxc.gitee.io/2020/03/06/Faults/index/" target="_blank" rel="noopener">OpenCore配置错误、故障与解决办法</a>问题九。</p>
+<h4 id="遇到问题三："><a href="#遇到问题三：" class="headerlink" title="遇到问题三："></a>遇到问题三：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Kernel Extensions in backtrace：</span><br><span class="line">com.apple.iokit.IOPCIFamily(2.9).....</span><br><span class="line">com.apple.driver.AppleACPIPlatform(6.1)......</span><br><span class="line">......</span><br><span class="line">com.apple.driver.AppleIntelCFLGraphicsFramebuffer(14.0.4)......</span><br></pre></td></tr></table></figure>
+
+<p>见<a href="https://shuiyunxc.gitee.io/2020/03/06/Faults/index/" target="_blank" rel="noopener">OpenCore配置错误、故障与解决办法</a>问题九。</p>
 <h4 id="遇到问题四～十："><a href="#遇到问题四～十：" class="headerlink" title="遇到问题四～十："></a>遇到问题四～十：</h4><p>就不一一罗列了。</p>
 <h3 id="联想-M920x-OC配置的完善"><a href="#联想-M920x-OC配置的完善" class="headerlink" title="联想-M920x-OC配置的完善"></a>联想-M920x-OC配置的完善</h3><h4 id="声卡"><a href="#声卡" class="headerlink" title="声卡"></a>声卡</h4><p>Blog开始就声卡仿冒做了说明并生成<code>AppleALC.kext</code>，直接添加使用，完美。并完善相关参数比如<code>device_type：Audio device</code>，有时候，参数不全，可能影响声卡声音大小</p>
 <img src="https://shuiyunxc.gitee.io/2020/03/21/M920x/index/FCCE29B3.png" alt="FCCE29B3" style="zoom:50%;" />
@@ -641,7 +643,7 @@
 <p>开机图形界面设置</p>
 <p>详见<a href="https://shuiyunxc.gitee.io/2020/03/19/SoundGra/index/" target="_blank" rel="noopener">OpenCore黑苹果引导开机声音与图形界面设置</a></p>
 <h3 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h3><p>随着OpenCore引导的日臻完善，与大佬们的快速升级与迭代，OpenCore必将逐步走向主流，早一日了解并掌握OpenCore是必要滴！希望这篇Blog，能给大家有所启迪！！</p>
-<h3 id="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，特别是不能在远景论坛转载，否则将追究法律责任！可能被远景封号，谢谢合作！！"><a href="#重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，特别是不能在远景论坛转载，否则将追究法律责任！可能被远景封号，谢谢合作！！" class="headerlink" title="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，特别是不能在远景论坛转载，否则将追究法律责任！可能被远景封号，谢谢合作！！"></a>重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，特别是不能在远景论坛转载，否则将追究法律责任！可能被远景封号，谢谢合作！！</h3><img src="https://img.shields.io/badge/更新日期：-2020年03月21日-red?style=flat-square" align='center'>
+<h4 id="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"><a href="#重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！" class="headerlink" title="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"></a>重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！</h4><img src="https://img.shields.io/badge/更新日期：-2020年03月21日-red?style=flat-square" align='center'>
 
 <h4 id="黑苹果OpenCore开放群，群号-9422866，注明“独行秀才Blog引入”"><a href="#黑苹果OpenCore开放群，群号-9422866，注明“独行秀才Blog引入”" class="headerlink" title=" 黑苹果OpenCore开放群，群号:9422866，注明“独行秀才Blog引入”"></a><font color= "#FF0000"  align="center"> 黑苹果OpenCore开放群，群号:9422866，注明“独行秀才Blog引入”</font></h4>
       
@@ -708,7 +710,7 @@
   <p><span>本文标题:</span>OpenCore引导安装联想-M920x黑苹果之历程</a></p>
   <p><span>文章作者:</span>独行秀才</a></p>
   <p><span>发布时间:</span>2020年03月21日 - 21:03:14</p>
-  <p><span>最后更新:</span>2020年03月22日 - 01:50:50</p>
+  <p><span>最后更新:</span>2020年03月23日 - 14:56:29</p>
   <p><span>原始链接:</span><a href="/2020/03/21/M920x/index/" title="OpenCore引导安装联想-M920x黑苹果之历程">https://shuiyunxc.github.io/2020/03/21/M920x/index/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://shuiyunxc.github.io/2020/03/21/M920x/index/"  aria-label="复制成功！"></i></span>
   </p>
@@ -741,11 +743,11 @@
           
             <a href="/tags/%E5%8F%B0%E5%BC%8F%E6%9C%BA/" rel="tag"><i class="fa fa-tag"></i> 台式机</a>
           
+            <a href="/tags/%E9%9B%86%E6%98%BE/" rel="tag"><i class="fa fa-tag"></i> 集显</a>
+          
             <a href="/tags/Lenovo/" rel="tag"><i class="fa fa-tag"></i> Lenovo</a>
           
             <a href="/tags/M920x/" rel="tag"><i class="fa fa-tag"></i> M920x</a>
-          
-            <a href="/tags/%E9%9B%86%E6%98%BE/" rel="tag"><i class="fa fa-tag"></i> 集显</a>
           
         </div>
       
@@ -767,6 +769,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/03/24/G7/index/" rel="prev" title="OpenCore引导安装戴尔-G7笔记本黑苹果之历程">
+                OpenCore引导安装戴尔-G7笔记本黑苹果之历程 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -850,7 +856,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -861,7 +867,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">39</span>
+                  <span class="site-state-item-count">46</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -872,7 +878,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">37</span>
+                  <span class="site-state-item-count">42</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -952,7 +958,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#OpenCore引导安装联想-M920x黑苹果之历程"><span class="nav-number">1.</span> <span class="nav-text">OpenCore引导安装联想-M920x黑苹果之历程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">1.0.1.</span> <span class="nav-text">关键字：OpenCore；OC；联想；M920x；黑苹果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.0.2.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#联想-M920x简介"><span class="nav-number">1.0.3.</span> <span class="nav-text">联想-M920x简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#联想-M920x声卡"><span class="nav-number">1.0.4.</span> <span class="nav-text">联想-M920x声卡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#联想-M920xUSB定制"><span class="nav-number">1.0.5.</span> <span class="nav-text">联想-M920xUSB定制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#联想-M920xBIOS设置"><span class="nav-number">1.0.6.</span> <span class="nav-text">联想-M920xBIOS设置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#CPU设置"><span class="nav-number">1.0.6.1.</span> <span class="nav-text">CPU设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#集显设置"><span class="nav-number">1.0.6.2.</span> <span class="nav-text">集显设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#启动菜单设置"><span class="nav-number">1.0.6.3.</span> <span class="nav-text">启动菜单设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安全菜单设置"><span class="nav-number">1.0.6.4.</span> <span class="nav-text">安全菜单设置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#联想-M920x-OC配置与安装历程"><span class="nav-number">1.0.7.</span> <span class="nav-text">联想-M920x-OC配置与安装历程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#遇到问题一："><span class="nav-number">1.0.7.1.</span> <span class="nav-text">遇到问题一：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遇到问题二："><span class="nav-number">1.0.7.2.</span> <span class="nav-text">遇到问题二：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遇到问题三："><span class="nav-number">1.0.7.3.</span> <span class="nav-text">遇到问题三：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遇到问题四～十："><span class="nav-number">1.0.7.4.</span> <span class="nav-text">遇到问题四～十：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#联想-M920x-OC配置的完善"><span class="nav-number">1.0.8.</span> <span class="nav-text">联想-M920x-OC配置的完善</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#声卡"><span class="nav-number">1.0.8.1.</span> <span class="nav-text">声卡</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#集显"><span class="nav-number">1.0.8.2.</span> <span class="nav-text">集显</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#联想-M920x-OC引导完善后成果展示"><span class="nav-number">1.0.9.</span> <span class="nav-text">联想-M920x-OC引导完善后成果展示</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关于本机"><span class="nav-number">1.0.9.1.</span> <span class="nav-text">关于本机</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#集显-1"><span class="nav-number">1.0.9.2.</span> <span class="nav-text">集显</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#USB"><span class="nav-number">1.0.9.3.</span> <span class="nav-text">USB</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他"><span class="nav-number">1.0.10.</span> <span class="nav-text">其他</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结束语"><span class="nav-number">1.0.11.</span> <span class="nav-text">结束语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，特别是不能在远景论坛转载，否则将追究法律责任！可能被远景封号，谢谢合作！！"><span class="nav-number">1.0.12.</span> <span class="nav-text">重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，特别是不能在远景论坛转载，否则将追究法律责任！可能被远景封号，谢谢合作！！</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#黑苹果OpenCore开放群，群号-9422866，注明“独行秀才Blog引入”"><span class="nav-number">1.0.12.1.</span> <span class="nav-text"> 黑苹果OpenCore开放群，群号:9422866，注明“独行秀才Blog引入”</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#OpenCore引导安装联想-M920x黑苹果之历程"><span class="nav-number">1.</span> <span class="nav-text">OpenCore引导安装联想-M920x黑苹果之历程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">1.0.1.</span> <span class="nav-text">关键字：OpenCore；OC；联想；M920x；黑苹果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.0.2.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#联想-M920x简介"><span class="nav-number">1.0.3.</span> <span class="nav-text">联想-M920x简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#联想-M920x声卡"><span class="nav-number">1.0.4.</span> <span class="nav-text">联想-M920x声卡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#联想-M920xUSB定制"><span class="nav-number">1.0.5.</span> <span class="nav-text">联想-M920xUSB定制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#联想-M920xBIOS设置"><span class="nav-number">1.0.6.</span> <span class="nav-text">联想-M920xBIOS设置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#CPU设置"><span class="nav-number">1.0.6.1.</span> <span class="nav-text">CPU设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#集显设置"><span class="nav-number">1.0.6.2.</span> <span class="nav-text">集显设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#启动菜单设置"><span class="nav-number">1.0.6.3.</span> <span class="nav-text">启动菜单设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安全菜单设置"><span class="nav-number">1.0.6.4.</span> <span class="nav-text">安全菜单设置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#联想-M920x-OC配置与安装历程"><span class="nav-number">1.0.7.</span> <span class="nav-text">联想-M920x-OC配置与安装历程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#遇到问题一："><span class="nav-number">1.0.7.1.</span> <span class="nav-text">遇到问题一：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遇到问题二："><span class="nav-number">1.0.7.2.</span> <span class="nav-text">遇到问题二：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遇到问题三："><span class="nav-number">1.0.7.3.</span> <span class="nav-text">遇到问题三：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遇到问题四～十："><span class="nav-number">1.0.7.4.</span> <span class="nav-text">遇到问题四～十：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#联想-M920x-OC配置的完善"><span class="nav-number">1.0.8.</span> <span class="nav-text">联想-M920x-OC配置的完善</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#声卡"><span class="nav-number">1.0.8.1.</span> <span class="nav-text">声卡</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#集显"><span class="nav-number">1.0.8.2.</span> <span class="nav-text">集显</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#联想-M920x-OC引导完善后成果展示"><span class="nav-number">1.0.9.</span> <span class="nav-text">联想-M920x-OC引导完善后成果展示</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关于本机"><span class="nav-number">1.0.9.1.</span> <span class="nav-text">关于本机</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#集显-1"><span class="nav-number">1.0.9.2.</span> <span class="nav-text">集显</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#USB"><span class="nav-number">1.0.9.3.</span> <span class="nav-text">USB</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他"><span class="nav-number">1.0.10.</span> <span class="nav-text">其他</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结束语"><span class="nav-number">1.0.11.</span> <span class="nav-text">结束语</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"><span class="nav-number">1.0.11.1.</span> <span class="nav-text">重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#黑苹果OpenCore开放群，群号-9422866，注明“独行秀才Blog引入”"><span class="nav-number">1.0.11.2.</span> <span class="nav-text"> 黑苹果OpenCore开放群，群号:9422866，注明“独行秀才Blog引入”</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -986,7 +992,7 @@
     
       <span class="post-meta-item-text">本站总字数&#58;</span>
     
-    <span title="本站总字数">25.7k</span>
+    <span title="本站总字数">27.9k</span>
   
 </div>
 
