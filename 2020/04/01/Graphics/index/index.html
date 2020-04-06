@@ -1,0 +1,5351 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="CPU,Graphics,Iris® Plus Graphics,UHD Graphics,HD Graphics," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="独行秀才的老窝" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="intel CPU&amp;集显ID速查前言本速查表全部源于Intel产品规范，在转录过程中，难免有错误或遗漏，请大家在查阅过程中，如果发现错误，请告知独行秀才！本表主要用于黑苹果安装过程中，集成显卡ID的查询。方便大家根据自己的CPU选择合适的显卡ID，完善自己的黑苹果！ 第十代智能英特尔® 酷睿™ 核心类型：Comet Lake   编号 CPU编号 处理器显卡 显卡基本频率 显卡最大动态频率">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Intel CPU&amp;集显ID速查">
+<meta property="og:url" content="https://shuiyunxc.github.io/2020/04/01/Graphics/index/index.html">
+<meta property="og:site_name" content="独行秀才的老窝">
+<meta property="og:description" content="intel CPU&amp;集显ID速查前言本速查表全部源于Intel产品规范，在转录过程中，难免有错误或遗漏，请大家在查阅过程中，如果发现错误，请告知独行秀才！本表主要用于黑苹果安装过程中，集成显卡ID的查询。方便大家根据自己的CPU选择合适的显卡ID，完善自己的黑苹果！ 第十代智能英特尔® 酷睿™ 核心类型：Comet Lake   编号 CPU编号 处理器显卡 显卡基本频率 显卡最大动态频率">
+<meta property="og:image" content="https://img.shields.io/badge/%E6%9B%B4%E6%96%B0%E6%97%A5%E6%9C%9F%EF%BC%9A-2020%E5%B9%B404%E6%9C%8803%E6%97%A5-red?style=flat-square">
+<meta property="article:published_time" content="2020-04-01T03:56:27.000Z">
+<meta property="article:modified_time" content="2020-04-02T16:33:29.000Z">
+<meta property="article:author" content="独行秀才">
+<meta property="article:tag" content="CPU">
+<meta property="article:tag" content="Graphics">
+<meta property="article:tag" content="Iris® Plus Graphics">
+<meta property="article:tag" content="UHD Graphics">
+<meta property="article:tag" content="HD Graphics">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img.shields.io/badge/%E6%9B%B4%E6%96%B0%E6%97%A5%E6%9C%9F%EF%BC%9A-2020%E5%B9%B404%E6%9C%8803%E6%97%A5-red?style=flat-square">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"right","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://shuiyunxc.github.io/2020/04/01/Graphics/index/"/>
+
+
+
+
+
+  <title>Intel CPU&集显ID速查 | 独行秀才的老窝</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?1baf224118b2f00d5c30cf05995b4c5f";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">独行秀才的老窝</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专注于黑苹果安装维护</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-corso">
+          <a href="/tags/%E6%95%99%E7%A8%8B/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br />
+            
+            教程
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-hackintosh">
+          <a href="/Hackintosh/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-apple"></i> <br />
+            
+            黑苹果安装维护
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://shuiyunxc.github.io/2020/04/01/Graphics/index/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="独行秀才">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="独行秀才的老窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Intel CPU&集显ID速查</h2>
+        
+
+        <div class="post-meta">
+        
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-01T11:56:27+08:00">
+                2020-04-01
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2020-04-03T00:33:29+08:00">
+                2020-04-03
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CPU/" itemprop="url" rel="index">
+                    <span itemprop="name">CPU</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CPU/Graphics-ID/" itemprop="url" rel="index">
+                    <span itemprop="name">Graphics ID</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CPU/Graphics-ID/Iris%C2%AE-Plus-Graphics/" itemprop="url" rel="index">
+                    <span itemprop="name">Iris® Plus Graphics</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CPU/Graphics-ID/Iris%C2%AE-Plus-Graphics/UHD-Graphics/" itemprop="url" rel="index">
+                    <span itemprop="name">UHD Graphics</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CPU/Graphics-ID/Iris%C2%AE-Plus-Graphics/UHD-Graphics/HD-Graphics/" itemprop="url" rel="index">
+                    <span itemprop="name">HD Graphics</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-commenting-o"></i>
+                </span>
+                <a href="/2020/04/01/Graphics/index/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/01/Graphics/index/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2020/04/01/Graphics/index/" class="leancloud_visitors" data-flag-title="Intel CPU&集显ID速查">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-folder-open"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          <!--
+          
+          -->
+          
+          
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  5.9k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  35
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="intel-CPU-amp-集显ID速查"><a href="#intel-CPU-amp-集显ID速查" class="headerlink" title="intel CPU&amp;集显ID速查"></a>intel CPU&amp;集显ID速查</h2><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本速查表全部源于<a href="https://ark.intel.com/content/www/cn/zh/ark.html#@PanelLabel122139" target="_blank" rel="noopener">Intel产品规范</a>，在转录过程中，难免有错误或遗漏，请大家在查阅过程中，如果发现错误，请告知独行秀才！本表主要用于黑苹果安装过程中，集成显卡ID的查询。方便大家根据自己的CPU选择合适的显卡ID，完善自己的黑苹果！</p>
+<h3 id="第十代智能英特尔®-酷睿™-核心类型：Comet-Lake"><a href="#第十代智能英特尔®-酷睿™-核心类型：Comet-Lake" class="headerlink" title="第十代智能英特尔® 酷睿™ 核心类型：Comet Lake"></a>第十代智能英特尔® 酷睿™ 核心类型：Comet Lake</h3><table>
+<thead>
+<tr>
+<th>编号</th>
+<th>CPU编号</th>
+<th>处理器显卡</th>
+<th>显卡基本频率</th>
+<th>显卡最大动态频率</th>
+<th>集显 ID</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>i7-10710U</td>
+<td>UHD Graphics</td>
+<td>300 MHz</td>
+<td>1.15 GHz</td>
+<td>未标注</td>
+</tr>
+<tr>
+<td>2</td>
+<td>i7-1065G7</td>
+<td>Iris® Plus Graphics</td>
+<td>300 MHz</td>
+<td>1.10 GHz</td>
+<td>0x8A52</td>
+</tr>
+<tr>
+<td>3</td>
+<td>i7-1060G7</td>
+<td>Iris® Plus Graphics</td>
+<td>300 MHz</td>
+<td>1.10 GHz</td>
+<td>0x8A51</td>
+</tr>
+<tr>
+<td>4</td>
+<td>i7-10510U</td>
+<td>UHD Graphics</td>
+<td>300 MHz</td>
+<td>1.15 GHz</td>
+<td>未标注</td>
+</tr>
+<tr>
+<td>5</td>
+<td>i7-10510Y</td>
+<td>UHD Graphics</td>
+<td>300 MHz</td>
+<td>1.15 GHz</td>
+<td>0x87CA</td>
+</tr>
+<tr>
+<td>6</td>
+<td>i5-1035G7</td>
+<td>Iris® Plus Graphics</td>
+<td>300 MHz</td>
+<td>1.05 GHz</td>
+<td>0x8A52</td>
+</tr>
+<tr>
+<td>7</td>
+<td>i5-1035G4</td>
+<td>Iris® Plus Graphics</td>
+<td>300 MHz</td>
+<td>1.05 GHz</td>
+<td>0x8A5A</td>
+</tr>
+<tr>
+<td>8</td>
+<td>i5-1035G1</td>
+<td>UHD Graphics</td>
+<td>300 MHz</td>
+<td>1.05 GHz</td>
+<td>0x8A56</td>
+</tr>
+<tr>
+<td>9</td>
+<td>i5-10310Y</td>
+<td>UHD Graphics</td>
+<td>300 MHz</td>
+<td>1.05 GHz</td>
+<td>0x87CA</td>
+</tr>
+<tr>
+<td>10</td>
+<td>i5-1030G7</td>
+<td>Iris® Plus Graphics</td>
+<td>300 MHz</td>
+<td>1.05 GHz</td>
+<td>0x8A51</td>
+</tr>
+<tr>
+<td>11</td>
+<td>i5-1030G4</td>
+<td>Iris® Plus Graphics</td>
+<td>300 MHz</td>
+<td>1.05 GHz</td>
+<td>0x8A5C</td>
+</tr>
+<tr>
+<td>12</td>
+<td>i5-10210U</td>
+<td>UHD Graphics</td>
+<td>300 MHz</td>
+<td>1.10 GHz</td>
+<td>未标注</td>
+</tr>
+<tr>
+<td>13</td>
+<td>i5-10210Y</td>
+<td>UHD Graphics</td>
+<td>300 MHz</td>
+<td>1.05 GHz</td>
+<td>0x87CA</td>
+</tr>
+<tr>
+<td>14</td>
+<td>i3-10110U</td>
+<td>UHD Graphics</td>
+<td>300 MHz</td>
+<td>1.00 GHz</td>
+<td>未标注</td>
+</tr>
+<tr>
+<td>15</td>
+<td>i3-10110Y</td>
+<td>UHD Graphics</td>
+<td>300 MHz</td>
+<td>1.00 GHz</td>
+<td>0x87CA</td>
+</tr>
+<tr>
+<td>16</td>
+<td>i3-1000G4</td>
+<td>Iris® Plus Graphics</td>
+<td>300 MHz</td>
+<td>0.90 GHz</td>
+<td>0x8A5C</td>
+</tr>
+<tr>
+<td>17</td>
+<td>i3-1000G1</td>
+<td>UHD Graphics</td>
+<td>300 MHz</td>
+<td>0.90 GHz</td>
+<td>0x8A58</td>
+</tr>
+<tr>
+<td>18</td>
+<td>i3-1005G1</td>
+<td>UHD Graphics</td>
+<td>300 MHz</td>
+<td>0.90 GHz</td>
+<td>0x8A56</td>
+</tr>
+</tbody></table>
+<h3 id="第九代智能英特尔®-酷睿™-核心类型：Ice-Lake"><a href="#第九代智能英特尔®-酷睿™-核心类型：Ice-Lake" class="headerlink" title="第九代智能英特尔® 酷睿™ 核心类型：Ice Lake"></a>第九代智能英特尔® 酷睿™ 核心类型：Ice Lake</h3><table>
+<thead>
+<tr>
+<th>编号</th>
+<th>CPU编号</th>
+<th>处理器显卡</th>
+<th>显卡基本频率</th>
+<th>显卡最大动态频率</th>
+<th>集显 ID</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>i9-9980HK</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.25 GHz</td>
+<td>0x3E9B</td>
+</tr>
+<tr>
+<td>2</td>
+<td>i9-9880H</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.20 GHz</td>
+<td>0x3E9B</td>
+</tr>
+<tr>
+<td>3</td>
+<td>i9-9900T</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.20 GHz</td>
+<td>0x3E98</td>
+</tr>
+<tr>
+<td>4</td>
+<td>i9-9900KS</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.20 GHz</td>
+<td>0x3E98</td>
+</tr>
+<tr>
+<td>5</td>
+<td>i9-9900K</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.20 GHz</td>
+<td>0x3E98</td>
+</tr>
+<tr>
+<td>6</td>
+<td>i9-9900</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.20 GHz</td>
+<td>0x3E98</td>
+</tr>
+<tr>
+<td>7</td>
+<td>i7-9850HL</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x3E9B</td>
+</tr>
+<tr>
+<td>8</td>
+<td>i7-9850HE</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x3E9B</td>
+</tr>
+<tr>
+<td>9</td>
+<td>i7-9850H</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x3E9B</td>
+</tr>
+<tr>
+<td>10</td>
+<td>i7-9750H</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x3E9B</td>
+</tr>
+<tr>
+<td>11</td>
+<td>i7-9700TE</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x3E98</td>
+</tr>
+<tr>
+<td>12</td>
+<td>i7-9700T</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x3E98</td>
+</tr>
+<tr>
+<td>13</td>
+<td>i7-9700K</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.20 GHz</td>
+<td>0x3E98</td>
+</tr>
+<tr>
+<td>14</td>
+<td>i7-9700E</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x3E98</td>
+</tr>
+<tr>
+<td>15</td>
+<td>i7-9700</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.20 GHz</td>
+<td>0x3E98</td>
+</tr>
+<tr>
+<td>16</td>
+<td>i5-9600T</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x3E92</td>
+</tr>
+<tr>
+<td>17</td>
+<td>i5-9600K</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x3E98</td>
+</tr>
+<tr>
+<td>18</td>
+<td>i5-9600</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x3E92</td>
+</tr>
+<tr>
+<td>19</td>
+<td>i5-9500TE</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x3E98</td>
+</tr>
+<tr>
+<td>20</td>
+<td>i5-9500T</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x3E92</td>
+</tr>
+<tr>
+<td>21</td>
+<td>i5-9500E</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x3E98</td>
+</tr>
+<tr>
+<td>22</td>
+<td>i5-9500</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x3E92</td>
+</tr>
+<tr>
+<td>23</td>
+<td>i5-9400T</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.05 GHz</td>
+<td>0x3E92</td>
+</tr>
+<tr>
+<td>24</td>
+<td>i5-9400H</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.05 GHz</td>
+<td>0x3E98</td>
+</tr>
+<tr>
+<td>25</td>
+<td>i5-9400</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.05 GHz</td>
+<td>0X3E98/x92</td>
+</tr>
+<tr>
+<td>26</td>
+<td>i5-9300H</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.05 GHz</td>
+<td>0x3E9B</td>
+</tr>
+<tr>
+<td>27</td>
+<td>i3-9350K</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x3E91</td>
+</tr>
+<tr>
+<td>28</td>
+<td>i3-9320</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x3E91</td>
+</tr>
+<tr>
+<td>29</td>
+<td>i3-9300T</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x3E91</td>
+</tr>
+<tr>
+<td>30</td>
+<td>i3-9300</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x3E91</td>
+</tr>
+<tr>
+<td>31</td>
+<td>i3-9100TE</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.05 GHz</td>
+<td>0x3E98</td>
+</tr>
+<tr>
+<td>32</td>
+<td>i3-9100T</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x3E91</td>
+</tr>
+<tr>
+<td>33</td>
+<td>i3-9100HL</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x3E9B</td>
+</tr>
+<tr>
+<td>34</td>
+<td>i3-9100E</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.05 GHz</td>
+<td>0x3E98</td>
+</tr>
+<tr>
+<td>35</td>
+<td>i3-9100</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x3E91</td>
+</tr>
+</tbody></table>
+<h3 id="第八代智能英特尔®-酷睿™-核心类型：Coffee-Lake"><a href="#第八代智能英特尔®-酷睿™-核心类型：Coffee-Lake" class="headerlink" title="第八代智能英特尔® 酷睿™ 核心类型：Coffee Lake"></a>第八代智能英特尔® 酷睿™ 核心类型：Coffee Lake</h3><table>
+<thead>
+<tr>
+<th>编号</th>
+<th>CPU编号</th>
+<th>处理器显卡</th>
+<th>显卡基本频率</th>
+<th>显卡最大动态频率</th>
+<th>集显 ID</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>i9-8950HK</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.20 GHz</td>
+<td>0x3E9B</td>
+</tr>
+<tr>
+<td>2</td>
+<td>i7-8665U</td>
+<td>UHD 630</td>
+<td>300 MHz</td>
+<td>1.10 GHz</td>
+<td>0x3EA0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>i7-8557U</td>
+<td>Iris® Plus Graphics 645</td>
+<td>300 MHz</td>
+<td>1.12 GHz</td>
+<td>0x3EA6</td>
+</tr>
+<tr>
+<td>4</td>
+<td>i7-8850H</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x3E9B</td>
+</tr>
+<tr>
+<td>5</td>
+<td>i7-8750H</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x3E9B</td>
+</tr>
+<tr>
+<td>6</td>
+<td>i7-8700T</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.20 GHz</td>
+<td>0x3E92</td>
+</tr>
+<tr>
+<td>7</td>
+<td>i7-8700K</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.20 GHz</td>
+<td>0x3E92</td>
+</tr>
+<tr>
+<td>8</td>
+<td>i7-8700B</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.20 GHz</td>
+<td>0x3E9B</td>
+</tr>
+<tr>
+<td>9</td>
+<td>i7-8700</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.20 GHz</td>
+<td>0x3E92</td>
+</tr>
+<tr>
+<td>10</td>
+<td>i7-8569U</td>
+<td>Iris® Plus Graphics 655</td>
+<td>300 MHz</td>
+<td>1.20 GHz</td>
+<td>0x3EA5</td>
+</tr>
+<tr>
+<td>11</td>
+<td>i7-8650U</td>
+<td>UHD 620</td>
+<td>300 MHz</td>
+<td>1.15 GHz</td>
+<td>0x5917</td>
+</tr>
+<tr>
+<td>12</td>
+<td>i7-8565U</td>
+<td>UHD 620</td>
+<td>300 MHz</td>
+<td>1.15 GHz</td>
+<td>0x3EA0</td>
+</tr>
+<tr>
+<td>13</td>
+<td>i7-8559U</td>
+<td>Iris® Plus Graphics 655</td>
+<td>300 MHz</td>
+<td>1.20 GHz</td>
+<td>0x3EA5</td>
+</tr>
+<tr>
+<td>14</td>
+<td>i7-8550U</td>
+<td>UHD 620</td>
+<td>300 MHz</td>
+<td>1.15 GHz</td>
+<td>0x5917</td>
+</tr>
+<tr>
+<td>15</td>
+<td>i7-8500Y</td>
+<td>UHD 615</td>
+<td>300 MHz</td>
+<td>1.05 GHz</td>
+<td>0x591C</td>
+</tr>
+<tr>
+<td>16</td>
+<td>i7-8086K</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.20 GHz</td>
+<td>0x3E92</td>
+</tr>
+<tr>
+<td>17</td>
+<td>i5-8600T</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x3E92</td>
+</tr>
+<tr>
+<td>18</td>
+<td>i5-8600K</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x3E92</td>
+</tr>
+<tr>
+<td>19</td>
+<td>i5-8600</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x3E92</td>
+</tr>
+<tr>
+<td>20</td>
+<td>i5-8500T</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x3E92</td>
+</tr>
+<tr>
+<td>21</td>
+<td>i5-8500B</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x3E9B</td>
+</tr>
+<tr>
+<td>22</td>
+<td>i5-8500</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x3E92</td>
+</tr>
+<tr>
+<td>23</td>
+<td>i5-8400T</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.05 GHz</td>
+<td>0x3E92</td>
+</tr>
+<tr>
+<td>24</td>
+<td>i5-8400H</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x3E9B</td>
+</tr>
+<tr>
+<td>25</td>
+<td>i5-8400B</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.05 GHz</td>
+<td>0x3E9B</td>
+</tr>
+<tr>
+<td>26</td>
+<td>i5-8400</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.05 GHz</td>
+<td>0x3E92</td>
+</tr>
+<tr>
+<td>27</td>
+<td>i5-8365U</td>
+<td>UHD 620</td>
+<td>300 MHz</td>
+<td>1.10 GHz</td>
+<td>0x3EA0</td>
+</tr>
+<tr>
+<td>28</td>
+<td>i5-8350U</td>
+<td>UHD 620</td>
+<td>300 MHz</td>
+<td>1.10 GHz</td>
+<td>0x5917</td>
+</tr>
+<tr>
+<td>29</td>
+<td>i5-8310Y</td>
+<td>Intel® UHD Graphics 617</td>
+<td>300 MHz</td>
+<td>1.05 GHz</td>
+<td>0x87C0</td>
+</tr>
+<tr>
+<td>30</td>
+<td>i5-8300H</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x3E9B</td>
+</tr>
+<tr>
+<td>31</td>
+<td>i5-8279U</td>
+<td>Iris® Plus Graphics 655</td>
+<td>300 MHz</td>
+<td>1.15 GHz</td>
+<td>0x3EA5</td>
+</tr>
+<tr>
+<td>32</td>
+<td>i5-8269U</td>
+<td>Iris® Plus Graphics 655</td>
+<td>300 MHz</td>
+<td>1.10 GHz</td>
+<td>0x3EA5</td>
+</tr>
+<tr>
+<td>33</td>
+<td>i5-8265U</td>
+<td>UHD 620</td>
+<td>300 MHz</td>
+<td>1.10 GHz</td>
+<td>3EA0, 3EA1</td>
+</tr>
+<tr>
+<td>34</td>
+<td>i5-8260U</td>
+<td>UHD 620</td>
+<td>300 MHz</td>
+<td>1.10 GHz</td>
+<td>0x3EA9</td>
+</tr>
+<tr>
+<td>35</td>
+<td>i5-8259U</td>
+<td>Iris® Plus Graphics 655</td>
+<td>300 MHz</td>
+<td>1.05 GHz</td>
+<td>0x3EA5</td>
+</tr>
+<tr>
+<td>36</td>
+<td>i5-8257U</td>
+<td>Iris® Plus Graphics 645</td>
+<td>300 MHz</td>
+<td>1.05 GHz</td>
+<td>0x3EA6</td>
+</tr>
+<tr>
+<td>37</td>
+<td>i5-8250U</td>
+<td>UHD 620</td>
+<td>300 MHz</td>
+<td>1.10 GHz</td>
+<td>0x5917</td>
+</tr>
+<tr>
+<td>38</td>
+<td>i5-8210Y</td>
+<td>Intel® UHD Graphics 617</td>
+<td>300 MHz</td>
+<td>1.05 GHz</td>
+<td>0x87C0</td>
+</tr>
+<tr>
+<td>39</td>
+<td>i5-8200Y</td>
+<td>Intel® UHD Graphics 615</td>
+<td>300 MHz</td>
+<td>0.95 GHz</td>
+<td>0x591C</td>
+</tr>
+<tr>
+<td>40</td>
+<td>i3-8350K</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x3E91</td>
+</tr>
+<tr>
+<td>41</td>
+<td>i3-8300</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x3E91</td>
+</tr>
+<tr>
+<td>42</td>
+<td>i3-8300T</td>
+<td>UHD 630</td>
+<td>300 MHz</td>
+<td>1.10 GHz</td>
+<td>0x3E91</td>
+</tr>
+<tr>
+<td>43</td>
+<td>i3-8145U</td>
+<td>UHD 620</td>
+<td>300 MHz</td>
+<td>1.00 GHz</td>
+<td>0x3EA0</td>
+</tr>
+<tr>
+<td>44</td>
+<td>i3-8140U</td>
+<td>UHD 620</td>
+<td>300 MHz</td>
+<td>1.00 GHz</td>
+<td>0x3EA9</td>
+</tr>
+<tr>
+<td>45</td>
+<td>i3-8130U</td>
+<td>UHD 620</td>
+<td>300 MHz</td>
+<td>1.00 GHz</td>
+<td>0x5917</td>
+</tr>
+<tr>
+<td>46</td>
+<td>i3-8109U</td>
+<td>Iris® Plus Graphics 655</td>
+<td>300 MHz</td>
+<td>1.05 GHz</td>
+<td>0x3EA5</td>
+</tr>
+<tr>
+<td>47</td>
+<td>i3-8100B</td>
+<td>UHD 630</td>
+<td>350 MHz</td>
+<td>1.05 GHz</td>
+<td>0x3E9B</td>
+</tr>
+<tr>
+<td>48</td>
+<td>i3-8100</td>
+<td>UHD 630</td>
+<td>300 MHz</td>
+<td>1.10 GHz</td>
+<td>0x3E91/x92</td>
+</tr>
+<tr>
+<td>49</td>
+<td>i3-8100T</td>
+<td>UHD 630</td>
+<td>300 MHz</td>
+<td>1.10 GHz</td>
+<td>0x3E91</td>
+</tr>
+</tbody></table>
+<h3 id="第七代智能英特尔®-酷睿™-核心类型：Kaby-Lake"><a href="#第七代智能英特尔®-酷睿™-核心类型：Kaby-Lake" class="headerlink" title="第七代智能英特尔® 酷睿™ 核心类型：Kaby Lake"></a>第七代智能英特尔® 酷睿™ 核心类型：Kaby Lake</h3><table>
+<thead>
+<tr>
+<th>编号</th>
+<th>CPU编号</th>
+<th>处理器显卡</th>
+<th>显卡基本频率</th>
+<th>显卡最大动态频率</th>
+<th>集显 ID</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>i7-7920HQ</td>
+<td>HD 630</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x591B</td>
+</tr>
+<tr>
+<td>2</td>
+<td>i7-7820HQ</td>
+<td>HD 630</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x591B</td>
+</tr>
+<tr>
+<td>3</td>
+<td>i7-7820HK</td>
+<td>HD 630</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x591B</td>
+</tr>
+<tr>
+<td>4</td>
+<td>i7-7820EQ</td>
+<td>HD 630</td>
+<td>350 MHz</td>
+<td>1.00 GHz</td>
+<td>0x591B</td>
+</tr>
+<tr>
+<td>5</td>
+<td>i7-7700HQ</td>
+<td>HD 630</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x591B</td>
+</tr>
+<tr>
+<td>6</td>
+<td>i7-7700</td>
+<td>HD 630</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x5912</td>
+</tr>
+<tr>
+<td>7</td>
+<td>i7-7700K</td>
+<td>HD 630</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x5912</td>
+</tr>
+<tr>
+<td>8</td>
+<td>i7-7700T</td>
+<td>HD 630</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x5912</td>
+</tr>
+<tr>
+<td>9</td>
+<td>i7-7660U</td>
+<td>Iris® Plus Graphics 640</td>
+<td>300 MHz</td>
+<td>1.10 GHz</td>
+<td>0x5926</td>
+</tr>
+<tr>
+<td>10</td>
+<td>i7-7600U</td>
+<td>HD 620</td>
+<td>300 MHz</td>
+<td>1.15 GHz</td>
+<td>0x5916</td>
+</tr>
+<tr>
+<td>11</td>
+<td>i7-7567U</td>
+<td>Iris® Plus Graphics 650</td>
+<td>300 MHz</td>
+<td>1.15 GHz</td>
+<td>0x5927</td>
+</tr>
+<tr>
+<td>12</td>
+<td>i7-7560U</td>
+<td>Iris® Plus Graphics 640</td>
+<td>300 MHz</td>
+<td>1.10 GHz</td>
+<td>0x5926</td>
+</tr>
+<tr>
+<td>13</td>
+<td>i7-7500U</td>
+<td>HD 620</td>
+<td>300 MHz</td>
+<td>1.05 GHz</td>
+<td>0x5916</td>
+</tr>
+<tr>
+<td>14</td>
+<td>i7-7Y75</td>
+<td>HD 615</td>
+<td>300 MHz</td>
+<td>1.05 GHz</td>
+<td>0x591E</td>
+</tr>
+<tr>
+<td>15</td>
+<td>i5-7600K</td>
+<td>HD 630</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x5912</td>
+</tr>
+<tr>
+<td>16</td>
+<td>i5-7600T</td>
+<td>HD 630</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x5912</td>
+</tr>
+<tr>
+<td>17</td>
+<td>i5-7600</td>
+<td>HD 630</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x5912</td>
+</tr>
+<tr>
+<td>18</td>
+<td>i5-7500</td>
+<td>HD 630</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x5912</td>
+</tr>
+<tr>
+<td>19</td>
+<td>i5-7500T</td>
+<td>HD 630</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x5912</td>
+</tr>
+<tr>
+<td>20</td>
+<td>i5-7442EQ</td>
+<td>HD 630</td>
+<td>350 MHz</td>
+<td>1.00 GHz</td>
+<td>0x591B</td>
+</tr>
+<tr>
+<td>21</td>
+<td>i5-7440HQ</td>
+<td>HD 630</td>
+<td>350 MHz</td>
+<td>1.00 GHz</td>
+<td>0x591B</td>
+</tr>
+<tr>
+<td>22</td>
+<td>i5-7440EQ</td>
+<td>HD 630</td>
+<td>350 MHz</td>
+<td>1.00 GHz</td>
+<td>0x591B</td>
+</tr>
+<tr>
+<td>23</td>
+<td>i5-7400T</td>
+<td>HD 630</td>
+<td>350 MHz</td>
+<td>1.00 GHz</td>
+<td>0x5912</td>
+</tr>
+<tr>
+<td>24</td>
+<td>i5-7400</td>
+<td>HD 630</td>
+<td>350 MHz</td>
+<td>1.00 GHz</td>
+<td>0x5912</td>
+</tr>
+<tr>
+<td>25</td>
+<td>i5-7360U</td>
+<td>Iris® Plus Graphics 640</td>
+<td>300 MHz</td>
+<td>1.00 GHz</td>
+<td>0x5926</td>
+</tr>
+<tr>
+<td>26</td>
+<td>i5-7300U</td>
+<td>HD 620</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x5916</td>
+</tr>
+<tr>
+<td>27</td>
+<td>i5-7300HQ</td>
+<td>HD 630</td>
+<td>350 MHz</td>
+<td>1.00 GHz</td>
+<td>0x591B</td>
+</tr>
+<tr>
+<td>28</td>
+<td>i5-7287U</td>
+<td>Iris® Plus Graphics 650</td>
+<td>300 MHz</td>
+<td>1.10 GHz</td>
+<td>0x5927</td>
+</tr>
+<tr>
+<td>29</td>
+<td>i5-7267U</td>
+<td>Iris® Plus Graphics 650</td>
+<td>300 MHz</td>
+<td>1.05 GHz</td>
+<td>0x5927</td>
+</tr>
+<tr>
+<td>30</td>
+<td>i5-7260U</td>
+<td>Iris® Plus Graphics 640</td>
+<td>300 MHz</td>
+<td>0.95 GHz</td>
+<td>0x5926</td>
+</tr>
+<tr>
+<td>31</td>
+<td>i5-7200U</td>
+<td>HD 620</td>
+<td>300 MHz</td>
+<td>1.00 GHz</td>
+<td>0x5916</td>
+</tr>
+<tr>
+<td>32</td>
+<td>i5-7Y54</td>
+<td>HD 615</td>
+<td>300 MHz</td>
+<td>0.95 GHz</td>
+<td>0x591E</td>
+</tr>
+<tr>
+<td>33</td>
+<td>i5-7Y57</td>
+<td>HD 615</td>
+<td>300 MHz</td>
+<td>0.95 GHz</td>
+<td>0x591E</td>
+</tr>
+<tr>
+<td>34</td>
+<td>i3-7350K</td>
+<td>HD 630</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x5912</td>
+</tr>
+<tr>
+<td>35</td>
+<td>i3-7320</td>
+<td>HD 630</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x5912</td>
+</tr>
+<tr>
+<td>36</td>
+<td>i3-7300</td>
+<td>HD 630</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x5912</td>
+</tr>
+<tr>
+<td>37</td>
+<td>i3-7300T</td>
+<td>HD 630</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x5912</td>
+</tr>
+<tr>
+<td>38</td>
+<td>i3-7130U</td>
+<td>HD 620</td>
+<td>300 MHz</td>
+<td>1.00 GHz</td>
+<td>0x5916</td>
+</tr>
+<tr>
+<td>39</td>
+<td>i3-7102E</td>
+<td>HD 630</td>
+<td>350 MHz</td>
+<td>0.95 GHz</td>
+<td>0x591B</td>
+</tr>
+<tr>
+<td>40</td>
+<td>i3-7101E</td>
+<td>HD 630</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x5902</td>
+</tr>
+<tr>
+<td>41</td>
+<td>i3-7101TE</td>
+<td>HD 630</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x5902</td>
+</tr>
+<tr>
+<td>42</td>
+<td>i3-7100T</td>
+<td>HD 630</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x5912</td>
+</tr>
+<tr>
+<td>43</td>
+<td>i3-7100E</td>
+<td>HD 630</td>
+<td>350 MHz</td>
+<td>0.95 GHz</td>
+<td>0x591B</td>
+</tr>
+<tr>
+<td>44</td>
+<td>i3-7100</td>
+<td>HD 630</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x5912</td>
+</tr>
+<tr>
+<td>45</td>
+<td>i3-7167U</td>
+<td>Iris® Plus Graphics 650</td>
+<td>300 MHz</td>
+<td>1.00 GHz</td>
+<td>0x5927</td>
+</tr>
+<tr>
+<td>46</td>
+<td>i3-7100U</td>
+<td>HD 620</td>
+<td>300 MHz</td>
+<td>1.00 GHz</td>
+<td>0x5916</td>
+</tr>
+<tr>
+<td>47</td>
+<td>i3-7100H</td>
+<td>HD 630</td>
+<td>350 MHz</td>
+<td>0.95 GHz</td>
+<td>0x591B</td>
+</tr>
+<tr>
+<td>48</td>
+<td>i3-7020U</td>
+<td>HD 620</td>
+<td>300 MHz</td>
+<td>1.00 GHz</td>
+<td>0x5916</td>
+</tr>
+</tbody></table>
+<h3 id="第六代智能英特尔®-酷睿™-核心类型：Skylake"><a href="#第六代智能英特尔®-酷睿™-核心类型：Skylake" class="headerlink" title="第六代智能英特尔® 酷睿™ 核心类型：Skylake"></a>第六代智能英特尔® 酷睿™ 核心类型：Skylake</h3><table>
+<thead>
+<tr>
+<th>编号</th>
+<th>CPU编号</th>
+<th>处理器显卡</th>
+<th>显卡基本频率</th>
+<th>显卡最大动态频率</th>
+<th>集显 ID</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>i7-6970HQ</td>
+<td>Iris® Pro Graphics 580</td>
+<td>350 MHz</td>
+<td>1.05 GHz</td>
+<td>0x193B</td>
+</tr>
+<tr>
+<td>2</td>
+<td>i7-6920HQ</td>
+<td>HD 530</td>
+<td>350 MHz</td>
+<td>1.05 GHz</td>
+<td>0x191B</td>
+</tr>
+<tr>
+<td>3</td>
+<td>i7-6870HQ</td>
+<td>Iris® Pro Graphics 580</td>
+<td>350 MHz</td>
+<td>1.00 GHz</td>
+<td>0x193B</td>
+</tr>
+<tr>
+<td>4</td>
+<td>i7-6822EQ</td>
+<td>HD 530</td>
+<td>350 MHz</td>
+<td>1.00 GHz</td>
+<td>0x191B</td>
+</tr>
+<tr>
+<td>5</td>
+<td>i7-6820HQ</td>
+<td>HD 530</td>
+<td>350 MHz</td>
+<td>1.00 GHz</td>
+<td>0x191B</td>
+</tr>
+<tr>
+<td>6</td>
+<td>i7-6820HK</td>
+<td>HD 530</td>
+<td>350 MHz</td>
+<td>1.05 GHz</td>
+<td>0x191B</td>
+</tr>
+<tr>
+<td>7</td>
+<td>i7-6820EQ</td>
+<td>HD 530</td>
+<td>350 MHz</td>
+<td>1.00 GHz</td>
+<td>0x191B</td>
+</tr>
+<tr>
+<td>8</td>
+<td>i7-6785R</td>
+<td>Iris® Pro Graphics 580</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x193B</td>
+</tr>
+<tr>
+<td>9</td>
+<td>i7-6700K</td>
+<td>HD 530</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x1912</td>
+</tr>
+<tr>
+<td>10</td>
+<td>i7-6700T</td>
+<td>HD 530</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x1912</td>
+</tr>
+<tr>
+<td>11</td>
+<td>i7-6700TE</td>
+<td>HD 530</td>
+<td>350 MHz</td>
+<td>1.00 GHz</td>
+<td>0x1912</td>
+</tr>
+<tr>
+<td>12</td>
+<td>i7-6700</td>
+<td>HD 530</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x1912</td>
+</tr>
+<tr>
+<td>13</td>
+<td>i7-6770HQ</td>
+<td>Iris® Pro Graphics 580</td>
+<td>350 MHz</td>
+<td>0.95 GHz</td>
+<td>0x193B</td>
+</tr>
+<tr>
+<td>14</td>
+<td>i7-6700HQ</td>
+<td>HD 530</td>
+<td>350 MHz</td>
+<td>1.05 GHz</td>
+<td>0x191B</td>
+</tr>
+<tr>
+<td>15</td>
+<td>i7-6660U</td>
+<td>Iris® Pro Graphics 540</td>
+<td>300 MHz</td>
+<td>1.05 GHz</td>
+<td>0x1926</td>
+</tr>
+<tr>
+<td>16</td>
+<td>i7-6650U</td>
+<td>Iris® Pro Graphics 540</td>
+<td>300 MHz</td>
+<td>1.05 GHz</td>
+<td>0x1926</td>
+</tr>
+<tr>
+<td>17</td>
+<td>i7-6600U</td>
+<td>HD 520</td>
+<td>300 MHz</td>
+<td>1.05 GHz</td>
+<td>0x1916</td>
+</tr>
+<tr>
+<td>18</td>
+<td>i7-6567U</td>
+<td>Iris® Pro Graphics 550</td>
+<td>300 MHz</td>
+<td>1.10 GHz</td>
+<td>0x1927</td>
+</tr>
+<tr>
+<td>19</td>
+<td>i7-6560U</td>
+<td>Iris® Pro Graphics 540</td>
+<td>300 MHz</td>
+<td>1.05 GHz</td>
+<td>0x1926</td>
+</tr>
+<tr>
+<td>20</td>
+<td>i7-6500U</td>
+<td>HD 520</td>
+<td>300 MHz</td>
+<td>1.05 GHz</td>
+<td>0x1916</td>
+</tr>
+<tr>
+<td>21</td>
+<td>i5-6600</td>
+<td>HD 530</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x1912</td>
+</tr>
+<tr>
+<td>22</td>
+<td>i5-6685R</td>
+<td>Iris® Pro Graphics 580</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x193B</td>
+</tr>
+<tr>
+<td>23</td>
+<td>i5-6600K</td>
+<td>HD 530</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x1912</td>
+</tr>
+<tr>
+<td>24</td>
+<td>i5-6600T</td>
+<td>HD 530</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x1912</td>
+</tr>
+<tr>
+<td>25</td>
+<td>i5-6585R</td>
+<td>Iris® Pro Graphics 580</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x193B</td>
+</tr>
+<tr>
+<td>26</td>
+<td>i5-6500</td>
+<td>HD 530</td>
+<td>350 MHz</td>
+<td>1.05 GHz</td>
+<td>0x1912</td>
+</tr>
+<tr>
+<td>27</td>
+<td>i5-6500T</td>
+<td>HD 530</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x1912</td>
+</tr>
+<tr>
+<td>28</td>
+<td>i5-6500TE</td>
+<td>HD 530</td>
+<td>350 MHz</td>
+<td>1.00 GHz</td>
+<td>0x1912</td>
+</tr>
+<tr>
+<td>29</td>
+<td>i5-6402P</td>
+<td>HD 510</td>
+<td>350 MHz</td>
+<td>0.95 GHz</td>
+<td>0x1902</td>
+</tr>
+<tr>
+<td>30</td>
+<td>i5-6400</td>
+<td>HD 530</td>
+<td>350 MHz</td>
+<td>0.95 GHz</td>
+<td>0x1912</td>
+</tr>
+<tr>
+<td>31</td>
+<td>i5-6400T</td>
+<td>HD 530</td>
+<td>350 MHz</td>
+<td>0.95 GHz</td>
+<td>0x1912</td>
+</tr>
+<tr>
+<td>32</td>
+<td>i5-6440EQ</td>
+<td>HD 530</td>
+<td>350 MHz</td>
+<td>1.00 GHz</td>
+<td>0x191B</td>
+</tr>
+<tr>
+<td>33</td>
+<td>i5-6440HQ</td>
+<td>HD 530</td>
+<td>350 MHz</td>
+<td>0.95 GHz</td>
+<td>0x191B</td>
+</tr>
+<tr>
+<td>34</td>
+<td>i5-6442EQ</td>
+<td>HD 530</td>
+<td>350 MHz</td>
+<td>1.00 GHz</td>
+<td>0x191B</td>
+</tr>
+<tr>
+<td>35</td>
+<td>i5-6360U</td>
+<td>Iris® Pro Graphics 540</td>
+<td>300 MHz</td>
+<td>1.00 GHz</td>
+<td>0x1926</td>
+</tr>
+<tr>
+<td>36</td>
+<td>i5-6350HQ</td>
+<td>Iris® Pro Graphics 580</td>
+<td>350 MHz</td>
+<td>0.90 GHz</td>
+<td>0x193B</td>
+</tr>
+<tr>
+<td>37</td>
+<td>i5-6300HQ</td>
+<td>HD 530</td>
+<td>350 MHz</td>
+<td>0.95 GHz</td>
+<td>0x191B</td>
+</tr>
+<tr>
+<td>38</td>
+<td>i5-6300U</td>
+<td>HD 520</td>
+<td>300 MHz</td>
+<td>1.00 GHz</td>
+<td>0x1916</td>
+</tr>
+<tr>
+<td>39</td>
+<td>i5-6200U</td>
+<td>HD 520</td>
+<td>300 MHz</td>
+<td>1.00 GHz</td>
+<td>0x1916</td>
+</tr>
+<tr>
+<td>40</td>
+<td>i5-6260U</td>
+<td>Iris® Pro Graphics 540</td>
+<td>300 MHz</td>
+<td>0.95 GHz</td>
+<td>0x1926</td>
+</tr>
+<tr>
+<td>41</td>
+<td>i5-6267U</td>
+<td>Iris® Pro Graphics 550</td>
+<td>300 MHz</td>
+<td>1.05 GHz</td>
+<td>0x1927</td>
+</tr>
+<tr>
+<td>42</td>
+<td>i5-6287U</td>
+<td>Iris® Pro Graphics 550</td>
+<td>300 MHz</td>
+<td>1.10 GHz</td>
+<td>0x1927</td>
+</tr>
+<tr>
+<td>43</td>
+<td>i3-6300</td>
+<td>HD 530</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x1912</td>
+</tr>
+<tr>
+<td>44</td>
+<td>i3-6300T</td>
+<td>HD 530</td>
+<td>350 MHz</td>
+<td>0.95 GHz</td>
+<td>0x1912</td>
+</tr>
+<tr>
+<td>45</td>
+<td>i3-6320</td>
+<td>HD 530</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x1912</td>
+</tr>
+<tr>
+<td>46</td>
+<td>i3-6100E</td>
+<td>HD 530</td>
+<td>350 MHz</td>
+<td>0.95 GHz</td>
+<td>0x191B</td>
+</tr>
+<tr>
+<td>47</td>
+<td>i3-6100H</td>
+<td>HD 530</td>
+<td>350 MHz</td>
+<td>0.90 GHz</td>
+<td>0x191B</td>
+</tr>
+<tr>
+<td>48</td>
+<td>i3-6100U</td>
+<td>HD 520</td>
+<td>300 MHz</td>
+<td>1.00 GHz</td>
+<td>0x1916</td>
+</tr>
+<tr>
+<td>49</td>
+<td>i3-6102E</td>
+<td>HD 530</td>
+<td>350 MHz</td>
+<td>0.95 GHz</td>
+<td>0x191B</td>
+</tr>
+<tr>
+<td>50</td>
+<td>i3-6157U</td>
+<td>Iris® Pro Graphics 550</td>
+<td>300 MHz</td>
+<td>1.00 GHz</td>
+<td>0x1927</td>
+</tr>
+<tr>
+<td>51</td>
+<td>i3-6167U</td>
+<td>Iris® Pro Graphics 550</td>
+<td>300 MHz</td>
+<td>1.00 GHz</td>
+<td>0x1927</td>
+</tr>
+<tr>
+<td>52</td>
+<td>i3-6100</td>
+<td>HD 530</td>
+<td>350 MHz</td>
+<td>1.05 GHz</td>
+<td>0x1912</td>
+</tr>
+<tr>
+<td>53</td>
+<td>i3-6100T</td>
+<td>HD 530</td>
+<td>350 MHz</td>
+<td>0.95 GHz</td>
+<td>0x1912</td>
+</tr>
+<tr>
+<td>54</td>
+<td>i3-6100TE</td>
+<td>HD 530</td>
+<td>350 MHz</td>
+<td>1.00 GHz</td>
+<td>0x1912</td>
+</tr>
+<tr>
+<td>55</td>
+<td>i3-6006U</td>
+<td>HD 520</td>
+<td>300 MHz</td>
+<td>0.90 GHz</td>
+<td>0x1916</td>
+</tr>
+<tr>
+<td>56</td>
+<td>i3-6098P</td>
+<td>HD 510</td>
+<td>350 MHz</td>
+<td>1.05 GHz</td>
+<td>0x1902</td>
+</tr>
+</tbody></table>
+<h3 id="第五代智能英特尔®-酷睿™-核心类型：Broadwell"><a href="#第五代智能英特尔®-酷睿™-核心类型：Broadwell" class="headerlink" title="第五代智能英特尔® 酷睿™ 核心类型：Broadwell"></a>第五代智能英特尔® 酷睿™ 核心类型：Broadwell</h3><table>
+<thead>
+<tr>
+<th>编号</th>
+<th>CPU编号</th>
+<th>处理器显卡</th>
+<th>显卡基本频率</th>
+<th>显卡最大动态频率</th>
+<th>集显 ID</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>i7-5950HQ</td>
+<td>Iris® Pro Graphics 6200</td>
+<td>300 MHz</td>
+<td>1.15 GHz</td>
+<td>0x1622</td>
+</tr>
+<tr>
+<td>2</td>
+<td>i7-5850HQ</td>
+<td>Iris® Pro Graphics 6200</td>
+<td>300 MHz</td>
+<td>1.10 GHz</td>
+<td>0x1622</td>
+</tr>
+<tr>
+<td>3</td>
+<td>i7-5850EQ</td>
+<td>Iris® Pro Graphics 6200</td>
+<td>300 MHz</td>
+<td>1.00 GHz</td>
+<td>未知</td>
+</tr>
+<tr>
+<td>4</td>
+<td>i7-5750HQ</td>
+<td>Iris® Pro Graphics 6200</td>
+<td>300 MHz</td>
+<td>1.05 GHz</td>
+<td>0x1622</td>
+</tr>
+<tr>
+<td>5</td>
+<td>i7-5700HQ</td>
+<td>Iris® Pro Graphics 6200</td>
+<td>300 MHz</td>
+<td>1.05 GHz</td>
+<td>0x1612</td>
+</tr>
+<tr>
+<td>6</td>
+<td>i7-5775R</td>
+<td>Iris® Pro Graphics 6200</td>
+<td>300 MHz</td>
+<td>1.15 GHz</td>
+<td>0x1622</td>
+</tr>
+<tr>
+<td>7</td>
+<td>i7-5775C</td>
+<td>Iris® Pro Graphics 6200</td>
+<td>300 MHz</td>
+<td>1.15 GHz</td>
+<td>0x1622</td>
+</tr>
+<tr>
+<td>8</td>
+<td>i7-5650U</td>
+<td>HD 6000</td>
+<td>300 MHz</td>
+<td>1.00 GHz</td>
+<td>0x1626</td>
+</tr>
+<tr>
+<td>9</td>
+<td>i7-5600U</td>
+<td>HD 5500</td>
+<td>300 MHz</td>
+<td>0.90 GHz</td>
+<td>0x1616</td>
+</tr>
+<tr>
+<td>10</td>
+<td>i7-5557U</td>
+<td>Iris® Pro Graphics 6100</td>
+<td>300 MHz</td>
+<td>1.00 GHz</td>
+<td>0x162B</td>
+</tr>
+<tr>
+<td>11</td>
+<td>i7-5550U</td>
+<td>HD 6000</td>
+<td>300 MHz</td>
+<td>1.00 GHz</td>
+<td>0x1626</td>
+</tr>
+<tr>
+<td>12</td>
+<td>i7-5500U</td>
+<td>HD 5500</td>
+<td>300 MHz</td>
+<td>0.95 GHz</td>
+<td>0x1616</td>
+</tr>
+<tr>
+<td>13</td>
+<td>i5-5675R</td>
+<td>Iris® Pro Graphics 6200</td>
+<td>300 MHz</td>
+<td>1.10 GHz</td>
+<td>0x1622</td>
+</tr>
+<tr>
+<td>14</td>
+<td>i5-5675C</td>
+<td>Iris® Pro Graphics 6200</td>
+<td>300 MHz</td>
+<td>1.10 GHz</td>
+<td>0x1622</td>
+</tr>
+<tr>
+<td>15</td>
+<td>i5-5575R</td>
+<td>Iris® Pro Graphics 6200</td>
+<td>300 MHz</td>
+<td>1.05 GHz</td>
+<td>0x1622</td>
+</tr>
+<tr>
+<td>16</td>
+<td>i5-5350U</td>
+<td>HD 6000</td>
+<td>300 MHz</td>
+<td>1.00 GHz</td>
+<td>0x1626</td>
+</tr>
+<tr>
+<td>17</td>
+<td>i5-5350H</td>
+<td>Iris® Pro Graphics 6200</td>
+<td>300 MHz</td>
+<td>1.05 GHz</td>
+<td>0x1622</td>
+</tr>
+<tr>
+<td>18</td>
+<td>i5-5300U</td>
+<td>HD 5500</td>
+<td>300 MHz</td>
+<td>0.90 GHz</td>
+<td>0x1616</td>
+</tr>
+<tr>
+<td>19</td>
+<td>i5-5287U</td>
+<td>Iris® Pro Graphics 6100</td>
+<td>300 MHz</td>
+<td>1.10 GHz</td>
+<td>0x162B</td>
+</tr>
+<tr>
+<td>20</td>
+<td>i5-5257U</td>
+<td>Iris® Pro Graphics 6100</td>
+<td>300 MHz</td>
+<td>1.05 GHz</td>
+<td>0x162B</td>
+</tr>
+<tr>
+<td>21</td>
+<td>i5-5250U</td>
+<td>HD 6000</td>
+<td>300 MHz</td>
+<td>0.95 GHz</td>
+<td>0x1626</td>
+</tr>
+<tr>
+<td>22</td>
+<td>i5-5200U</td>
+<td>HD 5500</td>
+<td>300 MHz</td>
+<td>0.90 GHz</td>
+<td>0x1616</td>
+</tr>
+<tr>
+<td>23</td>
+<td>i3-5157U</td>
+<td>Iris® Pro Graphics 6100</td>
+<td>300 MHz</td>
+<td>1.00 GHz</td>
+<td>0x162B</td>
+</tr>
+<tr>
+<td>24</td>
+<td>i3-5020U</td>
+<td>HD 5500</td>
+<td>300 MHz</td>
+<td>0.90 GHz</td>
+<td>0x1616</td>
+</tr>
+<tr>
+<td>25</td>
+<td>i3-5015U</td>
+<td>HD 5500</td>
+<td>300 MHz</td>
+<td>0.85 GHz</td>
+<td>0x1616</td>
+</tr>
+<tr>
+<td>26</td>
+<td>i3-5010U</td>
+<td>HD 5500</td>
+<td>300 MHz</td>
+<td>0.90 GHz</td>
+<td>0x1616</td>
+</tr>
+<tr>
+<td>27</td>
+<td>i3-5005U</td>
+<td>HD 5500</td>
+<td>300 MHz</td>
+<td>0.85 GHz</td>
+<td>0x1616</td>
+</tr>
+</tbody></table>
+<h3 id="第四代智能英特尔®-酷睿™-核心类型：Haswell"><a href="#第四代智能英特尔®-酷睿™-核心类型：Haswell" class="headerlink" title="第四代智能英特尔® 酷睿™ 核心类型：Haswell"></a>第四代智能英特尔® 酷睿™ 核心类型：Haswell</h3><table>
+<thead>
+<tr>
+<th>编号</th>
+<th>CPU编号</th>
+<th>处理器显卡</th>
+<th>显卡基本频率</th>
+<th>显卡最大动态频率</th>
+<th>集显 ID</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>i7-4900MQ</td>
+<td>HD 4600</td>
+<td>400 MHz</td>
+<td>1.30 GHz</td>
+<td>0x416</td>
+</tr>
+<tr>
+<td>2</td>
+<td>i7-4910MQ</td>
+<td>HD 4600</td>
+<td>400 MHz</td>
+<td>1.30 GHz</td>
+<td>0x416</td>
+</tr>
+<tr>
+<td>3</td>
+<td>i7-4950HQ</td>
+<td>Iris® Pro Graphics 5200</td>
+<td>200 MHz</td>
+<td>1.30 GHz</td>
+<td>0xD26</td>
+</tr>
+<tr>
+<td>4</td>
+<td>i7-4960HQ</td>
+<td>Iris® Pro Graphics 5200</td>
+<td>200 MHz</td>
+<td>1.30 GHz</td>
+<td>0xD26</td>
+</tr>
+<tr>
+<td>5</td>
+<td>i7-4980HQ</td>
+<td>Iris® Pro Graphics 5200</td>
+<td>200 MHz</td>
+<td>1.30 GHz</td>
+<td>0xD26</td>
+</tr>
+<tr>
+<td>6</td>
+<td>i7-4800MQ</td>
+<td>HD 4600</td>
+<td>400 MHz</td>
+<td>1.30 GHz</td>
+<td>0x416</td>
+</tr>
+<tr>
+<td>7</td>
+<td>i7-4810MQ</td>
+<td>HD 4600</td>
+<td>400 MHz</td>
+<td>1.30 GHz</td>
+<td>0x416</td>
+</tr>
+<tr>
+<td>8</td>
+<td>i7-4850HQ</td>
+<td>Iris® Pro Graphics 5200</td>
+<td>200 MHz</td>
+<td>1.20 GHz</td>
+<td>0xD26</td>
+</tr>
+<tr>
+<td>9</td>
+<td>i7-4860HQ</td>
+<td>Iris® Pro Graphics 5200</td>
+<td>200 MHz</td>
+<td>1.20 GHz</td>
+<td>0xD26</td>
+</tr>
+<tr>
+<td>10</td>
+<td>i7-4870HQ</td>
+<td>Iris® Pro Graphics 5200</td>
+<td>200 MHz</td>
+<td>1.20 GHz</td>
+<td>0xD26</td>
+</tr>
+<tr>
+<td>11</td>
+<td>i7-4700HQ</td>
+<td>HD 4600</td>
+<td>400 MHz</td>
+<td>1.30 GHz</td>
+<td>0x416</td>
+</tr>
+<tr>
+<td>12</td>
+<td>i7-4700MQ</td>
+<td>HD 4600</td>
+<td>400 MHz</td>
+<td>1.15 GHz</td>
+<td>0x416</td>
+</tr>
+<tr>
+<td>13</td>
+<td>i7-4702HQ</td>
+<td>HD 4600</td>
+<td>400 MHz</td>
+<td>1.15 GHz</td>
+<td>0x416</td>
+</tr>
+<tr>
+<td>14</td>
+<td>i7-4702MQ</td>
+<td>HD 4600</td>
+<td>400 MHz</td>
+<td>1.15 GHz</td>
+<td>0x416</td>
+</tr>
+<tr>
+<td>15</td>
+<td>i7-4710HQ</td>
+<td>HD 4600</td>
+<td>400 MHz</td>
+<td>1.20 GHz</td>
+<td>0x416</td>
+</tr>
+<tr>
+<td>16</td>
+<td>i7-4710MQ</td>
+<td>HD 4600</td>
+<td>400 MHz</td>
+<td>1.15 GHz</td>
+<td>0x416</td>
+</tr>
+<tr>
+<td>17</td>
+<td>i7-4712HQ</td>
+<td>HD 4600</td>
+<td>400 MHz</td>
+<td>1.15 GHz</td>
+<td>0x416</td>
+</tr>
+<tr>
+<td>18</td>
+<td>i7-4712MQ</td>
+<td>HD 4600</td>
+<td>400 MHz</td>
+<td>1.15 GHz</td>
+<td>0x416</td>
+</tr>
+<tr>
+<td>19</td>
+<td>i7-4720HQ</td>
+<td>HD 4600</td>
+<td>400 MHz</td>
+<td>1.20 GHz</td>
+<td>0x416</td>
+</tr>
+<tr>
+<td>20</td>
+<td>i7-4722HQ</td>
+<td>HD 4600</td>
+<td>400 MHz</td>
+<td>1.15 GHz</td>
+<td>0x416</td>
+</tr>
+<tr>
+<td>21</td>
+<td>i7-4750HQ</td>
+<td>Iris® Pro Graphics 5200</td>
+<td>200 MHz</td>
+<td>1.20 GHz</td>
+<td>0xD26</td>
+</tr>
+<tr>
+<td>22</td>
+<td>i7-4760HQ</td>
+<td>Iris® Pro Graphics 5200</td>
+<td>200 MHz</td>
+<td>1.20 GHz</td>
+<td>0xD26</td>
+</tr>
+<tr>
+<td>23</td>
+<td>i7-4770HQ</td>
+<td>Iris® Pro Graphics 5200</td>
+<td>200 MHz</td>
+<td>1.20 GHz</td>
+<td>0xD26</td>
+</tr>
+<tr>
+<td>24</td>
+<td>i7-4790K</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.25 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>25</td>
+<td>i7-4770K</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.25 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>26</td>
+<td>i7-4765T</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.25 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>27</td>
+<td>i7-4770</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.20 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>28</td>
+<td>i7-4770R</td>
+<td>Iris® Pro Graphics 5200</td>
+<td>200 MHz</td>
+<td>1.30 GHz</td>
+<td>0xD22</td>
+</tr>
+<tr>
+<td>29</td>
+<td>i7-4770S</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.20 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>30</td>
+<td>i7-4770T</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.20 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>31</td>
+<td>i7-4771</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.20 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>32</td>
+<td>i7-4785T</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.20 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>33</td>
+<td>i7-4790</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.20 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>34</td>
+<td>i7-4790S</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.20 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>35</td>
+<td>i7-4790T</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.20 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>36</td>
+<td>i7-4600M</td>
+<td>HD 4600</td>
+<td>400 MHz</td>
+<td>1.30 GHz</td>
+<td>0x416</td>
+</tr>
+<tr>
+<td>37</td>
+<td>i7-4600U</td>
+<td>HD 4400</td>
+<td>200 MHz</td>
+<td>1.10 GHz</td>
+<td>0xA16</td>
+</tr>
+<tr>
+<td>38</td>
+<td>i7-4610M</td>
+<td>HD 4600</td>
+<td>400 MHz</td>
+<td>1.30 GHz</td>
+<td>0x416</td>
+</tr>
+<tr>
+<td>39</td>
+<td>i7-4610Y</td>
+<td>HD 4200</td>
+<td>200 MHz</td>
+<td>0.85 GHz</td>
+<td>0x402</td>
+</tr>
+<tr>
+<td>40</td>
+<td>i7-4650U</td>
+<td>HD 5000</td>
+<td>200 MHz</td>
+<td>1.10 GHz</td>
+<td>0xA26</td>
+</tr>
+<tr>
+<td>41</td>
+<td>i7-4500U</td>
+<td>HD 4400</td>
+<td>200 MHz</td>
+<td>1.10 GHz</td>
+<td>0xA16</td>
+</tr>
+<tr>
+<td>42</td>
+<td>i7-4510U</td>
+<td>HD 4400</td>
+<td>200 MHz</td>
+<td>1.10 GHz</td>
+<td>0xA16</td>
+</tr>
+<tr>
+<td>43</td>
+<td>i7-4550U</td>
+<td>HD 5000</td>
+<td>200 MHz</td>
+<td>1.10 GHz</td>
+<td>0xA26</td>
+</tr>
+<tr>
+<td>44</td>
+<td>i7-4558U</td>
+<td>Iris® Pro Graphics 5100</td>
+<td>200 MHz</td>
+<td>1.20 GHz</td>
+<td>0xA2E</td>
+</tr>
+<tr>
+<td>45</td>
+<td>i7-4578U</td>
+<td>Iris® Pro Graphics 5100</td>
+<td>200 MHz</td>
+<td>1.20 GHz</td>
+<td>0xA2E</td>
+</tr>
+<tr>
+<td>46</td>
+<td>i5-4670</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.20 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>47</td>
+<td>i5-4670K</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.20 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>48</td>
+<td>i5-4670R</td>
+<td>Iris® Pro Graphics 5200</td>
+<td>200 MHz</td>
+<td>1.30 GHz</td>
+<td>0xD22</td>
+</tr>
+<tr>
+<td>49</td>
+<td>i5-4670S</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.20 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>50</td>
+<td>i5-4670T</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.20 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>51</td>
+<td>i5-4690</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.20 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>52</td>
+<td>i5-4690K</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.20 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>53</td>
+<td>i5-4690S</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.20 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>54</td>
+<td>i5-4690T</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.20 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>55</td>
+<td>i5-4570</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>56</td>
+<td>i5-4570R</td>
+<td>Iris® Pro Graphics 5200</td>
+<td>200 MHz</td>
+<td>1.15 GHz</td>
+<td>0xD22</td>
+</tr>
+<tr>
+<td>57</td>
+<td>i5-4570S</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>58</td>
+<td>i5-4570T</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>59</td>
+<td>i5-4590</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>60</td>
+<td>i5-4590S</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>61</td>
+<td>i5-4590T</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>62</td>
+<td>i5-4460T</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>63</td>
+<td>i5-4460S</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>64</td>
+<td>i5-4460</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>65</td>
+<td>i5-4440S</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>66</td>
+<td>i5-4440</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>67</td>
+<td>i5-4430S</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>68</td>
+<td>i5-4430</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>69</td>
+<td>i5-4300M</td>
+<td>HD 4600</td>
+<td>400 MHz</td>
+<td>1.25 GHz</td>
+<td>0x416</td>
+</tr>
+<tr>
+<td>70</td>
+<td>i5-4300U</td>
+<td>HD 4400</td>
+<td>200 MHz</td>
+<td>1.10 GHz</td>
+<td>0xA16</td>
+</tr>
+<tr>
+<td>71</td>
+<td>i5-4300Y</td>
+<td>HD 4200</td>
+<td>200 MHz</td>
+<td>0.85 GHz</td>
+<td>0x402</td>
+</tr>
+<tr>
+<td>72</td>
+<td>i5-4302Y</td>
+<td>HD 4200</td>
+<td>200 MHz</td>
+<td>0.85 GHz</td>
+<td>0x402</td>
+</tr>
+<tr>
+<td>73</td>
+<td>i5-4308U</td>
+<td>Iris® Pro Graphics 5100</td>
+<td>200 MHz</td>
+<td>1.20 GHz</td>
+<td>0xA2E</td>
+</tr>
+<tr>
+<td>74</td>
+<td>i5-4310M</td>
+<td>HD 4600</td>
+<td>400 MHz</td>
+<td>1.25 GHz</td>
+<td>0x416</td>
+</tr>
+<tr>
+<td>75</td>
+<td>i5-4310U</td>
+<td>HD 4400</td>
+<td>200 MHz</td>
+<td>1.10 GHz</td>
+<td>0xA16</td>
+</tr>
+<tr>
+<td>76</td>
+<td>i5-4330M</td>
+<td>HD 4600</td>
+<td>400 MHz</td>
+<td>1.25 GHz</td>
+<td>0x416</td>
+</tr>
+<tr>
+<td>77</td>
+<td>i5-4340M</td>
+<td>HD 4600</td>
+<td>400 MHz</td>
+<td>1.25 GHz</td>
+<td>0x416</td>
+</tr>
+<tr>
+<td>78</td>
+<td>i5-4350U</td>
+<td>HD 5000</td>
+<td>200 MHz</td>
+<td>1.10 GHz</td>
+<td>0xA26</td>
+</tr>
+<tr>
+<td>79</td>
+<td>i5-4360U</td>
+<td>HD 5000</td>
+<td>200 MHz</td>
+<td>1.10 GHz</td>
+<td>0xA26</td>
+</tr>
+<tr>
+<td>80</td>
+<td>i5-4200H</td>
+<td>HD 4600</td>
+<td>400 MHz</td>
+<td>1.15 GHz</td>
+<td>0x416</td>
+</tr>
+<tr>
+<td>81</td>
+<td>i5-4200M</td>
+<td>HD 4600</td>
+<td>400 MHz</td>
+<td>1.15 GHz</td>
+<td>0x416</td>
+</tr>
+<tr>
+<td>82</td>
+<td>i5-4200U</td>
+<td>HD 4400</td>
+<td>200 MHz</td>
+<td>1.10 GHz</td>
+<td>0xA16</td>
+</tr>
+<tr>
+<td>83</td>
+<td>i5-4200Y</td>
+<td>HD 4200</td>
+<td>200 MHz</td>
+<td>0.85 GHz</td>
+<td>0x402</td>
+</tr>
+<tr>
+<td>84</td>
+<td>i5-4202Y</td>
+<td>HD 4200</td>
+<td>200 MHz</td>
+<td>0.85 GHz</td>
+<td>0x402</td>
+</tr>
+<tr>
+<td>85</td>
+<td>i5-4210H</td>
+<td>HD 4600</td>
+<td>400 MHz</td>
+<td>1.15 GHz</td>
+<td>0x416</td>
+</tr>
+<tr>
+<td>86</td>
+<td>i5-4210M</td>
+<td>HD 4600</td>
+<td>400 MHz</td>
+<td>1.15 GHz</td>
+<td>0x416</td>
+</tr>
+<tr>
+<td>87</td>
+<td>i5-4210U</td>
+<td>HD 4400</td>
+<td>200 MHz</td>
+<td>1.00 GHz</td>
+<td>0xA16</td>
+</tr>
+<tr>
+<td>88</td>
+<td>i5-4210Y</td>
+<td>HD 4200</td>
+<td>200 MHz</td>
+<td>0.85 GHz</td>
+<td>0x402</td>
+</tr>
+<tr>
+<td>89</td>
+<td>i5-4220Y</td>
+<td>HD 4200</td>
+<td>200 MHz</td>
+<td>0.85 GHz</td>
+<td>0x402</td>
+</tr>
+<tr>
+<td>90</td>
+<td>i5-4250U</td>
+<td>HD 5000</td>
+<td>200 MHz</td>
+<td>1.00 GHz</td>
+<td>0xA26</td>
+</tr>
+<tr>
+<td>91</td>
+<td>i5-4258U</td>
+<td>Iris® Pro Graphics 5100</td>
+<td>200 MHz</td>
+<td>1.10 GHz</td>
+<td>0xA2E</td>
+</tr>
+<tr>
+<td>92</td>
+<td>i5-4260U</td>
+<td>HD 5000</td>
+<td>200 MHz</td>
+<td>1.00 GHz</td>
+<td>0xA26</td>
+</tr>
+<tr>
+<td>93</td>
+<td>i5-4278U</td>
+<td>Iris® Pro Graphics 5100</td>
+<td>200 MHz</td>
+<td>1.10 GHz</td>
+<td>0xA2E</td>
+</tr>
+<tr>
+<td>94</td>
+<td>i5-4288U</td>
+<td>Iris® Pro Graphics 5100</td>
+<td>200 MHz</td>
+<td>1.20 GHz</td>
+<td>0xA2E</td>
+</tr>
+<tr>
+<td>95</td>
+<td>i3-4330</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>96</td>
+<td>i3-4330T</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>97</td>
+<td>i3-4340</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>98</td>
+<td>i3-4350</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>99</td>
+<td>i3-4350T</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>100</td>
+<td>i3-4360</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>101</td>
+<td>i3-4360T</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>102</td>
+<td>i3-4370</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x412</td>
+</tr>
+<tr>
+<td>103</td>
+<td>i3-4370T</td>
+<td>HD 4600</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x41E</td>
+</tr>
+<tr>
+<td>104</td>
+<td>i3-4100M</td>
+<td>HD 4600</td>
+<td>400 MHz</td>
+<td>1.10 GHz</td>
+<td>0x416</td>
+</tr>
+<tr>
+<td>105</td>
+<td>i3-4100U</td>
+<td>HD 4400</td>
+<td>400 MHz</td>
+<td>1.00 GHz</td>
+<td>0x416</td>
+</tr>
+<tr>
+<td>106</td>
+<td>i3-4110M</td>
+<td>HD 4600</td>
+<td>400 MHz</td>
+<td>1.10 GHz</td>
+<td>0x416</td>
+</tr>
+<tr>
+<td>107</td>
+<td>i3-4120U</td>
+<td>HD 4400</td>
+<td>200 MHz</td>
+<td>1.00 GHz</td>
+<td>0xA16</td>
+</tr>
+<tr>
+<td>108</td>
+<td>i3-4158U</td>
+<td>Iris® Pro Graphics 5100</td>
+<td>200 MHz</td>
+<td>1.10 GHz</td>
+<td>0xA2E</td>
+</tr>
+<tr>
+<td>109</td>
+<td>i3-4170T</td>
+<td>HD 4400</td>
+<td>200 MHz</td>
+<td>1.15 GHz</td>
+<td>0x41E</td>
+</tr>
+<tr>
+<td>110</td>
+<td>i3-4170</td>
+<td>HD 4400</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x41E</td>
+</tr>
+<tr>
+<td>111</td>
+<td>i3-4160T</td>
+<td>HD 4400</td>
+<td>200 MHz</td>
+<td>1.15 GHz</td>
+<td>0x41E</td>
+</tr>
+<tr>
+<td>112</td>
+<td>i3-4160</td>
+<td>HD 4400</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x41E</td>
+</tr>
+<tr>
+<td>113</td>
+<td>i3-4150T</td>
+<td>HD 4400</td>
+<td>200 MHz</td>
+<td>1.15 GHz</td>
+<td>0x41E</td>
+</tr>
+<tr>
+<td>114</td>
+<td>i3-4150</td>
+<td>HD 4400</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x41E</td>
+</tr>
+<tr>
+<td>115</td>
+<td>i3-4130T</td>
+<td>HD 4400</td>
+<td>200 MHz</td>
+<td>1.15 GHz</td>
+<td>0x41E</td>
+</tr>
+<tr>
+<td>116</td>
+<td>i3-4130</td>
+<td>HD 4400</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x41E</td>
+</tr>
+<tr>
+<td>117</td>
+<td>i3-4000M</td>
+<td>HD 4600</td>
+<td>400 MHz</td>
+<td>1.10 GHz</td>
+<td>0x416</td>
+</tr>
+<tr>
+<td>118</td>
+<td>i3-4005U</td>
+<td>HD 4400</td>
+<td>200 MHz</td>
+<td>0.95 GHz</td>
+<td>0xA16</td>
+</tr>
+<tr>
+<td>119</td>
+<td>i3-4010U</td>
+<td>HD 4400</td>
+<td>200 MHz</td>
+<td>1.00 GHz</td>
+<td>0xA16</td>
+</tr>
+<tr>
+<td>120</td>
+<td>i3-4010Y</td>
+<td>HD 4200</td>
+<td>200 MHz</td>
+<td>0.85 GHz</td>
+<td>0x402</td>
+</tr>
+<tr>
+<td>121</td>
+<td>i3-4012Y</td>
+<td>HD 4200</td>
+<td>200 MHz</td>
+<td>0.85 GHz</td>
+<td>0x402</td>
+</tr>
+<tr>
+<td>122</td>
+<td>i3-4020Y</td>
+<td>HD 4200</td>
+<td>200 MHz</td>
+<td>0.85 GHz</td>
+<td>0x402</td>
+</tr>
+<tr>
+<td>123</td>
+<td>i3-4025U</td>
+<td>HD 4400</td>
+<td>200 MHz</td>
+<td>0.95 GHz</td>
+<td>0xA16</td>
+</tr>
+<tr>
+<td>124</td>
+<td>i3-4030U</td>
+<td>HD 4400</td>
+<td>200 MHz</td>
+<td>1.00 GHz</td>
+<td>0xA16</td>
+</tr>
+<tr>
+<td>125</td>
+<td>i3-4030Y</td>
+<td>HD 4200</td>
+<td>200 MHz</td>
+<td>0.85 GHz</td>
+<td>0x402</td>
+</tr>
+</tbody></table>
+<h3 id="第三代智能英特尔®-酷睿™-核心类型：Ivy-Bridge"><a href="#第三代智能英特尔®-酷睿™-核心类型：Ivy-Bridge" class="headerlink" title="第三代智能英特尔® 酷睿™ 核心类型：Ivy Bridge"></a>第三代智能英特尔® 酷睿™ 核心类型：Ivy Bridge</h3><table>
+<thead>
+<tr>
+<th>编号</th>
+<th>CPU编号</th>
+<th>处理器显卡</th>
+<th>显卡基本频率</th>
+<th>显卡最大动态频率</th>
+<th>集显 ID</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>i7-3840QM</td>
+<td>HD 4000</td>
+<td>650 MHz</td>
+<td>1.30 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>2</td>
+<td>i7-3820QM</td>
+<td>HD 4000</td>
+<td>650 MHz</td>
+<td>1.25 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>3</td>
+<td>i7-3770T</td>
+<td>HD 4000</td>
+<td>650 MHz</td>
+<td>1.15 GHz</td>
+<td>0x162</td>
+</tr>
+<tr>
+<td>4</td>
+<td>i7-3770S</td>
+<td>HD 4000</td>
+<td>650 MHz</td>
+<td>1.15 GHz</td>
+<td>0x162</td>
+</tr>
+<tr>
+<td>5</td>
+<td>i7-3770K</td>
+<td>HD 4000</td>
+<td>650 MHz</td>
+<td>1.15 GHz</td>
+<td>0x162</td>
+</tr>
+<tr>
+<td>6</td>
+<td>i7-3770</td>
+<td>HD 4000</td>
+<td>650 MHz</td>
+<td>1.15 GHz</td>
+<td>0x162</td>
+</tr>
+<tr>
+<td>7</td>
+<td>i7-3740QM</td>
+<td>HD 4000</td>
+<td>650 MHz</td>
+<td>1.30 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>8</td>
+<td>i7-3720QM</td>
+<td>HD 4000</td>
+<td>650 MHz</td>
+<td>1.25 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>9</td>
+<td>i7-3689Y</td>
+<td>HD 4000</td>
+<td>350 MHz</td>
+<td>0.85 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>10</td>
+<td>i7-3687U</td>
+<td>HD 4000</td>
+<td>350 MHz</td>
+<td>1.20 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>11</td>
+<td>i7-3667U</td>
+<td>HD 4000</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>12</td>
+<td>i7-3635QM</td>
+<td>HD 4000</td>
+<td>650 MHz</td>
+<td>1.20 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>13</td>
+<td>i7-3632QM</td>
+<td>HD 4000</td>
+<td>650 MHz</td>
+<td>1.15 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>14</td>
+<td>i7-3630QM</td>
+<td>HD 4000</td>
+<td>650 MHz</td>
+<td>1.15 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>15</td>
+<td>i7-3615QM</td>
+<td>HD 4000</td>
+<td>650 MHz</td>
+<td>1.20 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>16</td>
+<td>i7-3612QM</td>
+<td>HD 4000</td>
+<td>650 MHz</td>
+<td>1.10 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>17</td>
+<td>i7-3610QM</td>
+<td>HD 4000</td>
+<td>650 MHz</td>
+<td>1.10 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>18</td>
+<td>i7-3540M</td>
+<td>HD 4000</td>
+<td>650 MHz</td>
+<td>1.30 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>19</td>
+<td>i7-3537U</td>
+<td>HD 4000</td>
+<td>650 MHz</td>
+<td>1.20 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>20</td>
+<td>i7-3520M</td>
+<td>HD 4000</td>
+<td>650 MHz</td>
+<td>1.25 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>21</td>
+<td>i7-3517U</td>
+<td>HD 4000</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>22</td>
+<td>i5-3570S</td>
+<td>HD 2500</td>
+<td>650 MHz</td>
+<td>1.15 GHz</td>
+<td>0x152</td>
+</tr>
+<tr>
+<td>23</td>
+<td>i5-3570T</td>
+<td>HD 2500</td>
+<td>650 MHz</td>
+<td>1.15 GHz</td>
+<td>0x152</td>
+</tr>
+<tr>
+<td>24</td>
+<td>i5-3570K</td>
+<td>HD 4000</td>
+<td>650 MHz</td>
+<td>1.15 GHz</td>
+<td>0x152</td>
+</tr>
+<tr>
+<td>25</td>
+<td>i5-3570</td>
+<td>HD 2500</td>
+<td>650 MHz</td>
+<td>1.15 GHz</td>
+<td>0x152</td>
+</tr>
+<tr>
+<td>26</td>
+<td>i5-3550S</td>
+<td>HD 2500</td>
+<td>650 MHz</td>
+<td>1.15 GHz</td>
+<td>0x152</td>
+</tr>
+<tr>
+<td>27</td>
+<td>i5-3550</td>
+<td>HD 2500</td>
+<td>650 MHz</td>
+<td>1.15 GHz</td>
+<td>0x152</td>
+</tr>
+<tr>
+<td>28</td>
+<td>i5-3475S</td>
+<td>HD 4000</td>
+<td>650 MHz</td>
+<td>1.15 GHz</td>
+<td>0x152</td>
+</tr>
+<tr>
+<td>29</td>
+<td>i5-3470T</td>
+<td>HD 2500</td>
+<td>650 MHz</td>
+<td>1.10 GHz</td>
+<td>0x152</td>
+</tr>
+<tr>
+<td>30</td>
+<td>i5-3470S</td>
+<td>HD 2500</td>
+<td>650 MHz</td>
+<td>1.10 GHz</td>
+<td>0x152</td>
+</tr>
+<tr>
+<td>31</td>
+<td>i5-3470</td>
+<td>HD 2500</td>
+<td>650 MHz</td>
+<td>1.10 GHz</td>
+<td>0x152</td>
+</tr>
+<tr>
+<td>32</td>
+<td>i5-3450S</td>
+<td>HD 2500</td>
+<td>650 MHz</td>
+<td>1.10 GHz</td>
+<td>0x152</td>
+</tr>
+<tr>
+<td>33</td>
+<td>i5-3450</td>
+<td>HD 2500</td>
+<td>650 MHz</td>
+<td>1.10 GHz</td>
+<td>0x152</td>
+</tr>
+<tr>
+<td>34</td>
+<td>i5-3439Y</td>
+<td>HD 4000</td>
+<td>350 MHz</td>
+<td>0.85 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>35</td>
+<td>i5-3437U</td>
+<td>HD 4000</td>
+<td>650 MHz</td>
+<td>1.20 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>36</td>
+<td>i5-3427U</td>
+<td>HD 4000</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>37</td>
+<td>i5-3380M</td>
+<td>HD 4000</td>
+<td>650 MHz</td>
+<td>1.25 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>38</td>
+<td>i5-3360M</td>
+<td>HD 4000</td>
+<td>650 MHz</td>
+<td>1.20 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>39</td>
+<td>i5-3340S</td>
+<td>HD 2500</td>
+<td>650 MHz</td>
+<td>1.05 GHz</td>
+<td>0x152</td>
+</tr>
+<tr>
+<td>40</td>
+<td>i5-3340M</td>
+<td>HD 4000</td>
+<td>650 MHz</td>
+<td>1.25 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>41</td>
+<td>i5-3340</td>
+<td>HD 2500</td>
+<td>650 MHz</td>
+<td>1.05 GHz</td>
+<td>0x152</td>
+</tr>
+<tr>
+<td>42</td>
+<td>i5-3339Y</td>
+<td>HD 4000</td>
+<td>350 MHz</td>
+<td>0.85 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>43</td>
+<td>i5-3337U</td>
+<td>HD 4000</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>44</td>
+<td>i5-3330S</td>
+<td>HD 2500</td>
+<td>650 MHz</td>
+<td>1.05 GHz</td>
+<td>0x152</td>
+</tr>
+<tr>
+<td>45</td>
+<td>i5-3330</td>
+<td>HD 2500</td>
+<td>650 MHz</td>
+<td>1.05 GHz</td>
+<td>0x152</td>
+</tr>
+<tr>
+<td>46</td>
+<td>i5-3320M</td>
+<td>HD 4000</td>
+<td>650 MHz</td>
+<td>1.20 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>47</td>
+<td>i5-3317U</td>
+<td>HD 4000</td>
+<td>350 MHz</td>
+<td>1.05 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>48</td>
+<td>i5-3230M</td>
+<td>HD 4000</td>
+<td>650 MHz</td>
+<td>1.10 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>49</td>
+<td>i5-3230M</td>
+<td>HD 4000</td>
+<td>650 MHz</td>
+<td>1.10 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>50</td>
+<td>i5-3210M</td>
+<td>HD 4000</td>
+<td>650 MHz</td>
+<td>1.10 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>51</td>
+<td>i3-3250T</td>
+<td>HD 2500</td>
+<td>650 MHz</td>
+<td>1.05GHz</td>
+<td>0x152</td>
+</tr>
+<tr>
+<td>52</td>
+<td>i3-3250</td>
+<td>HD 2500</td>
+<td>650 MHz</td>
+<td>1.05GHz</td>
+<td>0x152</td>
+</tr>
+<tr>
+<td>53</td>
+<td>i3-3245</td>
+<td>HD 4000</td>
+<td>650 MHz</td>
+<td>1.05 GHz</td>
+<td>0x152</td>
+</tr>
+<tr>
+<td>54</td>
+<td>i3-3240T</td>
+<td>HD 2500</td>
+<td>650 MHz</td>
+<td>1.05GHz</td>
+<td>0x152</td>
+</tr>
+<tr>
+<td>55</td>
+<td>i3-3240</td>
+<td>HD 2500</td>
+<td>650 MHz</td>
+<td>1.05GHz</td>
+<td>0x152</td>
+</tr>
+<tr>
+<td>56</td>
+<td>i3-3229Y</td>
+<td>HD 4000</td>
+<td>350 MHz</td>
+<td>0.85 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>57</td>
+<td>i3-3227U</td>
+<td>HD 4000</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>58</td>
+<td>i3-3225</td>
+<td>HD 4000</td>
+<td>650 MHz</td>
+<td>1.05 GHz</td>
+<td>0x152</td>
+</tr>
+<tr>
+<td>59</td>
+<td>i3-3220T</td>
+<td>HD 2500</td>
+<td>650 MHz</td>
+<td>1.05GHz</td>
+<td>0x152</td>
+</tr>
+<tr>
+<td>60</td>
+<td>i3-3220</td>
+<td>HD 2500</td>
+<td>650 MHz</td>
+<td>1.05GHz</td>
+<td>0x152</td>
+</tr>
+<tr>
+<td>61</td>
+<td>i3-3217U</td>
+<td>HD 4000</td>
+<td>350 MHz</td>
+<td>1.05 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>62</td>
+<td>i3-3210</td>
+<td>HD 2500</td>
+<td>650 MHz</td>
+<td>1.05GHz</td>
+<td>0x152</td>
+</tr>
+<tr>
+<td>63</td>
+<td>i3-3130M</td>
+<td>HD 4000</td>
+<td>650 MHz</td>
+<td>1.10 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>64</td>
+<td>i3-3120M</td>
+<td>HD 4000</td>
+<td>650 MHz</td>
+<td>1.10 GHz</td>
+<td>0x166</td>
+</tr>
+<tr>
+<td>65</td>
+<td>i3-3110M</td>
+<td>HD 4000</td>
+<td>650 MHz</td>
+<td>1.00 GHz</td>
+<td>0x166</td>
+</tr>
+</tbody></table>
+<h3 id="第二代智能英特尔®-酷睿™-核心类型：Sandy-Bridge"><a href="#第二代智能英特尔®-酷睿™-核心类型：Sandy-Bridge" class="headerlink" title="第二代智能英特尔® 酷睿™ 核心类型：Sandy Bridge"></a>第二代智能英特尔® 酷睿™ 核心类型：Sandy Bridge</h3><table>
+<thead>
+<tr>
+<th>编号</th>
+<th>CPU编号</th>
+<th>处理器显卡</th>
+<th>显卡基本频率</th>
+<th>显卡最大动态频率</th>
+<th>集显 ID</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>i7-2860QM</td>
+<td>HD 3000</td>
+<td>650 MHz</td>
+<td>1.30 GHz</td>
+<td>0x116</td>
+</tr>
+<tr>
+<td>2</td>
+<td>i7-2820QM</td>
+<td>HD 3000</td>
+<td>650 MHz</td>
+<td>1.30 GHz</td>
+<td>0x116</td>
+</tr>
+<tr>
+<td>3</td>
+<td>i7-2760QM</td>
+<td>HD 3000</td>
+<td>650 MHz</td>
+<td>1.30 GHz</td>
+<td>0x116</td>
+</tr>
+<tr>
+<td>4</td>
+<td>i7-2720QM</td>
+<td>HD 3000</td>
+<td>650 MHz</td>
+<td>1.30 GHz</td>
+<td>0x116</td>
+</tr>
+<tr>
+<td>5</td>
+<td>i7-2700K</td>
+<td>HD 3000</td>
+<td>850 MHz</td>
+<td>1.35 GHz</td>
+<td>0x112</td>
+</tr>
+<tr>
+<td>6</td>
+<td>i7-2677M</td>
+<td>HD 3000</td>
+<td>350 MHz</td>
+<td>1.20 GHz</td>
+<td>0x116</td>
+</tr>
+<tr>
+<td>7</td>
+<td>i7-2670QM</td>
+<td>HD 3000</td>
+<td>650 MHz</td>
+<td>1.10 GHz</td>
+<td>0x116</td>
+</tr>
+<tr>
+<td>8</td>
+<td>i7-2675QM</td>
+<td>HD 3000</td>
+<td>650 MHz</td>
+<td>1.20 GHz</td>
+<td>0x116</td>
+</tr>
+<tr>
+<td>9</td>
+<td>i7-2657M</td>
+<td>HD 3000</td>
+<td>350 MHz</td>
+<td>1.00 GHz</td>
+<td>0x116</td>
+</tr>
+<tr>
+<td>10</td>
+<td>i7-2649M</td>
+<td>HD 3000</td>
+<td>500 MHz</td>
+<td>1.10 GHz</td>
+<td>0x116</td>
+</tr>
+<tr>
+<td>11</td>
+<td>i7-2640M</td>
+<td>HD 3000</td>
+<td>650 MHz</td>
+<td>1.20 GHz</td>
+<td>0x116</td>
+</tr>
+<tr>
+<td>12</td>
+<td>i7-2637M</td>
+<td>HD 3000</td>
+<td>350 MHz</td>
+<td>1.20 GHz</td>
+<td>0x116</td>
+</tr>
+<tr>
+<td>13</td>
+<td>i7-2635QM</td>
+<td>HD 3000</td>
+<td>650 MHz</td>
+<td>1.20 GHz</td>
+<td>0x116</td>
+</tr>
+<tr>
+<td>14</td>
+<td>i7-2630QM</td>
+<td>HD 3000</td>
+<td>650 MHz</td>
+<td>1.10 GHz</td>
+<td>0x116</td>
+</tr>
+<tr>
+<td>15</td>
+<td>i7-2629M</td>
+<td>HD 3000</td>
+<td>500 MHz</td>
+<td>1.10 GHz</td>
+<td>0x116</td>
+</tr>
+<tr>
+<td>16</td>
+<td>i7-2620M</td>
+<td>HD 3000</td>
+<td>650 MHz</td>
+<td>1.30 GHz</td>
+<td>0x116</td>
+</tr>
+<tr>
+<td>17</td>
+<td>i7-2617M</td>
+<td>HD 3000</td>
+<td>350 MHz</td>
+<td>0.95 GHz</td>
+<td>0x116</td>
+</tr>
+<tr>
+<td>18</td>
+<td>i7-2600S</td>
+<td>HD 2000</td>
+<td>850 MHz</td>
+<td>1.35 GHz</td>
+<td>0x102</td>
+</tr>
+<tr>
+<td>19</td>
+<td>i7-2600K</td>
+<td>HD 3000</td>
+<td>850 MHz</td>
+<td>1.35 GHz</td>
+<td>0x112</td>
+</tr>
+<tr>
+<td>20</td>
+<td>i7-2600</td>
+<td>HD 2000</td>
+<td>850 MHz</td>
+<td>1.35 GHz</td>
+<td>0x102</td>
+</tr>
+<tr>
+<td>21</td>
+<td>i5-2557M</td>
+<td>HD 3000</td>
+<td>350 MHz</td>
+<td>1.20 GHz</td>
+<td>0x116</td>
+</tr>
+<tr>
+<td>22</td>
+<td>i5-2540M</td>
+<td>HD 3000</td>
+<td>650 MHz</td>
+<td>1.30 GHz</td>
+<td>0x116</td>
+</tr>
+<tr>
+<td>23</td>
+<td>i5-2537M</td>
+<td>HD 3000</td>
+<td>350 MHz</td>
+<td>0.90 GHz</td>
+<td>0x116</td>
+</tr>
+<tr>
+<td>24</td>
+<td>i5-2520M</td>
+<td>HD 3000</td>
+<td>650 MHz</td>
+<td>1.30 GHz</td>
+<td>0x116</td>
+</tr>
+<tr>
+<td>25</td>
+<td>i5-2500T</td>
+<td>HD 2000</td>
+<td>650 MHz</td>
+<td>1.25 GHz</td>
+<td>0x102</td>
+</tr>
+<tr>
+<td>26</td>
+<td>i5-2500S</td>
+<td>HD 2000</td>
+<td>850 MHz</td>
+<td>1.10 GHz</td>
+<td>0x102</td>
+</tr>
+<tr>
+<td>27</td>
+<td>i5-2500K</td>
+<td>HD 3000</td>
+<td>850 MHz</td>
+<td>1.10 GHz</td>
+<td>0x112</td>
+</tr>
+<tr>
+<td>28</td>
+<td>i5-2500</td>
+<td>HD 2000</td>
+<td>850 MHz</td>
+<td>1.10 GHz</td>
+<td>0x102</td>
+</tr>
+<tr>
+<td>29</td>
+<td>i5-2467M</td>
+<td>HD 3000</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x116</td>
+</tr>
+<tr>
+<td>30</td>
+<td>i5-2450M</td>
+<td>HD 3000</td>
+<td>650 MHz</td>
+<td>1.30 GHz</td>
+<td>0x116</td>
+</tr>
+<tr>
+<td>31</td>
+<td>i5-2435M</td>
+<td>HD 3000</td>
+<td>650 MHz</td>
+<td>1.30 GHz</td>
+<td>0x116</td>
+</tr>
+<tr>
+<td>32</td>
+<td>i5-2430M</td>
+<td>HD 3000</td>
+<td>650 MHz</td>
+<td>1.20 GHz</td>
+<td>0x116</td>
+</tr>
+<tr>
+<td>33</td>
+<td>i5-2410M</td>
+<td>HD 3000</td>
+<td>650 MHz</td>
+<td>1.20 GHz</td>
+<td>0x116</td>
+</tr>
+<tr>
+<td>34</td>
+<td>i5-2405S</td>
+<td>HD 3000</td>
+<td>850 MHz</td>
+<td>1.10 GHz</td>
+<td>0x112</td>
+</tr>
+<tr>
+<td>35</td>
+<td>i3-2370M</td>
+<td>HD 3000</td>
+<td>650 MHz</td>
+<td>1.15 GHz</td>
+<td>0x116</td>
+</tr>
+<tr>
+<td>36</td>
+<td>i3-2367M</td>
+<td>HD 3000</td>
+<td>350 MHz</td>
+<td>1.00 GHz</td>
+<td>0x116</td>
+</tr>
+<tr>
+<td>37</td>
+<td>i3-2357M</td>
+<td>HD 3000</td>
+<td>350 MHz</td>
+<td>0.95 GHz</td>
+<td>0x116</td>
+</tr>
+<tr>
+<td>38</td>
+<td>i3-2350M</td>
+<td>HD 3000</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x116</td>
+</tr>
+<tr>
+<td>39</td>
+<td>i3-2348M</td>
+<td>HD 3000</td>
+<td>350 MHz</td>
+<td>1.15 GHz</td>
+<td>0x116</td>
+</tr>
+<tr>
+<td>40</td>
+<td>i3-2330M</td>
+<td>HD 3000</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x116</td>
+</tr>
+<tr>
+<td>41</td>
+<td>i3-2328M</td>
+<td>HD 3000</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x116</td>
+</tr>
+<tr>
+<td>42</td>
+<td>i3-2312M</td>
+<td>HD 3000</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x116</td>
+</tr>
+<tr>
+<td>43</td>
+<td>i3-2310M</td>
+<td>HD 3000</td>
+<td>350 MHz</td>
+<td>1.10 GHz</td>
+<td>0x116</td>
+</tr>
+<tr>
+<td>44</td>
+<td>i3-2125</td>
+<td>HD 3000</td>
+<td>850 MHz</td>
+<td>1.10 GHz</td>
+<td>0x112</td>
+</tr>
+<tr>
+<td>45</td>
+<td>i3-2105</td>
+<td>HD 3000</td>
+<td>850 MHz</td>
+<td>1.10 GHz</td>
+<td>0x112</td>
+</tr>
+</tbody></table>
+<h4 id="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"><a href="#重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！" class="headerlink" title="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"></a>重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！</h4><img src="https://img.shields.io/badge/更新日期：-2020年04月03日-red?style=flat-square" align='center'>
+
+<h4 id="黑苹果OpenCore开放群，群号-9422866，注明“独行秀才Blog引入”"><a href="#黑苹果OpenCore开放群，群号-9422866，注明“独行秀才Blog引入”" class="headerlink" title="黑苹果OpenCore开放群，群号:9422866，注明“独行秀才Blog引入”"></a><font color= "#FF0000"  align="center">黑苹果OpenCore开放群，群号:9422866，注明“独行秀才Blog引入”</font></h4>
+      
+    </div>
+    
+    
+    
+
+    
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #FF0000;font-size:18px;"><i class="fa fa-arrow-right" aria-hidden="true"></i><i class="fa fa-arrow-right" aria-hidden="true"></i><i class="fa fa-arrow-right" aria-hidden="true"></i><i class="fa fa-arrow-right" aria-hidden="true"></i>本文结束<i class="fa fa-flag-checkered" color:#000000;></i>感谢您的阅读<i class="fa fa-arrow-left" aria-hidden="true"></i><i class="fa fa-arrow-left" aria-hidden="true"></i><i class="fa fa-arrow-left" aria-hidden="true"></i><i class="fa fa-arrow-left" aria-hidden="true"></i></div>
+    
+</div>
+
+
+  
+</div>
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/weixin.png" alt="独行秀才 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/aipay.png" alt="独行秀才 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+<div>
+    
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+
+  <p><span>本文标题:</span>Intel CPU&集显ID速查</a></p>
+  <p><span>文章作者:</span>独行秀才</a></p>
+  <p><span>发布时间:</span>2020年04月01日 - 11:56:27</p>
+  <p><span>最后更新:</span>2020年04月03日 - 00:33:29</p>
+  <p><span>原始链接:</span><a href="/2020/04/01/Graphics/index/" title="Intel CPU&集显ID速查">https://shuiyunxc.github.io/2020/04/01/Graphics/index/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://shuiyunxc.github.io/2020/04/01/Graphics/index/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
+</div>
+<script>
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({
+          title: "",
+          text: '复制成功',
+          html: false,
+          timer: 500,
+          showConfirmButton: false
+        });
+      });
+    }));
+</script>
+
+
+
+    
+</div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CPU/" rel="tag"><i class="fa fa-tag"></i> CPU</a>
+          
+            <a href="/tags/Graphics/" rel="tag"><i class="fa fa-tag"></i> Graphics</a>
+          
+            <a href="/tags/Iris%C2%AE-Plus-Graphics/" rel="tag"><i class="fa fa-tag"></i> Iris® Plus Graphics</a>
+          
+            <a href="/tags/UHD-Graphics/" rel="tag"><i class="fa fa-tag"></i> UHD Graphics</a>
+          
+            <a href="/tags/HD-Graphics/" rel="tag"><i class="fa fa-tag"></i> HD Graphics</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/03/26/19E266/index/" rel="next" title="macOS Catalina 10.15.4(19E266)原版镜像 by OpenCore-0.5.7-03-24编译版">
+                <i class="fa fa-chevron-left"></i> macOS Catalina 10.15.4(19E266)原版镜像 by OpenCore-0.5.7-03-24编译版
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="独行秀才" />
+            
+              <p class="site-author-name" itemprop="name">独行秀才</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/shuiyunxc" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:shuiyunxc@sina.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="/weixin" target="_blank" title="微信">
+                      
+                        <i class="fa fa-fw fa-weixin"></i>微信</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="/qq" target="_blank" title="QQ">
+                      
+                        <i class="fa fa-fw fa-qq"></i>QQ</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="/Hackintosh" target="_blank" title="黑苹果服务">
+                      
+                        <i class="fa fa-fw fa-apple"></i>黑苹果服务</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.bilibili.com/video/av85050197" target="_blank" title="B站视频">
+                      
+                        <i class="fa fa-fw fa-camera"></i>B站视频</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#intel-CPU-amp-集显ID速查"><span class="nav-number">1.</span> <span class="nav-text">intel CPU&amp;集显ID速查</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第十代智能英特尔®-酷睿™-核心类型：Comet-Lake"><span class="nav-number">1.2.</span> <span class="nav-text">第十代智能英特尔® 酷睿™ 核心类型：Comet Lake</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第九代智能英特尔®-酷睿™-核心类型：Ice-Lake"><span class="nav-number">1.3.</span> <span class="nav-text">第九代智能英特尔® 酷睿™ 核心类型：Ice Lake</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第八代智能英特尔®-酷睿™-核心类型：Coffee-Lake"><span class="nav-number">1.4.</span> <span class="nav-text">第八代智能英特尔® 酷睿™ 核心类型：Coffee Lake</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第七代智能英特尔®-酷睿™-核心类型：Kaby-Lake"><span class="nav-number">1.5.</span> <span class="nav-text">第七代智能英特尔® 酷睿™ 核心类型：Kaby Lake</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第六代智能英特尔®-酷睿™-核心类型：Skylake"><span class="nav-number">1.6.</span> <span class="nav-text">第六代智能英特尔® 酷睿™ 核心类型：Skylake</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第五代智能英特尔®-酷睿™-核心类型：Broadwell"><span class="nav-number">1.7.</span> <span class="nav-text">第五代智能英特尔® 酷睿™ 核心类型：Broadwell</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第四代智能英特尔®-酷睿™-核心类型：Haswell"><span class="nav-number">1.8.</span> <span class="nav-text">第四代智能英特尔® 酷睿™ 核心类型：Haswell</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三代智能英特尔®-酷睿™-核心类型：Ivy-Bridge"><span class="nav-number">1.9.</span> <span class="nav-text">第三代智能英特尔® 酷睿™ 核心类型：Ivy Bridge</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二代智能英特尔®-酷睿™-核心类型：Sandy-Bridge"><span class="nav-number">1.10.</span> <span class="nav-text">第二代智能英特尔® 酷睿™ 核心类型：Sandy Bridge</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"><span class="nav-number">1.10.1.</span> <span class="nav-text">重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#黑苹果OpenCore开放群，群号-9422866，注明“独行秀才Blog引入”"><span class="nav-number">1.10.2.</span> <span class="nav-text">黑苹果OpenCore开放群，群号:9422866，注明“独行秀才Blog引入”</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2019 &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">独行秀才</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">本站总字数&#58;</span>
+    
+    <span title="本站总字数">34.4k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i> 访问人数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i> 访问总量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'XsF3ooTFstaC4AdIkBGId7Xi-9Nh9j0Va',
+        appKey: 'FMWOp5KGWSz1o0WwGecKgk2Y',
+        placeholder: '欢迎大家畅所欲言',
+        avatar:'mp',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+  
+  <script>
+    
+    function addCount(Counter) {
+      var $visitors = $('.leancloud_visitors');
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+            
+              .done(function() {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.time + 1);
+              })
+            
+              .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+              })
+          } else {
+            
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1 }))
+                .done(function() {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function() {
+                  console.log('Failed to create');
+                });
+            
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'XsF3ooTFstaC4AdIkBGId7Xi-9Nh9j0Va')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: 'https://' + api_server + '/1.1' + url,
+              headers: {
+                'X-LC-Id': 'XsF3ooTFstaC4AdIkBGId7Xi-9Nh9j0Va',
+                'X-LC-Key': 'FMWOp5KGWSz1o0WwGecKgk2Y',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+          
+            const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
+            if (localhost.test(document.URL)) return;
+            addCount(Counter);
+          
+        });
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
