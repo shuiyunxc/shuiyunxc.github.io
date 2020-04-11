@@ -90,7 +90,7 @@
 
 <meta name="description" content="关键字：黑苹果；OC；OpenCore；故障；错误；解决方法 OpenCore配置错误、故障与解决办法随着0.5.6正式版OpenCore的发布，越来越多的朋友，也在逐步向OC转移。在转移的过程中，遇到了这样或那样的问题，这篇Blog旨在帮助大家解决这些问题。当然，遇到的问题各异，解决办法也各不相同，也希望大家把自己遇到的问题或错误打包给我，我们一起来解决，来充实这篇Blog。以给大家在使用OC时">
 <meta property="og:type" content="article">
-<meta property="og:title" content="OpenCore配置错误、故障与解决办法（03月29日更新）">
+<meta property="og:title" content="OpenCore配置错误、故障与解决办法（04月10日更新）">
 <meta property="og:url" content="https://shuiyunxc.github.io/2020/03/06/Faults/index/index.html">
 <meta property="og:site_name" content="独行秀才的老窝">
 <meta property="og:description" content="关键字：黑苹果；OC；OpenCore；故障；错误；解决方法 OpenCore配置错误、故障与解决办法随着0.5.6正式版OpenCore的发布，越来越多的朋友，也在逐步向OC转移。在转移的过程中，遇到了这样或那样的问题，这篇Blog旨在帮助大家解决这些问题。当然，遇到的问题各异，解决办法也各不相同，也希望大家把自己遇到的问题或错误打包给我，我们一起来解决，来充实这篇Blog。以给大家在使用OC时">
@@ -111,9 +111,10 @@
 <meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/06/Faults/index/3579154D.jpg">
 <meta property="og:image" content="https://shuiyunxc.gitee.io//2020/03/06/Faults/index/87A839CF0D.jpg">
 <meta property="og:image" content="https://shuiyunxc.gitee.io//2020/03/06/Faults/index/8D949959.jpg">
-<meta property="og:image" content="https://img.shields.io/badge/%E6%9B%B4%E6%96%B0%E6%97%A5%E6%9C%9F-2020%E5%B9%B403%E6%9C%8829%E6%97%A5-red?style=flat-square">
+<meta property="og:image" content="https://shuiyunxc.gitee.io//2020/03/06/Faults/index/EC8D8F0AFB.jpg">
+<meta property="og:image" content="https://img.shields.io/badge/%E6%9B%B4%E6%96%B0%E6%97%A5%E6%9C%9F-2020%E5%B9%B404%E6%9C%8810%E6%97%A5-red?style=flat-square">
 <meta property="article:published_time" content="2020-03-06T10:19:39.000Z">
-<meta property="article:modified_time" content="2020-03-29T11:30:20.000Z">
+<meta property="article:modified_time" content="2020-04-10T06:03:30.000Z">
 <meta property="article:author" content="独行秀才">
 <meta property="article:tag" content="OpenCore">
 <meta property="article:tag" content="教程">
@@ -157,7 +158,7 @@
 
 
 
-  <title>OpenCore配置错误、故障与解决办法（03月29日更新） | 独行秀才的老窝</title>
+  <title>OpenCore配置错误、故障与解决办法（04月10日更新） | 独行秀才的老窝</title>
   
 
 
@@ -375,7 +376,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">OpenCore配置错误、故障与解决办法（03月29日更新）</h2>
+          <h2 class="post-title" itemprop="name headline">OpenCore配置错误、故障与解决办法（04月10日更新）</h2>
         
 
         <div class="post-meta">
@@ -404,8 +405,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-03-29T19:30:20+08:00">
-                2020-03-29
+              <time title="更新于" itemprop="dateModified" datetime="2020-04-10T14:03:30+08:00">
+                2020-04-10
               </time>
             
           </span>
@@ -494,7 +495,7 @@
 
           
           
-             <span id="/2020/03/06/Faults/index/" class="leancloud_visitors" data-flag-title="OpenCore配置错误、故障与解决办法（03月29日更新）">
+             <span id="/2020/03/06/Faults/index/" class="leancloud_visitors" data-flag-title="OpenCore配置错误、故障与解决办法（04月10日更新）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-folder-open"></i>
@@ -522,7 +523,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.5k
+                  1.6k
                 </span>
               
 
@@ -645,16 +646,28 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">oc：Image Kexts\CPUFiend.kext\Contents\MacOS\CPUCPUFiend.kext is missing for kext CPUFiend.kext ()</span><br><span class="line">Halting on critical error</span><br></pre></td></tr></table></figure>
 
 <p>这个错误明显是用文字编辑器编辑错误，将CPUFiend.kext置于\Contents\MacOS\之下，修改正确即可解决。</p>
+<h3 id="问题十五：如图"><a href="#问题十五：如图" class="headerlink" title="问题十五：如图"></a>问题十五：如图</h3><img src="https://shuiyunxc.gitee.io//2020/03/06/Faults/index/EC8D8F0AFB.jpg" alt="EC8D8F0AFB" style="zoom:45%;" />
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">......</span><br><span class="line">[EB|&#39;LD:LKC] BPDK -&gt; (System\Library\PrelinkedKernels\prelinkedkernl.development)</span><br><span class="line">[EB|&#39;LD:OFS] Err(0xE) @OPEN (System\\Library\\PrelinkedKernels\\prelinkedkernl.development)</span><br><span class="line">[EB|&#39;LD:LKC] BPDK ,!R -&gt; (System\Library\PrelinkedKernels\prelinkedkernl)</span><br><span class="line">[EB|&#39;LD:LKFS] &#125; 0K(0)</span><br><span class="line">[EB|&#39;LD:LKC] &#125; 0K(0)</span><br><span class="line">......</span><br></pre></td></tr></table></figure>
+
+<p>出现这个界面，直接卡在这里不动了，一般是CFG Lock未解锁（0x00），检查下面3项是否勾选</p>
+<ul>
+<li><code>Config-Kernel-Quirks-AppleCpuPmCfgLock</code></li>
+<li><code>Config-Kernel-Quirks-AppleXcpmCfgLock</code></li>
+<li><code>Config-UEFI-Quirks-IgnoreInvalidFlexRatio</code></li>
+</ul>
+<p>很多朋友一般是前面2项有勾选，却没有勾选第三项。需要提醒的是，CFG Lock没有解锁的情况下，这3项必须勾选！</p>
 <h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>这篇Blog在不断充实中，期待大家将自己遇到的问题（最好有截图）与解决办法（或可共同解决）打包发我，分享给广大网友，谢谢！！</p>
-<h3 id="致谢："><a href="#致谢：" class="headerlink" title="致谢："></a>致谢：</h3><p>网友：乐善好施（QQ：XXX986XXX）、诚信赢天下（QQ：XXX6236XXX）、王XXX（QQ：XXX832XXX）、lanzhou薛（XXX17XXX）、Ros.mac（XXX961XXX）、淡淡的风（XXX65XXX）提供故障截图。</p>
-<h3 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h3><p>2020-03-29添加问题13、14</p>
+<h3 id="致谢："><a href="#致谢：" class="headerlink" title="致谢："></a>致谢：</h3><p>网友：乐善好施（QQ：XXX986XXX）、诚信赢天下（QQ：XXX6236XXX）、王XXX（QQ：XXX832XXX）、lanzhou薛（XXX17XXX）、Ros.mac（XXX961XXX）、淡淡的风（XXX65XXX）、XX星中月XX（XX641XX）提供故障截图。</p>
+<h3 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h3><p>2020-03-29添加问题15</p>
+<p>2020-03-29添加问题13、14</p>
 <p>2020-03-26添加问题12</p>
 <p>2020-03-21添加问题10、11</p>
 <p>2020-03-14添加问题9</p>
 <p>2020-03-10添加问题8</p>
 <p>2020-03-08添加问题6、7</p>
 <p>2020-03-06 V0.0.1</p>
-<h4 id="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"><a href="#重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！" class="headerlink" title="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"></a>重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！</h4><img src="https://img.shields.io/badge/更新日期-2020年03月29日-red?style=flat-square" align='center'>
+<h4 id="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"><a href="#重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！" class="headerlink" title="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"></a>重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！</h4><img src="https://img.shields.io/badge/更新日期-2020年04月10日-red?style=flat-square" align='center'>
 
 <h4 id="黑苹果OpenCore开放群，群号-9422866，注明“独行秀才Blog引入”"><a href="#黑苹果OpenCore开放群，群号-9422866，注明“独行秀才Blog引入”" class="headerlink" title="黑苹果OpenCore开放群，群号:9422866，注明“独行秀才Blog引入”"></a><font color= "#FF0000"  align="center">黑苹果OpenCore开放群，群号:9422866，注明“独行秀才Blog引入”</font></h4>
       
@@ -718,11 +731,11 @@
   <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
 
-  <p><span>本文标题:</span>OpenCore配置错误、故障与解决办法（03月29日更新）</a></p>
+  <p><span>本文标题:</span>OpenCore配置错误、故障与解决办法（04月10日更新）</a></p>
   <p><span>文章作者:</span>独行秀才</a></p>
   <p><span>发布时间:</span>2020年03月06日 - 18:19:39</p>
-  <p><span>最后更新:</span>2020年03月29日 - 19:30:20</p>
-  <p><span>原始链接:</span><a href="/2020/03/06/Faults/index/" title="OpenCore配置错误、故障与解决办法（03月29日更新）">https://shuiyunxc.github.io/2020/03/06/Faults/index/</a>
+  <p><span>最后更新:</span>2020年04月10日 - 14:03:30</p>
+  <p><span>原始链接:</span><a href="/2020/03/06/Faults/index/" title="OpenCore配置错误、故障与解决办法（04月10日更新）">https://shuiyunxc.github.io/2020/03/06/Faults/index/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://shuiyunxc.github.io/2020/03/06/Faults/index/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
@@ -781,8 +794,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/03/10/instru/index/" rel="prev" title="OpenCore黑苹果引导配置说明第三版（基于04月05日编译版）">
-                OpenCore黑苹果引导配置说明第三版（基于04月05日编译版） <i class="fa fa-chevron-right"></i>
+              <a href="/2020/03/10/instru/index/" rel="prev" title="OpenCore黑苹果引导配置说明第四版（基于0.5.8-04月10日编译版）">
+                OpenCore黑苹果引导配置说明第四版（基于0.5.8-04月10日编译版） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -867,7 +880,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -969,7 +982,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">关键字：黑苹果；OC；OpenCore；故障；错误；解决方法 </span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OpenCore配置错误、故障与解决办法"><span class="nav-number"></span> <span class="nav-text">OpenCore配置错误、故障与解决办法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题一：如图"><span class="nav-number"></span> <span class="nav-text">问题一：如图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题二：如图"><span class="nav-number"></span> <span class="nav-text">问题二：如图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题三：如图"><span class="nav-number"></span> <span class="nav-text">问题三：如图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题四：如图"><span class="nav-number"></span> <span class="nav-text">问题四：如图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题五：如图"><span class="nav-number"></span> <span class="nav-text">问题五：如图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题六：如图"><span class="nav-number"></span> <span class="nav-text">问题六：如图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题七：如图"><span class="nav-number"></span> <span class="nav-text">问题七：如图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题八：如图"><span class="nav-number"></span> <span class="nav-text">问题八：如图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题九：如图"><span class="nav-number"></span> <span class="nav-text">问题九：如图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题十：如图"><span class="nav-number"></span> <span class="nav-text">问题十：如图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题十一：如图"><span class="nav-number"></span> <span class="nav-text">问题十一：如图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题十二：如图"><span class="nav-number"></span> <span class="nav-text">问题十二：如图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题十三：如图"><span class="nav-number"></span> <span class="nav-text">问题十三：如图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题十四：如图"><span class="nav-number"></span> <span class="nav-text">问题十四：如图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#后记"><span class="nav-number"></span> <span class="nav-text">后记</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#致谢："><span class="nav-number"></span> <span class="nav-text">致谢：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新日志"><span class="nav-number"></span> <span class="nav-text">更新日志</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"><span class="nav-number">1.</span> <span class="nav-text">重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#黑苹果OpenCore开放群，群号-9422866，注明“独行秀才Blog引入”"><span class="nav-number">2.</span> <span class="nav-text">黑苹果OpenCore开放群，群号:9422866，注明“独行秀才Blog引入”</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">关键字：黑苹果；OC；OpenCore；故障；错误；解决方法 </span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OpenCore配置错误、故障与解决办法"><span class="nav-number"></span> <span class="nav-text">OpenCore配置错误、故障与解决办法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题一：如图"><span class="nav-number"></span> <span class="nav-text">问题一：如图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题二：如图"><span class="nav-number"></span> <span class="nav-text">问题二：如图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题三：如图"><span class="nav-number"></span> <span class="nav-text">问题三：如图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题四：如图"><span class="nav-number"></span> <span class="nav-text">问题四：如图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题五：如图"><span class="nav-number"></span> <span class="nav-text">问题五：如图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题六：如图"><span class="nav-number"></span> <span class="nav-text">问题六：如图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题七：如图"><span class="nav-number"></span> <span class="nav-text">问题七：如图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题八：如图"><span class="nav-number"></span> <span class="nav-text">问题八：如图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题九：如图"><span class="nav-number"></span> <span class="nav-text">问题九：如图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题十：如图"><span class="nav-number"></span> <span class="nav-text">问题十：如图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题十一：如图"><span class="nav-number"></span> <span class="nav-text">问题十一：如图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题十二：如图"><span class="nav-number"></span> <span class="nav-text">问题十二：如图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题十三：如图"><span class="nav-number"></span> <span class="nav-text">问题十三：如图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题十四：如图"><span class="nav-number"></span> <span class="nav-text">问题十四：如图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题十五：如图"><span class="nav-number"></span> <span class="nav-text">问题十五：如图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#后记"><span class="nav-number"></span> <span class="nav-text">后记</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#致谢："><span class="nav-number"></span> <span class="nav-text">致谢：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新日志"><span class="nav-number"></span> <span class="nav-text">更新日志</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"><span class="nav-number">1.</span> <span class="nav-text">重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#黑苹果OpenCore开放群，群号-9422866，注明“独行秀才Blog引入”"><span class="nav-number">2.</span> <span class="nav-text">黑苹果OpenCore开放群，群号:9422866，注明“独行秀才Blog引入”</span></a></li></ol></div>
             
 
           </div>
