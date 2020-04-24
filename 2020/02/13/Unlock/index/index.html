@@ -88,30 +88,31 @@
 
 
 
-<meta name="description" content="黑苹果；OC；OpenCore；解除；CFG LOCK；方法   ## OpenCore引导Mac下解除CFG LOCK锁定的方法   更新BIOS下载最新的BIOS，保存主板BIOS设置，更新主板BIOS，恢复主板BIOS设置至新BIOS。 注意以下只能对AMI芯片BIOS有效，对PHOENIX或其他BIOS芯片无效，PHOENIX或其他BIOS芯片只能找其他办法。 提取新BIOS的CFG Lo">
+<meta name="description" content="黑苹果；OC；OpenCore；解除；CFG LOCK；方法   OpenCore引导Mac下解除CFG LOCK锁定的方法更新BIOS下载最新的BIOS，保存主板BIOS设置，更新主板BIOS，恢复主板BIOS设置至新BIOS。 注意以下只能对AMI芯片BIOS有效，对PHOENIX或其他BIOS芯片无效，PHOENIX或其他BIOS芯片只能找其他办法。 提取新BIOS的CFG Lock数据由O">
 <meta property="og:type" content="article">
-<meta property="og:title" content="OpenCore引导Mac下解除CFG LOCK锁定（03月14日更新）">
+<meta property="og:title" content="OpenCore引导Mac下解除CFG LOCK锁定（04月13日更新）">
 <meta property="og:url" content="https://shuiyunxc.github.io/2020/02/13/Unlock/index/index.html">
 <meta property="og:site_name" content="独行秀才的老窝">
-<meta property="og:description" content="黑苹果；OC；OpenCore；解除；CFG LOCK；方法   ## OpenCore引导Mac下解除CFG LOCK锁定的方法   更新BIOS下载最新的BIOS，保存主板BIOS设置，更新主板BIOS，恢复主板BIOS设置至新BIOS。 注意以下只能对AMI芯片BIOS有效，对PHOENIX或其他BIOS芯片无效，PHOENIX或其他BIOS芯片只能找其他办法。 提取新BIOS的CFG Lo">
-<meta property="og:image" content="https://shuiyunxc.github.io/2020/02/13/Unlock/index/D6892260.png">
-<meta property="og:image" content="https://shuiyunxc.github.io/2020/02/13/Unlock/index/D42B5F41.png">
-<meta property="og:image" content="https://shuiyunxc.github.io/2020/02/13/Unlock/index/279AEC39.png">
-<meta property="og:image" content="https://shuiyunxc.github.io/2020/02/13/Unlock/index/1C1465EC-3C51.png">
-<meta property="og:image" content="https://shuiyunxc.github.io/2020/02/13/Unlock/index/0B092DDF.png">
-<meta property="og:image" content="https://shuiyunxc.github.io/2020/02/13/Unlock/index/B31F6904.png">
-<meta property="og:image" content="https://shuiyunxc.github.io/2020/02/13/Unlock/index/30A1BC7B.png">
-<meta property="og:image" content="https://shuiyunxc.github.io/2020/02/13/Unlock/index/E4CA4967.png">
-<meta property="og:image" content="https://img.shields.io/badge/%E6%9B%B4%E6%96%B0%E6%97%A5%E6%9C%9F-2020%E5%B9%B403%E6%9C%8814%E6%97%A5-blue?style=flat-square">
+<meta property="og:description" content="黑苹果；OC；OpenCore；解除；CFG LOCK；方法   OpenCore引导Mac下解除CFG LOCK锁定的方法更新BIOS下载最新的BIOS，保存主板BIOS设置，更新主板BIOS，恢复主板BIOS设置至新BIOS。 注意以下只能对AMI芯片BIOS有效，对PHOENIX或其他BIOS芯片无效，PHOENIX或其他BIOS芯片只能找其他办法。 提取新BIOS的CFG Lock数据由O">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/02/13/Unlock/index/D6892260.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/02/13/Unlock/index/9DEB7C24.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/02/13/Unlock/index/D42B5F41.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/02/13/Unlock/index/279AEC39.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/02/13/Unlock/index/1C1465EC-3C51.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/02/13/Unlock/index/0B092DDF.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/02/13/Unlock/index/B31F6904.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/02/13/Unlock/index/30A1BC7B.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/02/13/Unlock/index/E4CA4967.png">
+<meta property="og:image" content="https://img.shields.io/badge/%E6%9B%B4%E6%96%B0%E6%97%A5%E6%9C%9F-2020%E5%B9%B404%E6%9C%8813%E6%97%A5-blue?style=flat-square">
 <meta property="article:published_time" content="2020-02-13T07:26:59.000Z">
-<meta property="article:modified_time" content="2020-03-22T08:51:09.000Z">
+<meta property="article:modified_time" content="2020-04-13T04:22:51.000Z">
 <meta property="article:author" content="独行秀才">
 <meta property="article:tag" content="台式机">
 <meta property="article:tag" content="笔记本">
 <meta property="article:tag" content="OpenCore,EFI">
 <meta property="article:tag" content="CFG Lock">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://shuiyunxc.github.io/2020/02/13/Unlock/index/D6892260.png">
+<meta name="twitter:image" content="https://shuiyunxc.gitee.io/2020/02/13/Unlock/index/D6892260.png">
 
 
 
@@ -147,7 +148,7 @@
 
 
 
-  <title>OpenCore引导Mac下解除CFG LOCK锁定（03月14日更新） | 独行秀才的老窝</title>
+  <title>OpenCore引导Mac下解除CFG LOCK锁定（04月13日更新） | 独行秀才的老窝</title>
   
 
 
@@ -365,7 +366,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">OpenCore引导Mac下解除CFG LOCK锁定（03月14日更新）</h2>
+          <h2 class="post-title" itemprop="name headline">OpenCore引导Mac下解除CFG LOCK锁定（04月13日更新）</h2>
         
 
         <div class="post-meta">
@@ -394,8 +395,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-03-22T16:51:09+08:00">
-                2020-03-22
+              <time title="更新于" itemprop="dateModified" datetime="2020-04-13T12:22:51+08:00">
+                2020-04-13
               </time>
             
           </span>
@@ -484,7 +485,7 @@
 
           
           
-             <span id="/2020/02/13/Unlock/index/" class="leancloud_visitors" data-flag-title="OpenCore引导Mac下解除CFG LOCK锁定（03月14日更新）">
+             <span id="/2020/02/13/Unlock/index/" class="leancloud_visitors" data-flag-title="OpenCore引导Mac下解除CFG LOCK锁定（04月13日更新）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-folder-open"></i>
@@ -512,7 +513,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  912
+                  911
                 </span>
               
 
@@ -551,24 +552,22 @@
       
         <div class="note class_name info"><p>黑苹果；OC；OpenCore；解除；CFG LOCK；方法 </p></div>
 
-## <div class="note class\_name info"><p><font color= "#FF0000"  align="center">OpenCore引导Mac下解除CFG LOCK锁定的方法</font> </p></div>
-
-<h3 id="更新BIOS"><a href="#更新BIOS" class="headerlink" title="更新BIOS"></a>更新BIOS</h3><p>下载最新的BIOS，保存主板BIOS设置，更新主板BIOS，恢复主板BIOS设置至新BIOS。</p>
+<h2 id="OpenCore引导Mac下解除CFG-LOCK锁定的方法"><a href="#OpenCore引导Mac下解除CFG-LOCK锁定的方法" class="headerlink" title="OpenCore引导Mac下解除CFG LOCK锁定的方法"></a><font color= "#FF0000"  align="center">OpenCore引导Mac下解除CFG LOCK锁定的方法</font></h2><h3 id="更新BIOS"><a href="#更新BIOS" class="headerlink" title="更新BIOS"></a>更新BIOS</h3><p>下载最新的BIOS，保存主板BIOS设置，更新主板BIOS，恢复主板BIOS设置至新BIOS。</p>
 <p><font color= "#FF0000"  align="center">注意以下只能对AMI芯片BIOS有效，对PHOENIX或其他BIOS芯片无效，PHOENIX或其他BIOS芯片只能找其他办法。</font></p>
-<h3 id="提取新BIOS的CFG-Lock数据"><a href="#提取新BIOS的CFG-Lock数据" class="headerlink" title="提取新BIOS的CFG Lock数据"></a>提取新BIOS的CFG Lock数据</h3><p>由OpenCore引导进到Mac，然后下载工具包，下载地址<a href="https://gitee.com/shuiyunxc/CFG-Lock-Tools" target="_blank" rel="noopener"><i class="fa fa-download" aria-hidden="true"></i></a><br>将工具包中的<code>modGRUBShell.efi</code>放入<code>OpenCore-EFI-Drivers</code><br>修改<code>config.plist</code>-<code>Config-Misc</code>-<code>Tools-添加附加工具</code>中，添加<code>modGRUBShell.efi</code>，并启用。 同时，将<code>config.plist</code>中与CFG Lock有关的勾选去掉，将修改后的EFI放入U盘里面的EFI分区。<strong>（先不要动硬盘里面的EFI，待完成后面的操作，U盘能正常引导，再替换！这个很重要！！）</strong><br><img src="/2020/02/13/Unlock/index/D6892260.png" alt="D6892260" style="zoom:50%;" /></p>
-<h4 id="打开工具包中-UEFITool，"><a href="#打开工具包中-UEFITool，" class="headerlink" title="打开工具包中-UEFITool，"></a>打开工具包中-UEFITool，</h4><p>菜单栏选择<code>File</code>&gt;<code>Open image file…</code>选取上面下载的最新BIOS。点<code>File</code>&gt;<code>Searsh</code>，打开搜索框，选择Text，输入<code>CFG Lock</code>，回车。定位到包含CFG Lock的模块。</p>
-<img src="/2020/02/13/Unlock/index/D42B5F41.png" alt="D42B5F41" style="zoom:50%;" />
+<h3 id="提取新BIOS的CFG-Lock数据"><a href="#提取新BIOS的CFG-Lock数据" class="headerlink" title="提取新BIOS的CFG Lock数据"></a>提取新BIOS的CFG Lock数据</h3><p>由OpenCore引导进到Mac，然后下载工具包，下载地址<a href="https://gitee.com/shuiyunxc/CFG-Lock-Tools" target="_blank" rel="noopener"><i class="fa fa-download" aria-hidden="true"></i></a><br>将工具包中的<code>modGRUBShell.efi</code>放入<code>OpenCore-EFI-Drivers</code><br>修改<code>config.plist</code>-<code>Config-Misc</code>-<code>Tools-添加附加工具</code>中，添加<code>modGRUBShell.efi</code>，并启用。 同时，将<code>config.plist</code>中与CFG Lock有关的勾选去掉，将修改后的EFI放入U盘里面的EFI分区。<strong>（先不要动硬盘里面的EFI，待完成后面的操作，U盘能正常引导，再替换！这个很重要！！）</strong><br><img src="https://shuiyunxc.gitee.io/2020/02/13/Unlock/index/D6892260.png" alt="D6892260" style="zoom:50%;" /></p>
+<h4 id="打开工具包中-UEFITool，"><a href="#打开工具包中-UEFITool，" class="headerlink" title="打开工具包中-UEFITool，"></a><img src="https://shuiyunxc.gitee.io/2020/02/13/Unlock/index/9DEB7C24.png" alt="9DEB7C24" style="zoom:50%;" />打开工具包中-UEFITool，</h4><p>菜单栏选择<code>File</code>&gt;<code>Open image file…</code>选取上面下载的最新BIOS。点<code>File</code>&gt;<code>Searsh</code>，打开搜索框，选择Text，输入<code>CFG Lock</code>，回车。定位到包含CFG Lock的模块。</p>
+<img src="https://shuiyunxc.gitee.io/2020/02/13/Unlock/index/D42B5F41.png" alt="D42B5F41" style="zoom:50%;" />
 
 <p>点选包含CFG Lock的模块，右键-<code>Extract as is…</code>，到桌面，名字命名为<code>1.bin</code></p>
-<img src="/2020/02/13/Unlock/index/279AEC39.png" alt="279AEC39" style="zoom:50%;" />
+<img src="https://shuiyunxc.gitee.io/2020/02/13/Unlock/index/279AEC39.png" alt="279AEC39" style="zoom:50%;" />
 
-<img src="/2020/02/13/Unlock/index/1C1465EC-3C51.png" alt="1C1465EC-3C51" style="zoom:50%;" />
+<img src="https://shuiyunxc.gitee.io/2020/02/13/Unlock/index/1C1465EC-3C51.png" alt="1C1465EC-3C51" style="zoom:50%;" />
 
 <h4 id="生成可读CFG-Lock文件"><a href="#生成可读CFG-Lock文件" class="headerlink" title="生成可读CFG Lock文件"></a>生成可读CFG Lock文件</h4><p>将工具包中的<code>ifrextract</code>放在桌面，打开终端，把<code>ifrextract</code>拖入终端，在把<code>1.bin</code>拖入终端，再输入<code>1.txt</code>,回车。在用户-你的用户名下生存<code>1.txt</code>，</p>
-<img src="/2020/02/13/Unlock/index/0B092DDF.png" alt="0B092DDF" style="zoom:50%;" />
+<img src="https://shuiyunxc.gitee.io/2020/02/13/Unlock/index/0B092DDF.png" alt="0B092DDF" style="zoom:50%;" />
 
 <h4 id="获取CFG-Lock地址"><a href="#获取CFG-Lock地址" class="headerlink" title="获取CFG Lock地址"></a>获取CFG Lock地址</h4><p>将<code>1.txt</code>移到桌面，双击打开（如果提示打不开，在文本编辑-偏好设置-打开和储存-打开文件-选择<code>西文（Mac OS Roman）</code>）即可打开。按<code>command+F</code>，输入<code>CFG Lock</code>，回车，定位到<code>CFG Lock</code></p>
-<img src="/2020/02/13/Unlock/index/B31F6904.png" alt="B31F6904" style="zoom:50%;" />
+<img src="https://shuiyunxc.gitee.io/2020/02/13/Unlock/index/B31F6904.png" alt="B31F6904" style="zoom:50%;" />
 
 <p>整理如下：</p>
 <ul>
@@ -581,14 +580,14 @@
 <p>打开set_dump GUI，选择下载的新BIOS，输入关键词，点搜索关键词，等待十几秒，就是出现下图的数字，地址可能与上面获取的地址有差异，也可能是相同的，但是经过我的验证都是有效的。地址为<code>0x529</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Vendor: AMI</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">CFG Lock: 0x529</span><br><span class="line">   Disabled        0x0   </span><br><span class="line">   Enabled         0x1 (default)            </span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">1 items found, 1 valid</span><br></pre></td></tr></table></figure>
 
-<img src="/2020/02/13/Unlock/index/30A1BC7B.png" alt="30A1BC7B" style="zoom:50%;" />
+<img src="https://shuiyunxc.gitee.io/2020/02/13/Unlock/index/30A1BC7B.png" alt="30A1BC7B" style="zoom:50%;" />
 
 <h4 id="修改CFG-Lock锁定"><a href="#修改CFG-Lock锁定" class="headerlink" title="修改CFG Lock锁定"></a>修改CFG Lock锁定</h4><p>重启，在磁盘选项下面有个modGRUBShell的选项，选择此项，显示grub&gt;，输入setup_var_3 0x84，即是查看0x84地址下的信息，为0x1，再输入setup_var_3 0x84 0x0，此命令是将0x84 0x1修改为0x84 0x0，即解除CFG Lock锁定。可以再次输入setup_var_3 0x84检查0x84的信息。下图是解锁后的状况：</p>
-<img src="/2020/02/13/Unlock/index/E4CA4967.png" alt="E4CA4967" style="zoom:50%;" />
+<img src="https://shuiyunxc.gitee.io/2020/02/13/Unlock/index/E4CA4967.png" alt="E4CA4967" style="zoom:50%;" />
 
 <p>至此，<code>CFG Lock解锁完毕</code>，用<code>U盘的EFI</code>引导，进Mac，如果正常，就用此EFI替换硬盘的EFI，作为常规的EFI使用！</p>
 <p>如有疑问或不清楚的，可以联系我！！</p>
-<h3 id="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"><a href="#重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！" class="headerlink" title="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"></a>重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！</h3><img src="https://img.shields.io/badge/更新日期-2020年03月14日-blue?style=flat-square" align='center'>
+<h3 id="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"><a href="#重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！" class="headerlink" title="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"></a>重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！</h3><img src="https://img.shields.io/badge/更新日期-2020年04月13日-blue?style=flat-square" align='center'>
 
 <h4 id="黑苹果OpenCore开放群，群号-9422866，注明“独行秀才Blog引入”"><a href="#黑苹果OpenCore开放群，群号-9422866，注明“独行秀才Blog引入”" class="headerlink" title="黑苹果OpenCore开放群，群号:9422866，注明“独行秀才Blog引入”"></a><font color= "#FF0000"  align="center">黑苹果OpenCore开放群，群号:9422866，注明“独行秀才Blog引入”</font></h4>
       
@@ -652,11 +651,11 @@
   <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
 
-  <p><span>本文标题:</span>OpenCore引导Mac下解除CFG LOCK锁定（03月14日更新）</a></p>
+  <p><span>本文标题:</span>OpenCore引导Mac下解除CFG LOCK锁定（04月13日更新）</a></p>
   <p><span>文章作者:</span>独行秀才</a></p>
   <p><span>发布时间:</span>2020年02月13日 - 15:26:59</p>
-  <p><span>最后更新:</span>2020年03月22日 - 16:51:09</p>
-  <p><span>原始链接:</span><a href="/2020/02/13/Unlock/index/" title="OpenCore引导Mac下解除CFG LOCK锁定（03月14日更新）">https://shuiyunxc.github.io/2020/02/13/Unlock/index/</a>
+  <p><span>最后更新:</span>2020年04月13日 - 12:22:51</p>
+  <p><span>原始链接:</span><a href="/2020/02/13/Unlock/index/" title="OpenCore引导Mac下解除CFG LOCK锁定（04月13日更新）">https://shuiyunxc.github.io/2020/02/13/Unlock/index/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://shuiyunxc.github.io/2020/02/13/Unlock/index/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
@@ -799,7 +798,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -810,7 +809,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-count">52</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -821,7 +820,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-count">48</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -901,7 +900,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#更新BIOS"><span class="nav-number">1.</span> <span class="nav-text">更新BIOS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提取新BIOS的CFG-Lock数据"><span class="nav-number">2.</span> <span class="nav-text">提取新BIOS的CFG Lock数据</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#打开工具包中-UEFITool，"><span class="nav-number">2.1.</span> <span class="nav-text">打开工具包中-UEFITool，</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#生成可读CFG-Lock文件"><span class="nav-number">2.2.</span> <span class="nav-text">生成可读CFG Lock文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#获取CFG-Lock地址"><span class="nav-number">2.3.</span> <span class="nav-text">获取CFG Lock地址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2020-02-15更新，简单快速获取CFG-Lock地址"><span class="nav-number">2.4.</span> <span class="nav-text">2020-02-15更新，简单快速获取CFG Lock地址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改CFG-Lock锁定"><span class="nav-number">2.5.</span> <span class="nav-text">修改CFG Lock锁定</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"><span class="nav-number">3.</span> <span class="nav-text">重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#黑苹果OpenCore开放群，群号-9422866，注明“独行秀才Blog引入”"><span class="nav-number">3.1.</span> <span class="nav-text">黑苹果OpenCore开放群，群号:9422866，注明“独行秀才Blog引入”</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#OpenCore引导Mac下解除CFG-LOCK锁定的方法"><span class="nav-number">1.</span> <span class="nav-text">OpenCore引导Mac下解除CFG LOCK锁定的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#更新BIOS"><span class="nav-number">1.1.</span> <span class="nav-text">更新BIOS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提取新BIOS的CFG-Lock数据"><span class="nav-number">1.2.</span> <span class="nav-text">提取新BIOS的CFG Lock数据</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#打开工具包中-UEFITool，"><span class="nav-number">1.2.1.</span> <span class="nav-text">打开工具包中-UEFITool，</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#生成可读CFG-Lock文件"><span class="nav-number">1.2.2.</span> <span class="nav-text">生成可读CFG Lock文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#获取CFG-Lock地址"><span class="nav-number">1.2.3.</span> <span class="nav-text">获取CFG Lock地址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2020-02-15更新，简单快速获取CFG-Lock地址"><span class="nav-number">1.2.4.</span> <span class="nav-text">2020-02-15更新，简单快速获取CFG Lock地址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改CFG-Lock锁定"><span class="nav-number">1.2.5.</span> <span class="nav-text">修改CFG Lock锁定</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"><span class="nav-number">1.3.</span> <span class="nav-text">重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#黑苹果OpenCore开放群，群号-9422866，注明“独行秀才Blog引入”"><span class="nav-number">1.3.1.</span> <span class="nav-text">黑苹果OpenCore开放群，群号:9422866，注明“独行秀才Blog引入”</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -935,7 +934,7 @@
     
       <span class="post-meta-item-text">本站总字数&#58;</span>
     
-    <span title="本站总字数">35.4k</span>
+    <span title="本站总字数">36.5k</span>
   
 </div>
 

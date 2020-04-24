@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="OpenCore,教程," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="独行秀才的老窝" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="面向小白的OC快速无脑配置-基于OpenCore-0.5.8-04-23编译版前言鉴于OC配置各种教程的各种繁杂，众小白们处于云里雾里，一脸懵逼的状态，经过独行秀才的思考、简化与提炼，采用图文与视频的方式呈现给广大网友。不要问，不要问，不要问为什么要这样配置，这样配置大多数100、200、300系列台式机可以进行正常安装，至于以后的优化、完善，就不是本文的讨论范畴。请自行搜索。当然，还有一个更快的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面向小白的OC快速无脑配置-基于OpenCore-0.5.8-04-23编译版">
+<meta property="og:url" content="https://shuiyunxc.github.io/2020/04/23/xiaobai/index/index.html">
+<meta property="og:site_name" content="独行秀才的老窝">
+<meta property="og:description" content="面向小白的OC快速无脑配置-基于OpenCore-0.5.8-04-23编译版前言鉴于OC配置各种教程的各种繁杂，众小白们处于云里雾里，一脸懵逼的状态，经过独行秀才的思考、简化与提炼，采用图文与视频的方式呈现给广大网友。不要问，不要问，不要问为什么要这样配置，这样配置大多数100、200、300系列台式机可以进行正常安装，至于以后的优化、完善，就不是本文的讨论范畴。请自行搜索。当然，还有一个更快的">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/OCC-C2D1DCCC.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/ACPI-D39180AC.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/ACPI-0CC7EB35.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/Booter-267642CA.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/Device-54FBDD55.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/Kernel-A1A25B3C.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/Kernel-56A7A72F.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/Misc-Boot-EFB0F912.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/Misc-Debug-BB2DB20D.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/Misc-Security-BF80E34F.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/Misc-Tools-31D6BED1.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/Mvram-4DFDA-4C863506.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/Nvram-7C436-BB43395A.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/Platfo-Generic-1A0E1032.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/UEFI-A-Q-5E76C74D.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/UFEI-Audio-6E91E61B.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/UEFI-De-ED019461.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/UEFI-Apple-5F6B8886.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/UEFI-Out-2CCAF9B7.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/UEFI-PC-060378D5.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/UEFI-Ram-0A0676A4.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/Kernel-A1A25B3C.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/UEFI-A-Q-5E76C74D.png">
+<meta property="og:image" content="https://img.shields.io/badge/%E6%9B%B4%E6%96%B0%E6%97%A5%E6%9C%9F-2020%E5%B9%B404%E6%9C%8823%E6%97%A5-violet?style=flat-square">
+<meta property="article:published_time" content="2020-04-23T11:49:56.000Z">
+<meta property="article:modified_time" content="2020-04-23T15:18:16.000Z">
+<meta property="article:author" content="独行秀才">
+<meta property="article:tag" content="OpenCore">
+<meta property="article:tag" content="教程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/OCC-C2D1DCCC.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"right","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://shuiyunxc.github.io/2020/04/23/xiaobai/index/"/>
+
+
+
+
+
+  <title>面向小白的OC快速无脑配置-基于OpenCore-0.5.8-04-23编译版 | 独行秀才的老窝</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?1baf224118b2f00d5c30cf05995b4c5f";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">独行秀才的老窝</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专注于黑苹果安装维护</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-corso">
+          <a href="/tags/%E6%95%99%E7%A8%8B/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br />
+            
+            教程
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-hackintosh">
+          <a href="/Hackintosh/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-apple"></i> <br />
+            
+            黑苹果安装维护
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://shuiyunxc.github.io/2020/04/23/xiaobai/index/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="独行秀才">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="独行秀才的老窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">面向小白的OC快速无脑配置-基于OpenCore-0.5.8-04-23编译版</h2>
+        
+
+        <div class="post-meta">
+        
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-23T19:49:56+08:00">
+                2020-04-23
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2020-04-23T23:18:16+08:00">
+                2020-04-23
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OpenCore/" itemprop="url" rel="index">
+                    <span itemprop="name">OpenCore</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OpenCore/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index">
+                    <span itemprop="name">教程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-commenting-o"></i>
+                </span>
+                <a href="/2020/04/23/xiaobai/index/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/23/xiaobai/index/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2020/04/23/xiaobai/index/" class="leancloud_visitors" data-flag-title="面向小白的OC快速无脑配置-基于OpenCore-0.5.8-04-23编译版">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-folder-open"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          <!--
+          
+          -->
+          
+          
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  798
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="面向小白的OC快速无脑配置-基于OpenCore-0-5-8-04-23编译版"><a href="#面向小白的OC快速无脑配置-基于OpenCore-0-5-8-04-23编译版" class="headerlink" title="面向小白的OC快速无脑配置-基于OpenCore-0.5.8-04-23编译版"></a>面向小白的OC快速无脑配置-基于OpenCore-0.5.8-04-23编译版</h2><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>鉴于OC配置各种教程的各种繁杂，众小白们处于云里雾里，一脸懵逼的状态，经过独行秀才的思考、简化与提炼，采用图文与视频的方式呈现给广大网友。不要问，不要问，不要问为什么要这样配置，这样配置大多数100、200、300系列台式机可以进行正常安装，至于以后的优化、完善，就不是本文的讨论范畴。请自行搜索。当然，还有一个更快的方法，就是白嫖一个EFI。<font color= "#FF0000" >重要说明：以下操作全部是基于Mac环境。</font>配套视频在剪辑和配音中，敬请期待。</p>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ul>
+<li><p><a href="https://gitee.com/shuiyunxc/OpenCore/repository/archive/0.5.8-04-23?format=zip" target="_blank" rel="noopener">下载OpenCore-0.5.8-04-23编译版</a>（可能你需要注册码云，那就去注册啰！反正以后都会用到！）</p>
+</li>
+<li><p>解压下载的OpenCore-0.5.8-04-23编译版包，将<code>Docs</code>文件夹里面的<code>Sample.plist</code>或<code>SampleFull.plist</code>拷贝到<code>EFI/OC</code>文件夹中，并改名为<code>config.plist</code></p>
+</li>
+<li><p><a href="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/OpenCore-Configurator.zip" target="_blank" rel="noopener">下载或更新与之配套的编辑器OpenCore Configurator（简称OCC）2.0.0.0版本</a>。</p>
+</li>
+<li><p><a href="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/ACPI.zip" target="_blank" rel="noopener">下载适合台式机的SSDT包</a></p>
+</li>
+<li><p><a href="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/Drivers.zip" target="_blank" rel="noopener">下载补充.efi驱动</a>，包含3项：<code>ApfsDriverLoader.efi</code>、<code>AudioDxe.efi</code>、<code>HFSPlus.efi</code></p>
+</li>
+<li><p><a href="https://shuiyunxc.gitee.io/2020/03/19/SoundGra/index/Resources.zip" target="_blank" rel="noopener">下载开机声音与图形界面必须用到的Resources</a>文件夹。</p>
+</li>
+<li><p>打开OCC-偏好设置-选择<code>OC 0.5.8开发版</code></p>
+<img src="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/OCC-C2D1DCCC.png" alt="OCC-C2D1DCCC" style="zoom:50%;" />
+
+
+
+</li>
+</ul>
+<h3 id="ACPI设置："><a href="#ACPI设置：" class="headerlink" title="ACPI设置："></a>ACPI设置：</h3><h5 id="ACPI-添加与Quirks设置："><a href="#ACPI-添加与Quirks设置：" class="headerlink" title="ACPI-添加与Quirks设置："></a>ACPI-添加与Quirks设置：</h5><img src="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/ACPI-D39180AC.png" alt="ACPI-D39180AC" style="zoom:50%;" />
+
+<h5 id="ACPI-阻止设置："><a href="#ACPI-阻止设置：" class="headerlink" title="ACPI-阻止设置："></a>ACPI-阻止设置：</h5><p>模版内容不改动。</p>
+<h5 id="ACPI-补丁设置："><a href="#ACPI-补丁设置：" class="headerlink" title="ACPI-补丁设置："></a>ACPI-补丁设置：</h5><img src="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/ACPI-0CC7EB35.png" alt="ACPI-0CC7EB35" style="zoom:50%;" />
+
+<h3 id="Booter设置："><a href="#Booter设置：" class="headerlink" title="Booter设置："></a>Booter设置：</h3><h5 id="Booter-Quirks设置"><a href="#Booter-Quirks设置" class="headerlink" title="Booter-Quirks设置"></a>Booter-Quirks设置</h5><img src="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/Booter-267642CA.png" alt="Booter-267642CA" style="zoom:50%;" />
+
+
+
+<h3 id="DeviceProperties设置："><a href="#DeviceProperties设置：" class="headerlink" title="DeviceProperties设置："></a>DeviceProperties设置：</h3><h5 id="声卡设置："><a href="#声卡设置：" class="headerlink" title="声卡设置："></a>声卡设置：</h5><img src="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/Device-54FBDD55.png" alt="Device-54FBDD55" style="zoom:50%;" />
+
+<h5 id="集显设置：（有独显可以无视以下内容）"><a href="#集显设置：（有独显可以无视以下内容）" class="headerlink" title="集显设置：（有独显可以无视以下内容）"></a>集显设置：（有独显可以无视以下内容）</h5><p>一般台式机路径：<code>PciRoot(0x0)/Pci(0x2,0x0)</code>，安装的时候，只用了一个参数<code>AAPL,ig-platform-id:07009B3E</code> 后期完善，补齐相关参数，至于07009B3E根据自己集显调整更换。</p>
+<h3 id="Kernel设置："><a href="#Kernel设置：" class="headerlink" title="Kernel设置："></a>Kernel设置：</h3><h5 id="Kernel-添加（Add）与Quirks设置："><a href="#Kernel-添加（Add）与Quirks设置：" class="headerlink" title="Kernel-添加（Add）与Quirks设置："></a>Kernel-添加（Add）与Quirks设置：</h5><img src="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/Kernel-A1A25B3C.png" alt="Kernel-A1A25B3C" style="zoom:50%;" />
+
+<h5 id="Kernel-阻止（Block）设置："><a href="#Kernel-阻止（Block）设置：" class="headerlink" title="Kernel-阻止（Block）设置："></a>Kernel-阻止（Block）设置：</h5><p>模版内容不改动。</p>
+<p>Kernel-CPU仿冒设置：</p>
+<p>模版内容不改动。</p>
+<p>Kernel-补丁（Patch）设置：</p>
+<img src="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/Kernel-56A7A72F.png" alt="Kernel-56A7A72F" style="zoom:50%;" />
+
+
+
+<h3 id="Misc设置："><a href="#Misc设置：" class="headerlink" title="Misc设置："></a>Misc设置：</h3><h5 id="Misc-Boot设置："><a href="#Misc-Boot设置：" class="headerlink" title="Misc- Boot设置："></a>Misc- Boot设置：</h5><img src="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/Misc-Boot-EFB0F912.png" alt="Misc-Boot-EFB0F912" style="zoom:50%;" />
+
+<p>Misc-Debug设置：</p>
+<img src="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/Misc-Debug-BB2DB20D.png" alt="Misc-Debug-BB2DB20D" style="zoom:50%;" />
+
+<p>Misc- Security设置：</p>
+<img src="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/Misc-Security-BF80E34F.png" alt="Misc-Security-BF80E34F" style="zoom:50%;" />
+
+<p>Misc-Tools 设置：</p>
+<img src="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/Misc-Tools-31D6BED1.png" alt="Misc-Tools-31D6BED1" style="zoom:50%;" />
+
+
+
+<h3 id="NVRAM设置："><a href="#NVRAM设置：" class="headerlink" title="NVRAM设置："></a>NVRAM设置：</h3><h5 id="NVRAM-添加（4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14）设置："><a href="#NVRAM-添加（4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14）设置：" class="headerlink" title="NVRAM-添加（4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14）设置："></a>NVRAM-添加（4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14）设置：</h5><img src="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/Mvram-4DFDA-4C863506.png" alt="Mvram-4DFDA-4C863506" style="zoom:50%;" />
+
+<h5 id="NVRAM-添加（4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102）设置："><a href="#NVRAM-添加（4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102）设置：" class="headerlink" title="NVRAM-添加（4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102）设置："></a>NVRAM-添加（4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102）设置：</h5><p>直接#4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102。</p>
+<h5 id="NVRAM-添加（7C436110-AB2A-4BBB-A880-FE41995C9F82）设置："><a href="#NVRAM-添加（7C436110-AB2A-4BBB-A880-FE41995C9F82）设置：" class="headerlink" title="NVRAM-添加（7C436110-AB2A-4BBB-A880-FE41995C9F82）设置："></a>NVRAM-添加（7C436110-AB2A-4BBB-A880-FE41995C9F82）设置：</h5><img src="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/Nvram-7C436-BB43395A.png" alt="Nvram-7C436-BB43395A" style="zoom:50%;" />
+
+<h5 id="NVRAM-阻止（Block）设置："><a href="#NVRAM-阻止（Block）设置：" class="headerlink" title="NVRAM-阻止（Block）设置："></a>NVRAM-阻止（Block）设置：</h5><p>模版内容不改动。</p>
+<h5 id="NVRAM-LegacySchema设置："><a href="#NVRAM-LegacySchema设置：" class="headerlink" title="NVRAM-LegacySchema设置："></a>NVRAM-LegacySchema设置：</h5><p>模版内容不改动。</p>
+<h3 id="PlatformInfo设置："><a href="#PlatformInfo设置：" class="headerlink" title="PlatformInfo设置："></a>PlatformInfo设置：</h3><h5 id="PlatformInfo-Generic设置："><a href="#PlatformInfo-Generic设置：" class="headerlink" title="PlatformInfo-Generic设置："></a>PlatformInfo-Generic设置：</h5><img src="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/Platfo-Generic-1A0E1032.png" alt="Platfo-Generic-1A0E1032" style="zoom:50%;" />
+
+<h5 id="PlatformInfo其他项目不用设置"><a href="#PlatformInfo其他项目不用设置" class="headerlink" title="PlatformInfo其他项目不用设置"></a>PlatformInfo其他项目不用设置</h5><h3 id="UEFI设置："><a href="#UEFI设置：" class="headerlink" title="UEFI设置："></a>UEFI设置：</h3><h5 id="UEFI-APFS与Quirks设置："><a href="#UEFI-APFS与Quirks设置：" class="headerlink" title="UEFI-APFS与Quirks设置："></a>UEFI-APFS与Quirks设置：</h5><img src="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/UEFI-A-Q-5E76C74D.png" alt="UEFI-A-Q-5E76C74D" style="zoom:50%;" />
+
+<h5 id="UEFI-Audio设置："><a href="#UEFI-Audio设置：" class="headerlink" title="UEFI-Audio设置："></a>UEFI-Audio设置：</h5><img src="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/UFEI-Audio-6E91E61B.png" alt="UFEI-Audio-6E91E61B" style="zoom:50%;" />
+
+<h5 id="UEFI-Drivers设置："><a href="#UEFI-Drivers设置：" class="headerlink" title="UEFI-Drivers设置："></a>UEFI-Drivers设置：</h5><img src="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/UEFI-De-ED019461.png" alt="UEFI-De-ED019461" style="zoom:50%;" />
+
+<h5 id="UEFI-Apple快捷键（Input）设置："><a href="#UEFI-Apple快捷键（Input）设置：" class="headerlink" title="UEFI-Apple快捷键（Input）设置："></a>UEFI-Apple快捷键（Input）设置：</h5><img src="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/UEFI-Apple-5F6B8886.png" alt="UEFI-Apple-5F6B8886" style="zoom:50%;" />
+
+<h5 id="UEFI-Output（显示输出）设置："><a href="#UEFI-Output（显示输出）设置：" class="headerlink" title="UEFI-Output（显示输出）设置："></a>UEFI-Output（显示输出）设置：</h5><img src="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/UEFI-Out-2CCAF9B7.png" alt="UEFI-Out-2CCAF9B7" style="zoom:50%;" />
+
+<p>UEFI-ProtocolOverrides(协议覆盖)设置：</p>
+<img src="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/UEFI-PC-060378D5.png" alt="UEFI-PC-060378D5" style="zoom:50%;" />
+
+<p>UEFI-ReservedMemory(保留内存)设置：</p>
+<img src="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/UEFI-Ram-0A0676A4.png" alt="UEFI-Ram-0A0676A4" style="zoom:50%;" />
+
+<h3 id="重要补充："><a href="#重要补充：" class="headerlink" title="重要补充："></a>重要补充：</h3><h5 id="关于CFG-Lock三项位置"><a href="#关于CFG-Lock三项位置" class="headerlink" title="关于CFG Lock三项位置"></a>关于CFG Lock三项位置</h5><p>第一二项：</p>
+<img src="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/Kernel-A1A25B3C.png" alt="Kernel-A1A25B3C" style="zoom:50%;" />
+
+<p>第三项：</p>
+<img src="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/UEFI-A-Q-5E76C74D.png" alt="UEFI-A-Q-5E76C74D" style="zoom:50%;" />
+
+<h3 id="后记："><a href="#后记：" class="headerlink" title="后记："></a>后记：</h3><p>以后不论是OC还是OCC，都必然会有更新，但是基本设置不会有太大的变化，如果有重大改变，独行秀才也会及时更新相关内容。</p>
+<h3 id="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！特别是不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"><a href="#重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！特别是不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！" class="headerlink" title="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！特别是不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"></a>重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！特别是不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！</h3><img src="https://img.shields.io/badge/更新日期-2020年04月23日-violet?style=flat-square" align='center'>
+      
+    </div>
+    
+    
+    
+
+    
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #FF0000;font-size:18px;"><i class="fa fa-arrow-right" aria-hidden="true"></i><i class="fa fa-arrow-right" aria-hidden="true"></i><i class="fa fa-arrow-right" aria-hidden="true"></i><i class="fa fa-arrow-right" aria-hidden="true"></i>本文结束<i class="fa fa-flag-checkered" color:#000000;></i>感谢您的阅读<i class="fa fa-arrow-left" aria-hidden="true"></i><i class="fa fa-arrow-left" aria-hidden="true"></i><i class="fa fa-arrow-left" aria-hidden="true"></i><i class="fa fa-arrow-left" aria-hidden="true"></i></div>
+    
+</div>
+
+
+  
+</div>
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/weixin.png" alt="独行秀才 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/aipay.png" alt="独行秀才 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+<div>
+    
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+
+  <p><span>本文标题:</span>面向小白的OC快速无脑配置-基于OpenCore-0.5.8-04-23编译版</a></p>
+  <p><span>文章作者:</span>独行秀才</a></p>
+  <p><span>发布时间:</span>2020年04月23日 - 19:49:56</p>
+  <p><span>最后更新:</span>2020年04月23日 - 23:18:16</p>
+  <p><span>原始链接:</span><a href="/2020/04/23/xiaobai/index/" title="面向小白的OC快速无脑配置-基于OpenCore-0.5.8-04-23编译版">https://shuiyunxc.github.io/2020/04/23/xiaobai/index/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://shuiyunxc.github.io/2020/04/23/xiaobai/index/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
+</div>
+<script>
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({
+          title: "",
+          text: '复制成功',
+          html: false,
+          timer: 500,
+          showConfirmButton: false
+        });
+      });
+    }));
+</script>
+
+
+
+    
+</div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/OpenCore/" rel="tag"><i class="fa fa-tag"></i> OpenCore</a>
+          
+            <a href="/tags/%E6%95%99%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> 教程</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/04/21/M920x-video/index/" rel="next" title="联想M920x黑苹果开机视频演示">
+                <i class="fa fa-chevron-left"></i> 联想M920x黑苹果开机视频演示
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="独行秀才" />
+            
+              <p class="site-author-name" itemprop="name">独行秀才</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">52</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">48</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/shuiyunxc" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:shuiyunxc@sina.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="/weixin" target="_blank" title="微信">
+                      
+                        <i class="fa fa-fw fa-weixin"></i>微信</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="/qq" target="_blank" title="QQ">
+                      
+                        <i class="fa fa-fw fa-qq"></i>QQ</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="/Hackintosh" target="_blank" title="黑苹果服务">
+                      
+                        <i class="fa fa-fw fa-apple"></i>黑苹果服务</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.bilibili.com/video/av85050197" target="_blank" title="B站视频">
+                      
+                        <i class="fa fa-fw fa-camera"></i>B站视频</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#面向小白的OC快速无脑配置-基于OpenCore-0-5-8-04-23编译版"><span class="nav-number">1.</span> <span class="nav-text">面向小白的OC快速无脑配置-基于OpenCore-0.5.8-04-23编译版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#准备工作"><span class="nav-number">1.2.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ACPI设置："><span class="nav-number">1.3.</span> <span class="nav-text">ACPI设置：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#ACPI-添加与Quirks设置："><span class="nav-number">1.3.0.1.</span> <span class="nav-text">ACPI-添加与Quirks设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#ACPI-阻止设置："><span class="nav-number">1.3.0.2.</span> <span class="nav-text">ACPI-阻止设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#ACPI-补丁设置："><span class="nav-number">1.3.0.3.</span> <span class="nav-text">ACPI-补丁设置：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Booter设置："><span class="nav-number">1.4.</span> <span class="nav-text">Booter设置：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Booter-Quirks设置"><span class="nav-number">1.4.0.1.</span> <span class="nav-text">Booter-Quirks设置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DeviceProperties设置："><span class="nav-number">1.5.</span> <span class="nav-text">DeviceProperties设置：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#声卡设置："><span class="nav-number">1.5.0.1.</span> <span class="nav-text">声卡设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#集显设置：（有独显可以无视以下内容）"><span class="nav-number">1.5.0.2.</span> <span class="nav-text">集显设置：（有独显可以无视以下内容）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kernel设置："><span class="nav-number">1.6.</span> <span class="nav-text">Kernel设置：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Kernel-添加（Add）与Quirks设置："><span class="nav-number">1.6.0.1.</span> <span class="nav-text">Kernel-添加（Add）与Quirks设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Kernel-阻止（Block）设置："><span class="nav-number">1.6.0.2.</span> <span class="nav-text">Kernel-阻止（Block）设置：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Misc设置："><span class="nav-number">1.7.</span> <span class="nav-text">Misc设置：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Misc-Boot设置："><span class="nav-number">1.7.0.1.</span> <span class="nav-text">Misc- Boot设置：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NVRAM设置："><span class="nav-number">1.8.</span> <span class="nav-text">NVRAM设置：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#NVRAM-添加（4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14）设置："><span class="nav-number">1.8.0.1.</span> <span class="nav-text">NVRAM-添加（4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14）设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#NVRAM-添加（4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102）设置："><span class="nav-number">1.8.0.2.</span> <span class="nav-text">NVRAM-添加（4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102）设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#NVRAM-添加（7C436110-AB2A-4BBB-A880-FE41995C9F82）设置："><span class="nav-number">1.8.0.3.</span> <span class="nav-text">NVRAM-添加（7C436110-AB2A-4BBB-A880-FE41995C9F82）设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#NVRAM-阻止（Block）设置："><span class="nav-number">1.8.0.4.</span> <span class="nav-text">NVRAM-阻止（Block）设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#NVRAM-LegacySchema设置："><span class="nav-number">1.8.0.5.</span> <span class="nav-text">NVRAM-LegacySchema设置：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PlatformInfo设置："><span class="nav-number">1.9.</span> <span class="nav-text">PlatformInfo设置：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#PlatformInfo-Generic设置："><span class="nav-number">1.9.0.1.</span> <span class="nav-text">PlatformInfo-Generic设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#PlatformInfo其他项目不用设置"><span class="nav-number">1.9.0.2.</span> <span class="nav-text">PlatformInfo其他项目不用设置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UEFI设置："><span class="nav-number">1.10.</span> <span class="nav-text">UEFI设置：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#UEFI-APFS与Quirks设置："><span class="nav-number">1.10.0.1.</span> <span class="nav-text">UEFI-APFS与Quirks设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#UEFI-Audio设置："><span class="nav-number">1.10.0.2.</span> <span class="nav-text">UEFI-Audio设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#UEFI-Drivers设置："><span class="nav-number">1.10.0.3.</span> <span class="nav-text">UEFI-Drivers设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#UEFI-Apple快捷键（Input）设置："><span class="nav-number">1.10.0.4.</span> <span class="nav-text">UEFI-Apple快捷键（Input）设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#UEFI-Output（显示输出）设置："><span class="nav-number">1.10.0.5.</span> <span class="nav-text">UEFI-Output（显示输出）设置：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重要补充："><span class="nav-number">1.11.</span> <span class="nav-text">重要补充：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#关于CFG-Lock三项位置"><span class="nav-number">1.11.0.1.</span> <span class="nav-text">关于CFG Lock三项位置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#后记："><span class="nav-number">1.12.</span> <span class="nav-text">后记：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！特别是不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"><span class="nav-number">1.13.</span> <span class="nav-text">重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！特别是不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2019 &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">独行秀才</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">本站总字数&#58;</span>
+    
+    <span title="本站总字数">36.5k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i> 访问人数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i> 访问总量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'XsF3ooTFstaC4AdIkBGId7Xi-9Nh9j0Va',
+        appKey: 'FMWOp5KGWSz1o0WwGecKgk2Y',
+        placeholder: '欢迎大家畅所欲言',
+        avatar:'mp',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+  
+  <script>
+    
+    function addCount(Counter) {
+      var $visitors = $('.leancloud_visitors');
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+            
+              .done(function() {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.time + 1);
+              })
+            
+              .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+              })
+          } else {
+            
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1 }))
+                .done(function() {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function() {
+                  console.log('Failed to create');
+                });
+            
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'XsF3ooTFstaC4AdIkBGId7Xi-9Nh9j0Va')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: 'https://' + api_server + '/1.1' + url,
+              headers: {
+                'X-LC-Id': 'XsF3ooTFstaC4AdIkBGId7Xi-9Nh9j0Va',
+                'X-LC-Key': 'FMWOp5KGWSz1o0WwGecKgk2Y',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+          
+            const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
+            if (localhost.test(document.URL)) return;
+            addCount(Counter);
+          
+        });
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
