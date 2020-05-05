@@ -117,9 +117,9 @@
 <meta property="og:image" content="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/UEFI-Ram-0A0676A4.png">
 <meta property="og:image" content="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/Kernel-A1A25B3C.png">
 <meta property="og:image" content="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/UEFI-A-Q-5E76C74D.png">
-<meta property="og:image" content="https://img.shields.io/badge/%E6%9B%B4%E6%96%B0%E6%97%A5%E6%9C%9F-2020%E5%B9%B404%E6%9C%8823%E6%97%A5-violet?style=flat-square">
+<meta property="og:image" content="https://img.shields.io/badge/%E6%9B%B4%E6%96%B0%E6%97%A5%E6%9C%9F-2020%E5%B9%B404%E6%9C%8830%E6%97%A5-violet?style=flat-square">
 <meta property="article:published_time" content="2020-04-23T11:49:56.000Z">
-<meta property="article:modified_time" content="2020-04-23T15:18:16.000Z">
+<meta property="article:modified_time" content="2020-05-02T05:45:28.000Z">
 <meta property="article:author" content="独行秀才">
 <meta property="article:tag" content="OpenCore">
 <meta property="article:tag" content="教程">
@@ -407,8 +407,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-04-23T23:18:16+08:00">
-                2020-04-23
+              <time title="更新于" itemprop="dateModified" datetime="2020-05-02T13:45:28+08:00">
+                2020-05-02
               </time>
             
           </span>
@@ -492,7 +492,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  798
+                  823
                 </span>
               
 
@@ -529,7 +529,10 @@
       
 
       
-        <h2 id="面向小白的OC快速无脑配置-基于OpenCore-0-5-8-04-23编译版"><a href="#面向小白的OC快速无脑配置-基于OpenCore-0-5-8-04-23编译版" class="headerlink" title="面向小白的OC快速无脑配置-基于OpenCore-0.5.8-04-23编译版"></a>面向小白的OC快速无脑配置-基于OpenCore-0.5.8-04-23编译版</h2><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>鉴于OC配置各种教程的各种繁杂，众小白们处于云里雾里，一脸懵逼的状态，经过独行秀才的思考、简化与提炼，采用图文与视频的方式呈现给广大网友。不要问，不要问，不要问为什么要这样配置，这样配置大多数100、200、300系列台式机可以进行正常安装，至于以后的优化、完善，就不是本文的讨论范畴。请自行搜索。当然，还有一个更快的方法，就是白嫖一个EFI。<font color= "#FF0000" >重要说明：以下操作全部是基于Mac环境。</font>配套视频在剪辑和配音中，敬请期待。</p>
+        <h2 id="面向小白的OC快速无脑配置-基于OpenCore-0-5-8-04-23编译版"><a href="#面向小白的OC快速无脑配置-基于OpenCore-0-5-8-04-23编译版" class="headerlink" title="面向小白的OC快速无脑配置-基于OpenCore-0.5.8-04-23编译版"></a>面向小白的OC快速无脑配置-基于OpenCore-0.5.8-04-23编译版</h2><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>鉴于OC配置各种教程的各种繁杂，众小白们处于云里雾里，一脸懵逼的状态，经过独行秀才的思考、简化与提炼，采用图文与视频的方式呈现给广大网友。不要问，不要问，不要问为什么要这样配置，这样配置大多数100、200、300系列台式机可以进行正常安装，至于以后的优化、完善，就不是本文的讨论范畴。请自行搜索。当然，还有一个更快的方法，就是白嫖一个OC-EFI。<font color= "#FF0000" >重要说明：以下操作全部是基于Mac环境。</font></p>
+<h3 id="视频地址："><a href="#视频地址：" class="headerlink" title="视频地址："></a>视频地址：</h3><ul>
+<li><a href="https://shuiyunxc.gitee.io/2020/05/02/xiaobaiVideo/index/" target="_blank" rel="noopener">面向小白的Opencore(OC)快速无脑配置视频</a>，建议看B站与好看视频，抖音不支持4K</li>
+</ul>
 <h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ul>
 <li><p><a href="https://gitee.com/shuiyunxc/OpenCore/repository/archive/0.5.8-04-23?format=zip" target="_blank" rel="noopener">下载OpenCore-0.5.8-04-23编译版</a>（可能你需要注册码云，那就去注册啰！反正以后都会用到！）</p>
 </li>
@@ -542,6 +545,8 @@
 <li><p><a href="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/Drivers.zip" target="_blank" rel="noopener">下载补充.efi驱动</a>，包含3项：<code>ApfsDriverLoader.efi</code>、<code>AudioDxe.efi</code>、<code>HFSPlus.efi</code></p>
 </li>
 <li><p><a href="https://shuiyunxc.gitee.io/2020/03/19/SoundGra/index/Resources.zip" target="_blank" rel="noopener">下载开机声音与图形界面必须用到的Resources</a>文件夹。</p>
+</li>
+<li><p><a href="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/Kexts.zip" target="_blank" rel="noopener">下载Kexts包</a></p>
 </li>
 <li><p>打开OCC-偏好设置-选择<code>OC 0.5.8开发版</code></p>
 <img src="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/OCC-C2D1DCCC.png" alt="OCC-C2D1DCCC" style="zoom:50%;" />
@@ -617,7 +622,7 @@
 <img src="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/UEFI-A-Q-5E76C74D.png" alt="UEFI-A-Q-5E76C74D" style="zoom:50%;" />
 
 <h3 id="后记："><a href="#后记：" class="headerlink" title="后记："></a>后记：</h3><p>以后不论是OC还是OCC，都必然会有更新，但是基本设置不会有太大的变化，如果有重大改变，独行秀才也会及时更新相关内容。</p>
-<h3 id="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！特别是不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"><a href="#重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！特别是不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！" class="headerlink" title="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！特别是不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"></a>重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！特别是不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！</h3><img src="https://img.shields.io/badge/更新日期-2020年04月23日-violet?style=flat-square" align='center'>
+<h3 id="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！特别是不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"><a href="#重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！特别是不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！" class="headerlink" title="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！特别是不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"></a>重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！特别是不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！</h3><img src="https://img.shields.io/badge/更新日期-2020年04月30日-violet?style=flat-square" align='center'>
       
     </div>
     
@@ -682,7 +687,7 @@
   <p><span>本文标题:</span>面向小白的OC快速无脑配置-基于OpenCore-0.5.8-04-23编译版</a></p>
   <p><span>文章作者:</span>独行秀才</a></p>
   <p><span>发布时间:</span>2020年04月23日 - 19:49:56</p>
-  <p><span>最后更新:</span>2020年04月23日 - 23:18:16</p>
+  <p><span>最后更新:</span>2020年05月02日 - 13:45:28</p>
   <p><span>原始链接:</span><a href="/2020/04/23/xiaobai/index/" title="面向小白的OC快速无脑配置-基于OpenCore-0.5.8-04-23编译版">https://shuiyunxc.github.io/2020/04/23/xiaobai/index/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://shuiyunxc.github.io/2020/04/23/xiaobai/index/"  aria-label="复制成功！"></i></span>
   </p>
@@ -735,6 +740,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/05/02/xiaobaiVideo/index/" rel="prev" title="面向小白的Opencore(OC)快速无脑配置视频（05-05更新至第六集）">
+                面向小白的Opencore(OC)快速无脑配置视频（05-05更新至第六集） <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -818,7 +827,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">28</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -920,7 +929,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#面向小白的OC快速无脑配置-基于OpenCore-0-5-8-04-23编译版"><span class="nav-number">1.</span> <span class="nav-text">面向小白的OC快速无脑配置-基于OpenCore-0.5.8-04-23编译版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#准备工作"><span class="nav-number">1.2.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ACPI设置："><span class="nav-number">1.3.</span> <span class="nav-text">ACPI设置：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#ACPI-添加与Quirks设置："><span class="nav-number">1.3.0.1.</span> <span class="nav-text">ACPI-添加与Quirks设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#ACPI-阻止设置："><span class="nav-number">1.3.0.2.</span> <span class="nav-text">ACPI-阻止设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#ACPI-补丁设置："><span class="nav-number">1.3.0.3.</span> <span class="nav-text">ACPI-补丁设置：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Booter设置："><span class="nav-number">1.4.</span> <span class="nav-text">Booter设置：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Booter-Quirks设置"><span class="nav-number">1.4.0.1.</span> <span class="nav-text">Booter-Quirks设置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DeviceProperties设置："><span class="nav-number">1.5.</span> <span class="nav-text">DeviceProperties设置：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#声卡设置："><span class="nav-number">1.5.0.1.</span> <span class="nav-text">声卡设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#集显设置：（有独显可以无视以下内容）"><span class="nav-number">1.5.0.2.</span> <span class="nav-text">集显设置：（有独显可以无视以下内容）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kernel设置："><span class="nav-number">1.6.</span> <span class="nav-text">Kernel设置：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Kernel-添加（Add）与Quirks设置："><span class="nav-number">1.6.0.1.</span> <span class="nav-text">Kernel-添加（Add）与Quirks设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Kernel-阻止（Block）设置："><span class="nav-number">1.6.0.2.</span> <span class="nav-text">Kernel-阻止（Block）设置：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Misc设置："><span class="nav-number">1.7.</span> <span class="nav-text">Misc设置：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Misc-Boot设置："><span class="nav-number">1.7.0.1.</span> <span class="nav-text">Misc- Boot设置：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NVRAM设置："><span class="nav-number">1.8.</span> <span class="nav-text">NVRAM设置：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#NVRAM-添加（4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14）设置："><span class="nav-number">1.8.0.1.</span> <span class="nav-text">NVRAM-添加（4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14）设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#NVRAM-添加（4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102）设置："><span class="nav-number">1.8.0.2.</span> <span class="nav-text">NVRAM-添加（4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102）设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#NVRAM-添加（7C436110-AB2A-4BBB-A880-FE41995C9F82）设置："><span class="nav-number">1.8.0.3.</span> <span class="nav-text">NVRAM-添加（7C436110-AB2A-4BBB-A880-FE41995C9F82）设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#NVRAM-阻止（Block）设置："><span class="nav-number">1.8.0.4.</span> <span class="nav-text">NVRAM-阻止（Block）设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#NVRAM-LegacySchema设置："><span class="nav-number">1.8.0.5.</span> <span class="nav-text">NVRAM-LegacySchema设置：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PlatformInfo设置："><span class="nav-number">1.9.</span> <span class="nav-text">PlatformInfo设置：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#PlatformInfo-Generic设置："><span class="nav-number">1.9.0.1.</span> <span class="nav-text">PlatformInfo-Generic设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#PlatformInfo其他项目不用设置"><span class="nav-number">1.9.0.2.</span> <span class="nav-text">PlatformInfo其他项目不用设置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UEFI设置："><span class="nav-number">1.10.</span> <span class="nav-text">UEFI设置：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#UEFI-APFS与Quirks设置："><span class="nav-number">1.10.0.1.</span> <span class="nav-text">UEFI-APFS与Quirks设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#UEFI-Audio设置："><span class="nav-number">1.10.0.2.</span> <span class="nav-text">UEFI-Audio设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#UEFI-Drivers设置："><span class="nav-number">1.10.0.3.</span> <span class="nav-text">UEFI-Drivers设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#UEFI-Apple快捷键（Input）设置："><span class="nav-number">1.10.0.4.</span> <span class="nav-text">UEFI-Apple快捷键（Input）设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#UEFI-Output（显示输出）设置："><span class="nav-number">1.10.0.5.</span> <span class="nav-text">UEFI-Output（显示输出）设置：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重要补充："><span class="nav-number">1.11.</span> <span class="nav-text">重要补充：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#关于CFG-Lock三项位置"><span class="nav-number">1.11.0.1.</span> <span class="nav-text">关于CFG Lock三项位置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#后记："><span class="nav-number">1.12.</span> <span class="nav-text">后记：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！特别是不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"><span class="nav-number">1.13.</span> <span class="nav-text">重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！特别是不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#面向小白的OC快速无脑配置-基于OpenCore-0-5-8-04-23编译版"><span class="nav-number">1.</span> <span class="nav-text">面向小白的OC快速无脑配置-基于OpenCore-0.5.8-04-23编译版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#视频地址："><span class="nav-number">1.2.</span> <span class="nav-text">视频地址：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#准备工作"><span class="nav-number">1.3.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ACPI设置："><span class="nav-number">1.4.</span> <span class="nav-text">ACPI设置：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#ACPI-添加与Quirks设置："><span class="nav-number">1.4.0.1.</span> <span class="nav-text">ACPI-添加与Quirks设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#ACPI-阻止设置："><span class="nav-number">1.4.0.2.</span> <span class="nav-text">ACPI-阻止设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#ACPI-补丁设置："><span class="nav-number">1.4.0.3.</span> <span class="nav-text">ACPI-补丁设置：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Booter设置："><span class="nav-number">1.5.</span> <span class="nav-text">Booter设置：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Booter-Quirks设置"><span class="nav-number">1.5.0.1.</span> <span class="nav-text">Booter-Quirks设置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DeviceProperties设置："><span class="nav-number">1.6.</span> <span class="nav-text">DeviceProperties设置：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#声卡设置："><span class="nav-number">1.6.0.1.</span> <span class="nav-text">声卡设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#集显设置：（有独显可以无视以下内容）"><span class="nav-number">1.6.0.2.</span> <span class="nav-text">集显设置：（有独显可以无视以下内容）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kernel设置："><span class="nav-number">1.7.</span> <span class="nav-text">Kernel设置：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Kernel-添加（Add）与Quirks设置："><span class="nav-number">1.7.0.1.</span> <span class="nav-text">Kernel-添加（Add）与Quirks设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Kernel-阻止（Block）设置："><span class="nav-number">1.7.0.2.</span> <span class="nav-text">Kernel-阻止（Block）设置：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Misc设置："><span class="nav-number">1.8.</span> <span class="nav-text">Misc设置：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Misc-Boot设置："><span class="nav-number">1.8.0.1.</span> <span class="nav-text">Misc- Boot设置：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NVRAM设置："><span class="nav-number">1.9.</span> <span class="nav-text">NVRAM设置：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#NVRAM-添加（4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14）设置："><span class="nav-number">1.9.0.1.</span> <span class="nav-text">NVRAM-添加（4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14）设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#NVRAM-添加（4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102）设置："><span class="nav-number">1.9.0.2.</span> <span class="nav-text">NVRAM-添加（4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102）设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#NVRAM-添加（7C436110-AB2A-4BBB-A880-FE41995C9F82）设置："><span class="nav-number">1.9.0.3.</span> <span class="nav-text">NVRAM-添加（7C436110-AB2A-4BBB-A880-FE41995C9F82）设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#NVRAM-阻止（Block）设置："><span class="nav-number">1.9.0.4.</span> <span class="nav-text">NVRAM-阻止（Block）设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#NVRAM-LegacySchema设置："><span class="nav-number">1.9.0.5.</span> <span class="nav-text">NVRAM-LegacySchema设置：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PlatformInfo设置："><span class="nav-number">1.10.</span> <span class="nav-text">PlatformInfo设置：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#PlatformInfo-Generic设置："><span class="nav-number">1.10.0.1.</span> <span class="nav-text">PlatformInfo-Generic设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#PlatformInfo其他项目不用设置"><span class="nav-number">1.10.0.2.</span> <span class="nav-text">PlatformInfo其他项目不用设置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UEFI设置："><span class="nav-number">1.11.</span> <span class="nav-text">UEFI设置：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#UEFI-APFS与Quirks设置："><span class="nav-number">1.11.0.1.</span> <span class="nav-text">UEFI-APFS与Quirks设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#UEFI-Audio设置："><span class="nav-number">1.11.0.2.</span> <span class="nav-text">UEFI-Audio设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#UEFI-Drivers设置："><span class="nav-number">1.11.0.3.</span> <span class="nav-text">UEFI-Drivers设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#UEFI-Apple快捷键（Input）设置："><span class="nav-number">1.11.0.4.</span> <span class="nav-text">UEFI-Apple快捷键（Input）设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#UEFI-Output（显示输出）设置："><span class="nav-number">1.11.0.5.</span> <span class="nav-text">UEFI-Output（显示输出）设置：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重要补充："><span class="nav-number">1.12.</span> <span class="nav-text">重要补充：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#关于CFG-Lock三项位置"><span class="nav-number">1.12.0.1.</span> <span class="nav-text">关于CFG Lock三项位置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#后记："><span class="nav-number">1.13.</span> <span class="nav-text">后记：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！特别是不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"><span class="nav-number">1.14.</span> <span class="nav-text">重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！特别是不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -954,7 +963,7 @@
     
       <span class="post-meta-item-text">本站总字数&#58;</span>
     
-    <span title="本站总字数">36.5k</span>
+    <span title="本站总字数">36.7k</span>
   
 </div>
 
