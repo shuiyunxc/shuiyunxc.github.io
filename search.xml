@@ -284,9 +284,9 @@
           
           <category> 戴尔 </category>
           
-          <category> 笔记本 </category>
-          
           <category> 集显 </category>
+          
+          <category> 笔记本 </category>
           
           <category> G7 </category>
           
@@ -297,13 +297,13 @@
             
             <tag> OpenCore </tag>
             
+            <tag> 集显 </tag>
+            
             <tag> Dell </tag>
             
             <tag> G7 </tag>
             
             <tag> 笔记本 </tag>
-            
-            <tag> 集显 </tag>
             
         </tags>
       
@@ -342,11 +342,11 @@
             
             <tag> 台式机 </tag>
             
-            <tag> 集显 </tag>
-            
             <tag> Lenovo </tag>
             
             <tag> M920x </tag>
+            
+            <tag> 集显 </tag>
             
         </tags>
       
@@ -784,9 +784,9 @@
           
           <category> 联想 </category>
           
-          <category> 笔记本 </category>
-          
           <category> 集显 </category>
+          
+          <category> 笔记本 </category>
           
       </categories>
       
@@ -797,11 +797,11 @@
             
             <tag> EFI </tag>
             
-            <tag> 笔记本 </tag>
+            <tag> Lenovo </tag>
             
             <tag> 集显 </tag>
             
-            <tag> Lenovo </tag>
+            <tag> 笔记本 </tag>
             
             <tag> HD 630 </tag>
             

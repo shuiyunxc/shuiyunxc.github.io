@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="OpenCore,Dell,G7,笔记本,集显," />
+  <meta name="keywords" content="OpenCore,集显,Dell,G7,笔记本," />
 
 
 
@@ -113,10 +113,10 @@
 <meta property="article:modified_time" content="2020-03-24T15:43:22.000Z">
 <meta property="article:author" content="独行秀才">
 <meta property="article:tag" content="OpenCore">
+<meta property="article:tag" content="集显">
 <meta property="article:tag" content="Dell">
 <meta property="article:tag" content="G7">
 <meta property="article:tag" content="笔记本">
-<meta property="article:tag" content="集显">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://shuiyunxc.gitee.io/2020/03/24/G7/index/1022436.png">
 
@@ -453,8 +453,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%AC%94%E8%AE%B0%E6%9C%AC/" itemprop="url" rel="index">
-                    <span itemprop="name">笔记本</span>
+                  <a href="/categories/%E9%9B%86%E6%98%BE/" itemprop="url" rel="index">
+                    <span itemprop="name">集显</span>
                   </a>
                 </span>
 
@@ -464,8 +464,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%9B%86%E6%98%BE/" itemprop="url" rel="index">
-                    <span itemprop="name">集显</span>
+                  <a href="/categories/%E7%AC%94%E8%AE%B0%E6%9C%AC/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记本</span>
                   </a>
                 </span>
 
@@ -734,13 +734,13 @@
           
             <a href="/tags/OpenCore/" rel="tag"><i class="fa fa-tag"></i> OpenCore</a>
           
+            <a href="/tags/%E9%9B%86%E6%98%BE/" rel="tag"><i class="fa fa-tag"></i> 集显</a>
+          
             <a href="/tags/Dell/" rel="tag"><i class="fa fa-tag"></i> Dell</a>
           
             <a href="/tags/G7/" rel="tag"><i class="fa fa-tag"></i> G7</a>
           
             <a href="/tags/%E7%AC%94%E8%AE%B0%E6%9C%AC/" rel="tag"><i class="fa fa-tag"></i> 笔记本</a>
-          
-            <a href="/tags/%E9%9B%86%E6%98%BE/" rel="tag"><i class="fa fa-tag"></i> 集显</a>
           
         </div>
       
@@ -1176,8 +1176,8 @@
         el: '#comments' ,
         verify: false,
         notify: false,
-        appId: 'XsF3ooTFstaC4AdIkBGId7Xi-9Nh9j0Va',
-        appKey: 'FMWOp5KGWSz1o0WwGecKgk2Y',
+        appId: 'CL6neenEDVloIEfAyC2XKorB-gzGzoHsz',
+        appKey: 'u4lmCtHK3jMtf2uvKn3Datqj',
         placeholder: '欢迎大家畅所欲言',
         avatar:'mp',
         guest_info:guest,
@@ -1554,15 +1554,15 @@
     
 
     $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'XsF3ooTFstaC4AdIkBGId7Xi-9Nh9j0Va')
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'CL6neenEDVloIEfAyC2XKorB-gzGzoHsz')
         .done(function({ api_server }) {
           var Counter = function(method, url, data) {
             return $.ajax({
               method: method,
               url: 'https://' + api_server + '/1.1' + url,
               headers: {
-                'X-LC-Id': 'XsF3ooTFstaC4AdIkBGId7Xi-9Nh9j0Va',
-                'X-LC-Key': 'FMWOp5KGWSz1o0WwGecKgk2Y',
+                'X-LC-Id': 'CL6neenEDVloIEfAyC2XKorB-gzGzoHsz',
+                'X-LC-Key': 'u4lmCtHK3jMtf2uvKn3Datqj',
                 'Content-Type': 'application/json',
               },
               data: data
