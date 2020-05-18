@@ -402,13 +402,13 @@
     
       <category term="OpenCore" scheme="https://shuiyunxc.github.io/tags/OpenCore/"/>
     
+      <category term="集显" scheme="https://shuiyunxc.github.io/tags/%E9%9B%86%E6%98%BE/"/>
+    
       <category term="Dell" scheme="https://shuiyunxc.github.io/tags/Dell/"/>
     
       <category term="G7" scheme="https://shuiyunxc.github.io/tags/G7/"/>
     
       <category term="笔记本" scheme="https://shuiyunxc.github.io/tags/%E7%AC%94%E8%AE%B0%E6%9C%AC/"/>
-    
-      <category term="集显" scheme="https://shuiyunxc.github.io/tags/%E9%9B%86%E6%98%BE/"/>
     
   </entry>
   
@@ -448,11 +448,11 @@
     
       <category term="台式机" scheme="https://shuiyunxc.github.io/tags/%E5%8F%B0%E5%BC%8F%E6%9C%BA/"/>
     
-      <category term="集显" scheme="https://shuiyunxc.github.io/tags/%E9%9B%86%E6%98%BE/"/>
-    
       <category term="Lenovo" scheme="https://shuiyunxc.github.io/tags/Lenovo/"/>
     
       <category term="M920x" scheme="https://shuiyunxc.github.io/tags/M920x/"/>
+    
+      <category term="集显" scheme="https://shuiyunxc.github.io/tags/%E9%9B%86%E6%98%BE/"/>
     
   </entry>
   

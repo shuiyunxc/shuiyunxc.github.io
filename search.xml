@@ -375,13 +375,13 @@
             
             <tag> OpenCore </tag>
             
+            <tag> 集显 </tag>
+            
             <tag> Dell </tag>
             
             <tag> G7 </tag>
             
             <tag> 笔记本 </tag>
-            
-            <tag> 集显 </tag>
             
         </tags>
       
@@ -420,11 +420,11 @@
             
             <tag> 台式机 </tag>
             
-            <tag> 集显 </tag>
-            
             <tag> Lenovo </tag>
             
             <tag> M920x </tag>
+            
+            <tag> 集显 </tag>
             
         </tags>
       
@@ -875,11 +875,11 @@
             
             <tag> EFI </tag>
             
-            <tag> 笔记本 </tag>
+            <tag> Lenovo </tag>
             
             <tag> 集显 </tag>
             
-            <tag> Lenovo </tag>
+            <tag> 笔记本 </tag>
             
             <tag> HD 630 </tag>
             
