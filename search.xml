@@ -4,6 +4,43 @@
   
     
     <entry>
+      <title>OpenCore引导安装10代10900X黑苹果之历程</title>
+      <link href="/2020/05/26/10900X/index/"/>
+      <url>/2020/05/26/10900X/index/</url>
+      
+        <content type="html"><![CDATA[<h2 id="OpenCore引导安装10代10900X黑苹果之历程"><a href="#OpenCore引导安装10代10900X黑苹果之历程" class="headerlink" title="OpenCore引导安装10代10900X黑苹果之历程"></a>OpenCore引导安装10代10900X黑苹果之历程</h2><h3 id=""><a href="#" class="headerlink" title=""></a><div class="note class_name info"><p>关键字：OpenCore；OC；10代CPU；10900X；黑苹果</p></div></h3><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>随着intel10代CPU陆续上市，现在出现一股换代的热潮，黑苹果自然不能幸免。独行秀才经过几天的抉择。出手入了一块10900X，用来替换老旧的7820X，下面就安装过程中遇到的一些意外和成功的经验与大家分享。</p><h3 id="intel10代X-系列处理器CPU主要指标："><a href="#intel10代X-系列处理器CPU主要指标：" class="headerlink" title="intel10代X 系列处理器CPU主要指标："></a>intel10代X 系列处理器CPU主要指标：</h3><table><thead><tr><th>产品名称</th><th>内核数</th><th>最大睿频频率</th><th>处理器基本频率</th><th>缓存</th></tr></thead><tbody><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a href="https://ark.intel.com/content/www/cn/zh/ark/products/198017/intel-core-i9-10980xe-extreme-edition-processor-24-75m-cache-3-00-ghz.html" target="_blank" rel="noopener">英特尔® 酷睿™ i9-10980XE 至尊版处理器</a></td><td>18</td><td>4.60 GHz</td><td>3.00 GHz</td><td>24.75 MB Intel® Smart Cache</td></tr><tr><td><a href="https://ark.intel.com/content/www/cn/zh/ark/products/198014/intel-core-i9-10940x-x-series-processor-19-25m-cache-3-30-ghz.html" target="_blank" rel="noopener">英特尔® 酷睿™ i9-10940X X 系列处理器</a></td><td>14</td><td>4.60 GHz</td><td>3.30 GHz</td><td>19.25 MB Intel® Smart Cache</td></tr><tr><td><a href="https://ark.intel.com/content/www/cn/zh/ark/products/198012/intel-core-i9-10920x-x-series-processor-19-25m-cache-3-50-ghz.html" target="_blank" rel="noopener">英特尔® 酷睿™ i9-10920X X 系列处理器</a></td><td>12</td><td>4.60 GHz</td><td>3.50 GHz</td><td>19.25 MB Intel® Smart Cache</td></tr><tr><td><a href="https://ark.intel.com/content/www/cn/zh/ark/products/198019/intel-core-i9-10900x-x-series-processor-19-25m-cache-3-70-ghz.html" target="_blank" rel="noopener">英特尔® 酷睿™ i9-10900X X 系列处理器</a></td><td>10</td><td>4.50 GHz</td><td>3.70 GHz</td><td>19.25 MB Intel® Smart Cache</td></tr></tbody></table><img src="https://shuiyunxc.gitee.io/2020/05/26/10900X/index/ASD120.jpeg" alt="ASD120" style="zoom:50%;" /><h3 id="主板："><a href="#主板：" class="headerlink" title="主板："></a>主板：</h3><p>目前，基本是用华硕、技嘉的X299系列的主板，独行秀才用的是华硕Prime X299-A。</p><img src="https://shuiyunxc.gitee.io/2020/05/26/10900X/index/8B93391B.png" alt="8B93391B" style="zoom:50%;" /><img src="https://shuiyunxc.gitee.io/2020/05/26/10900X/index/297025DD.png" alt="297025DD" style="zoom:50%;" /><img src="https://shuiyunxc.gitee.io/2020/05/26/10900X/index/4050409C.png" alt="4050409C" style="zoom:50%;" /><img src="https://shuiyunxc.gitee.io/2020/05/26/10900X/index/D650D7E8.png" alt="D650D7E8" style="zoom:50%;" /><img src="https://shuiyunxc.gitee.io/2020/05/26/10900X/index/BBF52291.png" alt="BBF52291" style="zoom:50%;" /><h3 id="BIOS更新、特殊处理与设置"><a href="#BIOS更新、特殊处理与设置" class="headerlink" title="BIOS更新、特殊处理与设置"></a>BIOS更新、特殊处理与设置</h3><p>毫无疑问，BIOS必须要更新到支持10代U的，官网上有2002和3006的2个版本，独行秀才在这2个版本上犹豫了很久，最终选择了3006。</p><p>说干就干，立马下载，更新。设置</p><h4 id="一、-AI-Tweaker"><a href="#一、-AI-Tweaker" class="headerlink" title="一、 AI Tweaker/"></a>一、 AI Tweaker/</h4><ul><li>Ai Overclock Tuner：[XMP]</li><li>ASUS MultiCore Enhancement: Auto </li><li>AVX Instruction Core Ratio Negative Offset: “Auto”。</li><li>AVX-512 Instruction Core Ratio Negative Offset: “Auto” 。</li><li>CPU Core Ratio: Sync All Cores。</li><li>CPU SVID Support: Enabled。</li><li>DRAM Frequency: DDR4-XX00MHz (如果Ai Overclock Tuner：[XMP]的话，就自动识别频率)</li></ul><h4 id="二、Advanced（高级）-CPU-Configuration"><a href="#二、Advanced（高级）-CPU-Configuration" class="headerlink" title="二、Advanced（高级）/CPU Configuration"></a>二、Advanced（高级）/CPU Configuration</h4><ul><li>Hyper Threading [ALL]: Enabled</li><li>MSR Lock Control:Disabled</li></ul><h4 id="三、Advanced（高级）-CPU-Configuration-CPU-电源设置"><a href="#三、Advanced（高级）-CPU-Configuration-CPU-电源设置" class="headerlink" title="三、Advanced（高级）/CPU Configuration/CPU 电源设置/"></a>三、Advanced（高级）/CPU Configuration/CPU 电源设置/</h4><ul><li>Enhanced Intel Speed Step Technology (EIST):Enabled</li><li>Autonomous Core C-States: Enabled</li><li>Enhanced Halt State (C1E):Enabled</li><li>CPU C6 report: Enabled</li><li>Package C-State: C6(non retention) state</li><li>Intel SpeedShift Technology:Enabled</li><li>MFC Mode Override: OS Native</li></ul><h4 id="四、Advanced（高级）-Platform-Misc-Configuration（平台其他设置）"><a href="#四、Advanced（高级）-Platform-Misc-Configuration（平台其他设置）" class="headerlink" title="四、Advanced（高级）/Platform Misc Configuration（平台其他设置）/"></a>四、Advanced（高级）/Platform Misc Configuration（平台其他设置）/</h4><ul><li>默认</li></ul><h4 id="五、Advanced（高级）-System-Agent-Configuration（系统代理设置）"><a href="#五、Advanced（高级）-System-Agent-Configuration（系统代理设置）" class="headerlink" title="五、Advanced（高级）/System Agent Configuration（系统代理设置）/"></a>五、Advanced（高级）/System Agent Configuration（系统代理设置）/</h4><ul><li>Intel VT for Directed I/O (VT-d): Disabled/Enabled（开或关均可）</li></ul><h4 id="六、Boot（启动）"><a href="#六、Boot（启动）" class="headerlink" title="六、Boot（启动）/"></a>六、Boot（启动）/</h4><ul><li>Fast Boot（快速启动）: Disabled</li><li>Above 4G Decoding: Off</li><li>设置你的启动磁盘（一般完成安装后设置）</li></ul><h4 id="七、Boot（启动）-Boot-Configuration（启动设置）"><a href="#七、Boot（启动）-Boot-Configuration（启动设置）" class="headerlink" title="七、Boot（启动）/Boot Configuration（启动设置）"></a>七、Boot（启动）/Boot Configuration（启动设置）</h4><ul><li>Boot Logo Display: Auto </li><li>Boot up NumLock State: Disabled</li><li>Setup Mode: Advanced（高级）</li></ul><h4 id="八、Boot（启动）-Compatibility-Support-Module"><a href="#八、Boot（启动）-Compatibility-Support-Module" class="headerlink" title="八、Boot（启动）/Compatibility Support Module/"></a>八、Boot（启动）/Compatibility Support Module/</h4><ul><li>CSM: Disabled</li></ul><h4 id="九、Boot（启动）-Secure-Boot"><a href="#九、Boot（启动）-Secure-Boot" class="headerlink" title="九、Boot（启动）/Secure Boot/"></a>九、Boot（启动）/Secure Boot/</h4><ul><li>OS Type: Other OS</li></ul><h3 id="配置OpenCore"><a href="#配置OpenCore" class="headerlink" title="配置OpenCore"></a>配置OpenCore</h3><p>采用当天编译的0.5.9-05-25版本配置，结合7820X的相关SSDT与驱动，齐里咔嚓配置完成。</p><h3 id="引导系统历程"><a href="#引导系统历程" class="headerlink" title="引导系统历程"></a>引导系统历程</h3><p>利用配置好的OC文件，信心满满的，开机、引导。。。。出现下图的错误</p><img src="https://shuiyunxc.gitee.io/2020/05/26/10900X/index/E0D59345.png" alt="E0D59345" style="zoom:50%;" /><p>这个明显是CFG Lock未解锁导致的，但是明明在BIOS里面设置了<code>MSR Lock Control:Disabled</code>，为什么不行？，先不管，勾选config中的CFG Lock三项，继续，开机、引导。。。。出现下图错误</p><img src="https://shuiyunxc.gitee.io/2020/05/26/10900X/index/00C869F9.png" alt="00C869F9" style="zoom:50%;" /><p><code>com.apple.driver.appleACPIPlatform(6.1)</code>+内核崩溃，调整config，继续，开机、引导。。。。。出现下图错误</p><img src="https://shuiyunxc.gitee.io/2020/05/26/10900X/index/48766820.png" alt="48766820" style="zoom:50%;" /><p>依然是<code>com.apple.driver.appleACPIPlatform(6.1)</code>，但是没有内核崩溃。三番五次的出现<code>com.apple.driver.appleACPIPlatform(6.1)</code>，基本判断是BIOS问题。吃好饭，午休小憩，养足精神，爬楼梯。找到一篇关于华硕X299使用3000系列的BIOS的文章。仔细研读，原来是BIOS有BUG，需要修改。</p><h4 id="BIOS修改"><a href="#BIOS修改" class="headerlink" title="BIOS修改"></a>BIOS修改</h4><p>将下载好的3006版本的BIOS，用相应的软件进行修改，如下图：</p><img src="https://shuiyunxc.gitee.io/2020/05/26/10900X/index/B22508F4.png" alt="B22508F4" style="zoom:50%;" /><p>一共3处，修改完成后，由于是修改过的BIOS，无法用正常的办法刷入，只有强刷。具体操作就不啰嗦了。</p><h4 id="再次调整OC"><a href="#再次调整OC" class="headerlink" title="再次调整OC"></a>再次调整OC</h4><p>刷好BIOS后，还原最初的OC，开机、引导。。。Deung的一声。。。熟悉的跑码。欢快的跑码。。终于在屏幕上跳动。内心一阵窃喜。顺利进入系统。</p><p>里面开始各种烤鸡测试，居然跑到108度，没有死机</p><img src="https://shuiyunxc.gitee.io/2020/05/26/10900X/index/F2F14309.jpg" alt="F2F14309" style="zoom:50%;" /><p>重启、关机正常，CPU显示不正常，如下图</p><img src="https://shuiyunxc.gitee.io/2020/05/26/10900X/index/940CC96.png" alt="940CC96" style="zoom:80%;" /><p>调整config相应的参数后，CPU显示正常。显卡改名也正常</p><img src="https://shuiyunxc.gitee.io/2020/05/26/10900X/index/4C7D8F8B.png" alt="4C7D8F8B" style="zoom:80%;" /><p>其他图片就不发了。</p><h3 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h3><p>随着10代CPU上市以及OpenCore引导的日臻完善，Clover已经不能跟上时代的脚步，特别是10代CPU几乎不能用Clover引导，采用OC是必然的选择！希望这篇Blog，能给大家鼓舞和启迪！！</p><img src="https://img.shields.io/badge/更新日期：-2020年05月27日-red?style=flat-square" align='center'><h4 id="黑苹果OpenCore开放群，群号-9422866，注明“独行秀才Blog引入”"><a href="#黑苹果OpenCore开放群，群号-9422866，注明“独行秀才Blog引入”" class="headerlink" title=" 黑苹果OpenCore开放群，群号:9422866，注明“独行秀才Blog引入”"></a><font color= "#FF0000"  align="center"> 黑苹果OpenCore开放群，群号:9422866，注明“独行秀才Blog引入”</font></h4>]]></content>
+      
+      
+      <categories>
+          
+          <category> OpenCore </category>
+          
+          <category> 10代CPU </category>
+          
+          <category> 华硕X299-A </category>
+          
+          <category> 10900X </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> OpenCore </tag>
+            
+            <tag> 10代CPU </tag>
+            
+            <tag> 华硕X299-A </tag>
+            
+            <tag> 10900X </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>macOS Catalina 10.15.4(19E2269)原版镜像 by OpenCore-0.5.9-05-11编译版</title>
       <link href="/2020/05/17/19E2269/index/"/>
       <url>/2020/05/17/19E2269/index/</url>
@@ -375,13 +412,13 @@
             
             <tag> OpenCore </tag>
             
-            <tag> 集显 </tag>
-            
             <tag> Dell </tag>
             
             <tag> G7 </tag>
             
             <tag> 笔记本 </tag>
+            
+            <tag> 集显 </tag>
             
         </tags>
       
@@ -420,11 +457,11 @@
             
             <tag> 台式机 </tag>
             
+            <tag> 集显 </tag>
+            
             <tag> Lenovo </tag>
             
             <tag> M920x </tag>
-            
-            <tag> 集显 </tag>
             
         </tags>
       
@@ -875,11 +912,11 @@
             
             <tag> EFI </tag>
             
-            <tag> Lenovo </tag>
+            <tag> 笔记本 </tag>
             
             <tag> 集显 </tag>
             
-            <tag> 笔记本 </tag>
+            <tag> Lenovo </tag>
             
             <tag> HD 630 </tag>
             
