@@ -891,8 +891,8 @@
         el: '#comments' ,
         verify: false,
         notify: false,
-        appId: 'CL6neenEDVloIEfAyC2XKorB-gzGzoHsz',
-        appKey: 'u4lmCtHK3jMtf2uvKn3Datqj',
+        appId: 'XsF3ooTFstaC4AdIkBGId7Xi-9Nh9j0Va',
+        appKey: 'FMWOp5KGWSz1o0WwGecKgk2Y',
         placeholder: '欢迎大家畅所欲言',
         avatar:'mp',
         guest_info:guest,
@@ -1270,15 +1270,15 @@
     
 
     $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'CL6neenEDVloIEfAyC2XKorB-gzGzoHsz')
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'XsF3ooTFstaC4AdIkBGId7Xi-9Nh9j0Va')
         .done(function({ api_server }) {
           var Counter = function(method, url, data) {
             return $.ajax({
               method: method,
               url: 'https://' + api_server + '/1.1' + url,
               headers: {
-                'X-LC-Id': 'CL6neenEDVloIEfAyC2XKorB-gzGzoHsz',
-                'X-LC-Key': 'u4lmCtHK3jMtf2uvKn3Datqj',
+                'X-LC-Id': 'XsF3ooTFstaC4AdIkBGId7Xi-9Nh9j0Va',
+                'X-LC-Key': 'FMWOp5KGWSz1o0WwGecKgk2Y',
                 'Content-Type': 'application/json',
               },
               data: data
