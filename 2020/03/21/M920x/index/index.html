@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="OpenCore,台式机,集显,Lenovo,M920x," />
+  <meta name="keywords" content="台式机,OpenCore,集显,Lenovo,M920x," />
 
 
 
@@ -118,8 +118,8 @@
 <meta property="article:published_time" content="2020-03-21T13:03:14.000Z">
 <meta property="article:modified_time" content="2020-03-23T06:56:29.000Z">
 <meta property="article:author" content="独行秀才">
-<meta property="article:tag" content="OpenCore">
 <meta property="article:tag" content="台式机">
+<meta property="article:tag" content="OpenCore">
 <meta property="article:tag" content="集显">
 <meta property="article:tag" content="Lenovo">
 <meta property="article:tag" content="M920x">
@@ -739,9 +739,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/OpenCore/" rel="tag"><i class="fa fa-tag"></i> OpenCore</a>
-          
             <a href="/tags/%E5%8F%B0%E5%BC%8F%E6%9C%BA/" rel="tag"><i class="fa fa-tag"></i> 台式机</a>
+          
+            <a href="/tags/OpenCore/" rel="tag"><i class="fa fa-tag"></i> OpenCore</a>
           
             <a href="/tags/%E9%9B%86%E6%98%BE/" rel="tag"><i class="fa fa-tag"></i> 集显</a>
           
@@ -1183,8 +1183,8 @@
         el: '#comments' ,
         verify: false,
         notify: false,
-        appId: 'XsF3ooTFstaC4AdIkBGId7Xi-9Nh9j0Va',
-        appKey: 'FMWOp5KGWSz1o0WwGecKgk2Y',
+        appId: 'kRFmh4DLDK9UhhYHX3tNeppD-gzGzoHsz',
+        appKey: '3NkWCfSBBamoSXSXPQbkxp1u',
         placeholder: '欢迎大家畅所欲言',
         avatar:'mp',
         guest_info:guest,
@@ -1561,15 +1561,15 @@
     
 
     $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'XsF3ooTFstaC4AdIkBGId7Xi-9Nh9j0Va')
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'kRFmh4DLDK9UhhYHX3tNeppD-gzGzoHsz')
         .done(function({ api_server }) {
           var Counter = function(method, url, data) {
             return $.ajax({
               method: method,
               url: 'https://' + api_server + '/1.1' + url,
               headers: {
-                'X-LC-Id': 'XsF3ooTFstaC4AdIkBGId7Xi-9Nh9j0Va',
-                'X-LC-Key': 'FMWOp5KGWSz1o0WwGecKgk2Y',
+                'X-LC-Id': 'kRFmh4DLDK9UhhYHX3tNeppD-gzGzoHsz',
+                'X-LC-Key': '3NkWCfSBBamoSXSXPQbkxp1u',
                 'Content-Type': 'application/json',
               },
               data: data
