@@ -728,9 +728,9 @@
       
         <tags>
             
-            <tag> OpenCore </tag>
-            
             <tag> 台式机 </tag>
+            
+            <tag> OpenCore </tag>
             
             <tag> Lenovo </tag>
             
@@ -978,9 +978,9 @@
       
         <tags>
             
-            <tag> OpenCore </tag>
-            
             <tag> 台式机 </tag>
+            
+            <tag> OpenCore </tag>
             
             <tag> 集显 </tag>
             
@@ -1388,15 +1388,15 @@
       
         <tags>
             
-            <tag> OpenCore </tag>
-            
-            <tag> EFI </tag>
+            <tag> 技嘉 </tag>
             
             <tag> 台式机 </tag>
             
-            <tag> 技嘉 </tag>
-            
             <tag> Z390 </tag>
+            
+            <tag> EFI </tag>
+            
+            <tag> OpenCore </tag>
             
             <tag> Rx 5500XT </tag>
             
@@ -1433,9 +1433,9 @@
       
         <tags>
             
-            <tag> OpenCore </tag>
-            
             <tag> EFI </tag>
+            
+            <tag> OpenCore </tag>
             
             <tag> 笔记本 </tag>
             
@@ -1467,9 +1467,9 @@
           
           <category> EFI </category>
           
-          <category> Rx5500XT </category>
-          
           <category> 台式机 </category>
+          
+          <category> Rx5500XT </category>
           
           <category> 华擎 </category>
           
@@ -1478,15 +1478,15 @@
       
         <tags>
             
+            <tag> 台式机 </tag>
+            
+            <tag> EFI </tag>
+            
             <tag> ASRock </tag>
             
             <tag> 华擎 </tag>
             
             <tag> OpenCore </tag>
-            
-            <tag> EFI </tag>
-            
-            <tag> 台式机 </tag>
             
             <tag> Rx5500XT </tag>
             
@@ -1525,17 +1525,17 @@
       
         <tags>
             
-            <tag> EFI </tag>
-            
-            <tag> 台式机 </tag>
-            
             <tag> Clover </tag>
             
             <tag> 技嘉 </tag>
             
+            <tag> 台式机 </tag>
+            
             <tag> Z390 </tag>
             
             <tag> Rx560 </tag>
+            
+            <tag> EFI </tag>
             
         </tags>
       
