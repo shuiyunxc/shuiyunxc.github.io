@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="OpenCore,下载,原版镜像,macOS Big Sur,11.0.1," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="独行秀才的老窝" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="一派新风貌， 一切任施展安全、周到macOS Big Sur 将强大实力和优美外观的结合提升到一个崭新的高度。精心雕琢的全新设计，让你能淋漓尽致地感受 Mac 的魅力；Safari 浏览器迎来重大更新，待你饱览；地图 app 和信息 app 满载新功能，任你探索；更透明的隐私权限，保护也更周到。     独树一帜的性能，堪称典范的易用性，无拘无束的创造力。macOS Big Sur 精美的新设计，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="macOS Big Sur 11.0.1 正式版(20B29)原版镜像 OpenCore-0.6.4-11-13编译版">
+<meta property="og:url" content="https://shuiyunxc.github.io/2020/11/13/20B29/index/index.html">
+<meta property="og:site_name" content="独行秀才的老窝">
+<meta property="og:description" content="一派新风貌， 一切任施展安全、周到macOS Big Sur 将强大实力和优美外观的结合提升到一个崭新的高度。精心雕琢的全新设计，让你能淋漓尽致地感受 Mac 的魅力；Safari 浏览器迎来重大更新，待你饱览；地图 app 和信息 app 满载新功能，任你探索；更透明的隐私权限，保护也更周到。     独树一帜的性能，堪称典范的易用性，无拘无束的创造力。macOS Big Sur 精美的新设计，">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/08/05/20A5343i/index/BA6A246C.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/08/05/20A5343i/index/A1F99E33.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/08/05/20A5343i/index/50F89579.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/08/05/20A5343i/index/BFCC973E.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/11/13/20B29/index/10.12.42.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/08/20/20A5354i/index/%E6%89%AB%E7%A0%81%E8%8E%B7%E5%8F%96%E9%93%BE%E6%8E%A5.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/11/13/20B29/index/A9B20B29.png">
+<meta property="og:image" content="https://img.shields.io/badge/%E6%9B%B4%E6%96%B0%E6%97%A5%E6%9C%9F%EF%BC%9A-2020%E5%B9%B411%E6%9C%8813%E6%97%A5-red?style=flat-square">
+<meta property="article:published_time" content="2020-11-13T15:26:45.000Z">
+<meta property="article:modified_time" content="2020-11-13T15:36:58.000Z">
+<meta property="article:author" content="独行秀才">
+<meta property="article:tag" content="OpenCore">
+<meta property="article:tag" content="下载">
+<meta property="article:tag" content="原版镜像">
+<meta property="article:tag" content="macOS Big Sur">
+<meta property="article:tag" content="11.0.1">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://shuiyunxc.gitee.io/2020/08/05/20A5343i/index/BA6A246C.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"right","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://shuiyunxc.github.io/2020/11/13/20B29/index/"/>
+
+
+
+
+
+  <title>macOS Big Sur 11.0.1 正式版(20B29)原版镜像 OpenCore-0.6.4-11-13编译版 | 独行秀才的老窝</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?1baf224118b2f00d5c30cf05995b4c5f";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">独行秀才的老窝</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专注于黑苹果安装维护</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-corso">
+          <a href="/tags/%E6%95%99%E7%A8%8B/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br />
+            
+            教程
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-hackintosh">
+          <a href="/Hackintosh/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-apple"></i> <br />
+            
+            黑苹果安装维护
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://shuiyunxc.github.io/2020/11/13/20B29/index/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="独行秀才">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="独行秀才的老窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">macOS Big Sur 11.0.1 正式版(20B29)原版镜像 OpenCore-0.6.4-11-13编译版</h2>
+        
+
+        <div class="post-meta">
+        
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-11-13T23:26:45+08:00">
+                2020-11-13
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2020-11-13T23:36:58+08:00">
+                2020-11-13
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OpenCore/" itemprop="url" rel="index">
+                    <span itemprop="name">OpenCore</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OpenCore/%E4%B8%8B%E8%BD%BD/" itemprop="url" rel="index">
+                    <span itemprop="name">下载</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OpenCore/%E4%B8%8B%E8%BD%BD/macOS-Big-Sur/" itemprop="url" rel="index">
+                    <span itemprop="name">macOS Big Sur</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OpenCore/%E4%B8%8B%E8%BD%BD/macOS-Big-Sur/11-0-1/" itemprop="url" rel="index">
+                    <span itemprop="name">11.0.1</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OpenCore/%E4%B8%8B%E8%BD%BD/macOS-Big-Sur/11-0-1/%E5%8E%9F%E7%89%88%E9%95%9C%E5%83%8F/" itemprop="url" rel="index">
+                    <span itemprop="name">原版镜像</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-commenting-o"></i>
+                </span>
+                <a href="/2020/11/13/20B29/index/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/11/13/20B29/index/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2020/11/13/20B29/index/" class="leancloud_visitors" data-flag-title="macOS Big Sur 11.0.1 正式版(20B29)原版镜像 OpenCore-0.6.4-11-13编译版">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-folder-open"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          <!--
+          
+          -->
+          
+          
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  982
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="一派新风貌，-一切任施展"><a href="#一派新风貌，-一切任施展" class="headerlink" title="一派新风貌， 一切任施展"></a>一派新风貌， 一切任施展</h2><h2 id=""><a href="#" class="headerlink" title=""></a><img src="https://shuiyunxc.gitee.io/2020/08/05/20A5343i/index/BA6A246C.png" alt="BA6A246C"></h2><h3 id="安全、周到"><a href="#安全、周到" class="headerlink" title="安全、周到"></a>安全、周到</h3><p>macOS Big Sur 将强大实力和优美外观的结合提升到一个崭新的高度。精心雕琢的全新设计，让你能淋漓尽致地感受 Mac 的魅力；Safari 浏览器迎来重大更新，待你饱览；地图 app 和信息 app 满载新功能，任你探索；更透明的隐私权限，保护也更周到。</p>
+<img src="https://shuiyunxc.gitee.io/2020/08/05/20A5343i/index/A1F99E33.png" alt="A1F99E33" style="zoom:50%;" />
+
+
+
+<p>独树一帜的性能，堪称典范的易用性，无拘无束的创造力。macOS Big Sur 精美的新设计，会让你对 Mac 更爱不释手。</p>
+<h2 id="简约流畅的-App-界面，焕然一新的程序坞"><a href="#简约流畅的-App-界面，焕然一新的程序坞" class="headerlink" title="简约流畅的 App 界面，焕然一新的程序坞"></a>简约流畅的 App 界面，焕然一新的程序坞</h2><h3 id="统一的新外形"><a href="#统一的新外形" class="headerlink" title="统一的新外形"></a>统一的新外形</h3><p>从全高度边栏，到清爽的工具栏，新设计的 app 界面干净利落，始终将你的操作内容呈现在醒目的居中位置。整洁美观的设计更新，让你能更方便地找到各款常用 app。而且，app 图标还采用统一的新外形，在彰显 Mac 个性的同时又保持协调一致。</p>
+<h3 id="全新-Safari-浏览器，一看就合你心意。"><a href="#全新-Safari-浏览器，一看就合你心意。" class="headerlink" title="全新 Safari 浏览器，一看就合你心意。"></a>全新 Safari 浏览器，一看就合你心意。</h3><img src="https://shuiyunxc.gitee.io/2020/08/05/20A5343i/index/50F89579.png" alt="50F89579" style="zoom:50%;" />
+
+
+
+<p>无论是在线视听、进行搜索，还是看看网页，在各种 Apple 设备上，用 Safari 浏览器上网都再好不过。这次的重大更新还带来了直观的自定选项，提升了性能和电池续航，并引入了专为保护隐私而设的强大新功能。</p>
+<ul>
+<li>页面：背景图片可以自选设定，让你每次都能从心仪的画面上出发，前往要浏览的页面</li>
+<li>标签：标签页上有个好消息：简约优雅的新设计，可以同时展现更多标签页了，将光标悬停在任一标签页上，就能快速预览该页面</li>
+</ul>
+<h2 id="Mac-版信息，怎样开场都好聊。"><a href="#Mac-版信息，怎样开场都好聊。" class="headerlink" title="Mac 版信息，怎样开场都好聊。"></a>Mac 版信息，怎样开场都好聊。</h2><h3 id="置顶对话-单线回复"><a href="#置顶对话-单线回复" class="headerlink" title="置顶对话/单线回复"></a>置顶对话/单线回复</h3><p>你可将任何对话固定在对话列表的顶部。点回选项、键入指示器和新收到的信息则在置顶对话上动态显示。置顶还会在 iPhone、iPad 和 Mac 上同步，让你能快速进入重要的对话。在任何对话中都能直接回复特定信息。信息 app 会在原始回复下方自动开启新主题，所以，如果有人在群聊中问了个问题，你能毫不费力地追踪所有回复。</p>
+<h2 id="新设计的地图，更熟门熟路。"><a href="#新设计的地图，更熟门熟路。" class="headerlink" title="新设计的地图，更熟门熟路。"></a>新设计的地图，更熟门熟路。</h2><img src="https://shuiyunxc.gitee.io/2020/08/05/20A5343i/index/BFCC973E.png" alt="BFCC973E" style="zoom:50%;" />
+
+<p>Mac 版地图 app 的更新，充分利用了宽大的显示屏，规划起行程又快又方便。借助众多强大的新功能，在出发之前你就能轻松了解目的地。而有了新的导航方式，要找对路再也不用费神了。</p>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
+<li><p>本镜像采用Apple App Store下载的官方原版app制作。黑果目前尚无可用引导！</p>
+</li>
+<li><p>此镜像独行秀才亲自测试，可以用于升级安装/全新安装。顺利进到系统。</p>
+</li>
+<li><p>EFI采用OpenCore-0.6.4-11-13编译版引导</p>
+</li>
+<li><p>镜像发布站点：<a href="https://shuiyunxc.gitee.io/" target="_blank" rel="noopener">独行秀才的老窝</a>/<a href="https://blog.csdn.net/shuiyunxc" target="_blank" rel="noopener">CDSDN独行秀才的Blog</a></p>
+</li>
+</ul>
+<h2 id="相关截图"><a href="#相关截图" class="headerlink" title="相关截图"></a>相关截图</h2><p><img src="https://shuiyunxc.gitee.io/2020/11/13/20B29/index/10.12.42.png" alt="B280E6C3A"></p>
+<h2 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h2><p>百度网盘：<font color= "#FF0000"  align="center">扫描关注公众号，回复“20B29-秀才制作”后获取下载链接</font></p>
+<p>天翼云：<font color= "#FF0000"  align="center">扫描关注公众号，回复“20B29-秀才制作”后获取下载链接</font></p>
+<p><img src="https://shuiyunxc.gitee.io/2020/08/20/20A5354i/index/%E6%89%AB%E7%A0%81%E8%8E%B7%E5%8F%96%E9%93%BE%E6%8E%A5.png" alt="扫码获取链接"></p>
+<h3 id="扫描关注公众号，回复“20B29-秀才制作”后获取下载链接"><a href="#扫描关注公众号，回复“20B29-秀才制作”后获取下载链接" class="headerlink" title="扫描关注公众号，回复“20B29-秀才制作”后获取下载链接"></a><font color= "#FF0000"  align="center">扫描关注公众号，回复“20B29-秀才制作”后获取下载链接</font></h3><ul>
+<li><p>下载完成后请校验MD5、SHA1与SHA256，确认一致，否则重新下载！</p>
+<ul>
+<li>MD5：7ebd95ff5f3c329ea2acaa3354e6512d</li>
+<li>SHA1：9092c20a65d8c6657fdde2b10d3e2968d884cb57</li>
+<li>SHA256：d66ca30de1dae606254dc55dc7859cb07ced8d1cfad0f79e99379d82583ae8af</li>
+</ul>
+</li>
+<li><p>终端输入：openssl md5 拖入镜像</p>
+</li>
+<li><p>终端输入：openssl sha1 拖入镜像</p>
+</li>
+<li><p>终端输入：openssl dgst -sha256 拖入镜像</p>
+</li>
+</ul>
+<p>Windows下的验证请自行搜索</p>
+<img src="https://shuiyunxc.gitee.io/2020/11/13/20B29/index/A9B20B29.png" alt="A9B20B28" style="zoom:50%;" />
+
+<h4 id="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"><a href="#重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！" class="headerlink" title="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"></a>重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！</h4><img src="https://img.shields.io/badge/更新日期：-2020年11月13日-red?style=flat-square" align='center'>
+      
+    </div>
+    
+    
+    
+
+    
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #FF0000;font-size:18px;"><i class="fa fa-arrow-right" aria-hidden="true"></i><i class="fa fa-arrow-right" aria-hidden="true"></i><i class="fa fa-arrow-right" aria-hidden="true"></i><i class="fa fa-arrow-right" aria-hidden="true"></i>本文结束<i class="fa fa-flag-checkered" color:#000000;></i>感谢您的阅读<i class="fa fa-arrow-left" aria-hidden="true"></i><i class="fa fa-arrow-left" aria-hidden="true"></i><i class="fa fa-arrow-left" aria-hidden="true"></i><i class="fa fa-arrow-left" aria-hidden="true"></i></div>
+    
+</div>
+
+
+  
+</div>
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/weixin.png" alt="独行秀才 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/aipay.png" alt="独行秀才 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+<div>
+    
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+
+  <p><span>本文标题:</span>macOS Big Sur 11.0.1 正式版(20B29)原版镜像 OpenCore-0.6.4-11-13编译版</a></p>
+  <p><span>文章作者:</span>独行秀才</a></p>
+  <p><span>发布时间:</span>2020年11月13日 - 23:26:45</p>
+  <p><span>最后更新:</span>2020年11月13日 - 23:36:58</p>
+  <p><span>原始链接:</span><a href="/2020/11/13/20B29/index/" title="macOS Big Sur 11.0.1 正式版(20B29)原版镜像 OpenCore-0.6.4-11-13编译版">https://shuiyunxc.github.io/2020/11/13/20B29/index/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://shuiyunxc.github.io/2020/11/13/20B29/index/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
+</div>
+<script>
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({
+          title: "",
+          text: '复制成功',
+          html: false,
+          timer: 500,
+          showConfirmButton: false
+        });
+      });
+    }));
+</script>
+
+
+
+    
+</div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/OpenCore/" rel="tag"><i class="fa fa-tag"></i> OpenCore</a>
+          
+            <a href="/tags/%E4%B8%8B%E8%BD%BD/" rel="tag"><i class="fa fa-tag"></i> 下载</a>
+          
+            <a href="/tags/%E5%8E%9F%E7%89%88%E9%95%9C%E5%83%8F/" rel="tag"><i class="fa fa-tag"></i> 原版镜像</a>
+          
+            <a href="/tags/macOS-Big-Sur/" rel="tag"><i class="fa fa-tag"></i> macOS Big Sur</a>
+          
+            <a href="/tags/11-0-1/" rel="tag"><i class="fa fa-tag"></i> 11.0.1</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/11/11/20B28/index/" rel="next" title="macOS Big Sur 11.0.1 RC2(20B28)原版镜像下载">
+                <i class="fa fa-chevron-left"></i> macOS Big Sur 11.0.1 RC2(20B28)原版镜像下载
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/11/21/20B50/index/" rel="prev" title="macOS Big Sur 11.0.1 正式版(20B50)原版镜像 OpenCore-0.6.4-11-21编译版">
+                macOS Big Sur 11.0.1 正式版(20B50)原版镜像 OpenCore-0.6.4-11-21编译版 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="独行秀才" />
+            
+              <p class="site-author-name" itemprop="name">独行秀才</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">58</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">88</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">72</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/shuiyunxc" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:shuiyunxc@sina.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="/weixin" target="_blank" title="微信">
+                      
+                        <i class="fa fa-fw fa-weixin"></i>微信</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="/qq" target="_blank" title="QQ">
+                      
+                        <i class="fa fa-fw fa-qq"></i>QQ</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="/Hackintosh" target="_blank" title="黑苹果服务">
+                      
+                        <i class="fa fa-fw fa-apple"></i>黑苹果服务</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.bilibili.com/video/av85050197" target="_blank" title="B站视频">
+                      
+                        <i class="fa fa-fw fa-camera"></i>B站视频</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一派新风貌，-一切任施展"><span class="nav-number">1.</span> <span class="nav-text">一派新风貌， 一切任施展</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.</span> <span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安全、周到"><span class="nav-number">2.1.</span> <span class="nav-text">安全、周到</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简约流畅的-App-界面，焕然一新的程序坞"><span class="nav-number">3.</span> <span class="nav-text">简约流畅的 App 界面，焕然一新的程序坞</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#统一的新外形"><span class="nav-number">3.1.</span> <span class="nav-text">统一的新外形</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#全新-Safari-浏览器，一看就合你心意。"><span class="nav-number">3.2.</span> <span class="nav-text">全新 Safari 浏览器，一看就合你心意。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mac-版信息，怎样开场都好聊。"><span class="nav-number">4.</span> <span class="nav-text">Mac 版信息，怎样开场都好聊。</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#置顶对话-单线回复"><span class="nav-number">4.1.</span> <span class="nav-text">置顶对话&#x2F;单线回复</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新设计的地图，更熟门熟路。"><span class="nav-number">5.</span> <span class="nav-text">新设计的地图，更熟门熟路。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说明"><span class="nav-number">6.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相关截图"><span class="nav-number">7.</span> <span class="nav-text">相关截图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载地址"><span class="nav-number">8.</span> <span class="nav-text">下载地址</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#扫描关注公众号，回复“20B29-秀才制作”后获取下载链接"><span class="nav-number">8.1.</span> <span class="nav-text">扫描关注公众号，回复“20B29-秀才制作”后获取下载链接</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"><span class="nav-number">8.1.1.</span> <span class="nav-text">重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2019 &mdash; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">独行秀才</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">本站总字数&#58;</span>
+    
+    <span title="本站总字数">68.7k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i> 访问人数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i> 访问总量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'kRFmh4DLDK9UhhYHX3tNeppD-gzGzoHsz',
+        appKey: '3NkWCfSBBamoSXSXPQbkxp1u',
+        placeholder: '欢迎大家畅所欲言',
+        avatar:'mp',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+  
+  <script>
+    
+    function addCount(Counter) {
+      var $visitors = $('.leancloud_visitors');
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+            
+              .done(function() {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.time + 1);
+              })
+            
+              .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+              })
+          } else {
+            
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1 }))
+                .done(function() {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function() {
+                  console.log('Failed to create');
+                });
+            
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'kRFmh4DLDK9UhhYHX3tNeppD-gzGzoHsz')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: 'https://' + api_server + '/1.1' + url,
+              headers: {
+                'X-LC-Id': 'kRFmh4DLDK9UhhYHX3tNeppD-gzGzoHsz',
+                'X-LC-Key': '3NkWCfSBBamoSXSXPQbkxp1u',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+          
+            const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
+            if (localhost.test(document.URL)) return;
+            addCount(Counter);
+          
+        });
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -88,37 +88,38 @@
 
 
 
-<meta name="description" content="OpenCore黑苹果引导配置说明第七版-基于OpenCore-0.6.1-08-18-编译版关键字：黑苹果；OC；OpenCore；引导；配置2020-08-18编译OpenCore-0.6.1-08-18编译版 修复了SyncRuntimePermissions创建无效MAT表的问题 添加EFI FAT图像加载支持（macOS 10.8及更早版本） 添加了无缓存kext注入支持（macos10">
+<meta name="description" content="OpenCore黑苹果引导配置说明第十四版-基于OpenCore-0.6.8-04-06正式版关键字：黑苹果；OC；OpenCore；引导；配置2021-04-06编译OpenCore-0.6.8-04-06正式版 修复了OpenCanopy字体高度计算，可能会拒绝以前使用的字体并减轻内存损坏 修复了Xeon E5XXX&#x2F;E5-XXXX和Xeon WXXXX&#x2F;W-XXXX CPU的错误标识 添加了">
 <meta property="og:type" content="article">
-<meta property="og:title" content="OpenCore黑苹果引导配置说明第七版（基于0.6.1-08月18日编译版）">
+<meta property="og:title" content="OpenCore黑苹果引导配置说明第十四版（基于0.6.8-04月06日正式版）">
 <meta property="og:url" content="https://shuiyunxc.github.io/2020/03/10/instru/index/index.html">
 <meta property="og:site_name" content="独行秀才的老窝">
-<meta property="og:description" content="OpenCore黑苹果引导配置说明第七版-基于OpenCore-0.6.1-08-18-编译版关键字：黑苹果；OC；OpenCore；引导；配置2020-08-18编译OpenCore-0.6.1-08-18编译版 修复了SyncRuntimePermissions创建无效MAT表的问题 添加EFI FAT图像加载支持（macOS 10.8及更早版本） 添加了无缓存kext注入支持（macos10">
+<meta property="og:description" content="OpenCore黑苹果引导配置说明第十四版-基于OpenCore-0.6.8-04-06正式版关键字：黑苹果；OC；OpenCore；引导；配置2021-04-06编译OpenCore-0.6.8-04-06正式版 修复了OpenCanopy字体高度计算，可能会拒绝以前使用的字体并减轻内存损坏 修复了Xeon E5XXX&#x2F;E5-XXXX和Xeon WXXXX&#x2F;W-XXXX CPU的错误标识 添加了">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/07/16/19G73/index/%E6%89%AB%E7%A0%81.png">
 <meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/10/instru/index/A208C1FB.png">
 <meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/10/instru/index/20FA323E.png">
 <meta property="og:image" content="https://shuiyunxc.gitee.io/2020/07/16/19G73/index/%E6%89%AB%E7%A0%81.png">
 <meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/10/instru/index/EC8261FE.png">
 <meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/10/instru/index/D6777DE0.png">
-<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/10/instru/index/099D7880-2.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/10/instru/index/099D7880-3.png">
 <meta property="og:image" content="https://shuiyunxc.gitee.io/2020/07/16/19G73/index/%E6%89%AB%E7%A0%81.png">
-<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/10/instru/index/068D7FB6.png">
-<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/10/instru/index/6DF6A653.png">
-<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/10/instru/index/25EB37AC.png">
-<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/10/instru/index/6DF6A653.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/10/instru/index/068D7FB6-1.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/10/instru/index/6DF6A653-1.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/10/instru/index/25EB37AC-1.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/10/instru/index/6DF6A653-1.png">
 <meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/10/instru/index/2342CBE2.png">
 <meta property="og:image" content="https://shuiyunxc.gitee.io/2020/07/16/19G73/index/%E6%89%AB%E7%A0%81.png">
-<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/10/instru/index/BAAEBFD.png">
-<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/10/instru/index/9E25ED0D.png">
-<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/10/instru/index/3F23F0FD.jpg">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/10/instru/index/BAAEBFD-1.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/10/instru/index/9E25ED0D-1.png">
+<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/03/10/instru/index/3F23F0FD-1.png">
 <meta property="og:image" content="https://shuiyunxc.gitee.io/2020/07/16/19G73/index/%E6%89%AB%E7%A0%81.png">
-<meta property="og:image" content="https://img.shields.io/badge/%E6%9B%B4%E6%96%B0%E6%97%A5%E6%9C%9F-2020%E5%B9%B408%E6%9C%8818%E6%97%A5-blue?style=flat-square">
+<meta property="og:image" content="https://img.shields.io/badge/%E6%9B%B4%E6%96%B0%E6%97%A5%E6%9C%9F-2021%E5%B9%B404%E6%9C%8806%E6%97%A5-blue?style=flat-square">
 <meta property="article:published_time" content="2020-03-10T01:56:01.000Z">
-<meta property="article:modified_time" content="2020-08-17T16:10:31.000Z">
+<meta property="article:modified_time" content="2021-04-06T06:41:03.000Z">
 <meta property="article:author" content="独行秀才">
 <meta property="article:tag" content="OpenCore">
 <meta property="article:tag" content="教程">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://shuiyunxc.gitee.io/2020/03/10/instru/index/A208C1FB.png">
+<meta name="twitter:image" content="https://shuiyunxc.gitee.io/2020/07/16/19G73/index/%E6%89%AB%E7%A0%81.png">
 
 
 
@@ -154,7 +155,7 @@
 
 
 
-  <title>OpenCore黑苹果引导配置说明第七版（基于0.6.1-08月18日编译版） | 独行秀才的老窝</title>
+  <title>OpenCore黑苹果引导配置说明第十四版（基于0.6.8-04月06日正式版） | 独行秀才的老窝</title>
   
 
 
@@ -372,7 +373,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">OpenCore黑苹果引导配置说明第七版（基于0.6.1-08月18日编译版）</h2>
+          <h2 class="post-title" itemprop="name headline">OpenCore黑苹果引导配置说明第十四版（基于0.6.8-04月06日正式版）</h2>
         
 
         <div class="post-meta">
@@ -405,8 +406,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-08-18T00:10:31+08:00">
-                2020-08-18
+              <time title="更新于" itemprop="dateModified" datetime="2021-04-06T14:41:03+08:00">
+                2021-04-06
               </time>
             
           </span>
@@ -462,7 +463,7 @@
 
           
           
-             <span id="/2020/03/10/instru/index/" class="leancloud_visitors" data-flag-title="OpenCore黑苹果引导配置说明第七版（基于0.6.1-08月18日编译版）">
+             <span id="/2020/03/10/instru/index/" class="leancloud_visitors" data-flag-title="OpenCore黑苹果引导配置说明第十四版（基于0.6.8-04月06日正式版）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-folder-open"></i>
@@ -494,7 +495,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  7.7k
+                  9.9k
                 </span>
               
 
@@ -510,7 +511,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  29
+                  38
                 </span>
               
             </div>
@@ -531,44 +532,98 @@
       
 
       
-        <h1 id="OpenCore黑苹果引导配置说明第七版-基于OpenCore-0-6-1-08-18-编译版"><a href="#OpenCore黑苹果引导配置说明第七版-基于OpenCore-0-6-1-08-18-编译版" class="headerlink" title="OpenCore黑苹果引导配置说明第七版-基于OpenCore-0.6.1-08-18-编译版"></a>OpenCore黑苹果引导配置说明第七版-基于OpenCore-0.6.1-08-18-编译版</h1><h5 id=""><a href="#" class="headerlink" title=""></a><div class="note class_name primary"><p>关键字：黑苹果；OC；OpenCore；引导；配置</p></div></h5><h4 id="2020-08-18编译OpenCore-0-6-1-08-18编译版"><a href="#2020-08-18编译OpenCore-0-6-1-08-18编译版" class="headerlink" title="2020-08-18编译OpenCore-0.6.1-08-18编译版"></a>2020-08-18编译OpenCore-0.6.1-08-18编译版</h4><ul>
-<li>修复了SyncRuntimePermissions创建无效MAT表的问题</li>
-<li>添加EFI FAT图像加载支持（macOS 10.8及更早版本）</li>
-<li>添加了无缓存kext注入支持（macos10.9及更早版本）</li>
-<li>添加了mkext kext注入支持（macos10.6及更早版本）</li>
+        <h1 id="OpenCore黑苹果引导配置说明第十四版-基于OpenCore-0-6-8-04-06正式版"><a href="#OpenCore黑苹果引导配置说明第十四版-基于OpenCore-0-6-8-04-06正式版" class="headerlink" title="OpenCore黑苹果引导配置说明第十四版-基于OpenCore-0.6.8-04-06正式版"></a>OpenCore黑苹果引导配置说明第十四版-基于OpenCore-0.6.8-04-06正式版</h1><h5 id=""><a href="#" class="headerlink" title=""></a><div class="note class_name primary"><p>关键字：黑苹果；OC；OpenCore；引导；配置</p></div></h5><h4 id="2021-04-06编译OpenCore-0-6-8-04-06正式版"><a href="#2021-04-06编译OpenCore-0-6-8-04-06正式版" class="headerlink" title="2021-04-06编译OpenCore-0.6.8-04-06正式版"></a>2021-04-06编译OpenCore-0.6.8-04-06正式版</h4><ul>
+<li>修复了OpenCanopy字体高度计算，可能会拒绝以前使用的字体并减轻内存损坏</li>
+<li>修复了Xeon E5XXX/E5-XXXX和Xeon WXXXX/W-XXXX CPU的错误标识</li>
+<li>添加了RSDP、RSDT和XSDT处理NormalizeHeaders ACPI quirk</li>
 </ul>
-<h4 id="2020-08-16编译OpenCore-0-6-1-08-16编译版"><a href="#2020-08-16编译OpenCore-0-6-1-08-16编译版" class="headerlink" title="2020-08-16编译OpenCore-0.6.1-08-16编译版"></a>2020-08-16编译OpenCore-0.6.1-08-16编译版</h4><ul>
-<li>例行更新</li>
+<h4 id="2021-04-04编译OpenCore-0-6-8-04-04编译版"><a href="#2021-04-04编译OpenCore-0-6-8-04-04编译版" class="headerlink" title="2021-04-04编译OpenCore-0.6.8-04-04编译版"></a>2021-04-04编译OpenCore-0.6.8-04-04编译版</h4><ul>
+<li>添加PickerAudioAssist“磁盘映像”显示</li>
+<li>修复罕见情况下两次播放PickerAudioAsist指示的问题</li>
+<li>改进OpenCanopy指针加速</li>
+<li>添加对AppleEvent协议属性和特性的更精确的控制</li>
+<li>在CrScreenshotDxe上添加了动态键盘协议安装</li>
+<li>支持启动带有参数支持的UEFI工具（例如ControlMsrE2），而不需要来自picker的参数</li>
+</ul>
+<h4 id="2021-04-02编译OpenCore-0-6-8-04-02编译版"><a href="#2021-04-02编译OpenCore-0-6-8-04-02编译版" class="headerlink" title="2021-04-02编译OpenCore-0.6.8-04-02编译版"></a>2021-04-02编译OpenCore-0.6.8-04-02编译版</h4><ul>
+<li>匹配的默认Apple引导选择器光标的起始位置</li>
+<li>更新了OpenShell devices命令，以支持某些苹果固件返回的不对齐的设备名称</li>
+<li>在OpenCanopy中为dmg引导选项添加了（dmg）后缀</li>
+<li>添加了Rocket Lake和Tiger Lake CPU的标识符</li>
+</ul>
+<h4 id="2021-03-31编译OpenCore-0-6-8-03-31编译版"><a href="#2021-03-31编译OpenCore-0-6-8-03-31编译版" class="headerlink" title="2021-03-31编译OpenCore-0.6.8-03-31编译版"></a>2021-03-31编译OpenCore-0.6.8-03-31编译版</h4><ul>
 <li>优化部分代码</li>
 </ul>
-<h4 id="2020-08-14编译OpenCore-0-6-1-08-14编译版"><a href="#2020-08-14编译OpenCore-0-6-1-08-14编译版" class="headerlink" title="2020-08-14编译OpenCore-0.6.1-08-14编译版"></a>2020-08-14编译OpenCore-0.6.1-08-14编译版</h4><ul>
-<li>为老式笔记本电脑增加了文本渲染器的builtinext变量（搞不懂为什么还对老式机器还提供支持？？）</li>
-<li>新增<code>Config-Misc- Security-SecureBootModel</code></li>
+<h4 id="2021-03-29编译OpenCore-0-6-8-03-29编译版"><a href="#2021-03-29编译OpenCore-0-6-8-03-29编译版" class="headerlink" title="2021-03-29编译OpenCore-0.6.8-03-29编译版"></a>2021-03-29编译OpenCore-0.6.8-03-29编译版</h4><p>将Escape映射到0键作为快捷键使用，以便在选盘界面隐藏时强制显示<br>将CTRL映射到=/+键作为设置默认操作系统的快捷键使用<br>增加在KeySupport模式下，额外支持配置正确的密钥重复行为<br>修复在4核 Intel CPU上的CPU倍频检测<br>修复SMBIOS中多处理器和处理器缓存的错误</p>
+<h4 id="2021-03-27编译OpenCore-0-6-8-03-27编译版"><a href="#2021-03-27编译OpenCore-0-6-8-03-27编译版" class="headerlink" title="2021-03-27编译OpenCore-0.6.8-03-27编译版"></a>2021-03-27编译OpenCore-0.6.8-03-27编译版</h4><ul>
+<li>修正刷新选票界面视图时OpenCanopy闪烁的问题</li>
+<li>增加OpenCanopy标签导航支持</li>
+<li>增加OpenCanopy图形密码界面</li>
+<li>增加OpenCanopy的脉冲动画信号超时</li>
+<li>增加OpenCanopy的“设置默认”指示器</li>
+<li>修复OpenCanopy不会中止超时指针点击</li>
+<li>修复OpenCanopy简介动画不能用UIScale缩放的问题</li>
+<li>增加openencanopy启动项标签滚动(修复丢失的长标签)</li>
+<li>增加选项卡关闭和重新启动按钮内建选择器</li>
+<li>修复一些运行OpenDuet的系统固件关闭的问题</li>
 </ul>
-<h4 id="2020-08-12编译OpenCore-0-6-1-08-12编译版"><a href="#2020-08-12编译OpenCore-0-6-1-08-12编译版" class="headerlink" title="2020-08-12编译OpenCore-0.6.1-08-12编译版"></a>2020-08-12编译OpenCore-0.6.1-08-12编译版</h4><ul>
-<li>修正RSDP ACPI表校验和重新计算</li>
-<li>增加了对10.13+immutablekernel加载的支持</li>
-<li>修正了在11.0 kext注入中解决一些符号为零的问题</li>
-<li>通过限制引导管理访问以减少OpenCanopy的大小</li>
+<h4 id="2021-03-25编译OpenCore-0-6-8-03-25编译版"><a href="#2021-03-25编译OpenCore-0-6-8-03-25编译版" class="headerlink" title="2021-03-25编译OpenCore-0.6.8-03-25编译版"></a>2021-03-25编译OpenCore-0.6.8-03-25编译版</h4><ul>
+<li>增加苹果事件键盘处理，以改进OpenCanopy和内置选择器的按键响应</li>
+<li>增加苹果键映射的边缘检测，以改进拾取器中的非重复键响应</li>
+<li>修正一些PS/2系统上键盘处理的快速重复然后失速问题</li>
+<li>使用PollAppleHotKeys改进Shift+Enter和Shift+Index行为</li>
+<li>添加了CTRL-hold指示器到内置选择器</li>
+<li>用ControlMsrE2替换VerifyMsrE2，也允许在某些固件上解锁</li>
 </ul>
-<h4 id="2020-08-10编译OpenCore-0-6-1-08-10编译版"><a href="#2020-08-10编译OpenCore-0-6-1-08-10编译版" class="headerlink" title="2020-08-10编译OpenCore-0.6.1-08-10编译版"></a>2020-08-10编译OpenCore-0.6.1-08-10编译版</h4><ul>
-<li>增加了iMac20,1机型</li>
-<li>修复了老旧Xeon cpu显示名称，如Xeon E5450</li>
-<li>添加了kext注入支持，无需内核缓存</li>
-<li>添加Comet Lake-LP HDA设备代码</li>
-<li>修正了SATA控制器上的操作系统引导选择问题</li>
-</ul>
-<h4 id="2020-08-08编译OpenCore-0-6-1-08-08编译版"><a href="#2020-08-08编译OpenCore-0-6-1-08-08编译版" class="headerlink" title="2020-08-08编译OpenCore-0.6.1-08-08编译版"></a>2020-08-08编译OpenCore-0.6.1-08-08编译版</h4><ul>
-<li>例行更新</li>
+<h4 id="2021-03-23编译OpenCore-0-6-8-03-23编译版"><a href="#2021-03-23编译OpenCore-0-6-8-03-23编译版" class="headerlink" title="2021-03-23编译OpenCore-0.6.8-03-23编译版"></a>2021-03-23编译OpenCore-0.6.8-03-23编译版</h4><ul>
 <li>优化部分代码</li>
 </ul>
-<h4 id="2020-08-06编译OpenCore-0-6-1-08-06编译版"><a href="#2020-08-06编译OpenCore-0-6-1-08-06编译版" class="headerlink" title="2020-08-06编译OpenCore-0.6.1-08-06编译版"></a>2020-08-06编译OpenCore-0.6.1-08-06编译版</h4><ul>
-<li>提高其动感初期对热键的识别灵敏性。</li>
-<li>新增<code>Config-Misc- Security-DmgLoading</code>的设置，用于支持DMG的直接加载。</li>
+<h4 id="2021-03-21编译OpenCore-0-6-8-03-21编译版"><a href="#2021-03-21编译OpenCore-0-6-8-03-21编译版" class="headerlink" title="2021-03-21编译OpenCore-0.6.8-03-21编译版"></a>2021-03-21编译OpenCore-0.6.8-03-21编译版</h4><ul>
+<li>改进OpenCanopy双击实用性</li>
+<li>减少OpenCanopy触摸输入滞后，提高可用性</li>
 </ul>
-<h4 id="2020-08-04编译OpenCore-0-6-1-08-04编译版"><a href="#2020-08-04编译OpenCore-0-6-1-08-04编译版" class="headerlink" title="2020-08-04编译OpenCore-0.6.1-08-04编译版"></a>2020-08-04编译OpenCore-0.6.1-08-04编译版</h4><ul>
-<li>更新版本号为0.6.1</li>
+<h4 id="2021-03-19编译OpenCore-0-6-8-03-19编译版"><a href="#2021-03-19编译OpenCore-0-6-8-03-19编译版" class="headerlink" title="2021-03-19编译OpenCore-0.6.8-03-19编译版"></a>2021-03-19编译OpenCore-0.6.8-03-19编译版</h4><ul>
+<li>修复OpenCanopy和FileVault 2光标的不正常移动</li>
+<li>修复OpenCanopy中断处理导致的延宕事件和延迟</li>
 </ul>
+<h4 id="2021-03-17编译OpenCore-0-6-8-03-17编译版"><a href="#2021-03-17编译OpenCore-0-6-8-03-17编译版" class="headerlink" title="2021-03-17编译OpenCore-0.6.8-03-17编译版"></a>2021-03-17编译OpenCore-0.6.8-03-17编译版</h4><ul>
+<li>添加ACPI补丁的Base和BaseSkip查询</li>
+<li>修正在修补过程中ACPI表的损坏</li>
+</ul>
+<h4 id="2021-03-15编译OpenCore-0-6-8-03-15编译版"><a href="#2021-03-15编译OpenCore-0-6-8-03-15编译版" class="headerlink" title="2021-03-15编译OpenCore-0.6.8-03-15编译版"></a>2021-03-15编译OpenCore-0.6.8-03-15编译版</h4><ul>
+<li>优化部分代码</li>
+</ul>
+<h4 id="2021-03-13编译OpenCore-0-6-8-03-13编译版"><a href="#2021-03-13编译OpenCore-0-6-8-03-13编译版" class="headerlink" title="2021-03-13编译OpenCore-0.6.8-03-13编译版"></a>2021-03-13编译OpenCore-0.6.8-03-13编译版</h4><ul>
+<li>修正了SMBIOS SMC版本编码顺序</li>
+<li>从苹果平台信息增加了TSC频率读取</li>
+<li>为使用nForce芯片组的苹果设备增加了TSC频率读取</li>
+</ul>
+<h4 id="2021-03-11编译OpenCore-0-6-8-03-11编译版"><a href="#2021-03-11编译OpenCore-0-6-8-03-11编译版" class="headerlink" title="2021-03-11编译OpenCore-0.6.8-03-11编译版"></a>2021-03-11编译OpenCore-0.6.8-03-11编译版</h4><ul>
+<li>进一步改进了传统CPU的CPU频率计算</li>
+</ul>
+<h4 id="2021-03-09编译OpenCore-0-6-8-03-09编译版"><a href="#2021-03-09编译OpenCore-0-6-8-03-09编译版" class="headerlink" title="2021-03-09编译OpenCore-0.6.8-03-09编译版"></a>2021-03-09编译OpenCore-0.6.8-03-09编译版</h4><ul>
+<li>修复OpenCanopy有时会是开机显示菜单错误</li>
+</ul>
+<h4 id="2021-03-07编译OpenCore-0-6-8-03-07编译版"><a href="#2021-03-07编译OpenCore-0-6-8-03-07编译版" class="headerlink" title="2021-03-07编译OpenCore-0.6.8-03-07编译版"></a>2021-03-07编译OpenCore-0.6.8-03-07编译版</h4><ul>
+<li>修复在根文件系统无法创建日志文件的问题</li>
+<li>修复DisableSingleUser在某些情况下不被启用</li>
+<li>Mac EFI固件增加了ForceBooterSignature quirk</li>
+</ul>
+<h4 id="2021-03-05编译OpenCore-0-6-8-03-05编译版"><a href="#2021-03-05编译OpenCore-0-6-8-03-05编译版" class="headerlink" title="2021-03-05编译OpenCore-0.6.8-03-05编译版"></a>2021-03-05编译OpenCore-0.6.8-03-05编译版</h4><ul>
+<li>Windows版本切换为VS2019 toolchain</li>
+<li>减少了旧式引导安装交互工作</li>
+<li>提高了OpenCanopy渲染性能</li>
+<li>减少OpenCanopy鼠标指针输入延迟</li>
+<li>修正了光标边界可能与OpenCanopy的不同</li>
+<li>改进的内置选取器渲染性能</li>
+<li>在“自动”模式下为SMBIOS添加了内存类型解码</li>
+<li>支持将自定义项设置为默认引导选项</li>
+</ul>
+<h4 id="2021-03-03编译OpenCore-0-6-8-03-03编译版"><a href="#2021-03-03编译OpenCore-0-6-8-03-03编译版" class="headerlink" title="2021-03-03编译OpenCore-0.6.8-03-03编译版"></a>2021-03-03编译OpenCore-0.6.8-03-03编译版</h4><ul>
+<li>更新版本号为0.6.8</li>
+</ul>
+<img src="https://shuiyunxc.gitee.io/2020/07/16/19G73/index/扫码.png" alt="扫码" style="zoom:50%;" />
+
 <h3 id="一、-OC配置的基本条件与工具软件"><a href="#一、-OC配置的基本条件与工具软件" class="headerlink" title="一、    OC配置的基本条件与工具软件"></a>一、    OC配置的基本条件与工具软件</h3><h4 id="1-1、-准备Mac平台，包括实体机平台和虚拟机平台。"><a href="#1-1、-准备Mac平台，包括实体机平台和虚拟机平台。" class="headerlink" title="1.1、    准备Mac平台，包括实体机平台和虚拟机平台。"></a>1.1、    准备Mac平台，包括实体机平台和虚拟机平台。</h4><h4 id="1-2、-下载最新镜像并核对MD5，制作安装U盘。"><a href="#1-2、-下载最新镜像并核对MD5，制作安装U盘。" class="headerlink" title="1.2、    下载最新镜像并核对MD5，制作安装U盘。"></a>1.2、    下载最新镜像并核对MD5，制作安装U盘。</h4><h4 id="1-3、-工具软件："><a href="#1-3、-工具软件：" class="headerlink" title="1.3、    工具软件："></a>1.3、    工具软件：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">lover Configurator（Clover配置工具），</span><br><span class="line">OpenCore Configurator（持续更新中），</span><br><span class="line">Hackintool（综合工具），</span><br><span class="line">PlistEdit Pro（Plist文件工具），</span><br><span class="line">IORegistryExplorer（路径工具），</span><br><span class="line">BetterZip（解压软件）。</span><br></pre></td></tr></table></figure>
 
 <h4 id="1-4、基本流程："><a href="#1-4、基本流程：" class="headerlink" title="1.4、基本流程："></a>1.4、基本流程：</h4><img src="https://shuiyunxc.gitee.io/2020/03/10/instru/index/A208C1FB.png" alt="A208C1FB" style="zoom:50%;" />
@@ -581,7 +636,7 @@
 
 <h3 id="二、-配置准备："><a href="#二、-配置准备：" class="headerlink" title="二、    配置准备："></a>二、    配置准备：</h3><h4 id="2-0、-Mac平台准备"><a href="#2-0、-Mac平台准备" class="headerlink" title="2.0、    Mac平台准备"></a>2.0、    Mac平台准备</h4><p>没有Mac平台的，可以参阅<a href="https://shuiyunxc.gitee.io/2020/05/13/vmware/index/" target="_blank" rel="noopener">Windows10下Vmware15.5虚拟机安装苹果macOS Catalina 10.15.4</a>，建立Mac平台，已有Mac平台可以跳过此步。</p>
 <h4 id="2-1、-下载最新镜像，核对MD5"><a href="#2-1、-下载最新镜像，核对MD5" class="headerlink" title="2.1、    下载最新镜像，核对MD5"></a>2.1、    下载最新镜像，核对MD5</h4><p>利用下载的最新镜像，制作安装U盘。（用磁盘工具抹掉U盘，扩展日志式/GUID）</p>
-<h4 id="2-2、OC-EFI包"><a href="#2-2、OC-EFI包" class="headerlink" title="2.2、OC-EFI包"></a>2.2、OC-EFI包</h4><p><a href="https://gitee.com/shuiyunxc/OpenCore/releases" target="_blank" rel="noopener">下载最新0.5.7/0.5.8/0.5.9/0.6.0/0.6.1-OC包</a></p>
+<h4 id="2-2、OC-EFI包"><a href="#2-2、OC-EFI包" class="headerlink" title="2.2、OC-EFI包"></a>2.2、OC-EFI包</h4><p><a href="https://gitee.com/shuiyunxc/OpenCore/releases" target="_blank" rel="noopener">下载最新0.5.7/0.5.8/0.5.9/0.6.0/0.6.1/0.6.2/0.6.3/0.6.4/0.6.5/0.6.6/0.6.7/0.6.8-OC包</a></p>
 <p>放到桌面。里面包含Docs与Utilities后面将会用到。并改名为OC-EFI，便于识别。</p>
 <h4 id="2-3、ACPI文件（SSDT）"><a href="#2-3、ACPI文件（SSDT）" class="headerlink" title="2.3、ACPI文件（SSDT）"></a>2.3、ACPI文件（SSDT）</h4><p>将下载的SSDT包里面的<code>DSDT/SSDT</code>拷贝到<code>OC-EFI</code>-<code>OC</code>-<code>ACPI</code>里面。注意，除非你清楚这些DSDT/SSDT的明确作用，否则，能不用就不要用！</p>
 <h4 id="2-4、驱动转移"><a href="#2-4、驱动转移" class="headerlink" title="2.4、驱动转移"></a>2.4、驱动转移</h4><p>将下载的<code>Kext包</code>里面所有驱动全部拷贝到<code>OC-EFI</code>-<code>OC</code>- <code>Kexts</code>里面。同样道理，除非你清楚这些驱动的用途，否则删除不明用途的驱动</p>
@@ -615,27 +670,28 @@
 <img src="https://shuiyunxc.gitee.io/2020/03/10/instru/index/D6777DE0.png" alt="D6777DE0" style="zoom:50%;" />
 
 <h4 id="3-2、Config-Booter设置"><a href="#3-2、Config-Booter设置" class="headerlink" title="3.2、Config-Booter设置"></a>3.2、Config-Booter设置</h4><h5 id="3-2-1、config-Booter-MmioWhitelist（内存映射IO白名单）"><a href="#3-2-1、config-Booter-MmioWhitelist（内存映射IO白名单）" class="headerlink" title="3.2.1、config-Booter-MmioWhitelist（内存映射IO白名单）"></a>3.2.1、config-Booter-MmioWhitelist（内存映射IO白名单）</h5><p>默认第一项是为<code>Haswell芯片</code>提供内存寻址修复，此类芯片如果遇到内存相关问题，就勾选启用。 默认第二项是开机卡PCI Configuration。ACPI、PCI device同时释放到内存时发生0x1000内存地址被占用而卡在PCI Configuration，则勾选，否则无视！</p>
-<h5 id="3-2-2、config-Booter-Quirks："><a href="#3-2-2、config-Booter-Quirks：" class="headerlink" title="3.2.2、config-Booter-Quirks："></a>3.2.2、config-Booter-Quirks：</h5><p>此设置与<code>OpenRuntime.efi</code>有密切关系，<code>OpenRuntime.efi</code>将一些功能与OC合并、模块化。对于300系列等无法原生nvram的主板来说，此处的选项需要格外关注！</p>
+<h5 id="3-2-2、config-Booter-Patch（补丁）"><a href="#3-2-2、config-Booter-Patch（补丁）" class="headerlink" title="3.2.2、config-Booter-Patch（补丁）"></a><font color= "#FF0000" >3.2.2、config-Booter-Patch（补丁）</font></h5><h5 id="3-2-2、config-Booter-Quirks："><a href="#3-2-2、config-Booter-Quirks：" class="headerlink" title="3.2.2、config-Booter-Quirks："></a>3.2.2、config-Booter-Quirks：</h5><p>此设置与<code>OpenRuntime.efi</code>有密切关系，<code>OpenRuntime.efi</code>将一些功能与OC合并、模块化。对于300系列等无法原生nvram的主板来说，此处的选项需要格外关注！</p>
 <ul>
-<li>AvoidRuntimeDefrag：绝大部分UEFI都会写入时间、电源管理等信息，只要是黑苹果，此项必须<code>勾选</code>。</li>
-<li>DevirtualiseMmio：一般情况下，采用slide=1的方式进行连续性内存注入，故一般<code>不勾选</code>，除非你的机器用了KASLR方式。（台式机基本没有）。</li>
-<li>DisableSingleUser：是否开启单用户模式（-s）。一般<code>不勾选</code>。</li>
-<li>DisableVariableWrite：非原生nvram主板需要模拟nvram.plist写入variable值，所以<code>非原生nvram主板</code>必须<code>勾选</code>，<code>原生nvram主板</code>则<code>不勾选</code>。<font color= "#FF0000" >经过测试<code>非原生nvram主板</code>（主要是300系列主板）使用<a href="https://shuiyunxc.gitee.io/2020/03/10/instru/index/SSDT-PMC.aml.zip" target="_blank" rel="noopener">SSDT-PMC</a>以后，就可以当原生nvram主板使用，不用勾选此项。</font></li>
-<li>DiscardHibernateMap：这个选项帮助我们解决下面的冲突：当电脑从休眠中唤醒时，硬盘里面的资料会恢复到内存中去，此时OC内核以及内核缓存也要写入，二者可能产生冲突。就目前而言，台式机无视休眠功能，故，<code>不勾选</code>！</li>
-<li>EnableSafeModeSlide：安全模式下（-x）是否用连续性的内存注入方式，一般<code>勾选</code>。</li>
-<li>EnableWriteUnprotector：允许对UEFI服务代码的写入，该选项通过删除写保护(WP)来绕过UEFI运行时服务的代码页中的RX权限。一般是<code>勾选</code></li>
-<li>ForceExitBootServices：为让老旧主板也能使用内存寻址，正常情况下，<code>不勾选</code>，除非你的额主板很老很旧。至于何为老旧主板，自己根据实践摸索试验。</li>
-<li><font color= "#FF0000" >ProvideMaxSlide：勾选时，使Slide使用最大值，一般<code>不勾选</code></font></li>
-<li>ProtectMemoryRegions：确保CSM内存区域标记为ACPI NVS，以防止boot.efi或XNU重新定位或使用它们。但是由于AvoidRuntimeDefrag解决了类似的问题。默认<code>不勾选</code>（false）除非一些老旧主板可能需要勾选，需要测试。</li>
-<li>ProtectSecureBoot：保护UEFI安全引导变量写入参数时不被干扰而引起冲突，默认<code>不勾选</code>（false）。如选择Insyde或选择机型MacPro5,1。可能需要勾选。</li>
-<li>ProtectUefiServices：保护UEFI服务不被固件覆盖。用于修复Z390在DevirtualiseMmio、ProtectCsmRegion或ShrinkMemoryMap上的问题，非Z390的主板默认<code>不勾选</code>（false）。需要自己测试</li>
-<li>ProvideCustomSlide：此选项时强制macOS在可用的slide值中使用一个随机的、不产生冲突的slide值，故，必须<code>勾选</code>。</li>
-<li>RebuildAppleMemoryMap：生成与macOS兼容的内存映射，用于修复戴尔5490上启动macOS的问题，默认<code>不勾选</code>（false）。</li>
-<li>SetupVirtualMap：通过虚拟内存建立连续性内存供OC使用，并映射到分散的物理内存中，故，必须<code>勾选</code>。</li>
-<li>SignalAppleOS：将其他操作系统的信息报告给正在加载的macOS，<code>不勾选</code>。</li>
-<li>SyncRuntimePermissions：更新运行时环境的内存权限，主要用于早期的macOS或Linux/Windows，默认<code>不勾选</code>（false）。</li>
+<li>1、AllowRelocationBlock：对老旧版本的macOS有用，对macOS11和较新的硬件不兼容，所以一般<code>不勾选</code>。</li>
+<li>2、AvoidRuntimeDefrag：绝大部分UEFI都会写入时间、电源管理等信息，只要是黑苹果，此项必须<code>勾选</code>。</li>
+<li>3、DevirtualiseMmio：一般情况下，采用slide=1的方式进行连续性内存注入，故一般<code>不勾选</code>，除非你的机器用了KASLR方式。（台式机基本没有）。</li>
+<li>4、DisableSingleUser：是否开启单用户模式（-s）。一般<code>不勾选</code>。</li>
+<li>5、DisableVariableWrite：非原生nvram主板需要模拟nvram.plist写入variable值，所以<code>非原生nvram主板</code>必须<code>勾选</code>，<code>原生nvram主板</code>则<code>不勾选</code>。<font color= "#FF0000" >经过测试<code>非原生nvram主板</code>（主要是300系列主板）使用<a href="https://shuiyunxc.gitee.io/2020/03/10/instru/index/SSDT-PMC.aml.zip" target="_blank" rel="noopener">SSDT-PMC</a>以后，就可以当原生nvram主板使用，不用勾选此项。</font></li>
+<li>6、DiscardHibernateMap：这个选项帮助我们解决下面的冲突：当电脑从休眠中唤醒时，硬盘里面的资料会恢复到内存中去，此时OC内核以及内核缓存也要写入，二者可能产生冲突。就目前而言，台式机无视休眠功能，故，<code>不勾选</code>！</li>
+<li>7、EnableSafeModeSlide：安全模式下（-x）是否用连续性的内存注入方式，一般<code>勾选</code>。</li>
+<li>8、EnableWriteUnprotector：允许对UEFI服务代码的写入，该选项通过删除写保护(WP)来绕过UEFI运行时服务的代码页中的RX权限。一般是<code>勾选</code></li>
+<li>9、ForceExitBootServices：为让老旧主板也能使用内存寻址，正常情况下，<code>不勾选</code>，除非你的额主板很老很旧。至于何为老旧主板，自己根据实践摸索试验。</li>
+<li>10、ProvideMaxSlide：勾选时，使Slide使用最大值，一般<code>不勾选</code></li>
+<li>11、ProtectMemoryRegions：确保CSM内存区域标记为ACPI NVS，以防止boot.efi或XNU重新定位或使用它们。但是由于AvoidRuntimeDefrag解决了类似的问题。默认<code>不勾选</code>（false）除非一些老旧主板可能需要勾选，需要测试。</li>
+<li>12、ProtectSecureBoot：保护UEFI安全引导变量写入参数时不被干扰而引起冲突，默认<code>不勾选</code>（false）。如选择Insyde或选择机型MacPro5,1。可能需要勾选。</li>
+<li>13、ProtectUefiServices：保护UEFI服务不被固件覆盖。用于修复Z390在DevirtualiseMmio、ProtectCsmRegion或ShrinkMemoryMap上的问题，非Z390的主板默认<code>不勾选</code>（false）。需要自己测试</li>
+<li>14、ProvideCustomSlide：此选项时强制macOS在可用的slide值中使用一个随机的、不产生冲突的slide值，故，必须<code>勾选</code>。</li>
+<li>15、RebuildAppleMemoryMap：生成与macOS兼容的内存映射，Apple内核在解析UEFI内存映射时有几个限制。为了解决这些限制，这个选项将内存属性表权限应用于传递给Apple内核的内存映射，一般在启动macos10.6及更早版本时可能需要这个选项，默认<code>不勾选</code>（false）。</li>
+<li>16、SetupVirtualMap：通过虚拟内存建立连续性内存供OC使用，并映射到分散的物理内存中，故，必须<code>勾选</code>。</li>
+<li>17、SignalAppleOS：将其他操作系统的信息报告给正在加载的macOS，<code>不勾选</code>。</li>
+<li>18、SyncRuntimePermissions：更新运行时环境的内存权限，主要用于早期的macOS或Linux/Windows，默认<code>不勾选</code>（false）。</li>
 </ul>
-<img src="https://shuiyunxc.gitee.io/2020/03/10/instru/index/099D7880-2.png" alt="099D7880" style="zoom:50%;" />
+<img src="https://shuiyunxc.gitee.io/2020/03/10/instru/index/099D7880-3.png" alt="099D7880" style="zoom:50%;" />
 
 <h4 id="3-3、Config-DeviceProperties设置："><a href="#3-3、Config-DeviceProperties设置：" class="headerlink" title="3.3、Config-DeviceProperties设置："></a>3.3、Config-DeviceProperties设置：</h4><p>此项是用来描述/注入设备信息。主要是显卡与声卡，当然，也可以定制一些设备到关于本机-系统报告-PCI列表中去。</p>
 <h5 id="3-3-1：Config-DeviceProperties-添加（Add）："><a href="#3-3-1：Config-DeviceProperties-添加（Add）：" class="headerlink" title="3.3.1：Config-DeviceProperties-添加（Add）："></a>3.3.1：Config-DeviceProperties-添加（Add）：</h5><p>PCI信息导出：打开Hackintool，到PCI列表，点击下面的导出，在桌面生成4个文件，打开pcidevices.plist，能看到全部PCI信息。将你需要的设备拷贝过来。并稍作修改。具体的可以去看<a href="https://shuiyunxc.gitee.io/2020/01/27/OpenCore-configuration-video-version-2/" target="_blank" rel="noopener">OpenCore配置视频第二版</a>。<font color= "#FF0000" >原则上只添加声卡路径、ID，以及只有集显的情况下的集显路径与ID。</font></p>
@@ -666,65 +722,84 @@
 <h5 id="3-4-4：Config-Kernel-CPU仿冒，"><a href="#3-4-4：Config-Kernel-CPU仿冒，" class="headerlink" title="3.4.4：Config-Kernel-CPU仿冒，"></a>3.4.4：Config-Kernel-CPU仿冒，</h5><p>2种情况下，需要仿冒。<br>1、macOS尚不支持的CPU。<br>2、为不受支持的CPU启用XCPM。<br>对于XCPM支持，建议使用以下组合。<br>•Haswell-E（0x306F2）至Haswell（0x0306C3）：<br>Cpuid1Data：C3 06 03 00 00 00 00 00 00 00 00 00 00 00<br>Cpuid1Mask:：FF FF FF FF 00 00 00 00 00 00 00 00 00 00<br>•Broadwell-E（0x0406F1）至Broadwell（0x0306D4）：<br>Cpuid1Data：D4 06 03 00 00 00 00 00 00 00 00 00 00 00<br>Cpuid1Mask:：FF FF FF FF 00 00 00 00 00 00 00 00 00 00 00。<br>进一步情况可以见<a href="https://github.com/acidanthera/bugtracker/issues/365" target="_blank" rel="noopener"> acidanthera/bugtracker#365</a>。</p>
 <img src="https://shuiyunxc.gitee.io/2020/07/16/19G73/index/扫码.png" alt="扫码" style="zoom:50%;" />
 
-<h5 id="3-4-5：Config-Kernel-Quirks："><a href="#3-4-5：Config-Kernel-Quirks：" class="headerlink" title="3.4.5：Config-Kernel-Quirks："></a>3.4.5：Config-Kernel-Quirks：</h5><p>这个是内核相关的选项，<code>重要！</code></p>
+<p>3.4.5：Config-Kernel-Scheme Properties（方案）：<font color= "#FF0000" >09-01新增</font></p>
+<p>不明白OC团队的用意，添加一些对老系统老架构主板的支持。<font color= "#FF0000" >不管那些，<code>默认就好</code>。</font>苹果都放弃的东西，OC团队还在添加对老系统老架构的支持，有点本末倒置！！！</p>
+<h5 id="3-4-6：Config-Kernel-Quirks："><a href="#3-4-6：Config-Kernel-Quirks：" class="headerlink" title="3.4.6：Config-Kernel-Quirks："></a>3.4.6：Config-Kernel-Quirks：</h5><p>这个是内核相关的选项，<code>重要！</code></p>
 <ul>
-<li><p>AppleCpuPmCfgLock：如果你BIOS里面<code>CFG/MSR</code>已经<code>关闭</code>，则<code>不勾选</code>。<code>没有关闭</code>，则必须<code>勾选</code>，不清楚是否关闭，请用Hackintool-工具-点击Intel标志-从appleintellnfo获取，查找CFG Lock，如果显示0（MSR not lockde）则是关闭，如果显示1（MSR locked）则是开启。BIOS里面没有CFG/MSR相关选项的，CFG Lock关闭的方法见<a href="https://shuiyunxc.gitee.io/2020/02/13/Unlock/index/" target="_blank" rel="noopener">OpenCore引导Mac下解除CFG LOCK锁定</a>。</p>
+<li><p>1、AppleCpuPmCfgLock：如果你BIOS里面<code>CFG/MSR</code>已经<code>关闭</code>，则<code>不勾选</code>。<code>没有关闭</code>，则必须<code>勾选</code>，不清楚是否关闭，请用Hackintool-工具-点击Intel标志-从appleintellnfo获取，查找CFG Lock，如果显示0（MSR not lockde）则是关闭，如果显示1（MSR locked）则是开启。BIOS里面没有CFG/MSR相关选项的，CFG Lock关闭的方法见<a href="https://shuiyunxc.gitee.io/2020/02/13/Unlock/index/" target="_blank" rel="noopener">OpenCore引导Mac下解除CFG LOCK锁定</a>。</p>
 </li>
-<li><p>AppleXcpmCfgLock：同上。</p>
+<li><p>2、AppleXcpmCfgLock：同上。</p>
 </li>
-<li><p>AppleXcpmExtraMsrs：主要是在无原生电源管理的CPU上使用，一般是<code>Haswell-E</code>，<code>Broadwell-E</code>，<code>Skylake-X</code>这三种CPU，必须<code>勾选</code>，<code>其他CPU不用勾选</code>。</p>
+<li><p>3、AppleXcpmExtraMsrs：主要是在无原生电源管理的CPU上使用，一般是<code>Haswell-E</code>，<code>Broadwell-E</code>，<code>Skylake-X</code>这三种CPU，必须<code>勾选</code>，<code>其他CPU不用勾选</code>。</p>
 </li>
-<li><p>AppleXcpmForceBoost：此补丁将<code>0xFF00</code> 写入到<code>MSR_IA32_PERF_CONTROL (0x199),</code>一般CPU都<code>不勾选</code>，只有某些Xeon的CPU有作用。</p>
+<li><p>4、AppleXcpmForceBoost：此补丁将<code>0xFF00</code> 写入到<code>MSR_IA32_PERF_CONTROL (0x199),</code>一般CPU都<code>不勾选</code>，只有某些Xeon的CPU有作用。</p>
 </li>
-<li><p>CustomSMBIOSGuid：戴尔本本用的，一般<code>不勾选</code>。<font color= "#FF0000" >戴尔的笔记本与台式机最好也不要勾选，可能导致无法正确显示序列号。</font></p>
+<li><p>5、CustomSMBIOSGuid：戴尔本本用的，一般<code>不勾选</code>。<font color= "#FF0000" >戴尔的笔记本与台式机最好也不要勾选，可能导致无法正确显示序列号。</font></p>
 </li>
-<li><p>DisableIoMapper：禁止vt-d，如果BIOS里面禁止了，就<code>不勾选</code>。</p>
+<li><p>6、DisableIoMapper：禁止vt-d，如果BIOS里面禁止了，就<code>不勾选</code>。</p>
 </li>
-<li><p>DisableRtcChecksum：一般<code>不勾选</code>。在AppleRTC中禁用校验和写入（0x58-0x59）。</p>
+<li><p>7、DisableLinkeditJettison：这个选项让Lilu。在没有keepsyms=1引导参数的情况下，kext和其他一些可能在macOS Big Sur中发挥最佳性能。一般<code>不勾选</code>。</p>
 </li>
-<li><p>DummyPowerManagement：对于一些需要禁用AppleIntelCpuPowerManagement，采用NullCpuPowerManagement.kext 进行电源管理的CPU，必须勾选。其他CPU不勾选。</p>
+<li><p>8、DisableRtcChecksum：一般<code>不勾选</code>。在AppleRTC中禁用校验和写入（0x58-0x59）。</p>
 </li>
-<li><p>ExternalDiskIcons：AHCI控制器相关。现在主流主板对AHCI支持都很好，一般<code>不勾选</code>。</p>
+<li><p>9、ExtendBTFeatureFlags：将FeatureFlags设置为0x0F以获得蓝牙的全部功能，包括连续性。一般<code>不勾选</code>。</p>
 </li>
-<li><p>IncreasePciBarSize：将IOPCIFamily中的32位PCI带宽大小从1GB增加到4GB，一般<code>不勾选</code></p>
+<li><p>10、ExternalDiskIcons：AHCI控制器相关。现在主流主板对AHCI支持都很好，一般<code>不勾选</code>。</p>
 </li>
-<li><p>LapicKernelPanic：用于惠普本本的内核崩溃，一般<code>不勾选</code>。惠普本本也不要勾选。！！</p>
+<li><p>11、ForceSecureBootScheme：IMG4验证的强制x86方案。一般<code>不勾选</code>。</p>
 </li>
-<li><p>PanicNoKextDump：显示kext出错信息，一般<code>不勾选</code>。</p>
+<li><p>12、IncreasePciBarSize：将IOPCIFamily中的32位PCI带宽大小从1GB增加到4GB，一般<code>不勾选</code></p>
 </li>
-<li><p>PowerTimeoutKernelPanic：当遇到睡眠不能唤醒，只有重启后才能唤醒的情况下勾选，台式机一般<code>不勾选</code>。</p>
+<li><p>13、LapicKernelPanic：用于惠普本本的内核崩溃，一般<code>不勾选</code>。惠普本本也不要勾选。！！</p>
 </li>
-<li><p>ThirdPartyDrives：类似于开启Sata固态硬盘的trim功能。有Sata固态硬盘勾选，没有则<code>不勾选</code>。</p>
+<li><p>14、LegacyCommpage：对10.4-10.6有效。一般<code>不勾选</code>。</p>
 </li>
-<li><p>XhciPortLimit：解除15个端口限制，确认USB端口完美定制的可以不勾选。一般<code>勾选</code>。有USB定制的<code>不勾选</code>。</p>
-<img src="https://shuiyunxc.gitee.io/2020/03/10/instru/index/068D7FB6.png" alt="068D7FB6" style="zoom:50%;" />
+<li><p>15、PanicNoKextDump：显示kext出错信息，一般<code>不勾选</code>。</p>
+</li>
+<li><p>16、PowerTimeoutKernelPanic：当遇到睡眠不能唤醒，只有重启后才能唤醒的情况下勾选，台式机一般<code>不勾选</code>。</p>
+</li>
+<li><p><font color= "#FF0000" >17、SetApfsTrimTimeout：10.14以前的版本不需要设置。主要针对SATA SSD，根据不同的主控，设置不同的延迟，其中最大数值为4294967295。或者用999来关闭trim</font></p>
+</li>
+<li><p>18、ThirdPartyDrives：类似于开启Sata固态硬盘的trim功能。有Sata固态硬盘勾选，没有则<code>不勾选</code>。</p>
+</li>
+<li><p>19、XhciPortLimit：解除15个端口限制，确认USB端口完美定制的可以不勾选。一般<code>勾选</code>。有USB定制的<code>不勾选</code>。</p>
+</li>
+<li><p>20、<font color= "#FF0000" >另外增加了一些老机型、老系统的支持，就默认好了。这些无聊的更新！！！</font></p>
+<img src="https://shuiyunxc.gitee.io/2020/03/10/instru/index/068D7FB6-1.png" alt="068D7FB6" style="zoom:50%;" />
 
 </li>
 </ul>
 <h4 id="3-5：Config-Misc设置"><a href="#3-5：Config-Misc设置" class="headerlink" title="3.5：Config-Misc设置"></a>3.5：Config-Misc设置</h4><h5 id="3-5-1：Config-Misc-BlessOverride："><a href="#3-5-1：Config-Misc-BlessOverride：" class="headerlink" title="3.5.1：Config-Misc-BlessOverride："></a>3.5.1：Config-Misc-BlessOverride：</h5><p>这个选择是寻找一些不同位置的EFI，一般空。</p>
 <h5 id="3-5-2：Config-Misc-Boot："><a href="#3-5-2：Config-Misc-Boot：" class="headerlink" title="3.5.2：Config-Misc- Boot："></a>3.5.2：Config-Misc- Boot：</h5><ul>
-<li><p>ConsoleAttributes：设置图形界面背景与前景颜色，默认为0，其他颜色请官方说明。</p>
+<li><p>1、ConsoleAttributes：设置图形界面背景与前景颜色，默认为0，其他颜色请官方说明。</p>
 </li>
-<li><p>HibernateMode：检测休眠模式，一般选<code>none</code>，原生支持nvram的，并想休眠（注意不是睡眠）的，选<code>auto</code>。</p>
+<li><p>2、HibernateMode：检测休眠模式，一般选<code>none</code>，原生支持nvram的，并想休眠（注意不是睡眠）的，选<code>auto</code>。</p>
 </li>
-<li><p>HideAuxiliary：隐藏引导是磁盘一些辅助选项，勾选时，隐藏如：recovery、Clean NVRAM等，按ESC、0或空格后，显示而不隐藏。</p>
+<li><p>3、HideAuxiliary：隐藏引导是磁盘一些辅助选项，勾选时，隐藏如：recovery、Clean NVRAM等，按ESC、0或空格后，显示而不隐藏。</p>
 </li>
-<li><p>PickerAttributes：使用纯文本用户界面时背景与前景颜色选择。根据UEFI规范，用参数的选择，来调节背景与前景的颜色，默认值为<code>0</code></p>
+<li><p>4、PickerAttributes：使用纯文本用户界面时背景与前景颜色选择。根据UEFI规范，用参数的选择，来调节背景与前景的颜色，默认值为<code>0</code></p>
 </li>
-<li><p>PickerAudioAssist ：开启/关闭（true/false）启动时音频。</p>
+<li><p>5、LauncherOption：启动器中的选项</p>
+<p>•Disabled-什么都不做。<br>•Full -在引导加载程序启动时，在UEFI变量存储中创建或更新优先级最高的引导选项。要使该选项生效，必须启用RequestBootVarRouting。<br>•Short -创建一个短启动选项而不是一个完整的启动选项。这种变体对于一些较老的固件很有用，特别是Insyde，但也可能是其他不能处理完整设备路径的软件。<br>该选项提供了与第三方操作系统安装的集成，并在它们覆盖\EFI\BOOT\BOOTx64时进行升级。efi文件。通过在这个文件路径中创建一个自定义选项，OpenCore不再用于引导。用于引导的路径在LauncherPath选项中指定。</p>
 </li>
-<li><p>PollAppleHotKeys：是否开一些组合热键，如command+K；command+S。如果发现开机键盘无法选择，则不勾选。并删除OC/Drivers下的UsbKbDxe.efi。</p>
+<li><p>6、LauncherPath：启动程序选项的启动路径。Default是默认 OpenCore.efi，其他路径如\EFI\Launcher.efi。 </p>
 </li>
-<li><p>ShowPicker：是否显示开机启动盘显示，一般<code>勾选</code>，长期稳定使用的情况下可以不勾选。</p>
+<li><p>7、PickerVariant：用于引导管理的特定图标集的选择，一般选择<code>Auto</code>。</p>
 </li>
-<li><p>TakeoffDelay：在选择启动盘之前与快捷键操作的延迟。一般是0，对于一些键盘驱动需要填写5000-10000（微秒）。 </p>
+<li><p>8、PickerAudioAssist ：开启/关闭（true/false）启动时音频。</p>
 </li>
-<li><p>Timeout ：倒计时，0～30的整数。</p>
+<li><p>9、PollAppleHotKeys：是否开一些组合热键，如command+K；command+S。如果发现开机键盘无法选择，则不勾选。并删除OC/Drivers下的UsbKbDxe.efi。</p>
 </li>
-<li><p>PickerMode：启动界面选择</p>
+<li><p>10、ShowPicker：是否显示开机启动盘显示，一般<code>勾选</code>，长期稳定使用的情况下可以不勾选。</p>
+</li>
+<li><p>11、TakeoffDelay：在选择启动盘之前与快捷键操作的延迟。一般是0，对于一些键盘驱动需要填写5000-10000（微秒）。 </p>
+</li>
+<li><p>12、Timeout ：倒计时，0～30的整数。</p>
+</li>
+<li><p>13、PickerMode：启动界面选择</p>
 <ol>
 <li><font color= "#FF0000" >Builtin模式：使用简单的纯文本用户界面</font>。一般<code>选择此模式</code></li>
-<li>External模式：如果图形界面引导可用则启用，否则使用纯文本用户界面。[所需Resources文件在<a href="https://gitee.com/shuiyunxc/OpenCore/releases" target="_blank" rel="noopener">下载最新0.5.7/0.5.8/0.5.9/0.6.0/0.6.1-OC包</a>里面，里面包含开机声音、图形界面所需的图片以及相应驱动。</li>
+<li>External模式：如果图形界面引导可用则启用，否则使用纯文本用户界面。[所需Resources文件在<a href="https://gitee.com/shuiyunxc/OpenCore/releases" target="_blank" rel="noopener">下载最新0.5.7/0.5.8/0.5.9/0.6.0/0.6.1/0.6.2/0.6.3/0.6.4/0.6.5/0.6.6/0.6.7/0.6.8-OC包</a>里面，里面包含开机声音、图形界面所需的图片以及相应驱动。</li>
 <li>Apple模式：如果苹果引导可用则启用，否则使用纯文本用户界面。</li>
 </ol>
 <p>在External模式下，完全禁用OpenCore对所有引导管理，除非有强制策略。</p>
@@ -737,7 +812,7 @@
 <p>ResetNvram项：在勾选AllowNvramReset的情况下，可以使用CMD+OPT+P+R组合键来实现清除（Reset） NVRAM，当然还可以用另一种方式来清除NVRAM。</p>
 <p>BootApple项：执行此选项会找到的苹果操作系统的第一个引导，除非苹果已经创建了默认选择的操作系统。按住X键可选择此选项。</p>
 <p>BootAppleRecovery项：此选项执行引导到Apple操作系统恢复模式。要么是与默认选择的操作系统相关的操作系统，要么是在默认选择的操作系统不是由苹果公司创建或没有恢复的情况下首先找到的操作系统。按住CMD+R组合键可选择此选项。</p>
-<img src="https://shuiyunxc.gitee.io/2020/03/10/instru/index/6DF6A653.png" alt="6DF6A653" style="zoom:50%;" />
+<img src="https://shuiyunxc.gitee.io/2020/03/10/instru/index/6DF6A653-1.png" alt="6DF6A653" style="zoom:50%;" />
 
 </li>
 </ul>
@@ -752,82 +827,87 @@
 <li>Target：目标，一般填入<code>3</code>。</li>
 </ul>
 <h5 id="3-5-4：Config-Misc-Entries：添加一些路径。现在暂时不管。"><a href="#3-5-4：Config-Misc-Entries：添加一些路径。现在暂时不管。" class="headerlink" title="3.5.4：Config-Misc-Entries：添加一些路径。现在暂时不管。"></a>3.5.4：Config-Misc-Entries：添加一些路径。现在暂时不管。</h5><h5 id="3-5-5：Config-Misc-Security：安全设置，"><a href="#3-5-5：Config-Misc-Security：安全设置，" class="headerlink" title="3.5.5：Config-Misc- Security：安全设置，"></a>3.5.5：Config-Misc- Security：安全设置，</h5><ul>
-<li><p>AllowNvramReset：<code>勾选</code>是在开机引导选项中加入重置nvram缓存功能，调试完毕，<code>稳定后</code>，可以<code>不勾选</code>。</p>
+<li><p>1、AllowNvramReset：<code>勾选</code>是在开机引导选项中加入重置nvram缓存功能，调试完毕，<code>稳定后</code>，可以<code>不勾选</code>。</p>
 </li>
-<li><p>AllowSetDefault：允许CTRL+Enter和CTRL+Index处理在引导选择器中设置默认引导选项。</p>
+<li><p>2、AllowSetDefault：允许CTRL+Enter和CTRL+Index处理在引导选择器中设置默认引导选项。</p>
 </li>
-<li><p>AuthRestart：与启动身份验证相关，<code>不勾选</code>。</p>
+<li><p>3、ApECID：苹果磁盘加密引导标识。将此值设置为任何非零64位整数，将允许使用个性化的Apple Secure Boot标识符。如果要使用此设置，请确保使用加密安全的随机数生成器生成一个64位随机数。使用此值集和SecureBootModel有效且未被禁用，可以实现Apple Secure Boot的安全引导或实现完整全面的系统文件加密验证。</p>
 </li>
-<li><p>ExposeSensitiveData：由于使用nvram，填入<code>3</code></p>
+<li><p>3、AuthRestart：与启动身份验证相关，<code>不勾选</code>。</p>
 </li>
-<li><p>HaltLevel：显示级别，填入：<code>2147483648</code>。（0x80000000）的十进制</p>
+<li><p>4、ExposeSensitiveData：由于使用nvram，填入<code>3</code></p>
 </li>
-<li><p><font color= "#FF0000" >ApECID：苹果磁盘加密引导标识。将此值设置为任何非零64位整数，将允许使用个性化的Apple Secure Boot标识符。如果要使用此设置，请确保使用加密安全的随机数生成器生成一个64位随机数。使用此值集和SecureBootModel有效且未被禁用，可以实现Apple Secure Boot的安全引导或实现完整全面的系统文件加密验证。</font></p>
+<li><p>5、BlacklistAppleUpdate：勾选时，忽略试图更新苹果外围固件的启动选项(如multiupdate .efi)。</p>
 </li>
-<li><p><font color= "#FF0000" >BootProtect：对OpenCore引导的稳定性提供帮助。有2个选项，</font></p>
-<p><font color= "#FF0000" >• None — 与以前一样 </font><br><font color= "#FF0000" >• Bootstrap — 让\EFI\OC\Bootstrap\Bootstrap.efi 在启动时的优先级别最高。必须勾选<code>Config-UEFI-Quirks-RequestBootVarRouting</code>（启用“启动磁盘”选项）才能启用Bootstrap。</font></p>
-<p><font color= "#FF0000" >重要说明：</font></p>
-<p><font color= "#FF0000" >1、虽然几率不大，但对于一些主板可能导致丢失或失败或各种不兼容，。</font></p>
-<p><font color= "#FF0000" >2、重置NVRAM会删除已经创建的引导选项。</font></p>
+<li><p>6、DmgLoading：定义用于macOS恢复的磁盘映像(DMG)加载策略<br>Disabled —无法引导DMG镜像</p>
 </li>
-<li><p><font color= "#FF0000" >Vault：磁盘加密</font></p>
+</ul>
+<p><font color= "#FF0000" >Signed —引导有Apple签名的DMG镜像。只选择此项</font></p>
+<p>Any —引导任何DMG镜像</p>
+<ul>
+<li><p>7、EnablePassword：启用密码保护。一般<code>不勾选</code>。</p>
+</li>
+<li><p>8、ExposeSensitiveData：敏感数据暴露位掩码（sum）到操作系统。一般默认选6。</p>
+</li>
+<li><p>9、HaltLevel：显示级别，填入：<code>2147483648</code>。（0x80000000）的十进制</p>
+</li>
+<li><p>10、PasswordHash：设置EnabledPassword时使用的密码哈希。一般不用填写。</p>
+</li>
+<li><p>11、PasswordSalt：设置EnabledPassword时使用的密码。一般不用填写。</p>
+</li>
+<li><p>12、<font color= "#FF0000" >Vault：磁盘加密</font></p>
 <p><font color= "#FF0000" >填写Optional时，为选择磁盘不加密，一般情况下都填写<code>Optional</code></font></p>
 <p>填写Basic时，启用基本的系统文件加密验证</p>
 <p>填写Secure时，启用完整全面的系统文件加密验证</p>
 </li>
-<li><p>ScanPolicy：扫描策略，默认<code>983299</code>即可。建议填写<code>3870467</code>，也可以直接填写<code>0</code>解除所有限制，但是正常使用的情况下不建议用0，那样显示的项目太多，太杂，安装的时候可以用。<br>（ScanPolicy 参数是用来控制Oc扫描启动项的，对于苹果来说这显得多余。苹果的固件可以选择 禁用第三方安装盘 也就是 他会默认禁用U盘安装盘 需要进入Recovery 关闭保护才能正常引导，而黑果这种设计显得不那么灵活。<br>3080963可引导APFS和HFS分区适合nvram和模拟nvram正常的使用 系统通过更新nvram控制启动磁盘，安装，更新可自动完成，理论上应该开启所有扫描项以及所有磁盘IO类型扫描 但是某些人需求只扫描OSX或者并不想扫描到Win系统，<code>如果设置0 则关闭所有限制</code>）但是不建议用0。</p>
-<img src="https://shuiyunxc.gitee.io/2020/03/10/instru/index/25EB37AC.png" alt="25EB37AC" style="zoom:50%;" />
-
-
-
+<li><p>13、ScanPolicy：扫描策略，默认<code>983299</code>即可。建议填写<code>3870467</code>，也可以直接填写<code>0</code>解除所有限制，但是正常使用的情况下不建议用0，那样显示的项目太多，太杂，安装的时候可以用。<br>（ScanPolicy 参数是用来控制Oc扫描启动项的，对于苹果来说这显得多余。苹果的固件可以选择 禁用第三方安装盘 也就是 他会默认禁用U盘安装盘 需要进入Recovery 关闭保护才能正常引导，而黑果这种设计显得不那么灵活。<br>3080963可引导APFS和HFS分区适合nvram和模拟nvram正常的使用 系统通过更新nvram控制启动磁盘，安装，更新可自动完成，理论上应该开启所有扫描项以及所有磁盘IO类型扫描 但是某些人需求只扫描OSX或者并不想扫描到Win系统，<code>如果设置0 则关闭所有限制</code>）但是不建议用0。</p>
 </li>
-</ul>
-<p>  <font color= "#FF0000" >DmgLoading：通过<code>DmgLoading</code>的设置，支持DMG的直接加载。有三个选项：（0806新增）</font></p>
-<p>  <font color= "#FF0000" ><code>Disabled</code> -禁用加载DMG图像。</font><br>  <font color= "#FF0000" ><code>Signed</code>-只有苹果签名的DMG图像可以加载。</font><br>  <font color= "#FF0000" ><code>Any</code> -任何DMG映像将作为普通文件系统挂载。</font></p>
-<p>  <font color= "#FF0000" >不大清楚这个选项的目的和具体作用，一般默认<code>Signed</code>即可</font></p>
-<p>  <font color= "#FF0000" >SecureBootModel：苹果安全启动硬件参数，一般不启用安全模式的情况下选择默认<code>Default</code></font></p>
-<p>  <font color= "#FF0000" >定义Apple安全引导硬件模参数和策略。指定此值可定义哪些操作系统将是可引导的。在发布指定型号之前提供的操作系统将无法启动。有效值如下：</font></p>
+<li><p>14、SecureBootModel：苹果安全启动硬件参数，一般不启用安全模式的情况下选择默认<code>Default</code></p>
+<p>定义Apple安全引导硬件模参数和策略。指定此值可定义哪些操作系统将是可引导的。在发布指定型号之前提供的操作系统将无法启动。有效值如下：</p>
 <ul>
-<li><p><font color= "#FF0000" >Default — Recent available model, currently set to j215. </font></p>
+<li><font color= "#FF0000" >Default — Recent available model, currently set to j215. </font></li>
+</ul>
 </li>
 <li><p><font color= "#FF0000" >Disabled — No model, Secure Boot will be disabled.</font> </p>
-</li>
-<li><p><font color= "#FF0000" >j137 — iMacPro1,1 (December 2017) </font></p>
+<ul>
+<li><font color= "#FF0000" >j137 — iMacPro1,1 (December 2017) </font></li>
+</ul>
 </li>
 <li><p><font color= "#FF0000" >j680 — MacBookPro15,1 (July 2018)</font></p>
-</li>
-<li><p><font color= "#FF0000" >j132 — MacBookPro15,2 (July 2018) </font></p>
+<ul>
+<li><font color= "#FF0000" >j132 — MacBookPro15,2 (July 2018) </font></li>
+</ul>
 </li>
 <li><p><font color= "#FF0000" >j174 — Macmini8,1 (October 2018)</font></p>
-</li>
-<li><p><font color= "#FF0000" >j140k — MacBookAir8,1 (October 2018) </font></p>
-</li>
-<li><p><font color= "#FF0000" >j780 — MacBookPro15,3 (May 2019)</font></p>
-</li>
-<li><p><font color= "#FF0000" >j213 — MacBookPro15,4 (July 2019) </font></p>
+<ul>
+<li><font color= "#FF0000" >j140k — MacBookAir8,1 (October 2018) </font></li>
+<li><font color= "#FF0000" >j780 — MacBookPro15,3 (May 2019)</font></li>
+<li><font color= "#FF0000" >j213 — MacBookPro15,4 (July 2019) </font></li>
+</ul>
 </li>
 <li><p><font color= "#FF0000" >j140a — MacBookAir8,2 (July 2019) </font></p>
-</li>
-<li><p><font color= "#FF0000" >j152f — MacBookPro16,1 (November 2019) </font></p>
-</li>
-<li><p><font color= "#FF0000" >j160 — MacPro7,1 (December 2019) </font></p>
-</li>
-<li><p><font color= "#FF0000" >j230k — MacBookAir9,1 (March 2020) </font></p>
-</li>
-<li><p><font color= "#FF0000" >j214k — MacBookPro16,2 (May 2020) </font></p>
-</li>
-<li><p><font color= "#FF0000" >j223 — MacBookPro16,3 (May 2020) </font></p>
-</li>
-<li><p><font color= "#FF0000" >j215 — MacBookPro16,4 (June 2020) </font></p>
-</li>
-<li><p><font color= "#FF0000" >j185 — iMac20,1 (August 2020) </font></p>
-</li>
-<li><p><font color= "#FF0000" >j185f — iMac20,2 (August 2020)</font></p>
+<ul>
+<li><font color= "#FF0000" >j152f — MacBookPro16,1 (November 2019) </font></li>
+<li><font color= "#FF0000" >j160 — MacPro7,1 (December 2019) </font></li>
+<li><font color= "#FF0000" >j230k — MacBookAir9,1 (March 2020) </font></li>
+<li><font color= "#FF0000" >j214k — MacBookPro16,2 (May 2020) </font></li>
+<li><font color= "#FF0000" >j223 — MacBookPro16,3 (May 2020) </font></li>
+<li><font color= "#FF0000" >j215 — MacBookPro16,4 (June 2020) </font></li>
+<li><font color= "#FF0000" >j185 — iMac20,1 (August 2020) </font></li>
+<li><font color= "#FF0000" >j185f — iMac20,2 (August 2020)</font></li>
+</ul>
 <p><font color= "#FF0000" >PlatformInfo和SecureBootModel是独立的，允许使用任何SMBIOS启用Apple安全引导。</font><br><font color= "#FF0000" >将SecureBootModel设置为任何有效值，但<code>Disabled</code>，相当于中等安全的Apple SecureBoot。要实现完全的安全性，还需要指定ApECID值。</font><br><font color= "#FF0000" >注意:默认值会随着时间的推移而增加，以支持最新的主要发行版操作系统。不建议同时使用ApECID和默认值。</font></p>
+</li>
+<li><img src="https://shuiyunxc.gitee.io/2020/03/10/instru/index/25EB37AC-1.png" alt="25EB37AC" style="zoom:50%;" />
+
+
+
+
+
 </li>
 </ul>
 <h5 id="3-5-6：Config-Misc-Tools-工具选项："><a href="#3-5-6：Config-Misc-Tools-工具选项：" class="headerlink" title="3.5.6：Config-Misc-Tools 工具选项："></a>3.5.6：Config-Misc-Tools 工具选项：</h5><p>在开机的时候，加入工具，比如有Shell.efi，CleanNvram.efi，VerifyMsrE2.efi等，自行选择，如果勾选的话在EFI/OC/Tools文件夹中必须包含这些。<font color= "#FF0000" ><code>RtcRwX</code>用于读写RTC (CMOS)内存的实用工具。<code>ResetSystem</code>工具，可以在菜单中显示关机/重启</font></p>
-<img src="https://shuiyunxc.gitee.io/2020/03/10/instru/index/6DF6A653.png" alt="6DF6A653" style="zoom:50%;" />
+<img src="https://shuiyunxc.gitee.io/2020/03/10/instru/index/6DF6A653-1.png" alt="6DF6A653" style="zoom:50%;" />
 
 <h4 id="3-6：Config-NVRAM设置"><a href="#3-6：Config-NVRAM设置" class="headerlink" title="3.6：Config-NVRAM设置"></a>3.6：Config-NVRAM设置</h4><h5 id="3-6-1：Config-NVRAM-添加（Add）"><a href="#3-6-1：Config-NVRAM-添加（Add）" class="headerlink" title="3.6.1：Config-NVRAM-添加（Add）"></a>3.6.1：Config-NVRAM-添加（Add）</h5><h6 id="3-6-1-1：UUID：4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14："><a href="#3-6-1-1：UUID：4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14：" class="headerlink" title="3.6.1.1：UUID：4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14："></a>3.6.1.1：UUID：4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14：</h6><ul>
 <li><p>值01普通模式或02HIPDI模式。根据自己的显示情况选取。</p>
@@ -875,17 +955,26 @@
 <li>MinDate ：APFS驱动的日期。一般填写0。</li>
 <li>MinVersion：APFS驱动的版本。一般填写0。</li>
 </ul>
-<h5 id="3-8-2：Audio，包括此项下7个小项，建议默认不动，-所需Resources文件在下载最新0-5-7-0-5-8-0-5-9-0-6-0-0-6-1-OC包里面，里面包含开机声音、图形界面所需的图片以及相应驱动。"><a href="#3-8-2：Audio，包括此项下7个小项，建议默认不动，-所需Resources文件在下载最新0-5-7-0-5-8-0-5-9-0-6-0-0-6-1-OC包里面，里面包含开机声音、图形界面所需的图片以及相应驱动。" class="headerlink" title="3.8.2：Audio，包括此项下7个小项，建议默认不动，[所需Resources文件在下载最新0.5.7/0.5.8/0.5.9/0.6.0/0.6.1-OC包里面，里面包含开机声音、图形界面所需的图片以及相应驱动。"></a>3.8.2：Audio，包括此项下7个小项，建议默认不动，[所需Resources文件在<a href="https://gitee.com/shuiyunxc/OpenCore/releases" target="_blank" rel="noopener">下载最新0.5.7/0.5.8/0.5.9/0.6.0/0.6.1-OC包</a>里面，里面包含开机声音、图形界面所需的图片以及相应驱动。</h5><ul>
+<h5 id="3-8-2-AppleInput属性"><a href="#3-8-2-AppleInput属性" class="headerlink" title="3.8.2:AppleInput属性"></a>3.8.2:AppleInput属性</h5><p>3.8.2.1：AppleEvent ：确定是使用OC内置还是OEM Apple事件协议。<br>此选项决定是否使用Apple的OEM Apple事件协议（如果可用），或者是否使用OpenCore的反向工程和更新的重新实现。一般来说，OpenCore的重新实现应该是首选，因为它包含了一些更新，比如显著改进的鼠标光标精细移动和可配置的按键重复延迟。默认为<code>Builtin</code>，也可以选择Auto<br>•Auto-执行自动选择实现。由于使用优化来实现快速启动时间，这实际上意味着将找到并使用OpenCore重新实现，除非OpenCore是从Apple的boot picker（如果存在）显式选择并启动的（不仅仅是自动启动）。<br>•Builtin-使用OpenCore更新的Apple事件协议重新实现。推荐。<br>•OEM-假设Apple的协议在驱动程序连接时可用。这使得苹果的实现在苹果系统上得到了可靠的应用。否则，它将导致不支持键盘或鼠标。</p>
+<p>3.8.2.2：CustomDelays 启用自定义密钥重复延迟。一般选<code>Auto</code></p>
+<p>• Auto — 当KeySupport为真时，视为启用，否则视为禁用。<br>• Enabled — 使用值KeyInitialDelay和KeySubsequentDelay。<br>• Disabled — 使用Apple默认值500ms（50）和50ms（5）。</p>
+<p>3.8.2.3: KeyInitialDelay 选择为<code>0</code>时，无初始延迟，立即重置</p>
+<p>3.8.2.4:KeySubsequentDelay 在Apple事件协议的OpenCore实现中配置后续键盘重复延迟，单位为10ms。一般设置为<code>1</code>.</p>
+<p>3.8.2.5: PointerSpeedDiv 在Apple事件协议的OpenCore实现中配置指针速度除数。<br>为指针移动配置除数。Apple OEM默认值为<code>1</code>。0是此选项的无效值。</p>
+<p>3.8.2.6:PointerSpeedMul 在Apple事件协议的OpenCore实现中配置指针速度倍增器。<br>配置指针移动的乘数。Apple OEM默认值为<code>1</code></p>
+<h5 id="3-8-3：Audio，包括此项下9个小项，建议默认不动，-所需Resources文件在下载最新0-5-7-0-5-8-0-5-9-0-6-0-0-6-1-0-6-2-0-6-3-0-6-4-0-6-5-0-6-6-0-6-7-0-6-8-OC包里面，里面包含开机声音、图形界面所需的图片以及相应驱动。"><a href="#3-8-3：Audio，包括此项下9个小项，建议默认不动，-所需Resources文件在下载最新0-5-7-0-5-8-0-5-9-0-6-0-0-6-1-0-6-2-0-6-3-0-6-4-0-6-5-0-6-6-0-6-7-0-6-8-OC包里面，里面包含开机声音、图形界面所需的图片以及相应驱动。" class="headerlink" title="3.8.3：Audio，包括此项下9个小项，建议默认不动，[所需Resources文件在下载最新0.5.7/0.5.8/0.5.9/0.6.0/0.6.1/0.6.2/0.6.3/0.6.4/0.6.5/0.6.6/0.6.7/0.6.8-OC包里面，里面包含开机声音、图形界面所需的图片以及相应驱动。"></a>3.8.3：Audio，包括此项下9个小项，建议默认不动，[所需Resources文件在<a href="https://gitee.com/shuiyunxc/OpenCore/releases" target="_blank" rel="noopener">下载最新0.5.7/0.5.8/0.5.9/0.6.0/0.6.1/0.6.2/0.6.3/0.6.4/0.6.5/0.6.6/0.6.7/0.6.8-OC包</a>里面，里面包含开机声音、图形界面所需的图片以及相应驱动。</h5><ul>
 <li>AudioSupport-（false/true）：关闭/开启末端驱动以停止/启用开机音频</li>
 <li>AudioDevice-指定音频控制器路径，如：PciRoot(0x0)/Pci(0x1f,0x3)。</li>
+<li>SetupDelay-音频编解码器重新配置延迟（微秒），一般默认为0。</li>
 <li>AudioCodec-设置音频控制器上解码器的地址，如：0。</li>
 <li>AudioOut-设置解码器输出端口数，如1或4或7等。</li>
 <li>MinimumVolume-音量大小选择，默认是20。</li>
-<li>PlayChime-false/true，关闭/开启启动时播放铃声。</li>
+<li>ResetTrafficClass-在legacy HDA上将TCSEL重置为T0，一般默认为否</li>
+<li>PlayChime-auto/false/true，自动/关闭/开启启动时播放铃声。一般选开启</li>
 <li>VolumeAmplifier-音频增益系数。0～1000。</li>
 </ul>
-<h5 id="3-8-3：ConnectDrivers，"><a href="#3-8-3：ConnectDrivers，" class="headerlink" title="3.8.3：ConnectDrivers，"></a>3.8.3：ConnectDrivers，</h5><p>连接驱动程序。<code>勾选</code>。</p>
-<h5 id="3-8-4：Config-UEFI-Drivers，"><a href="#3-8-4：Config-UEFI-Drivers，" class="headerlink" title="3.8.4：Config-UEFI-Drivers，"></a>3.8.4：Config-UEFI-Drivers，</h5><p>UFEI驱动，一般情况下，新版OC只用3个：HfsPlus.efi，<del>ApfsDriverLoader.efi</del>和OpenRuntime.efi，至于UsbKbDxe.efi等根据自己的需要选择。</p>
+<h5 id="3-8-4：ConnectDrivers，"><a href="#3-8-4：ConnectDrivers，" class="headerlink" title="3.8.4：ConnectDrivers，"></a>3.8.4：ConnectDrivers，</h5><p>连接驱动程序。<code>勾选</code>。</p>
+<h5 id="3-8-5：Config-UEFI-Drivers，"><a href="#3-8-5：Config-UEFI-Drivers，" class="headerlink" title="3.8.5：Config-UEFI-Drivers，"></a>3.8.5：Config-UEFI-Drivers，</h5><p>UFEI驱动，一般情况下，新版OC只用2个：HfsPlus.efi和OpenRuntime.efi，至于UsbKbDxe.efi等根据自己的需要选择。</p>
 <ul>
 <li><code>CrScreenshotDxe</code> — 按F10可以保存文件或图像到OpenCore分区EFI（ESP）根目录下</li>
 <li><code>OpenRuntime</code> — OpenCore核心驱动，使用OpenCore引导必须使用</li>
@@ -899,10 +988,9 @@
 <li><code>VBoxHfs</code> 或<code>HFSPlus</code>— 对HFS格式的支持，建议用<code>HfsPlus</code>为好</li>
 <li><code>XhciDxe</code> — XHCI USB驱动，Sandy Bridge以前的CPU、主板或者USB3.0PCI卡需要此驱动</li>
 </ul>
-<h5 id="3-8-5：Config-UEFI-Apple快捷键相关（Input）："><a href="#3-8-5：Config-UEFI-Apple快捷键相关（Input）：" class="headerlink" title="3.8.5：Config-UEFI-Apple快捷键相关（Input）："></a>3.8.5：Config-UEFI-Apple快捷键相关（Input）：</h5><ul>
+<h5 id="3-8-6：Config-UEFI-Apple快捷键相关（Input）："><a href="#3-8-6：Config-UEFI-Apple快捷键相关（Input）：" class="headerlink" title="3.8.6：Config-UEFI-Apple快捷键相关（Input）："></a>3.8.6：Config-UEFI-Apple快捷键相关（Input）：</h5><ul>
 <li>KeyFiltering：默认不勾选（false），启用时，则是检查键盘输入完整性。只针对部分老旧主板。</li>
 <li>KeyForgetThreshold：设置为<code>5</code>。</li>
-<li>KeyMergeThreshold：设置为<code>2</code>。</li>
 <li>KeySupport：<code>勾选</code>。</li>
 <li>KeySupportMode：选择<code>Auto</code>。</li>
 <li>KeySwap：<code>勾选</code>。</li>
@@ -910,16 +998,18 @@
 <li>TimerResolution：延迟选<code>50000</code>。</li>
 <li>PointerSupportMode：范例是ASUS。<code>不改</code>。</li>
 </ul>
-<img src="https://shuiyunxc.gitee.io/2020/03/10/instru/index/BAAEBFD.png" alt="BAAEBFD" style="zoom:50%;" />
+<img src="https://shuiyunxc.gitee.io/2020/03/10/instru/index/BAAEBFD-1.png" alt="BAAEBFD" style="zoom:50%;" />
 
-<h5 id="3-8-6：Config-UEFI-ProtocolOverrides-协议覆盖-："><a href="#3-8-6：Config-UEFI-ProtocolOverrides-协议覆盖-：" class="headerlink" title="3.8.6：Config-UEFI-ProtocolOverrides(协议覆盖)："></a>3.8.6：Config-UEFI-ProtocolOverrides(协议覆盖)：</h5><ul>
+<h5 id="3-8-7：Config-UEFI-ProtocolOverrides-协议覆盖-："><a href="#3-8-7：Config-UEFI-ProtocolOverrides-协议覆盖-：" class="headerlink" title="3.8.7：Config-UEFI-ProtocolOverrides(协议覆盖)："></a>3.8.7：Config-UEFI-ProtocolOverrides(协议覆盖)：</h5><ul>
 <li>AppleAudio：关闭/开启苹果音频协议（不支持10.13以前的版本）。一般<code>不勾选</code></li>
 <li>AppleBootPolicy：虚拟机的Mac需要用，<code>不勾选</code>。</li>
 <li>AppleDebugLog：调用Apple调试日志协议，<code>不勾选</code>。</li>
-<li>AppleEvent：虚拟机并有vault需要用，<code>不勾选</code>。</li>
+<li>AppleFramebufferInfo：</li>
 <li>AppleImageConversion：重建apple图标，<code>不勾选</code>。</li>
+<li>AppleImg4Verification：</li>
 <li>AppleKeyMap：重建apple功能键，<code>不勾选</code>。</li>
 <li>AppleRtcRam：一般<code>不勾选</code>。</li>
+<li>AppleSecureBoot：</li>
 <li>AppleSmcIo：替代之前的VirtualSmc.efi，<code>055以后的版本可以不勾选</code>。</li>
 <li>AppleUserInterfaceTheme ：与主题有关，<code>不勾选</code>。</li>
 <li>DataHub：重建DataHub，<code>不勾选</code>。</li>
@@ -929,26 +1019,30 @@
 <li>OSInfo：操作系统信息协议，<code>不勾选</code>。</li>
 <li>UnicodeCollation：老旧主板需要，<code>不勾选</code>。</li>
 </ul>
-<h5 id="3-8-7：Config-UEFI-Quirks设置"><a href="#3-8-7：Config-UEFI-Quirks设置" class="headerlink" title="3.8.7：Config-UEFI-Quirks设置"></a>3.8.7：Config-UEFI-Quirks设置</h5><ul>
-<li>DeduplicateBootOrder：此键与BootProtect选项一起使用。一般<code>不勾选</code></li>
+<h5 id="3-8-8：Config-UEFI-Quirks设置"><a href="#3-8-8：Config-UEFI-Quirks设置" class="headerlink" title="3.8.8：Config-UEFI-Quirks设置"></a>3.8.8：Config-UEFI-Quirks设置</h5><ul>
+<li>ActivateHpetSupport：激活对HPET的支持，一般<code>不勾选</code>。</li>
 <li>ExitBootServicesDelay：较新的主板直接填入<code>0</code>，老旧主板填入3000000-5000000。</li>
 <li>IgnoreInvalidFlexRatio：<code>如果没有解锁CFG，必须勾选</code>。</li>
 <li>ReleaseUsbOwnership：如果开机键盘鼠标卡死，勾选试试，一般是<code>不勾选</code>的。</li>
 <li>RequestBootVarRouting：<code>如果要使用“启动磁盘”的选项，勾选</code>。</li>
 <li>UnblockFsConnect：与惠普本本相关，一般<code>不勾选</code>。</li>
+<li><font color= "#FF0000" >DisableSecurityPolicy ：一般<code>不勾选</code>。这个设置禁用了固件的各种安全特性，解除任何安全引导。如果您使用UEFI Secure Boot，请不要启用该功能。</font></li>
 <li>TscSyncTimeout：一般推荐用VoodooTSCSync、TSCAdjustReset或CpuTscSync (VoodooTSCSync的一个更专业的驱动）来解决TSC问题，一般<code>不勾选</code>。</li>
 </ul>
-<img src="https://shuiyunxc.gitee.io/2020/03/10/instru/index/9E25ED0D.png" alt="9E25ED0D" style="zoom:50%;" />
+<img src="https://shuiyunxc.gitee.io/2020/03/10/instru/index/9E25ED0D-1.png" alt="9E25ED0D" style="zoom:50%;" />
 
-<h5 id="3-8-8：Config-UEFI-Output（显示输出）设置："><a href="#3-8-8：Config-UEFI-Output（显示输出）设置：" class="headerlink" title="3.8.8：Config-UEFI-Output（显示输出）设置："></a>3.8.8：Config-UEFI-Output（显示输出）设置：</h5><p>包含以下11个小项</p>
+<h5 id="3-8-9：Config-UEFI-Output（显示输出）设置："><a href="#3-8-9：Config-UEFI-Output（显示输出）设置：" class="headerlink" title="3.8.9：Config-UEFI-Output（显示输出）设置："></a>3.8.9：Config-UEFI-Output（显示输出）设置：</h5><p>包含以下13个小项</p>
 <ul>
 <li>ClearScreenOnModeSwitch一般<code>不勾选</code>(<code>false</code>)</li>
 <li>ConsoleMode一般选<code>Max</code></li>
 <li>DirectGopRendering一般<code>不勾选</code>(<code>false</code>)，除非勾选后，对显示效果有利（对某些显卡有效）</li>
+<li><font color= "#FF0000" >GopPassThrough一般<code>不勾选</code>(<code>false</code>)，在UGA协议之上提供GOP协议支持</font></li>
 <li>IgnoreTextInGraphics一般是<code>勾选（true）</code></li>
 <li>ProvideConsoleGop一般是<code>勾选（true）</code></li>
+<li>ForceResolution-一般<code>不勾选</code>(<code>false</code>)，在默认情况下无法使用所需分辨率的情况下，强制设置分辨率，例如在旧版Intel GMA和第一代Intel HD Graphics（Ironlake/Arrandale）上。将分辨率设置为Max将尝试从连接的显示器的EDID中获取最大可用分辨率。</li>
 <li>ReconnectOnResChange一般<code>不勾选</code>(<code>false</code>)如果遇到开机直到登陆界面之前一直黑屏，那么勾选试试</li>
 <li>ReplaceTabWithSpace一般是<code>勾选（true）</code></li>
+<li>UgaPassThrough一般<code>不勾选</code>(<code>false</code>)</li>
 <li>Resolution开机分辨率，自行选择，如2560x1440；3840x2160等等。</li>
 <li>SanitiseClearScreen自行选择(<code>false或true</code>)</li>
 <li>TextRenderer一般选SystemGraphics或SystemText，根据自己使用情况自行调整。</li>
@@ -956,31 +1050,48 @@
 <p>​        TextRenderer有4个选项：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">• BuiltinGraphics — 切换到图形模式并使用内置渲染器和自定义控制台控件。选择此项需要勾ProvideConsoleGop，并将Resolution设置为Max</span><br><span class="line">• SystemGraphics — 切换到图形模式并使用带有自定义控制台控件的系统渲染器。</span><br><span class="line">• SystemText — 切换到文本模式并使用带有自定义控制台控件。</span><br><span class="line">• SystemGeneric — 使用系统控制台中的控件。</span><br><span class="line">一般情况下首选设置是SystemGraphics或SystemText。启用providecosolegop、将Resolution设置为Max、启用ReplaceTabWithSpace，几乎所有配置和机型都好用。特别说明下，机型设置为MacPro5,1只能选择BuiltinGraphics</span><br></pre></td></tr></table></figure>
 
-<img src="https://shuiyunxc.gitee.io/2020/03/10/instru/index/3F23F0FD.jpg" alt="3F23F0FD" style="zoom:50%;" />
+<img src="https://shuiyunxc.gitee.io/2020/03/10/instru/index/3F23F0FD-1.png" alt="3F23F0FD" style="zoom:50%;" />
 
-<h5 id="3-8-9：Config-UEFI-ReservedMemory，用于填充plist-dict值，避免系统写入和使用特定设备或硬件的内存。"><a href="#3-8-9：Config-UEFI-ReservedMemory，用于填充plist-dict值，避免系统写入和使用特定设备或硬件的内存。" class="headerlink" title="3.8.9：Config-UEFI-ReservedMemory，用于填充plist dict值，避免系统写入和使用特定设备或硬件的内存。"></a>3.8.9：Config-UEFI-ReservedMemory，用于填充plist dict值，避免系统写入和使用特定设备或硬件的内存。</h5><ul>
+<h5 id="3-8-10：Config-UEFI-ReservedMemory，用于填充plist-dict值，避免系统写入和使用特定设备或硬件的内存。"><a href="#3-8-10：Config-UEFI-ReservedMemory，用于填充plist-dict值，避免系统写入和使用特定设备或硬件的内存。" class="headerlink" title="3.8.10：Config-UEFI-ReservedMemory，用于填充plist dict值，避免系统写入和使用特定设备或硬件的内存。"></a>3.8.10：Config-UEFI-ReservedMemory，用于填充plist dict值，避免系统写入和使用特定设备或硬件的内存。</h5><ul>
 <li>Address：例如-268435456，设置预留内存区域的起始地址，防止系统访问。</li>
 <li>Comment：例如-HD3000: IGPU memory corruption errata。</li>
 <li>Size：例如-268435456，设置保留内存区域的大小，必须与页面对齐(4 kb)。</li>
 <li>Enabled：默认为false（关闭）则不预留上面的内存。</li>
 </ul>
 <h4 id="如有变化，保持更新！"><a href="#如有变化，保持更新！" class="headerlink" title="如有变化，保持更新！"></a>如有变化，保持更新！</h4><p>更新日志：</p>
-<p>2020-08-18第八次更新—基于OpenCore0.6.1-08-18编译版</p>
-<p>2020-08-16第七次更新—基于OpenCore0.6.1-08-16编译版</p>
-<p>2020-08-14第六次更新—基于OpenCore0.6.1-08-14编译版</p>
-<p>2020-08-12第五次更新—基于OpenCore0.6.1-08-12编译版</p>
-<p>2020-08-10第四次更新—基于OpenCore0.6.1-08-10编译版</p>
-<p>2020-08-08第三次更新—基于OpenCore0.6.1-08-08编译版</p>
-<p>2020-08-06第二次更新—基于OpenCore0.6.1-08-06编译版</p>
-<p>2020-08-04第一次更新—基于OpenCore0.6.1-08-04编译版</p>
-<h4 id="附录："><a href="#附录：" class="headerlink" title="附录："></a>附录：</h4><p><font color= "#FF0000" ><a href="https://shuiyunxc.gitee.io/2020/03/10/instru/index/OpenCore配置说明第七版.pdf" target="_blank" rel="noopener">OpenCore黑苹果引导配置说明第七版PDF版下载</a>，供大家线下参阅！</font></p>
+<p>2021-04-06第十八次更新—基于OpenCore0.6.8-04-06正式版</p>
+<p>2021-04-04第十七次更新—基于OpenCore0.6.8-04-04编译版</p>
+<p>2021-04-02第十六次更新—基于OpenCore0.6.8-04-02编译版</p>
+<p>2021-03-31第十五次更新—基于OpenCore0.6.8-03-31编译版</p>
+<p>2021-03-29第十四次更新—基于OpenCore0.6.8-03-29编译版</p>
+<p>2021-03-27第十三次更新—基于OpenCore0.6.8-03-27编译版</p>
+<p>2021-03-25第十二次更新—基于OpenCore0.6.8-03-25编译版</p>
+<p>2021-03-23第十一次更新—基于OpenCore0.6.8-03-23编译版</p>
+<p>2021-03-21第十次更新—基于OpenCore0.6.8-03-21编译版</p>
+<p>2021-03-19第九次更新—基于OpenCore0.6.8-03-19编译版</p>
+<p>2021-03-17第八次更新—基于OpenCore0.6.8-03-17编译版</p>
+<p>2021-03-15第七次更新—基于OpenCore0.6.8-03-15编译版</p>
+<p>2021-03-13第六次更新—基于OpenCore0.6.8-03-13编译版</p>
+<p>2021-03-11第五次更新—基于OpenCore0.6.8-03-11编译版</p>
+<p>2021-03-09第四次更新—基于OpenCore0.6.8-03-09编译版</p>
+<p>2021-03-07第三次更新—基于OpenCore0.6.8-03-07编译版</p>
+<p>2021-03-05第二次更新—基于OpenCore0.6.8-03-05编译版</p>
+<p>2021-03-03第一次更新—基于OpenCore0.6.8-03-03编译版</p>
+<h4 id="附录："><a href="#附录：" class="headerlink" title="附录："></a>附录：</h4><p><font color= "#FF0000" ><a href="https://shuiyunxc.gitee.io/2020/03/10/instru/index/OpenCore黑苹果引导配置说明第十四版PDF版.pdf" target="_blank" rel="noopener">OpenCore黑苹果引导配置说明第十四版PDF版下载</a></font></p>
+<p><font color= "#FF0000" ><a href="https://shuiyunxc.gitee.io/2020/03/10/instru/index/OpenCore黑苹果引导配置说明第十三版PDF版.pdf" target="_blank" rel="noopener">OpenCore黑苹果引导配置说明第十三版PDF版下载</a></font></p>
+<p><font color= "#FF0000" ><a href="https://shuiyunxc.gitee.io/2020/03/10/instru/index/OpenCore黑苹果引导配置说明第十二版PDF版.pdf" target="_blank" rel="noopener">OpenCore黑苹果引导配置说明第十二版PDF版下载</a></font></p>
+<p><font color= "#FF0000" ><a href="https://shuiyunxc.gitee.io/2020/03/10/instru/index/OpenCore黑苹果引导配置说明第十一版PDF版.pdf" target="_blank" rel="noopener">OpenCore黑苹果引导配置说明第十一版PDF版下载</a></font></p>
+<p><font color= "#FF0000" ><a href="https://shuiyunxc.gitee.io/2020/03/10/instru/index/OpenCore配置说明第十版.pdf" target="_blank" rel="noopener">OpenCore黑苹果引导配置说明第十版PDF版下载</a></font></p>
+<p><font color= "#FF0000" ><a href="https://shuiyunxc.gitee.io/2020/03/10/instru/index/OpenCore配置说明第九版.pdf" target="_blank" rel="noopener">OpenCore黑苹果引导配置说明第九版PDF版下载</a></font></p>
+<p><font color= "#FF0000" ><a href="https://shuiyunxc.gitee.io/2020/03/10/instru/index/OpenCore配置说明第八版.pdf" target="_blank" rel="noopener">OpenCore黑苹果引导配置说明第八版PDF版下载</a></font></p>
+<p><font color= "#FF0000" ><a href="https://shuiyunxc.gitee.io/2020/03/10/instru/index/OpenCore配置说明第七版.pdf" target="_blank" rel="noopener">OpenCore黑苹果引导配置说明第七版PDF版下载</a></font></p>
 <p><font color= "#FF0000" ><a href="https://shuiyunxc.gitee.io/2020/03/10/instru/index/OpenCore配置文字说明第六版.pdf" target="_blank" rel="noopener">OpenCore黑苹果引导配置说明第六版PDF版下载</a></font></p>
 <p><a href="https://shuiyunxc.gitee.io/2020/03/10/instru/index/OpenCore配置文字说明第五版.pdf" target="_blank" rel="noopener">OpenCore黑苹果引导配置说明第五版PDF版下载</a></p>
 <p><font color= "#FF0000" ><a href="https://shuiyunxc.gitee.io/2020/03/10/instru/index/OpenCore配置文字说明第四版.pdf" target="_blank" rel="noopener">OpenCore黑苹果引导配置说明第四版PDF版下载</a></font></p>
 <p><a href="https://shuiyunxc.gitee.io/2020/03/10/instru/index/OpenCore配置文字说明第三版.pdf" target="_blank" rel="noopener">OpenCore黑苹果引导配置说明第三版PDF版下载</a></p>
 <h3 id="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！特别是不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"><a href="#重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！特别是不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！" class="headerlink" title="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！特别是不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"></a>重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！特别是不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！</h3><img src="https://shuiyunxc.gitee.io/2020/07/16/19G73/index/扫码.png" alt="扫码" style="zoom:50%;" />
 
-<img src="https://img.shields.io/badge/更新日期-2020年08月18日-blue?style=flat-square" align='center'>
+<img src="https://img.shields.io/badge/更新日期-2021年04月06日-blue?style=flat-square" align='center'>
 
 <h4 id="黑苹果OpenCore开放群，群号-9422866，注明“独行秀才Blog引入”"><a href="#黑苹果OpenCore开放群，群号-9422866，注明“独行秀才Blog引入”" class="headerlink" title="黑苹果OpenCore开放群，群号:9422866，注明“独行秀才Blog引入”"></a><font color= "#FF0000"  align="center">黑苹果OpenCore开放群，群号:9422866，注明“独行秀才Blog引入”</font></h4>
       
@@ -1044,11 +1155,11 @@
   <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
 
-  <p><span>本文标题:</span>OpenCore黑苹果引导配置说明第七版（基于0.6.1-08月18日编译版）</a></p>
+  <p><span>本文标题:</span>OpenCore黑苹果引导配置说明第十四版（基于0.6.8-04月06日正式版）</a></p>
   <p><span>文章作者:</span>独行秀才</a></p>
   <p><span>发布时间:</span>2020年03月10日 - 09:56:01</p>
-  <p><span>最后更新:</span>2020年08月18日 - 00:10:31</p>
-  <p><span>原始链接:</span><a href="/2020/03/10/instru/index/" title="OpenCore黑苹果引导配置说明第七版（基于0.6.1-08月18日编译版）">https://shuiyunxc.github.io/2020/03/10/instru/index/</a>
+  <p><span>最后更新:</span>2021年04月06日 - 14:41:03</p>
+  <p><span>原始链接:</span><a href="/2020/03/10/instru/index/" title="OpenCore黑苹果引导配置说明第十四版（基于0.6.8-04月06日正式版）">https://shuiyunxc.github.io/2020/03/10/instru/index/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://shuiyunxc.github.io/2020/03/10/instru/index/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
@@ -1187,7 +1298,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-count">58</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1198,7 +1309,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">76</span>
+                  <span class="site-state-item-count">88</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1209,7 +1320,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">66</span>
+                  <span class="site-state-item-count">72</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1289,7 +1400,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#OpenCore黑苹果引导配置说明第七版-基于OpenCore-0-6-1-08-18-编译版"><span class="nav-number">1.</span> <span class="nav-text">OpenCore黑苹果引导配置说明第七版-基于OpenCore-0.6.1-08-18-编译版</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#null"><span class="nav-number">1.0.0.0.1.</span> <span class="nav-text">关键字：黑苹果；OC；OpenCore；引导；配置</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2020-08-18编译OpenCore-0-6-1-08-18编译版"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">2020-08-18编译OpenCore-0.6.1-08-18编译版</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2020-08-16编译OpenCore-0-6-1-08-16编译版"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">2020-08-16编译OpenCore-0.6.1-08-16编译版</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2020-08-14编译OpenCore-0-6-1-08-14编译版"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">2020-08-14编译OpenCore-0.6.1-08-14编译版</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2020-08-12编译OpenCore-0-6-1-08-12编译版"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">2020-08-12编译OpenCore-0.6.1-08-12编译版</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2020-08-10编译OpenCore-0-6-1-08-10编译版"><span class="nav-number">1.0.0.5.</span> <span class="nav-text">2020-08-10编译OpenCore-0.6.1-08-10编译版</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2020-08-08编译OpenCore-0-6-1-08-08编译版"><span class="nav-number">1.0.0.6.</span> <span class="nav-text">2020-08-08编译OpenCore-0.6.1-08-08编译版</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2020-08-06编译OpenCore-0-6-1-08-06编译版"><span class="nav-number">1.0.0.7.</span> <span class="nav-text">2020-08-06编译OpenCore-0.6.1-08-06编译版</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2020-08-04编译OpenCore-0-6-1-08-04编译版"><span class="nav-number">1.0.0.8.</span> <span class="nav-text">2020-08-04编译OpenCore-0.6.1-08-04编译版</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一、-OC配置的基本条件与工具软件"><span class="nav-number">1.0.1.</span> <span class="nav-text">一、    OC配置的基本条件与工具软件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1、-准备Mac平台，包括实体机平台和虚拟机平台。"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">1.1、    准备Mac平台，包括实体机平台和虚拟机平台。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2、-下载最新镜像并核对MD5，制作安装U盘。"><span class="nav-number">1.0.1.2.</span> <span class="nav-text">1.2、    下载最新镜像并核对MD5，制作安装U盘。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3、-工具软件："><span class="nav-number">1.0.1.3.</span> <span class="nav-text">1.3、    工具软件：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4、基本流程："><span class="nav-number">1.0.1.4.</span> <span class="nav-text">1.4、基本流程：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-6、OpenCore基本架构"><span class="nav-number">1.0.1.5.</span> <span class="nav-text">1.6、OpenCore基本架构</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、-配置准备："><span class="nav-number">1.0.2.</span> <span class="nav-text">二、    配置准备：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-0、-Mac平台准备"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">2.0、    Mac平台准备</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1、-下载最新镜像，核对MD5"><span class="nav-number">1.0.2.2.</span> <span class="nav-text">2.1、    下载最新镜像，核对MD5</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2、OC-EFI包"><span class="nav-number">1.0.2.3.</span> <span class="nav-text">2.2、OC-EFI包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3、ACPI文件（SSDT）"><span class="nav-number">1.0.2.4.</span> <span class="nav-text">2.3、ACPI文件（SSDT）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4、驱动转移"><span class="nav-number">1.0.2.5.</span> <span class="nav-text">2.4、驱动转移</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-6、config-plist文件"><span class="nav-number">1.0.2.6.</span> <span class="nav-text">2.6、config.plist文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-7、config-plist文件处理"><span class="nav-number">1.0.2.7.</span> <span class="nav-text">2.7、config.plist文件处理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、-开始配置OC-config-plist"><span class="nav-number">1.0.3.</span> <span class="nav-text">三、    开始配置OC-config.plist</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1、Config-ACPI设置："><span class="nav-number">1.0.3.1.</span> <span class="nav-text">3.1、Config-ACPI设置：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-1-1、config-ACPI-添加（Add）："><span class="nav-number">1.0.3.1.1.</span> <span class="nav-text">3.1.1、config-ACPI-添加（Add）：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-1-2、config-ACPI-Delete："><span class="nav-number">1.0.3.1.2.</span> <span class="nav-text">3.1.2、config-ACPI-Delete：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-1-3、config-ACPI-补丁（Patch）："><span class="nav-number">1.0.3.1.3.</span> <span class="nav-text">3.1.3、config-ACPI-补丁（Patch）：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-1-4、config-ACPI-Quirks："><span class="nav-number">1.0.3.1.4.</span> <span class="nav-text">3.1.4、config-ACPI-Quirks：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2、Config-Booter设置"><span class="nav-number">1.0.3.2.</span> <span class="nav-text">3.2、Config-Booter设置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-2-1、config-Booter-MmioWhitelist（内存映射IO白名单）"><span class="nav-number">1.0.3.2.1.</span> <span class="nav-text">3.2.1、config-Booter-MmioWhitelist（内存映射IO白名单）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-2-2、config-Booter-Quirks："><span class="nav-number">1.0.3.2.2.</span> <span class="nav-text">3.2.2、config-Booter-Quirks：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3、Config-DeviceProperties设置："><span class="nav-number">1.0.3.3.</span> <span class="nav-text">3.3、Config-DeviceProperties设置：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-3-1：Config-DeviceProperties-添加（Add）："><span class="nav-number">1.0.3.3.1.</span> <span class="nav-text">3.3.1：Config-DeviceProperties-添加（Add）：</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#3-3-1-1：声卡："><span class="nav-number">1.0.3.3.1.1.</span> <span class="nav-text">3.3.1.1：声卡：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-3-1-2：显卡："><span class="nav-number">1.0.3.3.1.2.</span> <span class="nav-text">3.3.1.2：显卡：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-3-1-3：其他设备"><span class="nav-number">1.0.3.3.1.3.</span> <span class="nav-text">3.3.1.3：其他设备</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-3-2：Config-DeviceProperties-Delete："><span class="nav-number">1.0.3.3.2.</span> <span class="nav-text">3.3.2：Config-DeviceProperties-Delete：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4：Config-Kernel设置："><span class="nav-number">1.0.3.4.</span> <span class="nav-text">3.4：Config-Kernel设置：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-4-1：Config-Kernel-添加（Add）："><span class="nav-number">1.0.3.4.1.</span> <span class="nav-text">3.4.1：Config-Kernel-添加（Add）：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-4-2：Config-Kernel-阻止（Block），"><span class="nav-number">1.0.3.4.2.</span> <span class="nav-text">3.4.2：Config-Kernel-阻止（Block），</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-4-3：Config-Kernel-补丁（Patch）："><span class="nav-number">1.0.3.4.3.</span> <span class="nav-text">3.4.3：Config-Kernel-补丁（Patch）：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-4-4：Config-Kernel-CPU仿冒，"><span class="nav-number">1.0.3.4.4.</span> <span class="nav-text">3.4.4：Config-Kernel-CPU仿冒，</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-4-5：Config-Kernel-Quirks："><span class="nav-number">1.0.3.4.5.</span> <span class="nav-text">3.4.5：Config-Kernel-Quirks：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-5：Config-Misc设置"><span class="nav-number">1.0.3.5.</span> <span class="nav-text">3.5：Config-Misc设置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-1：Config-Misc-BlessOverride："><span class="nav-number">1.0.3.5.1.</span> <span class="nav-text">3.5.1：Config-Misc-BlessOverride：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-2：Config-Misc-Boot："><span class="nav-number">1.0.3.5.2.</span> <span class="nav-text">3.5.2：Config-Misc- Boot：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-3：Config-Misc-Debug：调试选项"><span class="nav-number">1.0.3.5.3.</span> <span class="nav-text">3.5.3：Config-Misc-Debug：调试选项</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-4：Config-Misc-Entries：添加一些路径。现在暂时不管。"><span class="nav-number">1.0.3.5.4.</span> <span class="nav-text">3.5.4：Config-Misc-Entries：添加一些路径。现在暂时不管。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-5：Config-Misc-Security：安全设置，"><span class="nav-number">1.0.3.5.5.</span> <span class="nav-text">3.5.5：Config-Misc- Security：安全设置，</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-6：Config-Misc-Tools-工具选项："><span class="nav-number">1.0.3.5.6.</span> <span class="nav-text">3.5.6：Config-Misc-Tools 工具选项：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-6：Config-NVRAM设置"><span class="nav-number">1.0.3.6.</span> <span class="nav-text">3.6：Config-NVRAM设置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-6-1：Config-NVRAM-添加（Add）"><span class="nav-number">1.0.3.6.1.</span> <span class="nav-text">3.6.1：Config-NVRAM-添加（Add）</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#3-6-1-1：UUID：4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14："><span class="nav-number">1.0.3.6.1.1.</span> <span class="nav-text">3.6.1.1：UUID：4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-6-1-2：UUID：7C436110-AB2A-4BBB-A880-FE41995C9F82：为引导参数、语言与关闭SIP的相关内容。"><span class="nav-number">1.0.3.6.1.2.</span> <span class="nav-text">3.6.1.2：UUID：7C436110-AB2A-4BBB-A880-FE41995C9F82：为引导参数、语言与关闭SIP的相关内容。</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-6-2：Config-NVRAM-Delete："><span class="nav-number">1.0.3.6.2.</span> <span class="nav-text">3.6.2：Config-NVRAM-Delete：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-6-3：Config-NVRAM-LegacySchema，"><span class="nav-number">1.0.3.6.3.</span> <span class="nav-text">3.6.3：Config-NVRAM-LegacySchema，</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-6-4：Config-NVRAM-LegacyEnable，"><span class="nav-number">1.0.3.6.4.</span> <span class="nav-text">3.6.4：Config-NVRAM-LegacyEnable，</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-6-5：Config-NVRAM-WriteFlash，"><span class="nav-number">1.0.3.6.5.</span> <span class="nav-text">3.6.5：Config-NVRAM-WriteFlash，</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-6-6：LegacyOverwrite，"><span class="nav-number">1.0.3.6.6.</span> <span class="nav-text">3.6.6：LegacyOverwrite，</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7：Config-PlatformInfo设置。"><span class="nav-number">1.0.3.7.</span> <span class="nav-text">3.7：Config-PlatformInfo设置。</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-7-1：其他选项"><span class="nav-number">1.0.3.7.1.</span> <span class="nav-text">3.7.1：其他选项</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8：Config-UEFI，"><span class="nav-number">1.0.3.8.</span> <span class="nav-text">3.8：Config-UEFI，</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-1：APFS，按照下面APFS属性配置，用于提供APFS的支持（即不用Config-UEFI-Drivers里面的ApfsDriverLoader）。"><span class="nav-number">1.0.3.8.1.</span> <span class="nav-text">3.8.1：APFS，按照下面APFS属性配置，用于提供APFS的支持（即不用Config-UEFI-Drivers里面的ApfsDriverLoader）。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-2：Audio，包括此项下7个小项，建议默认不动，-所需Resources文件在下载最新0-5-7-0-5-8-0-5-9-0-6-0-0-6-1-OC包里面，里面包含开机声音、图形界面所需的图片以及相应驱动。"><span class="nav-number">1.0.3.8.2.</span> <span class="nav-text">3.8.2：Audio，包括此项下7个小项，建议默认不动，[所需Resources文件在下载最新0.5.7&#x2F;0.5.8&#x2F;0.5.9&#x2F;0.6.0&#x2F;0.6.1-OC包里面，里面包含开机声音、图形界面所需的图片以及相应驱动。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-3：ConnectDrivers，"><span class="nav-number">1.0.3.8.3.</span> <span class="nav-text">3.8.3：ConnectDrivers，</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-4：Config-UEFI-Drivers，"><span class="nav-number">1.0.3.8.4.</span> <span class="nav-text">3.8.4：Config-UEFI-Drivers，</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-5：Config-UEFI-Apple快捷键相关（Input）："><span class="nav-number">1.0.3.8.5.</span> <span class="nav-text">3.8.5：Config-UEFI-Apple快捷键相关（Input）：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-6：Config-UEFI-ProtocolOverrides-协议覆盖-："><span class="nav-number">1.0.3.8.6.</span> <span class="nav-text">3.8.6：Config-UEFI-ProtocolOverrides(协议覆盖)：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-7：Config-UEFI-Quirks设置"><span class="nav-number">1.0.3.8.7.</span> <span class="nav-text">3.8.7：Config-UEFI-Quirks设置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-8：Config-UEFI-Output（显示输出）设置："><span class="nav-number">1.0.3.8.8.</span> <span class="nav-text">3.8.8：Config-UEFI-Output（显示输出）设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-9：Config-UEFI-ReservedMemory，用于填充plist-dict值，避免系统写入和使用特定设备或硬件的内存。"><span class="nav-number">1.0.3.8.9.</span> <span class="nav-text">3.8.9：Config-UEFI-ReservedMemory，用于填充plist dict值，避免系统写入和使用特定设备或硬件的内存。</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如有变化，保持更新！"><span class="nav-number">1.0.3.9.</span> <span class="nav-text">如有变化，保持更新！</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#附录："><span class="nav-number">1.0.3.10.</span> <span class="nav-text">附录：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！特别是不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"><span class="nav-number">1.0.4.</span> <span class="nav-text">重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！特别是不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#黑苹果OpenCore开放群，群号-9422866，注明“独行秀才Blog引入”"><span class="nav-number">1.0.4.1.</span> <span class="nav-text">黑苹果OpenCore开放群，群号:9422866，注明“独行秀才Blog引入”</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#OpenCore黑苹果引导配置说明第十四版-基于OpenCore-0-6-8-04-06正式版"><span class="nav-number">1.</span> <span class="nav-text">OpenCore黑苹果引导配置说明第十四版-基于OpenCore-0.6.8-04-06正式版</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#null"><span class="nav-number">1.0.0.0.1.</span> <span class="nav-text">关键字：黑苹果；OC；OpenCore；引导；配置</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2021-04-06编译OpenCore-0-6-8-04-06正式版"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">2021-04-06编译OpenCore-0.6.8-04-06正式版</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2021-04-04编译OpenCore-0-6-8-04-04编译版"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">2021-04-04编译OpenCore-0.6.8-04-04编译版</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2021-04-02编译OpenCore-0-6-8-04-02编译版"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">2021-04-02编译OpenCore-0.6.8-04-02编译版</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2021-03-31编译OpenCore-0-6-8-03-31编译版"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">2021-03-31编译OpenCore-0.6.8-03-31编译版</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2021-03-29编译OpenCore-0-6-8-03-29编译版"><span class="nav-number">1.0.0.5.</span> <span class="nav-text">2021-03-29编译OpenCore-0.6.8-03-29编译版</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2021-03-27编译OpenCore-0-6-8-03-27编译版"><span class="nav-number">1.0.0.6.</span> <span class="nav-text">2021-03-27编译OpenCore-0.6.8-03-27编译版</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2021-03-25编译OpenCore-0-6-8-03-25编译版"><span class="nav-number">1.0.0.7.</span> <span class="nav-text">2021-03-25编译OpenCore-0.6.8-03-25编译版</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2021-03-23编译OpenCore-0-6-8-03-23编译版"><span class="nav-number">1.0.0.8.</span> <span class="nav-text">2021-03-23编译OpenCore-0.6.8-03-23编译版</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2021-03-21编译OpenCore-0-6-8-03-21编译版"><span class="nav-number">1.0.0.9.</span> <span class="nav-text">2021-03-21编译OpenCore-0.6.8-03-21编译版</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2021-03-19编译OpenCore-0-6-8-03-19编译版"><span class="nav-number">1.0.0.10.</span> <span class="nav-text">2021-03-19编译OpenCore-0.6.8-03-19编译版</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2021-03-17编译OpenCore-0-6-8-03-17编译版"><span class="nav-number">1.0.0.11.</span> <span class="nav-text">2021-03-17编译OpenCore-0.6.8-03-17编译版</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2021-03-15编译OpenCore-0-6-8-03-15编译版"><span class="nav-number">1.0.0.12.</span> <span class="nav-text">2021-03-15编译OpenCore-0.6.8-03-15编译版</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2021-03-13编译OpenCore-0-6-8-03-13编译版"><span class="nav-number">1.0.0.13.</span> <span class="nav-text">2021-03-13编译OpenCore-0.6.8-03-13编译版</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2021-03-11编译OpenCore-0-6-8-03-11编译版"><span class="nav-number">1.0.0.14.</span> <span class="nav-text">2021-03-11编译OpenCore-0.6.8-03-11编译版</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2021-03-09编译OpenCore-0-6-8-03-09编译版"><span class="nav-number">1.0.0.15.</span> <span class="nav-text">2021-03-09编译OpenCore-0.6.8-03-09编译版</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2021-03-07编译OpenCore-0-6-8-03-07编译版"><span class="nav-number">1.0.0.16.</span> <span class="nav-text">2021-03-07编译OpenCore-0.6.8-03-07编译版</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2021-03-05编译OpenCore-0-6-8-03-05编译版"><span class="nav-number">1.0.0.17.</span> <span class="nav-text">2021-03-05编译OpenCore-0.6.8-03-05编译版</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2021-03-03编译OpenCore-0-6-8-03-03编译版"><span class="nav-number">1.0.0.18.</span> <span class="nav-text">2021-03-03编译OpenCore-0.6.8-03-03编译版</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一、-OC配置的基本条件与工具软件"><span class="nav-number">1.0.1.</span> <span class="nav-text">一、    OC配置的基本条件与工具软件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1、-准备Mac平台，包括实体机平台和虚拟机平台。"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">1.1、    准备Mac平台，包括实体机平台和虚拟机平台。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2、-下载最新镜像并核对MD5，制作安装U盘。"><span class="nav-number">1.0.1.2.</span> <span class="nav-text">1.2、    下载最新镜像并核对MD5，制作安装U盘。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3、-工具软件："><span class="nav-number">1.0.1.3.</span> <span class="nav-text">1.3、    工具软件：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4、基本流程："><span class="nav-number">1.0.1.4.</span> <span class="nav-text">1.4、基本流程：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-6、OpenCore基本架构"><span class="nav-number">1.0.1.5.</span> <span class="nav-text">1.6、OpenCore基本架构</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、-配置准备："><span class="nav-number">1.0.2.</span> <span class="nav-text">二、    配置准备：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-0、-Mac平台准备"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">2.0、    Mac平台准备</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1、-下载最新镜像，核对MD5"><span class="nav-number">1.0.2.2.</span> <span class="nav-text">2.1、    下载最新镜像，核对MD5</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2、OC-EFI包"><span class="nav-number">1.0.2.3.</span> <span class="nav-text">2.2、OC-EFI包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3、ACPI文件（SSDT）"><span class="nav-number">1.0.2.4.</span> <span class="nav-text">2.3、ACPI文件（SSDT）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4、驱动转移"><span class="nav-number">1.0.2.5.</span> <span class="nav-text">2.4、驱动转移</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-6、config-plist文件"><span class="nav-number">1.0.2.6.</span> <span class="nav-text">2.6、config.plist文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-7、config-plist文件处理"><span class="nav-number">1.0.2.7.</span> <span class="nav-text">2.7、config.plist文件处理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、-开始配置OC-config-plist"><span class="nav-number">1.0.3.</span> <span class="nav-text">三、    开始配置OC-config.plist</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1、Config-ACPI设置："><span class="nav-number">1.0.3.1.</span> <span class="nav-text">3.1、Config-ACPI设置：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-1-1、config-ACPI-添加（Add）："><span class="nav-number">1.0.3.1.1.</span> <span class="nav-text">3.1.1、config-ACPI-添加（Add）：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-1-2、config-ACPI-Delete："><span class="nav-number">1.0.3.1.2.</span> <span class="nav-text">3.1.2、config-ACPI-Delete：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-1-3、config-ACPI-补丁（Patch）："><span class="nav-number">1.0.3.1.3.</span> <span class="nav-text">3.1.3、config-ACPI-补丁（Patch）：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-1-4、config-ACPI-Quirks："><span class="nav-number">1.0.3.1.4.</span> <span class="nav-text">3.1.4、config-ACPI-Quirks：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2、Config-Booter设置"><span class="nav-number">1.0.3.2.</span> <span class="nav-text">3.2、Config-Booter设置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-2-1、config-Booter-MmioWhitelist（内存映射IO白名单）"><span class="nav-number">1.0.3.2.1.</span> <span class="nav-text">3.2.1、config-Booter-MmioWhitelist（内存映射IO白名单）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-2-2、config-Booter-Patch（补丁）"><span class="nav-number">1.0.3.2.2.</span> <span class="nav-text">3.2.2、config-Booter-Patch（补丁）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-2-2、config-Booter-Quirks："><span class="nav-number">1.0.3.2.3.</span> <span class="nav-text">3.2.2、config-Booter-Quirks：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3、Config-DeviceProperties设置："><span class="nav-number">1.0.3.3.</span> <span class="nav-text">3.3、Config-DeviceProperties设置：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-3-1：Config-DeviceProperties-添加（Add）："><span class="nav-number">1.0.3.3.1.</span> <span class="nav-text">3.3.1：Config-DeviceProperties-添加（Add）：</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#3-3-1-1：声卡："><span class="nav-number">1.0.3.3.1.1.</span> <span class="nav-text">3.3.1.1：声卡：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-3-1-2：显卡："><span class="nav-number">1.0.3.3.1.2.</span> <span class="nav-text">3.3.1.2：显卡：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-3-1-3：其他设备"><span class="nav-number">1.0.3.3.1.3.</span> <span class="nav-text">3.3.1.3：其他设备</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-3-2：Config-DeviceProperties-Delete："><span class="nav-number">1.0.3.3.2.</span> <span class="nav-text">3.3.2：Config-DeviceProperties-Delete：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4：Config-Kernel设置："><span class="nav-number">1.0.3.4.</span> <span class="nav-text">3.4：Config-Kernel设置：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-4-1：Config-Kernel-添加（Add）："><span class="nav-number">1.0.3.4.1.</span> <span class="nav-text">3.4.1：Config-Kernel-添加（Add）：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-4-2：Config-Kernel-阻止（Block），"><span class="nav-number">1.0.3.4.2.</span> <span class="nav-text">3.4.2：Config-Kernel-阻止（Block），</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-4-3：Config-Kernel-补丁（Patch）："><span class="nav-number">1.0.3.4.3.</span> <span class="nav-text">3.4.3：Config-Kernel-补丁（Patch）：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-4-4：Config-Kernel-CPU仿冒，"><span class="nav-number">1.0.3.4.4.</span> <span class="nav-text">3.4.4：Config-Kernel-CPU仿冒，</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-4-6：Config-Kernel-Quirks："><span class="nav-number">1.0.3.4.5.</span> <span class="nav-text">3.4.6：Config-Kernel-Quirks：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-5：Config-Misc设置"><span class="nav-number">1.0.3.5.</span> <span class="nav-text">3.5：Config-Misc设置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-1：Config-Misc-BlessOverride："><span class="nav-number">1.0.3.5.1.</span> <span class="nav-text">3.5.1：Config-Misc-BlessOverride：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-2：Config-Misc-Boot："><span class="nav-number">1.0.3.5.2.</span> <span class="nav-text">3.5.2：Config-Misc- Boot：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-3：Config-Misc-Debug：调试选项"><span class="nav-number">1.0.3.5.3.</span> <span class="nav-text">3.5.3：Config-Misc-Debug：调试选项</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-4：Config-Misc-Entries：添加一些路径。现在暂时不管。"><span class="nav-number">1.0.3.5.4.</span> <span class="nav-text">3.5.4：Config-Misc-Entries：添加一些路径。现在暂时不管。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-5：Config-Misc-Security：安全设置，"><span class="nav-number">1.0.3.5.5.</span> <span class="nav-text">3.5.5：Config-Misc- Security：安全设置，</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-6：Config-Misc-Tools-工具选项："><span class="nav-number">1.0.3.5.6.</span> <span class="nav-text">3.5.6：Config-Misc-Tools 工具选项：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-6：Config-NVRAM设置"><span class="nav-number">1.0.3.6.</span> <span class="nav-text">3.6：Config-NVRAM设置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-6-1：Config-NVRAM-添加（Add）"><span class="nav-number">1.0.3.6.1.</span> <span class="nav-text">3.6.1：Config-NVRAM-添加（Add）</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#3-6-1-1：UUID：4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14："><span class="nav-number">1.0.3.6.1.1.</span> <span class="nav-text">3.6.1.1：UUID：4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-6-1-2：UUID：7C436110-AB2A-4BBB-A880-FE41995C9F82：为引导参数、语言与关闭SIP的相关内容。"><span class="nav-number">1.0.3.6.1.2.</span> <span class="nav-text">3.6.1.2：UUID：7C436110-AB2A-4BBB-A880-FE41995C9F82：为引导参数、语言与关闭SIP的相关内容。</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-6-2：Config-NVRAM-Delete："><span class="nav-number">1.0.3.6.2.</span> <span class="nav-text">3.6.2：Config-NVRAM-Delete：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-6-3：Config-NVRAM-LegacySchema，"><span class="nav-number">1.0.3.6.3.</span> <span class="nav-text">3.6.3：Config-NVRAM-LegacySchema，</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-6-4：Config-NVRAM-LegacyEnable，"><span class="nav-number">1.0.3.6.4.</span> <span class="nav-text">3.6.4：Config-NVRAM-LegacyEnable，</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-6-5：Config-NVRAM-WriteFlash，"><span class="nav-number">1.0.3.6.5.</span> <span class="nav-text">3.6.5：Config-NVRAM-WriteFlash，</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-6-6：LegacyOverwrite，"><span class="nav-number">1.0.3.6.6.</span> <span class="nav-text">3.6.6：LegacyOverwrite，</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7：Config-PlatformInfo设置。"><span class="nav-number">1.0.3.7.</span> <span class="nav-text">3.7：Config-PlatformInfo设置。</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-7-1：其他选项"><span class="nav-number">1.0.3.7.1.</span> <span class="nav-text">3.7.1：其他选项</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8：Config-UEFI，"><span class="nav-number">1.0.3.8.</span> <span class="nav-text">3.8：Config-UEFI，</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-1：APFS，按照下面APFS属性配置，用于提供APFS的支持（即不用Config-UEFI-Drivers里面的ApfsDriverLoader）。"><span class="nav-number">1.0.3.8.1.</span> <span class="nav-text">3.8.1：APFS，按照下面APFS属性配置，用于提供APFS的支持（即不用Config-UEFI-Drivers里面的ApfsDriverLoader）。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-2-AppleInput属性"><span class="nav-number">1.0.3.8.2.</span> <span class="nav-text">3.8.2:AppleInput属性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-3：Audio，包括此项下9个小项，建议默认不动，-所需Resources文件在下载最新0-5-7-0-5-8-0-5-9-0-6-0-0-6-1-0-6-2-0-6-3-0-6-4-0-6-5-0-6-6-0-6-7-0-6-8-OC包里面，里面包含开机声音、图形界面所需的图片以及相应驱动。"><span class="nav-number">1.0.3.8.3.</span> <span class="nav-text">3.8.3：Audio，包括此项下9个小项，建议默认不动，[所需Resources文件在下载最新0.5.7&#x2F;0.5.8&#x2F;0.5.9&#x2F;0.6.0&#x2F;0.6.1&#x2F;0.6.2&#x2F;0.6.3&#x2F;0.6.4&#x2F;0.6.5&#x2F;0.6.6&#x2F;0.6.7&#x2F;0.6.8-OC包里面，里面包含开机声音、图形界面所需的图片以及相应驱动。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-4：ConnectDrivers，"><span class="nav-number">1.0.3.8.4.</span> <span class="nav-text">3.8.4：ConnectDrivers，</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-5：Config-UEFI-Drivers，"><span class="nav-number">1.0.3.8.5.</span> <span class="nav-text">3.8.5：Config-UEFI-Drivers，</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-6：Config-UEFI-Apple快捷键相关（Input）："><span class="nav-number">1.0.3.8.6.</span> <span class="nav-text">3.8.6：Config-UEFI-Apple快捷键相关（Input）：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-7：Config-UEFI-ProtocolOverrides-协议覆盖-："><span class="nav-number">1.0.3.8.7.</span> <span class="nav-text">3.8.7：Config-UEFI-ProtocolOverrides(协议覆盖)：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-8：Config-UEFI-Quirks设置"><span class="nav-number">1.0.3.8.8.</span> <span class="nav-text">3.8.8：Config-UEFI-Quirks设置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-9：Config-UEFI-Output（显示输出）设置："><span class="nav-number">1.0.3.8.9.</span> <span class="nav-text">3.8.9：Config-UEFI-Output（显示输出）设置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-10：Config-UEFI-ReservedMemory，用于填充plist-dict值，避免系统写入和使用特定设备或硬件的内存。"><span class="nav-number">1.0.3.8.10.</span> <span class="nav-text">3.8.10：Config-UEFI-ReservedMemory，用于填充plist dict值，避免系统写入和使用特定设备或硬件的内存。</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如有变化，保持更新！"><span class="nav-number">1.0.3.9.</span> <span class="nav-text">如有变化，保持更新！</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#附录："><span class="nav-number">1.0.3.10.</span> <span class="nav-text">附录：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！特别是不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"><span class="nav-number">1.0.4.</span> <span class="nav-text">重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！特别是不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#黑苹果OpenCore开放群，群号-9422866，注明“独行秀才Blog引入”"><span class="nav-number">1.0.4.1.</span> <span class="nav-text">黑苹果OpenCore开放群，群号:9422866，注明“独行秀才Blog引入”</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -1309,7 +1420,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2019 &mdash; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; 2019 &mdash; <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -1323,7 +1434,7 @@
     
       <span class="post-meta-item-text">本站总字数&#58;</span>
     
-    <span title="本站总字数">50.5k</span>
+    <span title="本站总字数">68.7k</span>
   
 </div>
 
