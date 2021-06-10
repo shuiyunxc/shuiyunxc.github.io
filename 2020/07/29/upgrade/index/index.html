@@ -94,26 +94,26 @@
 <meta property="og:url" content="https://shuiyunxc.github.io/2020/07/29/upgrade/index/index.html">
 <meta property="og:site_name" content="独行秀才的老窝">
 <meta property="og:description" content="关键字：黑苹果；OC；OpenCore；引导；配置；OpenCore引导版本升级；OC升级   OpenCore版本升级指南前言鉴于目前OpenCore的快速迭代升级。很多网友还是使用“白嫖”的0.5.6甚至还有更早的0.5.4&#x2F;5的版本。已经跟不上OpenCore的升级节奏。特别是系统升级到10.15.5以后。有些早期版本的OC-EFI可能出现各种问题。因此升级OC就是一个必然的选择。那么如何升">
-<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/07/29/upgrade/index/06609B5D.png">
-<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/07/29/upgrade/index/A7E310B4.png">
-<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/07/29/upgrade/index/87B0DDF9.png">
-<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/07/29/upgrade/index/67DCA173.png">
-<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/07/29/upgrade/index/5C71863C.png">
-<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/07/29/upgrade/index/D1F83C1A.png">
-<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/07/29/upgrade/index/580C3E39.png">
-<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/07/29/upgrade/index/759DA80D.png">
-<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/07/29/upgrade/index/163E2974.png">
-<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/07/29/upgrade/index/EB31256E.png">
-<meta property="og:image" content="https://shuiyunxc.gitee.io/2020/07/16/19G73/index/%E6%89%AB%E7%A0%81.png">
+<meta property="og:image" content="https://shuiyunxc.github.io/2020/07/29/upgrade/index/06609B5D.png">
+<meta property="og:image" content="https://shuiyunxc.github.io/2020/07/29/upgrade/index/A7E310B4.png">
+<meta property="og:image" content="https://shuiyunxc.github.io/2020/07/29/upgrade/index/87B0DDF9.png">
+<meta property="og:image" content="https://shuiyunxc.github.io/2020/07/29/upgrade/index/67DCA173.png">
+<meta property="og:image" content="https://shuiyunxc.github.io/2020/07/29/upgrade/index/5C71863C.png">
+<meta property="og:image" content="https://shuiyunxc.github.io/2020/07/29/upgrade/index/D1F83C1A.png">
+<meta property="og:image" content="https://shuiyunxc.github.io/2020/07/29/upgrade/index/580C3E39.png">
+<meta property="og:image" content="https://shuiyunxc.github.io/2020/07/29/upgrade/index/759DA80D.png">
+<meta property="og:image" content="https://shuiyunxc.github.io/2020/07/29/upgrade/index/163E2974.png">
+<meta property="og:image" content="https://shuiyunxc.github.io/2020/07/29/upgrade/index/EB31256E.png">
+<meta property="og:image" content="https://shuiyunxc.github.io/2020/07/16/19G73/index/%E6%89%AB%E7%A0%81.png">
 <meta property="og:image" content="https://img.shields.io/badge/%E6%9B%B4%E6%96%B0%E6%97%A5%E6%9C%9F-2020%E5%B9%B407%E6%9C%8830%E6%97%A5-blue?style=flat-square">
 <meta property="article:published_time" content="2020-07-29T15:44:25.000Z">
-<meta property="article:modified_time" content="2020-07-30T07:20:22.000Z">
+<meta property="article:modified_time" content="2021-06-10T06:56:19.000Z">
 <meta property="article:author" content="独行秀才">
 <meta property="article:tag" content="OpenCore">
 <meta property="article:tag" content="教程">
 <meta property="article:tag" content="OC升级">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://shuiyunxc.gitee.io/2020/07/29/upgrade/index/06609B5D.png">
+<meta name="twitter:image" content="https://shuiyunxc.github.io/2020/07/29/upgrade/index/06609B5D.png">
 
 
 
@@ -396,8 +396,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-07-30T15:20:22+08:00">
-                2020-07-30
+              <time title="更新于" itemprop="dateModified" datetime="2021-06-10T14:56:19+08:00">
+                2021-06-10
               </time>
             
           </span>
@@ -533,48 +533,48 @@
 
 <h2 id="OpenCore版本升级指南"><a href="#OpenCore版本升级指南" class="headerlink" title="OpenCore版本升级指南"></a>OpenCore版本升级指南</h2><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>鉴于目前OpenCore的快速迭代升级。很多网友还是使用“白嫖”的0.5.6甚至还有更早的0.5.4/5的版本。已经跟不上OpenCore的升级节奏。特别是系统升级到10.15.5以后。有些早期版本的OC-EFI可能出现各种问题。因此升级OC就是一个必然的选择。那么如何升级OC呢。这篇Blog，就图文介绍下升级的基本方法。以后OC的升级，也基本按照这个基本方法来升级。大家注意更新时间，本Blog基于OCC-2.6.0.2。</p>
 <h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ul>
-<li>下载当前最新的OpenCore。<a href="https://gitee.com/shuiyunxc/OpenCore/releases" target="_blank" rel="noopener">点击下载</a></li>
-<li>下载当前最新的Kexts。<a href="https://gitee.com/shuiyunxc/Kexts/releases" target="_blank" rel="noopener">点击下载</a></li>
-<li>下载当前最新的 OCC[OpenCore Configurator]。<a href="https://gitee.com/shuiyunxc/OpenCore-Configurator/releases" target="_blank" rel="noopener">点击下载</a></li>
+<li>下载当前最新的OpenCore。<a href="https://github.com/shuiyunxc/OpenCore/releases" target="_blank" rel="noopener">点击下载</a></li>
+<li>下载当前最新的Kexts。<a href="https://github.com/shuiyunxc/Kexts/releases" target="_blank" rel="noopener">点击下载</a></li>
+<li>下载当前最新的 OCC[OpenCore Configurator]。<a href="https://github.com/shuiyunxc/OpenCore-Configurator/releases" target="_blank" rel="noopener">点击下载</a></li>
 <li>下载完成后，全部解压后，拷贝至桌面。</li>
 <li>将正常使用的OC-EFI拷贝至桌面。</li>
 </ul>
 <h3 id="开始升级（以下主要针对跨版本升级）"><a href="#开始升级（以下主要针对跨版本升级）" class="headerlink" title="开始升级（以下主要针对跨版本升级）"></a>开始升级（以下主要针对跨版本升级）</h3><ul>
 <li><p>桌面建议一个文件夹。命名为预备升级的版本号+当前日期如：060-07-29，根据个人喜好命名，这个没有特别限制，主要是区别版本与升级日期。</p>
 </li>
-<li><p>将下载的OpenCore包中EFI文件夹整体拷贝到新建的文件夹（060-07-29）<img src="https://shuiyunxc.gitee.io/2020/07/29/upgrade/index/06609B5D.png" alt="06609B5D" style="zoom:50%;" /></p>
+<li><p>将下载的OpenCore包中EFI文件夹整体拷贝到新建的文件夹（060-07-29）<img src="https://shuiyunxc.github.io/2020/07/29/upgrade/index/06609B5D.png" alt="06609B5D" style="zoom:50%;" /></p>
 </li>
 <li><p>将OpenCore包Docs中的模版文件<code>Sample.plist</code>拷贝到新建的文件夹（060-07-29）的<code>EFI-OC</code>文件夹中。</p>
 </li>
-<li><p>将OpenCore包的<code>HfsPlus.efi</code>与文件夹<code>Resources</code>也悉数拷贝到新建的文件夹（060-07-29）的<code>EFI-OC</code>文件夹中，将<code>HfsPlus.efi</code>移到<code>EFI-OC-Drivers</code>文件夹中去。<img src="https://shuiyunxc.gitee.io/2020/07/29/upgrade/index/A7E310B4.png" alt="A7E310B4" style="zoom:50%;" /></p>
+<li><p>将OpenCore包的<code>HfsPlus.efi</code>与文件夹<code>Resources</code>也悉数拷贝到新建的文件夹（060-07-29）的<code>EFI-OC</code>文件夹中，将<code>HfsPlus.efi</code>移到<code>EFI-OC-Drivers</code>文件夹中去。<img src="https://shuiyunxc.github.io/2020/07/29/upgrade/index/A7E310B4.png" alt="A7E310B4" style="zoom:50%;" /></p>
 </li>
 <li><p>将下载的Kexts包中的当前最新的驱动，全部拷贝到拷贝到新建的文件夹（060-07-29）的<code>EFI-OC-Kexts</code>文件夹中。</p>
-<img src="https://shuiyunxc.gitee.io/2020/07/29/upgrade/index/87B0DDF9.png" alt="87B0DDF9" style="zoom:50%;" />
+<img src="https://shuiyunxc.github.io/2020/07/29/upgrade/index/87B0DDF9.png" alt="87B0DDF9" style="zoom:50%;" />
 </li>
 <li><p>打开旧版本的EFI。将ACPI中的所有SSDT文件，全部拷贝到拷贝到新建的文件夹（060-07-29）的<code>EFI-OC-ACPI</code>文件夹中。（这里提醒下，除非你非常清楚这些SSDT的明确效能，并无害，可以全部使用旧版本的。否则需要测试、调整）</p>
-<img src="https://shuiyunxc.gitee.io/2020/07/29/upgrade/index/67DCA173.png" alt="67DCA173" style="zoom:50%;" />
+<img src="https://shuiyunxc.github.io/2020/07/29/upgrade/index/67DCA173.png" alt="67DCA173" style="zoom:50%;" />
 </li>
 <li><p>将旧版本的EFI中的<code>config.plist</code>拷贝到拷贝到新建的文件夹（060-07-29）的<code>EFI-OC</code>文件夹中，并改名为<code>config-old.plist</code>。同时将<code>Sample.plist</code>改名为<code>config.plist</code>。</p>
-<img src="https://shuiyunxc.gitee.io/2020/07/29/upgrade/index/5C71863C.png" alt="5C71863C" style="zoom:50%;" />
+<img src="https://shuiyunxc.github.io/2020/07/29/upgrade/index/5C71863C.png" alt="5C71863C" style="zoom:50%;" />
 </li>
 <li><p>用OpenCore Configurator分别打开<code>config.plist</code>与<code>config-old.plist</code>，开始编辑。</p>
 </li>
 <li><p>首先设置OpenCore Configurator的版本属性为当前的最新版本如<code>OC0.6.0开发版</code></p>
-<img src="https://shuiyunxc.gitee.io/2020/07/29/upgrade/index/D1F83C1A.png" alt="D1F83C1A" style="zoom:50%;" />
+<img src="https://shuiyunxc.github.io/2020/07/29/upgrade/index/D1F83C1A.png" alt="D1F83C1A" style="zoom:50%;" />
 </li>
 <li><p>ACPI设置：删除模版中SSDT，拖入ACPI文件夹中的SSDT，新版的<code>config.plist-ACPI</code>与<code>config-old.plist-ACPI</code>中的补丁与Quirks一致。</p>
-<img src="https://shuiyunxc.gitee.io/2020/07/29/upgrade/index/580C3E39.png" alt="580C3E39" style="zoom:50%;" />
+<img src="https://shuiyunxc.github.io/2020/07/29/upgrade/index/580C3E39.png" alt="580C3E39" style="zoom:50%;" />
 </li>
 <li><p>Booter设置：新版的<code>config.plist-Booter</code>与<code>config-old.plist-Booter</code>中的Quirks一致。</p>
-<img src="https://shuiyunxc.gitee.io/2020/07/29/upgrade/index/759DA80D.png" alt="759DA80D" style="zoom:50%;" />
+<img src="https://shuiyunxc.github.io/2020/07/29/upgrade/index/759DA80D.png" alt="759DA80D" style="zoom:50%;" />
 </li>
 <li><p>DeviceProperties设置：将旧版的设备路径拷贝到新版里面去。</p>
-<img src="https://shuiyunxc.gitee.io/2020/07/29/upgrade/index/163E2974.png" alt="163E2974" style="zoom:50%;" />
+<img src="https://shuiyunxc.github.io/2020/07/29/upgrade/index/163E2974.png" alt="163E2974" style="zoom:50%;" />
 </li>
 <li><p>Kernel设置：删除新版中的所有驱动。将<code>EFI-OC-Kexts</code>文件夹中驱动拖入。新版的<code>config.plist-Kernel</code>与<code>config-old.plist-Kernel</code>中的补丁与Quirks一致。</p>
-<img src="https://shuiyunxc.gitee.io/2020/07/29/upgrade/index/EB31256E.png" alt="EB31256E" style="zoom:50%;" />
+<img src="https://shuiyunxc.github.io/2020/07/29/upgrade/index/EB31256E.png" alt="EB31256E" style="zoom:50%;" />
 </li>
-<li><p>Misc、NVRAM、PlatformInfo与UEFI设置：参阅<a href="https://shuiyunxc.gitee.io/2020/04/23/xiaobai/index/" target="_blank" rel="noopener">面向小白的OC快速无脑配置</a>相关内容。大部分选项都是用新版的默认选择。</p>
+<li><p>Misc、NVRAM、PlatformInfo与UEFI设置：参阅<a href="https://shuiyunxc.github.io/2020/04/23/xiaobai/index/">面向小白的OC快速无脑配置</a>相关内容。大部分选项都是用新版的默认选择。</p>
 </li>
 <li><p>特别提醒CFG Lock未解锁的勾选！</p>
 </li>
@@ -587,7 +587,7 @@
 <li>开机按F8/11/12（各品牌主板/机器），选择UEFI-U盘引导系统。进行测试。测试正常。没有问题后，在用此EFI替换硬盘的EFI。如果有问题，再调整测试。</li>
 </ul>
 <h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>至此，整个OC升级已经完成。上面主要讲的是跨版本升级的情况，</p>
-<h4 id="版本内升级。主要替换的文件有EFI-BOOT中的BOOTx64-efi，EFI-OC中的Bootstrap文件夹，EFI-OC-Drivers中的文件和EFI-OC中的OpenCore-efi。"><a href="#版本内升级。主要替换的文件有EFI-BOOT中的BOOTx64-efi，EFI-OC中的Bootstrap文件夹，EFI-OC-Drivers中的文件和EFI-OC中的OpenCore-efi。" class="headerlink" title="版本内升级。主要替换的文件有EFI-BOOT中的BOOTx64.efi，EFI-OC中的Bootstrap文件夹，EFI-OC-Drivers中的文件和EFI-OC中的OpenCore.efi。"></a><font color= "#FF0000"  align="center">版本内升级。主要替换的文件有<code>EFI-BOOT</code>中的<code>BOOTx64.efi</code>，<code>EFI-OC</code>中的<code>Bootstrap</code>文件夹，<code>EFI-OC-Drivers</code>中的文件和<code>EFI-OC</code>中的<code>OpenCore.efi</code>。</font></h4><h3 id="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！特别是不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"><a href="#重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！特别是不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！" class="headerlink" title="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！特别是不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"></a>重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！特别是不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！</h3><img src="https://shuiyunxc.gitee.io/2020/07/16/19G73/index/扫码.png" alt="扫码" style="zoom:50%;" />
+<h4 id="版本内升级。主要替换的文件有EFI-BOOT中的BOOTx64-efi，EFI-OC中的Bootstrap文件夹，EFI-OC-Drivers中的文件和EFI-OC中的OpenCore-efi。"><a href="#版本内升级。主要替换的文件有EFI-BOOT中的BOOTx64-efi，EFI-OC中的Bootstrap文件夹，EFI-OC-Drivers中的文件和EFI-OC中的OpenCore-efi。" class="headerlink" title="版本内升级。主要替换的文件有EFI-BOOT中的BOOTx64.efi，EFI-OC中的Bootstrap文件夹，EFI-OC-Drivers中的文件和EFI-OC中的OpenCore.efi。"></a><font color= "#FF0000"  align="center">版本内升级。主要替换的文件有<code>EFI-BOOT</code>中的<code>BOOTx64.efi</code>，<code>EFI-OC</code>中的<code>Bootstrap</code>文件夹，<code>EFI-OC-Drivers</code>中的文件和<code>EFI-OC</code>中的<code>OpenCore.efi</code>。</font></h4><h3 id="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！特别是不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"><a href="#重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！特别是不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！" class="headerlink" title="重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！特别是不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！"></a>重要声明：独行秀才拥有此篇文字与图片所有版权，严禁用于任何商业用途，否则将追究法律责任！特别是不建议在远景论坛转载，大概率会被远景封号，谢谢合作！！</h3><img src="https://shuiyunxc.github.io/2020/07/16/19G73/index/扫码.png" alt="扫码" style="zoom:50%;" />
 
 <img src="https://img.shields.io/badge/更新日期-2020年07月30日-blue?style=flat-square" align='center'>
 
@@ -656,7 +656,7 @@
   <p><span>本文标题:</span>OpenCore引导版本升级指南</a></p>
   <p><span>文章作者:</span>独行秀才</a></p>
   <p><span>发布时间:</span>2020年07月29日 - 23:44:25</p>
-  <p><span>最后更新:</span>2020年07月30日 - 15:20:22</p>
+  <p><span>最后更新:</span>2021年06月10日 - 14:56:19</p>
   <p><span>原始链接:</span><a href="/2020/07/29/upgrade/index/" title="OpenCore引导版本升级指南">https://shuiyunxc.github.io/2020/07/29/upgrade/index/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://shuiyunxc.github.io/2020/07/29/upgrade/index/"  aria-label="复制成功！"></i></span>
   </p>
