@@ -1,0 +1,296 @@
+ OPENCORE黑苹果引导配置说明-基于 OPENCORE-0.7.4-10-05正式版
+ 一、 OC配置的基本条件与工具软件
+1.1、 准备Mac平台，包括实体机平台和虚拟机平台。 1.2、 下载最新镜像并核对MD5，制作安装U盘。 1.3、 工具软件:
+    1 OpenCore Configurator(持续更新中)， 2 Hackintool(综合工具)，
+3 PlistEdit Pro(Plist文件工具)，
+4 IORegistryExplorer(路径工具)，
+5 BetterZip(解压软件)。
+ 1.4、基本流程:
+ 
+   
+  1.6、OpenCore基本架构
+
+   二、 配置准备: 2.0、 Mac平台准备
+没有Mac平台的，可以参阅Windows10下Vmware15.5虚拟机安装苹果macOS Catalina 10.15.4，建立Mac平台，已有Mac平台可以跳过此步。
+2.1、 下载最新镜像，核对MD5 利用下载的最新镜像，制作安装U盘。(用磁盘工具抹掉U盘，扩展日志式/GUID)
+2.2、OC-EFI包 下载最新0.7.2/0.7.3/0.7.4-OC包
+放到桌面。里面包含Docs与Utilities后面将会用到。并改名为OC-EFI，便于识别。 2.3、ACPI文件(SSDT)
+将下载的SSDT包里面的 DSDT/SSDT 拷⻉到 OC-EFI - OC - ACPI 里面。注意，除非你清楚这些 DSDT/SSDT的明确作用，否则，能不用就不要用!现在一般在Docs/AcpiSamples/Binaries 里面包含有通用的SSDT，自己根据自己的主板选取
+      
+ 2.4、驱动Kexts
+将下载的 Kext包 里面所有驱动全部拷⻉到 OC-EFI - OC - Kexts 里面。同样道理，除非你清 楚这些驱动的用途，否则删除不明用途的驱动，通用驱动在https://gitee.com/shuiyunxc/K exts/releases
+2.6、config.plist文件 将OC包/Docs里面的范例Sample.plist或SampleFull.plist之一拷⻉到 OC-EFI - OC 里面，并
+改名为config.plist。 2.7、config.plist文件处理
+分别用相应的配置工具打开OC-config.plist。
+          三、 开始配置OC-config.plist
+3.1、Config-ACPI设置: 3.1.1、config-ACPI-添加(Add):
+先删除范例里面所有DSDT/SSDT，点浏览，到 OC-EFI - OC - ACPI ，选取所有你使用的 DSDT/SSDT。(再次建议:，特别是台式机，能不用DSDT/SSDT的，就不要用，除非你精通
+且清楚了解DSDT/SSDT的作用!)参阅面向小白的OC快速无脑配置-基于OpenCore。在下 载的OC包Docs/AcpiSamples/Binaries里面有编译好的SSDT，选择合适你机器的。
+3.1.2、config-ACPI-Delete: 除非你明白确切意义，一般不用。
+    
+  3.1.3、config-ACPI-补丁(Patch):
+建议，逐个调试删除，保留最少的、必要的热补丁。我已经遇到不止一个例子，由于乱用热 补丁且不明白这些热补丁的明确作用，导致无法正常引导。特别是笔记本。热补丁原则上最 好不用，除非必须用。
+下面是10.15.x常用的2个补丁:
+更改控制器EC0名称
+     1 Comment:EC0 to EC 2 Find:4543305F
+3 Replace:45435F5F
+ 解决RTC问题:
+     1 Comment:Fix AsRock Z390 BIOS DSDT Device(RTC) bug 2 Find:A00A9353 54415301
+3 Replace:A00A910A FF0BFFFF
+  
+  3.1.4、config-ACPI-Quirks:
+FadtEnableReset:主要用于老旧主板的开关机功能，如果你关机变重启，可以勾选， 一般情况下 不勾选 。
+ReseHwSig:与休眠有关的选项，台式机一般不用， 不勾选 NormalizeHeaders:清理ACPI头，一般 勾选 ，如果有相应的热补丁，可以 不勾选 。 RebaseRegions:更换硬件或升级BIOS可能对ACPI产生影响，一般 不勾选 。如果遇到 卡PCI Configuration Begin，就勾选试试。
+Resetlogstatus:重置日志，一般 不勾选 。
+           3.2、Config-Booter设置 3.2.1、config-Booter-MmioWhitelist(内存映射IO白名单)
+默认第一项是为 Haswell芯片 提供内存寻址修复，此类芯片如果遇到内存相关问题，就勾选 启用。 默认第二项是开机卡PCI Configuration。ACPI、PCI device同时释放到内存时发生 0x1000内存地址被占用而卡在PCI Configuration，则勾选，否则无视!
+3.2.2、config-Booter-Patch(补丁) 3.2.2、config-Booter-Quirks:
+此设置与 OpenRuntime.efi 有密切关系， OpenRuntime.efi 将一些功能与OC合并、模块 化。对于300系列等无法原生nvram的主板来说，此处的选项需要格外关注!
+      
+  1、AllowRelocationBlock:对老旧版本的macOS有用，对macOS11和较新的硬件不 兼容，所以一般 不勾选 。 2、AvoidRuntimeDefrag:绝大部分UEFI都会写入时间、电源管理等信息，只要是黑 苹果，此项必须 勾选 。 3、DevirtualiseMmio:一般情况下，采用slide=1的方式进行连续性内存注入，故一般
+不勾选 ，除非你的机器用了KASLR方式。(台式机基本没有)。 4、DisableSingleUser:是否开启单用户模式(-s)。一般 不勾选 。 5、DisableVariableWrite:非原生nvram主板需要模拟nvram.plist写入variable值， 所以 非原生nvram主板 必须 勾选 ， 原生nvram主板 则 不勾选 。经过测试 非原生nvram主 板 (主要是300系列主板)使用SSDT-PMC以后，就可以当原生nvram主板使用，不用 勾选此项。 6、DiscardHibernateMap:这个选项帮助我们解决下面的冲突:当电脑从休眠中唤醒 时，硬盘里面的资料会恢复到内存中去，此时OC内核以及内核缓存也要写入，二者可 能产生冲突。就目前而言，台式机无视休眠功能，故， 不勾选 ! 7、EnableSafeModeSlide:安全模式下(-x)是否用连续性的内存注入方式，一般 勾 选。 8、EnableWriteUnprotector:允许对UEFI服务代码的写入，该选项通过删除写保护 (WP)来绕过UEFI运行时服务的代码⻚中的RX权限。一般是 勾选 9、ForceExitBootServices:为让老旧主板也能使用内存寻址，正常情况下， 不勾选 ， 除非你的额主板很老很旧。至于何为老旧主板，自己根据实践摸索试验。 10、ProvideMaxSlide:勾选时，使Slide使用最大值，一般 不勾选 11、ProtectMemoryRegions:确保CSM内存区域标记为ACPI NVS，以防止boot.efi 或XNU重新定位或使用它们。但是由于AvoidRuntimeDefrag解决了类似的问题。默 认 不勾选 (false)除非一些老旧主板可能需要勾选，需要测试。 12、ProtectSecureBoot:保护UEFI安全引导变量写入参数时不被干扰而引起冲突，默 认 不勾选 (false)。如选择Insyde或选择机型MacPro5,1。可能需要勾选。 13、ProtectUefiServices:保护UEFI服务不被固件覆盖。用于修复Z390在 DevirtualiseMmio、ProtectCsmRegion或ShrinkMemoryMap上的问题，非Z390的主 板默认 不勾选 (false)。需要自己测试 14、ProvideCustomSlide:此选项时强制macOS在可用的slide值中使用一个随机 的、不产生冲突的slide值，故，必须 勾选 。 15、RebuildAppleMemoryMap:生成与macOS兼容的内存映射，Apple内核在解 析UEFI内存映射时有几个限制。为了解决这些限制，这个选项将内存属性表权限应用于 传递给Apple内核的内存映射，一般在启动macos10.6及更早版本时可能需要这个选 项，默认 不勾选 (false)。 16、SetupVirtualMap:通过虚拟内存建立连续性内存供OC使用，并映射到分散的物 理内存中，故，必须 勾选 。 17、SignalAppleOS:将其他操作系统的信息报告给正在加载的macOS， 不勾选 。 18、SyncRuntimePermissions:更新运行时环境的内存权限，主要用于早期的macOS 或Linux/Windows，默认 不勾选 (false)。
+                                
+   3.3、Config-DeviceProperties设置: 此项是用来描述/注入设备信息。主要是显卡与声卡，当然，也可以定制一些设备到关于本机-
+系统报告-PCI列表中去。 3.3.1:Config-DeviceProperties-添加(Add):
+PCI信息导出:打开Hackintool，到PCI列表，点击下面的导出，在桌面生成4个文件，打开 pcidevices.plist，能看到全部PCI信息。将你需要的设备拷⻉过来。并稍作修改。具体的可 以去看OpenCore配置视频第二版。原则上只添加声卡路径、ID，以及只有集显的情况下的 集显路径与ID。
+3.3.1.1:声卡:
+一般情况下声卡的路径是 PciRoot(0x0)/Pci(0x1f,0x3) 。 右边的键/值一般稍作修改，比如接口 AAPL,slot-name 的值可以改为 Built In (内 建/内置)。
+显示名称 model 的值改为Hackintool-音频-音频设备-名称里面的。
+layout-id 的值一般就用导出的。不用修改。
+device_type 一般设置为: Audio device 其他就用导出的值。
+              3.3.1.2:显卡:
+
+ 3.3.1.2:显卡:
+无集显的CPU直接删除路径 PciRoot(0x0)/Pci(0x2,0x0) ，将pcidevices.plist中独显 信息直接拷⻉过来，我的路径是: PciRoot(0x20)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)。
+AAPL,slot-name 的值改为 PCIEX1 或者 Slot-1 。
+model 的值可以改为 Radeon Pro Vega 56 (根据自己显卡的名字修改)。 其他不动。 独显DP/HDMI声卡:直接将pcidevices.plist中独显DP/HDMI声卡信息直接拷⻉过来， 我的路径
+PciRoot(0x20)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x1) 。 AAPL,slot-name 的值与显卡相同。
+model 的值可以改为与显卡匹配，比如Radeon Pro Vega 56 DP/HDMI Audio。其他
+不动。
+有集显的CPU:路径 PciRoot(0x0)/Pci(0x2,0x0) 。一般情况下，直接将 pcidevices.plist中集显的信息直接拷⻉过来，就可以了，稍作修改，如AAPL,slot- name改为Built In(内建/内置)。model的值稍作修饰。关于仅使用集显的，可能遇 到HDMI接口紫屏的问题，请自行搜索解决办法。
+3.3.1.3:其他设备 一般情况下，除非需要，一般不导入。
+3.3.2:Config-DeviceProperties-Delete: 此项默认即可。一般不做修改。
+3.4:Config-Kernel设置: 此项是内存相关的设置。
+3.4.1:Config-Kernel-添加(Add):
+直接点击浏览，到OC-EFI/OC/Kexts，选取全部，这里需要注意的是，Lilu.kext必须调整到 第一位。对于依赖VirtualSMC.kext或FakeSMC.kext的驱动，则必须放在他们的后面。需要 启用的，后面需要勾选。笔记本特别要注意键盘与触摸板驱动，主驱动一定要放在包内容驱 动前面。
+3.4.2:Config-Kernel-阻止(Block)， 禁用一些驱动。默认即可。
+                     
+  3.4.3:Config-Kernel-补丁(Patch): 范例里面的4个一般情况下不用，2个RTC的补丁可以用于华硕的主板(二选一)，但需要测
+试。主要解决华硕主板重启BIOS重置，需要按F1跳过的问题。 3.4.4:Config-Kernel-CPU仿冒，
+2种情况下，需要仿冒。
+1、macOS尚不支持的CPU。 2、为不受支持的CPU启用XCPM。 对于XCPM支持，建议使用以下组合。 •Haswell-E(0x306F2)至Haswell(0x0306C3): Cpuid1Data:C3 06 03 00 00 00 00 00 00 00 00 00 00 00 Cpuid1Mask::FF FF FF FF 00 00 00 00 00 00 00 00 00 00 •Broadwell-E(0x0406F1)至Broadwell(0x0306D4): Cpuid1Data:D4 06 03 00 00 00 00 00 00 00 00 00 00 00 Cpuid1Mask::FF FF FF FF 00 00 00 00 00 00 00 00 00 00 00。 进一步情况可以⻅ acidanthera/bugtracker#365。
+3.4.5:Config-Kernel-Scheme Properties(方案): 不明白OC团队的用意，添加一些对老系统老架构主板的支持。不管那些， 默认就好 。苹果都
+放弃的东⻄，OC团队还在添加对老系统老架构的支持，有点本末倒置!!!
+3.4.6:Config-Kernel-Quirks: 这个是内核相关的选项， 重要!
+     
+  1、AppleCpuPmCfgLock:如果你BIOS里面 CFG/MSR 已经 关闭 ，则 不勾选 。 没有关 闭 ，则必须 勾选 ，不清楚是否关闭，请用Hackintool-工具-点击Intel标志-从 appleintellnfo获取，查找CFG Lock，如果显示0(MSR not lockde)则是关闭，如 果显示1(MSR locked)则是开启。BIOS里面没有CFG/MSR相关选项的，CFG Lock 关闭的方法⻅OpenCore引导Mac下解除CFG LOCK锁定。
+2、AppleXcpmCfgLock:同上。 3、AppleXcpmExtraMsrs:主要是在无原生电源管理的CPU上使用，一般是 Haswell-
+E ， Broadwell-E ， Skylake-X 这三种CPU，必须 勾选 ， 其他CPU不用勾选 。 4、AppleXcpmForceBoost:此补丁将 0xFF00 写入到 MSR_IA32_PERF_CONTROL
+(0x199), 一般CPU都 不勾选 ，只有某些Xeon的CPU有作用。 5、CustomSMBIOSGuid:戴尔本本用的，一般 不勾选 。戴尔的笔记本与台式机最好
+也不要勾选，可能导致无法正确显示序列号。
+6、DisableIoMapper:禁止vt-d，如果BIOS里面禁止了，就 不勾选 。 7、DisableLinkeditJettison:这个选项让Lilu。在没有keepsyms=1引导参数的情况
+下，kext和其他一些可能在macOS Big Sur中发挥最佳性能。一般 不勾选 。 8、DisableRtcChecksum:一般 不勾选 。在AppleRTC中禁用校验和写入(0x58-
+0x59)。 9、ExtendBTFeatureFlags:将FeatureFlags设置为0x0F以获得蓝牙的全部功能，包括
+连续性。一般 不勾选 。
+10、ExternalDiskIcons:AHCI控制器相关。现在主流主板对AHCI支持都很好，一般 不 勾选 。
+11、ForceSecureBootScheme:IMG4验证的强制x86方案。一般 不勾选 。 12、IncreasePciBarSize:将IOPCIFamily中的32位PCI带宽大小从1GB增加到4GB，
+一般 不勾选
+13、LapicKernelPanic:用于惠普本本的内核崩溃，一般 不勾选 。惠普本本也不要勾 选。!!
+14、LegacyCommpage:对10.4-10.6有效。一般 不勾选 。 15、PanicNoKextDump:显示kext出错信息，一般 不勾选 。
+                                          
+  16、PowerTimeoutKernelPanic:当遇到睡眠不能唤醒，只有重启后才能唤醒的情况 下勾选，台式机一般 不勾选 。
+17、ProvideCurrentCpuInfo:向内核提供当前CPU信息。一般 不勾选 。 这个quirk目前为内核提供了正确的TSC和FSB值，并且禁用了CPU拓扑验证。 注意:这些修补程序当前以Microsoft Hyper-V为目标，可能需要扩展以用于其他目
+18、SetApfsTrimTimeout:10.14以前的版本不需要设置。主要针对SATA SSD，根据不 同的主控，设置不同的延迟，其中最大数值为4294967295。或者用999来关闭trim
+19、ThirdPartyDrives:类似于开启Sata固态硬盘的trim功能。有Sata固态硬盘勾选， 没有则 不勾选 。
+20、XhciPortLimit:解除15个端口限制，确认USB端口完美定制的可以不勾选。一般 勾 选 。有USB定制的 不勾选 。
+3.5:Config-Misc设置 3.5.1:Config-Misc-BlessOverride: 这个选择是寻找一些不同位置的EFI，一般空。
+3.5.2:Config-Misc- Boot:
+         
+  1、ConsoleAttributes:设置图形界面背景与前景颜色，默认为0，其他颜色请官方说 明。
+2、HibernateMode:检测休眠模式，一般选 none ，原生支持nvram的，并想休眠 (注意不是睡眠)的，选 auto 。
+3、HideAuxiliary:隐藏引导是磁盘一些辅助选项，勾选时，隐藏如:recovery、 Clean NVRAM等，按ESC、0或空格后，显示而不隐藏。
+4、PickerAttributes:使用纯文本用户界面时背景与前景颜色选择。根据UEFI规范，用 参数的选择，来调节背景与前景的颜色，默认值为 0
+5、LauncherOption:启动器中的选项
+•Disabled-什么都不做。
+•Full -在引导加载程序启动时，在UEFI变量存储中创建或更新优先级最高的引导选项。 要使该选项生效，必须启用RequestBootVarRouting。
+•Short -创建一个短启动选项而不是一个完整的启动选项。这种变体对于一些较老的固 件很有用，特别是Insyde，但也可能是其他不能处理完整设备路径的软件。 该选项提供了与第三方操作系统安装的集成，并在它们覆盖\EFI\BOOT\BOOTx64时进 行升级。efi文件。通过在这个文件路径中创建一个自定义选项，OpenCore不再用于引 导。用于引导的路径在LauncherPath选项中指定。
+6、LauncherPath:启动程序选项的启动路径。Default是默认 OpenCore.efi，其他 路径如\EFI\Launcher.efi。
+7、PickerVariant:用于引导管理的特定图标集的选择，一般选择 Acidanthera\GoldenGate 。
+8、PickerAudioAssist :开启/关闭(true/false)启动时音频。 9、PollAppleHotKeys:是否开一些组合热键，如command+K;command+S。如
+果发现开机键盘无法选择，则不勾选。并删除OC/Drivers下的UsbKbDxe.efi。 10、ShowPicker:是否显示开机启动盘显示，一般 勾选 ，⻓期稳定使用的情况下可以
+不勾选。 11、TakeoffDelay:在选择启动盘之前与快捷键操作的延迟。一般是0，对于一些键盘
+驱动需要填写5000-10000(微秒)。 12、Timeout :倒计时，0~30的整数。
+      
+  13、PickerMode:启动界面选择
+1. Builtin模式:使用简单的纯文本用户界面。一般 选择此模式
+2. External模式:如果图形界面引导可用则启用，否则使用纯文本用户界面。[所需
+Resources文件在下载最新0.7.2/0.7.3/0.7.4-OC包里面，里面包含开机声音、图
+形界面所需的图片以及相应驱动。
+3. Apple模式:如果苹果引导可用则启用，否则使用纯文本用户界面。
+在External模式下，完全禁用OpenCore对所有引导管理，除非有强制策略。 在Apple模式下，可以绕过强制策略。
+要实现External模式，用户自定义界面，使用OcSupportPkg、 OcBootManagementLib库，外部图形接
+口参考在ExternalUi测试驱动程序中提供。 OpenCore-Builtin模式引导包含在引导过程中支持几个快捷键，类似于苹果的BDS，目
+前有以下几个: Default-默认选项:使用OpenCore内置引导
+ShowPicker项:勾选此项，则此项变为默认项，强制picker显示，可以在引导时使用 Option。
+ResetNvram项:在勾选AllowNvramReset的情况下，可以使用CMD+OPT+P+R组合 键来实现清除(Reset) NVRAM，当然还可以用另一种方式来清除NVRAM。
+BootApple项:执行此选项会找到的苹果操作系统的第一个引导，除非苹果已经创建了 默认选择的操作系统。按住X键可选择此选项。
+BootAppleRecovery项:此选项执行引导到Apple操作系统恢复模式。要么是与默认 选择的操作系统相关的操作系统，要么是在默认选择的操作系统不是由苹果公司创建或 没有恢复的情况下首先找到的操作系统。按住CMD+R组合键可选择此选项。
+  
+   3.5.3:Config-Misc-Debug:调试选项
+AppleDebug:勾选后 boot.efi调试日志保存到OpenCore日志中，一般 不勾选 。此 参数仅适用于10.15.4及以上的版本 ApplePanic:将macOS内核崩溃日志保存到OpenCore根分区。测试时勾选，一般
+不勾选 ，
+DisableWatchDog: 不勾选 。
+DisplayDelay:显示延迟，填入 0 。
+DisplayLevel:显示等级，填入: 2147483650 。 SerialInit:此选项将在启用(任何)调试日志记录之前在OpenCore中执行串行端口初 始化。串行端口配置是在编译时通过pcd在gEfiMdeModulePkgTokenSpaceGuid GUID中定义的。MdeModulePkg中的默认值。dec如下: •PCD串行波特率-波特率:115200。 •PCD串行控制-线路控制:无奇偶校验，8个数据位，1个停止位。 SysReport:用于调试版本转储系统信息。一般 不勾选 ，只能用DEBUG版本才使用 Target:目标，一般填入 3 。
+3.5.4:Config-Misc-Entries:添加一些路径。现在暂时不管。 3.5.5:Config-Misc- Security:安全设置，
+1、AllowNvramReset: 勾选 是在开机引导选项中加入重置nvram缓存功能，调试完 毕， 稳定后 ，可以 不勾选 。
+2、AllowSetDefault:允许CTRL+Enter和CTRL+Index处理在引导选择器中设置默认引 导选项。
+              
+  3、AllowToggleSip:启用OpenCore选择器中禁用和启用系统完整性保护的入口，一 般 不勾选 。
+4、ApECID:苹果磁盘加密引导标识。将此值设置为任何非零64位整数，将允许使用个 性化的Apple Secure Boot标识符。如果要使用此设置，请确保使用加密安全的随机数 生成器生成一个64位随机数。使用此值集和SecureBootModel有效且未被禁用，可以 实现Apple Secure Boot的安全引导或实现完整全面的系统文件加密验证。
+5、AuthRestart:与启动身份验证相关， 不勾选 。 6、ExposeSensitiveData:由于使用nvram，填入 3
+7、BlacklistAppleUpdate:勾选时，忽略试图更新苹果外围固件的启动选项(如 multiupdate .efi)。
+8、DmgLoading:定义用于macOS恢复的磁盘映像(DMG)加载策略 Disabled —无法引导DMG镜像
+Signed —引导有Apple签名的DMG镜像。只选择此项
+Any —引导任何DMG镜像
+9、EnablePassword:启用密码保护。一般 不勾选 。
+10、ExposeSensitiveData:敏感数据暴露位掩码(sum)到操作系统。一般默认选 6。
+11、HaltLevel:显示级别，填入: 2147483648 。(0x80000000)的十进制 12、PasswordHash:设置EnabledPassword时使用的密码哈希。一般不用填写。
+13、PasswordSalt:设置EnabledPassword时使用的密码。一般不用填写。 14、Vault:磁盘加密 填写Optional时，为选择磁盘不加密，一般情况下都填写 Optional 填写Basic时，启用基本的系统文件加密验证 填写Secure时，启用完整全面的系统文件加密验证
+13、ScanPolicy:扫描策略，建议填写 3870467 ，也可以直接填写 0 解除所有限制， 但是正常使用的情况下不建议用0，那样显示的项目太多，太杂，安装的时候可以用。
+(ScanPolicy 参数是用来控制Oc扫描启动项的，对于苹果来说这显得多余。苹果的固 件可以选择 禁用第三方安装盘 也就是 他会默认禁用U盘安装盘 需要进入Recovery 关
+            
+  闭保护才能正常引导，而黑果这种设计显得不那么灵活。 3080963可引导APFS和HFS分区适合nvram和模拟nvram正常的使用 系统通过更新 nvram控制启动磁盘，安装，更新可自动完成，理论上应该开启所有扫描项以及所有磁 盘IO类型扫描 但是某些人需求只扫描OSX或者并不想扫描到Win系统， 如果设置0 则关 闭所有限制 )但是不建议用0。
+14、SecureBootModel:苹果安全启动硬件参数，一般不启用安全模式的情况下选择 默认 Default
+定义Apple安全引导硬件模参数和策略。指定此值可定义哪些操作系统将是可引导的。 在发布指定型号之前提供的操作系统将无法启动。有效值如下:
+Default — Recent available model, currently set to j215. Disabled — No model, Secure Boot will be disabled. j137 — iMacPro1,1 (December 2017)
+j680 — MacBookPro15,1 (July 2018)
+j132 — MacBookPro15,2 (July 2018)
+j174 — Macmini8,1 (October 2018)
+j140k — MacBookAir8,1 (October 2018) j780 — MacBookPro15,3 (May 2019)
+j213 — MacBookPro15,4 (July 2019)
+j140a — MacBookAir8,2 (July 2019)
+j152f — MacBookPro16,1 (November 2019) j160 — MacPro7,1 (December 2019)
+j230k — MacBookAir9,1 (March 2020) j214k — MacBookPro16,2 (May 2020) j223 — MacBookPro16,3 (May 2020) j215 — MacBookPro16,4 (June 2020) j185 — iMac20,1 (August 2020)
+j185f — iMac20,2 (August 2020)
+PlatformInfo和SecureBootModel是独立的，允许使用任何SMBIOS启用Apple安全引 导。
+将SecureBootModel设置为任何有效值，但 Disabled ，相当于中等安全的Apple SecureBoot。要实现完全的安全性，还需要指定ApECID值。 注意:默认值会随着时间的推移而增加，以支持最新的主要发行版操作系统。不建议同时 使用ApECID和默认值。
+        
+   3.5.6:Config-Misc-Tools 工具选项:
+在开机的时候，加入工具，比如有Shell.efi，CleanNvram.efi，VerifyMsrE2.efi等，自行选 择，如果勾选的话在EFI/OC/Tools文件夹中必须包含这些。 RtcRwX 用于读写RTC (CMOS)内 存的实用工具。 ResetSystem 工具，可以在菜单中显示关机/重启
+     
+ 3.6:Config-NVRAM设置
+3.6.1:Config-NVRAM-添加(Add) 3.6.1.1:UUID:4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14:
+值01普通模式或02HIPDI模式。根据自己的显示情况选取。 DefaultBackgroundColor:数字为 00000000
+3.6.1.2 : UUID : 7C436110-AB2A-4BBB-A880-FE41995C9F82 : 为 引 导 参 数 、 语 言 与 关 闭 SIP的相关内容。
+prev-lang:kbd:键盘布局或语言选项，填入 7a68 2d48 616e 733a 3235 32 ，为中 文。
+csr-active-config:SIP保护。填入 E7030000 是关闭保护，填入 00000000 是开启保 护。
+boot-args:引导参数。例如: npci=0x3000 agdpmod=pikera -v 等等。 SystemAudioVolume
+系统音量大小调节，默认46，建议60.
+3.6.2:Config-NVRAM-Delete: 禁用一些nvram变量。不用设置。
+            
+  NVRAM-Block-4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14-DefaultBackgroundColor 3.6.3:Config-NVRAM-LegacySchema，
+默认即可。 3.6.4:Config-NVRAM-LegacyEnable，
+非原生nvram主板勾选 。 原生nvram主板不勾选 。经过测试 非原生nvram主板 (主要是300系列 主板)使用SSDT-PMC以后，就可以当原生nvram主板使用， 不勾选 此项。
+3.6.5:Config-NVRAM-WriteFlash，
+一般 不勾选 。可能会影响到启动磁盘的设置，勾选的情况下能跳过错误提示。
+3.6.6:LegacyOverwrite， 允许从nvram.plist重写固件变量。一般 不勾选
+3.7:Config-PlatformInfo设置。 选择适合你自己机器的机型。至于三码。具体设置去参阅OpenCore引导下config.plist的三
+码设置。
+Config-PlatformInfo-Generic-AdviseWindows:此项与引导Windows有关，强制固件对 Windows的支持。 以下2个情况需要勾选:
+• 开启CSM (0x1)，EFI分区不在第一启动盘上，无法引导Windows。
+• 关闭CMS，采用纯UEFI (0x2)，EFI分区在第一启动盘上，无法引导 Windows。
+             
+  3.7.1:其他选项
+Automatic(自动): 勾选 。 UpdateDataHub: 勾选 。 UpdateNVRAM: 勾选 。 UpdateSMBIOS: 勾选 。 UpdateSMBIOSMode: 创建/自动/覆盖
+3.8:Config-UEFI， UEFI的相关设置。
+3.8.1:APFS，按照下面APFS属性配置，用于提供APFS的支持(即不用Config- UEFI-Drivers里面的ApfsDriverLoader)。
+EnableJumpstart:加载APFS驱动程序 勾选(YES)。此选项执行已签名APFS的加载 驱动与扫描策略。
+GlobalConnect:主要用于老式HP的笔记本，一般无视。 HideVerbose:勾选(YES)是隐藏APFS驱动程序的详细日志。
+JumpstartHotPlug :支持包含APFS的USB设备热插拔，一般不勾选(NO) MinDate :APFS驱动的日期。一般填写0。 MinVersion:APFS驱动的版本。一般填写0。
+3.8.2:AppleInput属性
+3.8.2.1:AppleEvent :确定是使用OC内置还是OEM Apple事件协议。 此选项决定是否使用Apple的OEM Apple事件协议(如果可用)，或者是否使用OpenCore 的反向工程和更新的重新实现。一般来说，OpenCore的重新实现应该是首选，因为它包含 了一些更新，比如显著改进的鼠标光标精细移动和可配置的按键重复延迟。默认
+为 Builtin ，也可以选择Auto
+•Auto-由于其结果有些不可预测，通常不建议使用此选项。 •Builtin-即使在可以使用OEM版本的Apple硬件上，依然建议使用此设置。推荐。 •OEM-在大多数使用情况下，建议首选内置。
+3.8.2.2:CustomDelays 启用自定义密钥重复延迟。一般选 Auto
+• Auto — 当KeySupport为真时，视为启用，否则视为禁用。
+• Enabled — 使用值KeyInitialDelay和KeySubsequentDelay。 • Disabled — 使用Apple默认值500ms(50)和50ms(5)。
+      
+  3.8.2.3: KeyInitialDelay 选择为 0 时，无初始延迟，立即重置 3.8.2.4:KeySubsequentDelay 在Apple事件协议的OpenCore实现中配置后续键盘重复延
+迟，单位为10ms。一般设置为 1 .
+3.8.2.5: PointerSpeedDiv 在Apple事件协议的OpenCore实现中配置指针速度除数。
+为指针移动配置除数。Apple OEM默认值为 1 。0是此选项的无效值。 3.8.2.6:PointerSpeedMul 在Apple事件协议的OpenCore实现中配置指针速度倍增器。
+配置指针移动的乘数。Apple OEM默认值为 1
+3.8.3:Audio，包括此项下9个小项，建议默认不动，[所需Resources文件在下载 最新0.7.2/0.7.3/0.7.4-OC包里面，里面包含开机声音、图形界面所需的图片以及 相应驱动。
+AudioSupport-(false/true):关闭/开启末端驱动以停止/启用开机音频 AudioDevice-指定音频控制器路径，如:PciRoot(0x0)/Pci(0x1f,0x3)。 SetupDelay-音频编解码器重新配置延迟(微秒)，一般默认为0。 AudioCodec-设置音频控制器上解码器的地址，如:0。 AudioOut-设置解码器输出端口数，如1或4或7等。 MinimumVolume-音量大小选择，默认是20。
+ResetTrafficClass-在legacy HDA上将TCSEL重置为T0，一般默认为否 PlayChime-auto/false/true，自动/关闭/开启启动时播放铃声。一般选开启 VolumeAmplifier-音频增益系数。0~1000。
+3.8.4:ConnectDrivers， 连接驱动程序。 勾选 。
+3.8.5:Config-UEFI-Drivers， UFEI驱动，一般情况下，新版OC只用2个:HfsPlus.efi和OpenRuntime.efi，至于
+UsbKbDxe.efi等根据自己的需要选择。 最新属性格式:
+1. Path(路径) 描述:从OC/Drivers目录加载UEFI驱动的路径。
+2. Enabled(启用) 说明:如果为false，该驱动程序条目将被忽略。
+
+  3. Arguments(参数) 描述:一些OC插件接受可选的附加参数，可以在这里指定为字符串。
+CrScreenshotDxe — 按F10可以保存文件或图像到OpenCore分区EFI(ESP)根目录 下
+OpenRuntime — OpenCore核心驱动，使用OpenCore引导必须使用
+OpenCanopy —图形界面驱动
+AudioDxe —开机声音驱动
+Ps2MouseDxe —来自MdeModulePkg的PS/2鼠标驱动程序，用于UEFI图形界面中触摸
+板的驱动，
+UsbMouseDxe —来自MdeModulePkg的USB鼠标驱动程序，用于UEFI图形界面中USB
+鼠标的驱动,
+EnhancedFatDxe — 对FAT格式的支持
+NvmExpressDxe — 对于Haswell或更早不支持NVMe SSD添加的驱动
+OpenUsbKbDxe — 将USB键盘模拟为苹果键盘的驱动
+VBoxHfs 或 HFSPlus — 对HFS格式的支持，建议用 HfsPlus 为好
+XhciDxe — XHCI USB驱动，Sandy Bridge以前的CPU、主板或者USB3.0PCI卡需要此
+驱动
+3.8.6:Config-UEFI-Apple快捷键相关(Input):
+KeyFiltering:默认不勾选(false)，启用时，则是检查键盘输入完整性。只针对部分 老旧主板。
+KeyForgetThreshold:设置为 5 。
+KeySupport: 勾选 。
+KeySupportMode:选择 Auto 。
+KeySwap: 勾选 。 PointerSupport:如果是华硕Z87/Z97，勾选，其他 不勾选 。 TimerResolution:延迟选 50000 。 PointerSupportMode:范例是ASUS。 不改 。
+                                
+   3.8.7:Config-UEFI-ProtocolOverrides(协议覆盖):
+AppleAudio:关闭/开启苹果音频协议(不支持10.13以前的版本)。一般 不勾选 AppleBootPolicy:虚拟机的Mac需要用， 不勾选 。 AppleDebugLog:调用Apple调试日志协议， 不勾选 。
+AppleEg2Info :用内置版本取代Apple EFI Graphics 2协议。一般 不勾选 。 AppleFramebufferInfo:一般 不勾选 。 AppleImageConversion:重建apple图标， 不勾选 。 AppleImg4Verification:一般 不勾选 。
+AppleKeyMap:重建apple功能键， 不勾选 。
+AppleRtcRam:一般 不勾选 。
+AppleSecureBoot:一般 不勾选 。 AppleSmcIo:替代之前的VirtualSmc.efi， 055以后的版本可以不勾选 。 AppleUserInterfaceTheme :与主题有关， 不勾选 。 DataHub:重建DataHub， 不勾选 。 DeviceProperties:虚拟机需要， 不勾选 。
+FirmwareVolume:File Vault的相关， 不勾选 。 HashServices:File Vault的相关， 不勾选 。 OSInfo:操作系统信息协议， 不勾选 。 UnicodeCollation:老旧主板需要， 不勾选 。
+3.8.8:Config-UEFI-Quirks设置
+ActivateHpetSupport:激活对HPET的支持，一般 不勾选 。 EnableVectorAcceleration:关闭/启用SHA-512和SHA-384 算法的AVX矢量加速。 ExitBootServicesDelay:较新的主板直接填入 0 ，老旧主板填入3000000-5000000。
+                                      
+  IgnoreInvalidFlexRatio: 如果没有解锁CFG，必须勾选 。 ForceOcWriteFlash:为所有OpenCore系统变量启用写入闪存一般不勾选 ForgeUefiSupport :勾选时允许在旧版EFI 1.x固件(如MacPro5,1)的硬件上运行为 UEFI 2.x固件一般 不勾选 。 ReleaseUsbOwnership:如果开机键盘鼠标卡死，勾选试试，一般是 不勾选 的。 RequestBootVarRouting: 如果要使用“启动磁盘”的选项，勾选 。 ReloadOptionRoms:一般 不勾选 。勾选时允许在固件版本通过forguefisupport升级 后，在较旧的mac上重新加载NVIDIA GOP Option ROM。 UnblockFsConnect:与惠普本本相关，一般 不勾选 。
+DisableSecurityPolicy :一般 不勾选 。这个设置禁用了固件的各种安全特性，解除任 何安全引导。如果您使用UEFI Secure Boot，请不要启用该功能。 TscSyncTimeout:一般推荐用VoodooTSCSync、TSCAdjustReset或CpuTscSync (VoodooTSCSync的一个更专业的驱动)来解决TSC问题，一般 不勾选 。
+3.8.9:Config-UEFI-Output(显示输出)设置: 包含以下13个小项
+ClearScreenOnModeSwitch一般 不勾选 ( false ) ConsoleMode一般选 Max
+DirectGopRendering一般 不勾选 ( false )，除非勾选后，对显示效果有利(对某些显 卡有效)
+                         
+ GopPassThrough一般 Disabled ，在UGA协议之上提供GOP协议支持，Description: 在UGA协议实例之上提供GOP协议实例。此选项通过基于UGA的代理为未实现该协议 的固件提供GOP协议。该选项支持的值如下:
+•Enabled -为所有UGA协议提供GOP。 •Apple-为支持AppleFramebufferInfo的协议提供GOP。 • Disabled-不提供GOP。
+IgnoreTextInGraphics一般是 勾选(true) ProvideConsoleGop一般是 勾选(true)
+ForceResolution-一般 不勾选 ( false )，在默认情况下无法使用所需分辨率的情况下， 强制设置分辨率，例如在旧版Intel GMA和第一代Intel HD Graphics
+(Ironlake/Arrandale)上。将分辨率设置为Max将尝试从连接的显示器的EDID中获 取最大可用分辨率。
+ReconnectOnResChange一般 不勾选 ( false )如果遇到开机直到登陆界面之前一直 黑屏，那么勾选试试
+ReplaceTabWithSpace一般是 勾选(true) UgaPassThrough一般 不勾选 ( false )
+Resolution开机分辨率，自行选择，如2560x1440;3840x2160等等。 SanitiseClearScreen自行选择( false或true ) TextRenderer一般选SystemGraphics或SystemText，根据自己使用情况自行调整。
+TextRenderer有4个选项:
+                          1 • BuiltinGraphics — 切换到图形模式并使用内置渲染器和自定义控制台控件。 选择此项需要勾ProvideConsoleGop，并将Resolution设置为Max
+2 • SystemGraphics — 切换到图形模式并使用带有自定义控制台控件的系统渲染 器。
+3 • SystemText — 切换到文本模式并使用带有自定义控制台控件。
+4 • SystemGeneric — 使用系统控制台中的控件。
+5 一般情况下首选设置是SystemGraphics或SystemText。启用
+providecosolegop、将Resolution设置为Max、启用 ReplaceTabWithSpace，几乎所有配置和机型都好用。特别说明下，机型设置为 MacPro5,1只能选择BuiltinGraphics
+ 
+   3.8.10:Config-UEFI-ReservedMemory，用于填充plist dict值，避免系统写入和 使用特定设备或硬件的内存。
+Address:例如-268435456，设置预留内存区域的起始地址，防止系统访问。 Comment:例如-HD3000: IGPU memory corruption errata。 Size:例如-268435456，设置保留内存区域的大小，必须与⻚面对⻬(4 kb)。 Enabled:默认为false(关闭)则不预留上面的内存。
+如有变化，保持更新!
+附录:
+OpenCore黑苹果引导配置说明0.7.4版PDF版下载 OpenCore黑苹果引导配置说明0.7.3版PDF版下载 OpenCore黑苹果引导配置说明0.7.2版PDF版下载 OpenCore黑苹果引导配置说明0.7.1版PDF版下载 OpenCore黑苹果引导配置说明0.7.0版PDF版下载 OpenCore黑苹果引导配置说明0.6.9版PDF版下载
+
+  重要声明:独行秀才拥有此篇文字与图片所有版权，严禁 用于任何商业用途，否则将追究法律责任!特别是不建议 在远景论坛转载，大概率会被远景封号，谢谢合作!!
+黑苹果OpenCore开放群，群号:9422866，注明“独行秀才Blog引 入”
+  更新日期
+ 2021年10月07日
